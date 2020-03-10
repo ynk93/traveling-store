@@ -1,0 +1,548 @@
+# Copyright (C) 2019 woocommerce-bluesnap-gateway
+# This file is distributed under the same license as the woocommerce-bluesnap-gateway package.
+msgid ""
+msgstr ""
+"Project-Id-Version: woocommerce-bluesnap-gateway\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: class-woocommerce-bluesnap-gateway.php:74, class-woocommerce-bluesnap-gateway.php:82
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: class-woocommerce-bluesnap-gateway.php:90
+msgid "Only a single instance of this class is allowed. Use singleton."
+msgstr ""
+
+#: class-woocommerce-bluesnap-gateway.php:134
+msgid "WooCommerce Bluesnap Gateway is inactive because WooCommerce is not installed and active."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:79
+msgid "All pages that include Apple Pay must be served over HTTPS. Your domain must have a valid SSL certificate."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:85
+msgid "Apple Pay activation: You'll need to register all web domains that will display the Apple Pay button. Learn how: "
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:86
+msgid "<a href=\"https://developers.bluesnap.com/docs/apple-pay#section-domain-verification\" target=\"blank\">here</a>"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:115
+msgid "Error processing Apple Pay. Please try again."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:117
+msgid "Apple Pay is not available for you due to the contents of your cart being incompatible with it. Please attempt the standard checkout options."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:118
+msgid "Apple Pay is not available for you due to the contents of your cart being incompatible with your OS version. Upgrade if possible, or attempt the standard checkout options."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:119
+msgid "Apple Pay is not available for you because you don't have any payment methods set up. Please set it up, or attempt the standard checkout options."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:183
+msgid "Empty cart"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:275, includes/class-wc-bluesnap-apple-pay.php:288
+msgid "Unable to find shipping method for address."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:506
+msgid "Apple Pay is available, but an account is required."
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:507
+msgid "Log In or Register"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:534
+msgid "OR"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:888
+msgid "Tax"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:895
+msgid "Shipping"
+msgstr ""
+
+#: includes/class-wc-bluesnap-apple-pay.php:902
+msgid "Discount"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:31, includes/class-wc-bluesnap-email-chargeback-order.php:60
+msgid "Chargeback received for order"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:32
+msgid "Chargeback received for order emails are sent to chosen recipient(s) when the issuing bank initiates a refund."
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:53
+msgid "[{site_title}] Chargeback received for order ({order_number})"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:137, includes/admin/bluesnap-settings.php:14
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:139
+msgid "Enable this email notification"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:143
+msgid "Recipient(s)"
+msgstr ""
+
+#. translators: %s: WP admin email
+#: includes/class-wc-bluesnap-email-chargeback-order.php:146
+msgid "Enter recipients (comma separated) for this email. Defaults to %s."
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:152
+msgid "Subject"
+msgstr ""
+
+#. translators: %s: list of placeholders
+#. translators: %s: list of placeholders
+#: includes/class-wc-bluesnap-email-chargeback-order.php:156, includes/class-wc-bluesnap-email-chargeback-order.php:165
+msgid "Available placeholders: %s"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:161
+msgid "Email heading"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:170
+msgid "Email type"
+msgstr ""
+
+#: includes/class-wc-bluesnap-email-chargeback-order.php:172
+msgid "Choose which format of email to send."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:18
+msgid "Please enter a valid credit card number"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:19
+msgid "Please enter the CVV/CVC of your card"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:20
+msgid "Please enter your credit card's expiration date"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:21
+msgid "Your payment could not be processed at this time as this card brand is not supported. Please select a new payment method and try again."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:22
+msgid "Token is expired. Please try again."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:23
+msgid "Could not find token"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:24
+msgid "Token is not associated with a payment method, please verify your client integration or contact BlueSnap support"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:25
+msgid "Session expired please refresh page to continue"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:26, includes/class-wc-bluesnap-errors.php:27, includes/class-wc-bluesnap-errors.php:28
+msgid "Internal server error please try again later"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:31
+msgid "3D Secure is not enabled"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:32
+msgid "3D Secure authentication was failed because the shopper did not enter correct credentials"
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:33
+msgid "3D Secure object is missing required fields."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:37
+msgid "Your payment could not be processed at this time. Please make sure the card information was entered correctly and resubmit. If the problem persists, please contact your credit card company to authorize the purchase."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:38
+msgid "Your payment could not be processed at this time. Please try again later."
+msgstr ""
+
+#: includes/class-wc-bluesnap-errors.php:39
+msgid "Unfortunately your selected Card brand and Currency combination is not available. Please try a different card or contact our support team."
+msgstr ""
+
+#: includes/class-wc-bluesnap-gateway-addons.php:283
+msgid "Error processing scheduled_subscription_payment. Reason: "
+msgstr ""
+
+#: includes/class-wc-bluesnap-gateway-addons.php:320
+msgid "Error processing preorder payment. Reason: "
+msgstr ""
+
+#. translators: 1$: trial length (e.g.: "with 4 months free trial")
+#: includes/class-wc-bluesnap-gateway-addons.php:488
+msgid "- with %1$s free trial"
+msgstr ""
+
+#: includes/class-wc-bluesnap-gateway-addons.php:500
+msgid "- Sign Up Fee"
+msgstr ""
+
+#: includes/class-wc-bluesnap-gateway-addons.php:500
+msgid "- Sign Up Discount"
+msgstr ""
+
+#. translators: 1$: date string (e.g.: "to be paid November 22")
+#: includes/class-wc-bluesnap-gateway-addons.php:520
+msgid "- to be paid %1$s"
+msgstr ""
+
+#. translators: 1$: date string (e.g.: "to be paid November 22")
+#: includes/class-wc-bluesnap-gateway-addons.php:557
+msgid "Recurring totals"
+msgstr ""
+
+#. translators: placeholder is a date
+#: includes/class-wc-bluesnap-gateway-addons.php:568
+msgid "First renewal: %s"
+msgstr ""
+
+#: includes/class-wc-bluesnap-gateway-addons.php:572
+msgid "Every"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:65
+msgid "BlueSnap IPN request failed."
+msgstr ""
+
+#. translators: %1$s transactionType
+#: includes/class-wc-bluesnap-ipn-webhooks.php:70
+msgid "BlueSnap %1$s IPN request failed."
+msgstr ""
+
+#. translators: %1$s reason, %2$s amount
+#: includes/class-wc-bluesnap-ipn-webhooks.php:151
+msgid "BlueSnap REFUND IPN received. Reason: %1$s. Refund amount: %2$s."
+msgstr ""
+
+#. translators: $1: opening link tag, $2: order number, $3: closing link tag
+#: includes/class-wc-bluesnap-ipn-webhooks.php:172
+msgid "Subscription cancelled for refunded order %1$s#%2$s%3$s."
+msgstr ""
+
+#. translators: %1$s reason
+#: includes/class-wc-bluesnap-ipn-webhooks.php:181
+msgid "wc_create_refund failed: %1$s."
+msgstr ""
+
+#. translators: %1$s reason
+#: includes/class-wc-bluesnap-ipn-webhooks.php:194
+msgid "BlueSnap CHARGEBACK_STATUS_CHANGED IPN received. Reason: %1$s."
+msgstr ""
+
+#. translators: %1$s reason
+#: includes/class-wc-bluesnap-ipn-webhooks.php:213
+msgid "BlueSnap CHARGEBACK IPN request received. A chargeback has been created for this transaction. Reason: %1$s."
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:235
+msgid "Empty merchantTransactionId"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:243
+msgid "Order could not be found"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:256
+msgid "Empty request"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:263
+msgid "Invalid IPN source"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:268
+msgid "Invalid User-Agent"
+msgstr ""
+
+#: includes/class-wc-bluesnap-ipn-webhooks.php:276
+msgid "transactionType not set"
+msgstr ""
+
+#: includes/class-wc-bluesnap-token.php:233
+msgid "Credit card"
+msgstr ""
+
+#: templates/multicurrency-selector.php:20
+msgid "Default Currency"
+msgstr ""
+
+#: templates/payment-fields-bluesnap.php:27
+msgid "Card Number"
+msgstr ""
+
+#: templates/payment-fields-bluesnap.php:34
+msgid "Expiry Date"
+msgstr ""
+
+#: templates/payment-fields-bluesnap.php:39
+msgid "CVC"
+msgstr ""
+
+#: templates/payment-fields-bluesnap.php:42
+msgid "What's this?"
+msgstr ""
+
+#: templates/payment-fields-bluesnap.php:43
+msgid "The CVC (Card Validation Code) is a 3 or 4 digit code on the reverse side of Visa, MasterCard and Discover cards and on the front of American Express cards."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:10
+msgid "Get your credentials from <a href=\"https://bluesnap.com\" target=\"_blank\">here</a>"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:15
+msgid "Enable BlueSnap"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:21
+msgid "Test mode"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:22
+msgid "Enable Test Mode"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:24
+msgid "Place the payment gateway in test mode using test API keys."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:29
+msgid "IPN configuration"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:31
+msgid "You must add the following webhook endpoint to your Bluesnap account <a href=\"https://support.bluesnap.com/docs/ipn-setup\" target=\"_blank\">here</a>: "
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:34
+msgid "Title"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:36
+msgid "Type here the name that you want the user to see"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:37
+msgid "Credit/Debit Card"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:41
+msgid "Description"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:43
+msgid "Enter your payment method description here (optional)"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:44
+msgid "Pay using your Credit/Debit Card"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:48
+msgid "API Username"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:50
+msgid "API Username provided by BlueSnap."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:54
+msgid "API password"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:56
+msgid "API Password provided by BlueSnap."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:60
+msgid "Merchant Id"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:62
+msgid "Merchant id from your Bluesnap account."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:66
+msgid "Soft Descriptor"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:68
+msgid "This text will be displayed in your customers Credit Card statement."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:73
+msgid "3D Secure"
+msgstr ""
+
+#. translators: %1$s URL to Bluesnap Support
+#: includes/admin/bluesnap-settings.php:76
+msgid "Contact <a href=\"%1$s\">Merchant Support</a> and ask for 3D Secure to be enabled for your account before you activate it here."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:81
+msgid "Saved Cards"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:83
+msgid "Allow users to pay with saved cards on checkout. (Saved on BlueSnap server)."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:87
+msgid "BlueSnap currency converter"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:89
+msgid "Enable BlueSnap currency converter."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:93
+msgid "Select currencies to display in your shop"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:103
+msgid "Apple Pay Wallet"
+msgstr ""
+
+#. translators: %1$s URL to Bluesnap Support
+#: includes/admin/bluesnap-settings.php:105
+msgid "Contact <a href=\"%1$s\">Merchant Support</a> and ask for Apple Pay Wallet to be enabled for your account before you activate it here."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:107
+msgid "Allow users to pay with Apple pay."
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:111
+msgid "Logging"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:112
+msgid "Log debug messages"
+msgstr ""
+
+#: includes/admin/bluesnap-settings.php:114
+msgid "Save debug messages to the WooCommerce System Status log."
+msgstr ""
+
+#: includes/admin/class-wc-bluesnap-admin.php:64
+msgid "Settings"
+msgstr ""
+
+#. translators: 1) link
+#: includes/admin/class-wc-bluesnap-admin.php:106
+msgid "Bluesnap is enabled, but a SSL certificate is not detected. Your checkout may not be secure! Please ensure your server has a valid <a href=\"%1$s\" target=\"_blank\">SSL certificate</a>"
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:24
+msgid "BlueSnap"
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:26
+msgid "BlueSnap Payment Gateway"
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:171
+msgid "The Soft Descriptor setting was trimmed to 20 characters."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:175
+msgid "Soft descriptor is required. Disabling the gateway."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:215
+msgid "Card information is invalid."
+msgstr ""
+
+#. translators: transaction id
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:234
+msgid "Bluesnap transaction complete (Transaction ID: %s)"
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:357
+msgid "We could not save your credit card, try next time."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:407
+msgid "Something went wrong with your payment method selected."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:496
+msgid "An error occurred during the refund request. Review the WooCommerce logs for specific details about the error. If the logs don't resolve the issue, contact BlueSnap Merchant Support for assistance."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:564
+msgid "Credit Card type not supported on Add Payment Methods."
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:583
+msgid "Authorization has failed for this transaction. Please try again or contact your bank for assistance"
+msgstr ""
+
+#: includes/payment-methods/class-wc-bluesnap-gateway.php:654
+msgid "Error creating BlueSnap token"
+msgstr ""
+
+#: includes/widgets/class-wc-bluesnap-widget-multicurrency.php:17
+msgid "Displays a currency selector."
+msgstr ""
+
+#: includes/widgets/class-wc-bluesnap-widget-multicurrency.php:21
+msgid "BlueSnap Multicurrency Widget"
+msgstr ""
+
+#. translators: %1$s: Order number. %2$s: Customer full name.
+#. translators: %1$s: Order number. %2$s: Customer full name.
+#: templates/emails/admin-chargeback-order.php:24, templates/emails/plain/admin-chargeback-order.php:21
+msgid "Payment for order #%1$s from %2$s has received a chargeback."
+msgstr ""
+
+#: templates/emails/admin-chargeback-order.php:26, templates/emails/plain/admin-chargeback-order.php:23
+msgid "A chargeback occurs when a shopper contacts their card issuing bank and disputes a transaction they see on their statements."
+msgstr ""
+
+#. translators: %1$s: Bluesnap Transaction ID.
+#. translators: %1$s: Bluesnap Transaction ID.
+#: templates/emails/admin-chargeback-order.php:29, templates/emails/plain/admin-chargeback-order.php:26
+msgid "If you would like to know more, please log in to your BlueSnap account. You can find the order using Order locator. Invoice ID %1$s."
+msgstr ""
+
+#. translators: %1$s: Reason.
+#. translators: %1$s: Reason for the chargeback.
+#: templates/emails/admin-chargeback-order.php:35, templates/emails/plain/admin-chargeback-order.php:30
+msgid "The bank informs that the reason for the chargeback is: %1$s"
+msgstr ""
+
+#: templates/emails/admin-chargeback-order.php:40, templates/emails/plain/admin-chargeback-order.php:33
+msgid "The order was as follows:"
+msgstr ""
