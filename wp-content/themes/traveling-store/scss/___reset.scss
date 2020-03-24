@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  outline: none;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}

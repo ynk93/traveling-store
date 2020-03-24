@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: Traveling Store
 Author: Pozdniakov Bohdan & Eugene Yakovlev
@@ -7,3 +6,1284 @@ Requires at least: 4.9.6
 Requires PHP: 5.2.4
 Version: 1.0
 Text Domain: traveling-store
+ */
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  outline: none;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+pre,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+@font-face {
+  font-family: 'San Francisco Pro Display Thin';
+  src: url("./fonts/SFProDisplay-Thin.eot");
+  src: url("./fonts/SFProDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Thin.woff") format("woff"), url("./fonts/SFProDisplay-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Light';
+  src: url("./fonts/SFProDisplay-Light.eot");
+  src: url("./fonts/SFProDisplay-Light.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Light.woff") format("woff"), url("./fonts/SFProDisplay-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Regular';
+  src: url("./fonts/SFProDisplay-Regular.eot");
+  src: url("./fonts/SFProDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Regular.woff") format("woff"), url("./fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Medium';
+  src: url("./fonts/SFProDisplay-Medium.eot");
+  src: url("./fonts/SFProDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Medium.woff") format("woff"), url("./fonts/SFProDisplay-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Semibold';
+  src: url("./fonts/SFProDisplay-Semibold.eot");
+  src: url("./fonts/SFProDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Semibold.woff") format("woff"), url("./fonts/SFProDisplay-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Bold';
+  src: url("./fonts/SFProDisplay-Bold.eot");
+  src: url("./fonts/SFProDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Bold.woff") format("woff"), url("./fonts/SFProDisplay-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'San Francisco Pro Display Black';
+  src: url("./fonts/SFProDisplay-Black.eot");
+  src: local("./fonts/SF Pro Display Black"), local("SFProDisplay-Black"), url("./fonts/SFProDisplay-Black.eot?#iefix") format("embedded-opentype"), url("./fonts/SFProDisplay-Black.woff2") format("woff2"), url("./fonts/SFProDisplay-Black.woff") format("woff"), url("./fonts/SFProDisplay-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #e8e8e8;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  height: 42px;
+  line-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+}
+.nice-select:hover {
+  border-color: #dbdbdb;
+}
+.nice-select:active, .nice-select.open, .nice-select:focus {
+  border-color: #999;
+}
+.nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform-origin: 66% 66%;
+  transform: rotate(45deg);
+  transition: all 0.15s ease-in-out;
+  width: 5px;
+}
+.nice-select.open:after {
+  transform: rotate(-135deg);
+}
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
+}
+.nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none;
+}
+.nice-select.disabled:after {
+  border-color: #cccccc;
+}
+.nice-select.wide {
+  width: 100%;
+}
+.nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+.nice-select.right {
+  float: right;
+}
+.nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+.nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+.nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform-origin: 50% 0;
+  transform: scale(0.75) translateY(-21px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  transition: all 0.2s;
+}
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+.nice-select .option.selected {
+  font-weight: bold;
+}
+.nice-select .option.disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: default;
+}
+
+.no-csspointerevents .nice-select .list {
+  display: none;
+}
+.no-csspointerevents .nice-select.open .list {
+  display: block;
+}
+
+.h1 {
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: 0.02px;
+  font-family: "San Francisco Pro Display Black";
+}
+
+.h2 {
+  font-size: 32px;
+  line-height: 32px;
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.h3 {
+  font-size: 26px;
+  line-height: 31px;
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.h4 {
+  font-size: 18px;
+  line-height: 32px;
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.h5 {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "San Francisco Pro Display Semibold";
+}
+
+.bold {
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.p {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "San Francisco Pro Display Regular";
+}
+
+.wrapper {
+  font-family: "San Francisco Pro Display Regular";
+}
+.wrapper.whiteHeader header.header {
+  position: fixed;
+  top: -13px;
+}
+.wrapper.whiteHeader header.header .headerInnerWrap .headerBottomLine {
+  max-width: 100vw;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap:before, .wrapper.whiteHeader header.header .headerInnerWrap:before {
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .headerBottomLine, .wrapper.whiteHeader header.header .headerInnerWrap .headerBottomLine {
+  background: rgba(51, 51, 51, 0.12);
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .leftSide .logoBlock, .wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .logoBlock, .wrapper.whiteHeader header.header .headerInnerWrap .leftSide .logoBlock, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .logoBlock {
+  color: #333333;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper.whiteHeader header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel {
+  color: rgba(51, 51, 51, 0.5);
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper.whiteHeader header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber {
+  color: #333333;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .rightSide > ul li a, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide > ul li a {
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select {
+  border-color: #E7E7E7;
+  color: #333333;
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
+  background-image: url("./images/icons/arrow_down-black.svg");
+}
+.wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .basketIconWrapper, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .basketIconWrapper {
+  background-image: url("./images/icons/basket-black.svg");
+}
+.wrapper.innerPageHeader {
+  padding-top: 81px;
+}
+.wrapper .content {
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper header.header {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+}
+.wrapper header.header .headerInnerWrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding: 26px 0 14px;
+}
+.wrapper header.header .headerInnerWrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.wrapper header.header .headerInnerWrap .headerBottomLine {
+  height: 1px;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  background: rgba(255, 255, 255, 0.12);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  -moz-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.wrapper header.header .headerInnerWrap .leftSide, .wrapper header.header .headerInnerWrap .rightSide {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.wrapper header.header .headerInnerWrap .leftSide .logoBlock, .wrapper header.header .headerInnerWrap .rightSide .logoBlock {
+  color: #fff;
+  font-family: "San Francisco Pro Display Black";
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock {
+  margin-left: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneIcon, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneIcon {
+  background: #FC6A00 url("./images/icons/phone_icon.svg") no-repeat center/24px;
+  width: 42px;
+  height: 42px;
+  margin-right: 12px;
+}
+.wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 10px;
+  margin-bottom: 8px;
+}
+.wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.wrapper header.header .headerInnerWrap .rightSide {
+  text-align: right;
+  justify-content: flex-end;
+}
+.wrapper header.header .headerInnerWrap .rightSide > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper header.header .headerInnerWrap .rightSide > ul li + li a {
+  margin-left: 24px;
+}
+.wrapper header.header .headerInnerWrap .rightSide > ul li a {
+  font-size: 12px;
+  line-height: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper {
+  margin-left: 32px;
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  width: 60px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select.open:after {
+  -moz-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select .list {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #333333;
+  width: 100%;
+  margin-top: 10px;
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select .list option {
+  min-height: 30px;
+  line-height: 30px;
+}
+.wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
+  content: '';
+  width: 7px;
+  height: 5px;
+  border: 0;
+  margin: auto 0;
+  top: 0;
+  bottom: -1px;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+  -moz-transform-origin: center 50%;
+  -ms-transform-origin: center 50%;
+  -webkit-transform-origin: center 50%;
+  transform-origin: center 50%;
+  background: url("./images/icons/arrow_down.svg") no-repeat center/contain;
+}
+.wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper {
+  position: relative;
+  margin-left: 41px;
+  height: 30px;
+  width: 42px;
+  background: url("./images/icons/basket.svg") no-repeat left center/29px;
+}
+.wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper .basketIcon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+  background: #FC6A00;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-family: "San Francisco Pro Display Bold";
+  color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+.wrapper section.mainSection {
+  height: 592px;
+  padding-bottom: 32px;
+  overflow: hidden;
+}
+.wrapper section.mainSection .swiper-container {
+  height: 100%;
+  overflow: visible;
+}
+.wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
+  position: absolute;
+  z-index: 3;
+  left: calc(((100vw - 1280px) / 2) + 80px);
+  bottom: -32px;
+  height: 64px;
+  width: 130px;
+  background: #FC6A00;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper section.mainSection .swiper-container .swiper-buttons-wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #FFFFFF;
+  opacity: 0.3;
+}
+.wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-left, .wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-right {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: url("./images/icons/arrow_right_1.svg") no-repeat center/8px;
+}
+.wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-left.swiper-button-disabled, .wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-right.swiper-button-disabled {
+  opacity: 0.5;
+}
+.wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-left {
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.wrapper section.mainSection .swiper-container .swiper-pagination {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 24px;
+  height: 100%;
+  right: calc(((100vw - 1280px) / 2) - 8px);
+  bottom: 0;
+  top: 0;
+  left: inherit;
+}
+.wrapper section.mainSection .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 24px;
+  position: relative;
+  height: 30px;
+  display: block;
+  background: transparent;
+  opacity: 1;
+  margin: 0;
+}
+.wrapper section.mainSection .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .innerBullet {
+  opacity: 1;
+}
+.wrapper section.mainSection .swiper-container .swiper-pagination .swiper-pagination-bullet .innerBullet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+  margin-left: 80px;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .bold {
+  color: #fff;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
+  opacity: 0;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideDescription {
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "San Francisco Pro Display Light";
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .tourSlidePicBlock {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .tourSlidePicBlock:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .tourSlidePicBlock img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+  z-index: 3;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .tourSlidePicBlock {
+  transform: translateX(0) scale(1.2);
+  transition: all 1s;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .slideContent .slideTitle {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .slideContent .slideDescription {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-prev .tourSlidePicBlock {
+  transform: translateX(20%) scale(1.4);
+  transition: all 1s;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-prev .slideContent .slideTitle {
+  transform: translateX(60px);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-prev .slideContent .slideDescription {
+  transform: translateX(90px);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-next .tourSlidePicBlock {
+  transform: translateX(-20%) scale(1.4);
+  transition: all 1s;
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-next .slideContent .slideTitle {
+  transform: translateX(-60px);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide-next .slideContent .slideDescription {
+  transform: translateX(-90px);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.wrapper section.popularProductsSection {
+  margin: 106px 0 112px;
+}
+.wrapper section.nthInRowSection .content {
+  flex-direction: column;
+}
+.wrapper section.nthInRowSection .cardsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrapper section.partnersSection {
+  margin-bottom: 112px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 123px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img {
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img.uniqaLogo {
+  width: 73px;
+  height: 73px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img.tuAirLogo {
+  width: 153px;
+  height: 50px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img.terraceLogo {
+  width: 166px;
+  height: 107px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img.rixosLogo {
+  width: 160px;
+  height: 50px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardPic img.seraserLogo {
+  width: 145px;
+  height: 32px;
+}
+.wrapper section.partnersSection .cardsRow .card .cardInfo {
+  padding: 0;
+  text-align: center;
+}
+.wrapper section.partnersSection .cardsRow .card .cardInfo .cardName {
+  font-family: "San Francisco Pro Display Bold";
+  text-align: center;
+  font-size: 11px;
+  line-height: 45px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.wrapper section.categoriesSection {
+  margin-bottom: 160px;
+}
+.wrapper section.categoriesSection .card {
+  max-width: calc((100% - 40px) / 3);
+}
+.wrapper section.categoriesSection .card .cardPic {
+  height: 184px;
+}
+.wrapper section.categoriesSection .card .cardInfo {
+  padding: 20px 16px;
+  display: block;
+}
+.wrapper section.categoriesSection .card .cardInfo .cardName {
+  display: block;
+  margin-bottom: 8px;
+}
+.wrapper section.aboutUsSection {
+  padding: 113px 0 84px;
+  margin-bottom: 112px;
+  background: url("./images/uploads/categoriesPics/image 13.png") no-repeat center/cover;
+}
+.wrapper section.aboutUsSection .aboutUsSectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.wrapper section.aboutUsSection .aboutUsSectionContent .orangeMark {
+  display: block;
+  width: 60px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  margin: 0 auto;
+  font-size: 10px;
+  font-family: "San Francisco Pro Display Bold";
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: #FC6A00;
+}
+.wrapper section.aboutUsSection .aboutUsSectionContent .h1 {
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+.wrapper section.aboutUsSection .aboutUsSectionContent .p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+.wrapper section.aboutUsSection .aboutUsSectionContent .toAboutUsButton {
+  border: 1px solid #E7E7E7;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 56px;
+  text-align: center;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  max-width: 160px;
+  height: 56px;
+  line-height: 56px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.wrapper section.ourPreferencesSection {
+  margin-bottom: 187px;
+}
+.wrapper section.ourPreferencesSection .titleWrap {
+  margin-bottom: 92px;
+  text-align: center;
+}
+.wrapper section.ourPreferencesSection .titleWrap .h3 {
+  text-align: center;
+}
+.wrapper section.ourPreferencesSection .iconsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock {
+  position: relative;
+  max-width: 208px;
+  width: 100%;
+  height: 140px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  padding-top: 32px;
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic {
+  top: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  margin: auto;
+  background: no-repeat center/contain;
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.supportIcon {
+  width: 59px;
+  height: 59px;
+  background-image: url("./images/icons/customer-service 1.svg");
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.mooneyIcon {
+  width: 48px;
+  height: 48px;
+  background-image: url("./images/icons/wallet-2 1.svg");
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.cardIcon {
+  width: 52px;
+  height: 40px;
+  background-image: url("./images/icons/003-credit-card-1 1.svg");
+}
+.wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconText {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  color: #222;
+  font-family: "San Francisco Pro Display Medium";
+}
+.wrapper section.reviewsSection {
+  padding-bottom: 112px;
+}
+.wrapper section.reviewsSection .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper section.reviewsSection .leftSide {
+  padding: 0 80px;
+  max-width: 480px;
+}
+.wrapper section.reviewsSection .leftSide .reviewsTitle {
+  margin-bottom: 12px;
+}
+.wrapper section.reviewsSection .rightSide {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock {
+  max-width: calc((100% - 20px) / 2);
+  width: 100%;
+  padding: 24px 16px 16px;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock + .reviewBlock {
+  margin-left: 20px;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock .reviewHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock .reviewHead .avatarPic {
+  overflow: hidden;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  margin-right: 16px;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock .reviewHead .avatarPic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock .reviewHead .reviewTitle .reviewAuthorName {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "San Francisco Pro Display Semibold";
+  margin-bottom: 3px;
+}
+.wrapper section.reviewsSection .rightSide .reviewBlock .reviewText {
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: rgba(191, 209, 255, 0.15);
+}
+.wrapper section.catalogSection {
+  padding-bottom: 92px;
+}
+.wrapper section.catalogSection .content {
+  flex-direction: column;
+}
+.wrapper section.catalogSection .content .catalogSectionRow {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap {
+  max-width: calc((100% - 80px) / 5);
+  width: 100%;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock {
+  width: 100%;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarBody {
+  padding: 24px;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .cardsRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: calc(100% - calc((100% - 80px) / 5) - 20px);
+  margin-left: 20px;
+  width: 100%;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card {
+  max-width: calc((100% - 60px) / 4);
+  margin-bottom: 20px;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card + .card {
+  margin-left: 20px;
+}
+.wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(4n + 1) {
+  margin-left: 0;
+}
+.wrapper footer.footer .content {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper footer.footer .footerInnerRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px 0 0;
+  margin-bottom: 24px;
+  border-top: 1px solid #E7E7E7;
+}
+.wrapper footer.footer .footerInnerRow + .footerInnerRow {
+  border: 0;
+  padding: 0;
+}
+.wrapper footer.footer .footerInnerRow ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper footer.footer .footerInnerRow ul li + li {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow ul li a {
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper footer.footer .footerInnerRow ul li a.mainPageLinkLogo {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #222222;
+  font-family: "San Francisco Pro Display Black";
+}
+.wrapper footer.footer .footerInnerRow .contactLinks {
+  text-align: right;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-family: "San Francisco Pro Display Medium";
+  font-size: 14px;
+  line-height: 12px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks a:before {
+  content: '';
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  background: no-repeat center/contain;
+  margin-right: 8px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks a.mailLink:before {
+  width: 16px;
+  height: 12px;
+  background-image: url("./images/icons/mail.svg");
+}
+.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink:before {
+  width: 12px;
+  height: 14px;
+  background-image: url("./images/icons/phone.svg");
+}
+.wrapper footer.footer .footerInnerRow {
+  margin-bottom: 20px;
+}
+.wrapper footer.footer .socialLinksWrap a {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 28px;
+  height: 28px;
+  margin-left: 12px;
+  background: no-repeat center/cover;
+}
+.wrapper footer.footer .socialLinksWrap a.fb {
+  background-image: url("./images/icons/social/facebook.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.vk {
+  background-image: url("./images/icons/social/vk.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.insta {
+  background-image: url("./images/icons/social/instagram.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.whatsup {
+  background-image: url("./images/icons/social/whatsapp.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.telegram {
+  background-image: url("./images/icons/social/telegram.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.viber {
+  background-image: url("./images/icons/social/viber.svg");
+}
+.wrapper footer.footer .socialLinksWrap a.skype {
+  background-image: url("./images/icons/social/skype.svg");
+}
+.wrapper .titleWrap {
+  margin-bottom: 37px;
+}
+.wrapper .titleWrap.withButtonTitleWrap {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.wrapper .titleWrap.withButtonTitleWrap .withTitleButton {
+  border: 1px solid #E7E7E7;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 56px;
+  text-align: center;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  text-transform: uppercase;
+  display: block;
+  max-width: 160px;
+}
+.wrapper .titleWrap.innerPageTitleWrap {
+  margin: 56px 0;
+  text-align: center;
+}
+.wrapper .card {
+  max-width: calc((100% - 80px) / 5);
+  width: 100%;
+  background: #FFFFFF;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper .card .cardPic {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+.wrapper .card .cardPic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .card .cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 160px);
+  padding: 16px 16px 20px;
+}
+.wrapper .card .cardInfo .productInfoRows {
+  display: block;
+  padding-bottom: 16px;
+}
+.wrapper .card .cardInfo .productInfoRows .cardName {
+  display: block;
+  margin-bottom: 12px;
+  min-height: 41px;
+}
+.wrapper .card .cardInfo .productInfoRows .productInfoRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.wrapper .card .cardInfo .productInfoRows .productInfoRow .productInfoRowLabel {
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 18px;
+}
+.wrapper .card .cardInfo .productInfoRows .productInfoRow .productInfoRowValue {
+  line-height: 18px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Semibold";
+}
+.wrapper .card .cardInfo .productInfoRows .productInfoRow + .productInfoRow {
+  margin-top: 16px;
+}
+.wrapper .card .priceRow {
+  border-top: 1px solid #E7E7E7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.wrapper .card .priceRow .priceLabel {
+  font-size: 12px;
+  color: #333333;
+}
+.wrapper .card .priceRow .priceValue {
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 14px;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper .card .priceRow .opencardButton {
+  background: #FC6A00;
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: block;
+  max-width: 120px;
+}
