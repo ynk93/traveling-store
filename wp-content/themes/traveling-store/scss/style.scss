@@ -20,14 +20,14 @@ Text Domain: traveling-store
 $sfLight: 'San Francisco Pro Display Light';
 $sfRegular: 'San Francisco Pro Display Regular';
 $sfMedium: 'San Francisco Pro Display Medium';
-$sfSemiBold: 'San Francisco Pro Display Semibold';
+$sfSemiBold: 'San Francisco Pro Display Medium';
 $sfBold: 'San Francisco Pro Display Bold';
 $sfBlack: 'San Francisco Pro Display Black';
 
 $barlowFont: 'Barlow Condensed', sans-serif;
 
 
-$mainColor: #FC6A00;
+$mainColor: #F87F27;
 $mainBlackColor: #333333;
 $mainLightColor: rgba(255, 255, 255, 0.6);
 $mainGreyColor: rgba(51, 51, 51, 0.50);
@@ -79,7 +79,8 @@ $mainBorderColor: #E7E7E7;
   border: 1px solid $mainBorderColor;
   font-weight: bold;
   font-size: 11px;
-  line-height: 56px;
+  height: 56px;
+  line-height: 57px;
   text-align: center;
   width: 100%;
   font-family: $sfBold;
@@ -89,7 +90,7 @@ $mainBorderColor: #E7E7E7;
 @mixin mainYellowButton($height) {
   background: $mainColor;
   height: $height;
-  line-height: $height;
+  line-height: $height + 1px;
   width: 100%;
   font-family: $sfBold;
   font-size: 11px;
@@ -177,6 +178,20 @@ $mainBorderColor: #E7E7E7;
 
   &.innerPageHeader {
     padding-top: 81px;
+
+    header.header {
+      .headerInnerWrap {
+        .rightSide {
+          > ul {
+            li {
+              a {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .content {
@@ -202,6 +217,7 @@ $mainBorderColor: #E7E7E7;
       height: 100%;
       flex-direction: row;
       align-items: center;
+      justify-content: space-between;
       padding: 26px 0 14px;
 
       &:before {
@@ -241,7 +257,7 @@ $mainBorderColor: #E7E7E7;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        width: 100%;
+        width: auto;
 
         .logoBlock {
           color: #fff;
@@ -259,7 +275,7 @@ $mainBorderColor: #E7E7E7;
           align-items: center;
 
           .cellPhoneIcon {
-            background: $mainColor url('./images/icons/phone_icon.svg') no-repeat center/24px;
+            background: $mainColor url('./images/icons/phone_icon.svg') no-repeat center/19px;
             width: 42px;
             height: 42px;
             margin-right: 12px;
@@ -276,7 +292,7 @@ $mainBorderColor: #E7E7E7;
 
             .cellPhoneNumber {
               font-family: $barlowFont;
-              font-weight: 600;
+              font-weight: 500;
               font-size: 22px;
               line-height: 18px;
               letter-spacing: 0.05em;
@@ -705,11 +721,25 @@ $mainBorderColor: #E7E7E7;
   }
 
   section.aboutUsSection {
+    position: relative;
     padding: 113px 0 84px;
     margin-bottom: 112px;
-    background: url('./images/uploads/categoriesPics/image 13.png') no-repeat center/cover;
+    overflow: hidden;
+
+    .aboutUsBg {
+      width: 100vmax;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100vh;
+      transform: translate(-50%,0);
+      background: url('./images/uploads/categoriesPics/image 13.png') no-repeat center/cover;
+    }
 
     .aboutUsSectionContent {
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -751,8 +781,6 @@ $mainBorderColor: #E7E7E7;
         display: block;
         margin: 0 auto;
         max-width: 160px;
-        height: 56px;
-        line-height: 56px;
         color: #fff;
         font-size: 12px;
         letter-spacing: 0.02em;
@@ -927,18 +955,24 @@ $mainBorderColor: #E7E7E7;
             background: #fff;
             @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
 
+            & + .sideBarBlock {
+              margin-top: 20px;
+            }
+
             .sideBarHead {
               display: flex;
               flex-direction: row;
               align-items: center;
               padding: 24px;
               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+              .h5 {
+                line-height: 12px;
+              }
             }
 
             .sideBarBody {
               padding: 24px;
-
-
             }
           }
         }
@@ -962,6 +996,76 @@ $mainBorderColor: #E7E7E7;
             &:nth-child(4n + 1) {
               margin-left: 0;
             }
+          }
+        }
+      }
+    }
+  }
+
+  section.productCardSection {
+    width: 100%;
+
+    .content {
+      flex-direction: column;
+
+      .productCardRow {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .productCardLeftSide, .productCardRightSide {
+          width: 100%;
+          background: #fff;
+          @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+        }
+
+        .productCardLeftSide {
+          margin-right: 44px;
+          .productCardPic {
+            height: 400px;
+            width: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .productCardInfoHead {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 68px;
+            line-height: 68px;
+            border-bottom: 1px solid $mainBorderColor;
+
+            a {
+              display: block;
+              font-size: 14px;
+              color: $mainGreyColor;
+              margin-left: 32px;
+
+              &.active {
+                color: $mainBlackColor;
+              }
+            }
+          }
+
+          .productCardInfoBlocks {
+            padding: 28px 32px 24px;
+          }
+        }
+
+        .productCardRightSide {
+          max-width: 340px;
+
+          .sideBarHead {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
           }
         }
       }
@@ -1121,6 +1225,45 @@ $mainBorderColor: #E7E7E7;
       margin: 56px 0;
 
       text-align: center;
+
+      .innerPageBreadCrumbs {
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 10px;
+
+        .breadCrumb {
+          position: relative;
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            right: -16px;
+            margin: auto 0;
+            width: 4px;
+            height: 4px;
+            @include border-radius(50%);
+            background: $mainBlackColor;
+            opacity: 0.3;
+          }
+
+          & + .breadCrumb {
+            padding-left: 24px;
+          }
+
+          opacity: 0.4;
+
+          &:last-child {
+            opacity: 1;
+
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -1158,7 +1301,7 @@ $mainBorderColor: #E7E7E7;
         .cardName {
           display: block;
           margin-bottom: 12px;
-          min-height: 41px;
+          line-height: 19px;
         }
 
         .productInfoRow {
@@ -1180,7 +1323,7 @@ $mainBorderColor: #E7E7E7;
           }
 
           & + .productInfoRow {
-            margin-top: 16px;
+            margin-top: 13px;
           }
         }
       }
@@ -1196,12 +1339,12 @@ $mainBorderColor: #E7E7E7;
 
       .priceLabel {
         font-size: 12px;
-        color: $mainBlackColor;
+        color: $mainGreyColor;
       }
 
       .priceValue {
         display: block;
-        margin-top: 8px;
+        margin-top: 6px;
         font-size: 20px;
         line-height: 14px;
         font-family: $sfBold;
@@ -1212,6 +1355,84 @@ $mainBorderColor: #E7E7E7;
         display: block;
         max-width: 120px;
       }
+    }
+  }
+
+  .chbWrap {
+    & + .chbWrap {
+      margin-top: 12px;
+    }
+
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 31px;
+      line-height: 20px;
+      height: 20px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .chbLabel {
+      font-size: 14px;
+      font-family: $sfRegular;
+      color: $mainGreyColor;
+    }
+
+    .container input:checked ~ .checkmark {
+      background-color: $mainColor;
+      border-color: $mainColor;
+    }
+
+    .container input:checked ~ .chbLabel {
+      color: $mainBlackColor;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .container .checkmark:after {
+      opacity: 1;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 12px;
+      height: 10px;
+      background: url('./images/icons/check_icon.svg') no-repeat center;
+      background-size: contain;
     }
   }
 }

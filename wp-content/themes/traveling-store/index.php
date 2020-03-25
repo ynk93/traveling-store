@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-	/**
-	 * Template Name: Home page
-	 */
-	wp_head(); ?>
+/**
+ * Template Name: Home page
+ */
+wp_head(); ?>
 <body>
 <div class="wrapper">
 
-	<?php get_header(); ?>
+    <?php get_header(); ?>
 
     <section class="mainSection">
         <div class="swiper-container mainSwiper">
@@ -329,6 +329,7 @@
                 подробнее
             </a>
         </div>
+        <div class="aboutUsBg img-parallax" data-speed="-1.25"></div>
     </section>
     <section class="nthInRowSection ourPreferencesSection">
         <div class="content">
@@ -406,7 +407,7 @@
         </div>
     </section>
 
-	<?php get_footer(); ?>
+    <?php get_footer(); ?>
 
 </div>
 </body>
