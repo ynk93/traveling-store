@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Tourkey</title>
-    <?php include "_head.php" ?>
-</head>
+<?php
+	/**
+	 * Template Name: Home page
+	 */
+	wp_head(); ?>
 <body>
 <div class="wrapper">
-    <?php include "_header.php" ?>
+
+	<?php get_header(); ?>
+
     <section class="mainSection">
         <div class="swiper-container mainSwiper">
             <div class="swiper-wrapper">
@@ -402,8 +405,10 @@
             </div>
         </div>
     </section>
-    <?php include "_footer.php" ?>
+
+	<?php get_footer(); ?>
+
 </div>
 </body>
-<?php include "_bottom.php" ?>
+<?php wp_footer(); ?>
 </html>
