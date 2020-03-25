@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Tourkey</title>
-    <?php include "_head.php" ?>
-</head>
+<?php
+/**
+ * Template Name: Home page
+ */
+wp_head(); ?>
 <body>
-<div class="wrapper innerPageHeader">
-    <?php include "_header.php" ?>
+<div class="wrapper">
+
+    <?php get_header(); ?>
     <section class="catalogSection">
         <div class="content">
             <div class="titleWrap innerPageTitleWrap">
@@ -417,8 +419,10 @@
             </div>
         </div>
     </section>
-    <?php include "_footer.php" ?>
+
+    <?php get_footer(); ?>
+
 </div>
 </body>
-<?php include "_bottom.php" ?>
+<?php wp_footer(); ?>
 </html>
