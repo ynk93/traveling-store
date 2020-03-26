@@ -299,7 +299,7 @@ button {
 .h5 {
   font-size: 16px;
   line-height: 22px;
-  font-family: "San Francisco Pro Display Semibold";
+  font-family: "San Francisco Pro Display Medium";
 }
 
 .bold {
@@ -369,6 +369,9 @@ button {
 .wrapper.innerPageHeader {
   padding-top: 81px;
 }
+.wrapper.innerPageHeader header.header .headerInnerWrap .rightSide > ul li a {
+  font-size: 14px;
+}
 .wrapper .content {
   display: flex;
   flex-direction: row;
@@ -390,6 +393,7 @@ button {
   height: 100%;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 26px 0 14px;
 }
 .wrapper header.header .headerInnerWrap:before {
@@ -436,7 +440,7 @@ button {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: auto;
 }
 .wrapper header.header .headerInnerWrap .leftSide .logoBlock, .wrapper header.header .headerInnerWrap .rightSide .logoBlock {
   color: #fff;
@@ -453,7 +457,7 @@ button {
   align-items: center;
 }
 .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneIcon, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneIcon {
-  background: #FC6A00 url("./images/icons/phone_icon.svg") no-repeat center/24px;
+  background: #F87F27 url("./images/icons/phone_icon.svg") no-repeat center/19px;
   width: 42px;
   height: 42px;
   margin-right: 12px;
@@ -467,7 +471,7 @@ button {
 }
 .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber {
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 22px;
   line-height: 18px;
   letter-spacing: 0.05em;
@@ -555,7 +559,7 @@ button {
   top: -9px;
   width: 18px;
   height: 18px;
-  background: #FC6A00;
+  background: #F87F27;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -581,7 +585,7 @@ button {
   bottom: -32px;
   height: 64px;
   width: 130px;
-  background: #FC6A00;
+  background: #F87F27;
   display: flex;
   flex-direction: row;
 }
@@ -828,11 +832,24 @@ button {
   margin-bottom: 8px;
 }
 .wrapper section.aboutUsSection {
+  position: relative;
   padding: 113px 0 84px;
   margin-bottom: 112px;
+  overflow: hidden;
+}
+.wrapper section.aboutUsSection .aboutUsBg {
+  width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  transform: translate(-50%, 0);
   background: url("./images/uploads/categoriesPics/image 13.png") no-repeat center/cover;
 }
 .wrapper section.aboutUsSection .aboutUsSectionContent {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -853,7 +870,7 @@ button {
   color: #fff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  background: #FC6A00;
+  background: #F87F27;
 }
 .wrapper section.aboutUsSection .aboutUsSectionContent .h1 {
   color: #fff;
@@ -870,7 +887,8 @@ button {
   border: 1px solid #E7E7E7;
   font-weight: bold;
   font-size: 11px;
-  line-height: 56px;
+  height: 56px;
+  line-height: 57px;
   text-align: center;
   width: 100%;
   font-family: "San Francisco Pro Display Bold";
@@ -878,8 +896,6 @@ button {
   display: block;
   margin: 0 auto;
   max-width: 160px;
-  height: 56px;
-  line-height: 56px;
   color: #fff;
   font-size: 12px;
   letter-spacing: 0.02em;
@@ -1006,7 +1022,7 @@ button {
   display: block;
   font-size: 16px;
   line-height: 19px;
-  font-family: "San Francisco Pro Display Semibold";
+  font-family: "San Francisco Pro Display Medium";
   margin-bottom: 3px;
 }
 .wrapper section.reviewsSection .rightSide .reviewBlock .reviewText {
@@ -1035,12 +1051,18 @@ button {
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
 }
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock + .sideBarBlock {
+  margin-top: 20px;
+}
 .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead .h5 {
+  line-height: 12px;
 }
 .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarBody {
   padding: 24px;
@@ -1062,6 +1084,201 @@ button {
 }
 .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(4n + 1) {
   margin-left: 0;
+}
+.wrapper section.productCardSection {
+  width: 100%;
+}
+.wrapper section.productCardSection .content {
+  flex-direction: column;
+}
+.wrapper section.productCardSection .content .productCardRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide, .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+  width: 100%;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide {
+  margin-right: 44px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic {
+  height: 400px;
+  width: 100%;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 68px;
+  line-height: 68px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a {
+  display: block;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.5);
+  margin-left: 32px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a.active {
+  color: #333333;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks {
+  padding: 28px 32px 24px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+  max-width: 340px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrapper section.innerPageSection {
+  padding-bottom: 112px;
+}
+.wrapper section.innerPageSection .content {
+  flex-direction: column;
+}
+.wrapper section.innerPageSection .textPageContentRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper section.innerPageSection .textPageContentRow + .textPageContentRow {
+  margin-top: 160px;
+}
+.wrapper section.innerPageSection .textPageContentRow .leftSide, .wrapper section.innerPageSection .textPageContentRow .rightSide {
+  width: 100%;
+}
+.wrapper section.innerPageSection .textPageContentRow .leftSide {
+  margin-right: 80px;
+}
+.wrapper section.innerPageSection .textPageContentRow .textSide {
+  max-width: 400px;
+  width: 100%;
+  line-height: 22px;
+  font-size: 16px;
+}
+.wrapper section.innerPageSection .textPageContentRow .textSide .p + .p {
+  margin-top: 8px;
+}
+.wrapper section.innerPageSection .textPageContentRow .textSide .semibold {
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+}
+.wrapper section.innerPageSection .textPageContentRow .picSide {
+  width: 100%;
+  height: 280px;
+}
+.wrapper section.innerPageSection .textPageContentRow .picSide.tour1 {
+  background: url("./images/uploads/vip/vip1.png") no-repeat center/cover;
+}
+.wrapper section.innerPageSection .textPageContentRow .picSide.tour2 {
+  background: url("./images/uploads/vip/vip2.png") no-repeat center/cover;
+}
+.wrapper section.innerPageSection .textPageContentRow .picSide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper section.innerPageSection .faqBlock {
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  padding: 32px 40px;
+  max-width: calc(100% - 160px);
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper section.innerPageSection .faqBlock + .faqBlock {
+  margin-top: 32px;
+}
+.wrapper section.innerPageSection .faqBlock .faqTitle {
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+.wrapper section.innerPageSection .faqBlock .faqText {
+  line-height: 22px;
+}
+.wrapper section.innerPageSection .contactUsContent {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper section.innerPageSection .contactUsContent .p {
+  line-height: 24px;
+  text-align: center;
+}
+.wrapper section.innerPageSection .contactUsContent .p .bold {
+  color: #333333;
+}
+.wrapper section.innerPageSection .contactUsContent .p + .p {
+  margin-top: 8px;
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 37px;
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 176px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  margin: 0 16px;
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  background: no-repeat center top/contain;
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.mailIcon {
+  width: 36px;
+  height: 36px;
+  background-image: url("./images/icons/mailIcon.svg");
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.phonesIcon {
+  width: 36px;
+  height: 36px;
+  background-image: url("./images/icons/phoneIcon.svg");
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.messengersIcon {
+  width: 36px;
+  height: 36px;
+  background-image: url("./images/icons/messengersIcon.svg");
+}
+.wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconText {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  color: #222;
+  font-family: "San Francisco Pro Display Medium";
 }
 .wrapper footer.footer .content {
   display: flex;
@@ -1189,7 +1406,8 @@ button {
   border: 1px solid #E7E7E7;
   font-weight: bold;
   font-size: 11px;
-  line-height: 56px;
+  height: 56px;
+  line-height: 57px;
   text-align: center;
   width: 100%;
   font-family: "San Francisco Pro Display Bold";
@@ -1200,6 +1418,40 @@ button {
 .wrapper .titleWrap.innerPageTitleWrap {
   margin: 56px 0;
   text-align: center;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs {
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 10px;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb {
+  position: relative;
+  opacity: 0.4;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  right: -16px;
+  margin: auto 0;
+  width: 4px;
+  height: 4px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #333333;
+  opacity: 0.3;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb + .breadCrumb {
+  padding-left: 24px;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child {
+  opacity: 1;
+}
+.wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child:after {
+  display: none;
 }
 .wrapper .card {
   max-width: calc((100% - 80px) / 5);
@@ -1234,7 +1486,7 @@ button {
 .wrapper .card .cardInfo .productInfoRows .cardName {
   display: block;
   margin-bottom: 12px;
-  min-height: 41px;
+  line-height: 19px;
 }
 .wrapper .card .cardInfo .productInfoRows .productInfoRow {
   display: flex;
@@ -1250,10 +1502,10 @@ button {
 .wrapper .card .cardInfo .productInfoRows .productInfoRow .productInfoRowValue {
   line-height: 18px;
   color: #333333;
-  font-family: "San Francisco Pro Display Semibold";
+  font-family: "San Francisco Pro Display Medium";
 }
 .wrapper .card .cardInfo .productInfoRows .productInfoRow + .productInfoRow {
-  margin-top: 16px;
+  margin-top: 13px;
 }
 .wrapper .card .priceRow {
   border-top: 1px solid #E7E7E7;
@@ -1265,19 +1517,19 @@ button {
 }
 .wrapper .card .priceRow .priceLabel {
   font-size: 12px;
-  color: #333333;
+  color: rgba(51, 51, 51, 0.5);
 }
 .wrapper .card .priceRow .priceValue {
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
   font-size: 20px;
   line-height: 14px;
   font-family: "San Francisco Pro Display Bold";
 }
 .wrapper .card .priceRow .opencardButton {
-  background: #FC6A00;
+  background: #F87F27;
   height: 38px;
-  line-height: 38px;
+  line-height: 39px;
   width: 100%;
   font-family: "San Francisco Pro Display Bold";
   font-size: 11px;
@@ -1286,4 +1538,72 @@ button {
   color: #fff;
   display: block;
   max-width: 120px;
+}
+.wrapper .chbWrap {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+}
+.wrapper .chbWrap + .chbWrap {
+  margin-top: 12px;
+}
+.wrapper .chbWrap .container {
+  display: block;
+  position: relative;
+  padding-left: 31px;
+  line-height: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.wrapper .chbWrap .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.wrapper .chbWrap .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+.wrapper .chbWrap .chbLabel {
+  font-size: 14px;
+  font-family: "San Francisco Pro Display Regular";
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper .chbWrap .container input:checked ~ .checkmark {
+  background-color: #F87F27;
+  border-color: #F87F27;
+}
+.wrapper .chbWrap .container input:checked ~ .chbLabel {
+  color: #333333;
+}
+.wrapper .chbWrap .checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+.wrapper .chbWrap .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.wrapper .chbWrap .container .checkmark:after {
+  opacity: 1;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 12px;
+  height: 10px;
+  background: url("./images/icons/check_icon.svg") no-repeat center;
+  background-size: contain;
 }

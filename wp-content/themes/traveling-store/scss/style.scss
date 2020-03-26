@@ -733,7 +733,7 @@ $mainBorderColor: #E7E7E7;
       top: 0;
       left: 50%;
       height: 100vh;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
       background: url('./images/uploads/categoriesPics/image 13.png') no-repeat center/cover;
     }
 
@@ -1021,6 +1021,7 @@ $mainBorderColor: #E7E7E7;
 
         .productCardLeftSide {
           margin-right: 44px;
+
           .productCardPic {
             height: 400px;
             width: 100%;
@@ -1031,6 +1032,7 @@ $mainBorderColor: #E7E7E7;
               object-fit: cover;
             }
           }
+
           .productCardInfoHead {
             display: flex;
             flex-direction: row;
@@ -1066,6 +1068,164 @@ $mainBorderColor: #E7E7E7;
             align-items: center;
             padding: 24px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+
+  section.innerPageSection {
+    padding-bottom: 112px;
+
+    .content {
+      flex-direction: column;
+    }
+
+    .textPageContentRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      & + .textPageContentRow {
+        margin-top: 160px;
+      }
+
+      .leftSide, .rightSide {
+        width: 100%;
+      }
+
+      .leftSide {
+        margin-right: 80px;
+      }
+
+      .textSide {
+        max-width: 400px;
+        width: 100%;
+        line-height: 22px;
+        font-size: 16px;
+
+        .p + .p {
+          margin-top: 8px;
+        }
+
+        .semibold {
+          font-family: $sfSemiBold;
+          color: $mainBlackColor;
+        }
+      }
+
+      .picSide {
+        width: 100%;
+        height: 280px;
+
+        &.tour1 {
+          background: url('./images/uploads/vip/vip1.png') no-repeat center/cover;
+        }
+
+        &.tour2 {
+          background: url('./images/uploads/vip/vip2.png') no-repeat center/cover;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .faqBlock {
+      @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+      padding: 32px 40px;
+      max-width: calc(100% - 160px);
+      width: 100%;
+      margin: 0 auto;
+
+      & + .faqBlock {
+        margin-top: 32px;
+      }
+
+      .faqTitle {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 4px;
+      }
+
+      .faqText {
+        line-height: 22px;
+      }
+    }
+
+    .contactUsContent {
+      max-width: 640px;
+      width: 100%;
+      margin: 0 auto;
+
+      .p {
+        line-height: 24px;
+        text-align: center;
+
+        .bold {
+          color: $mainBlackColor;
+        }
+
+        & + .p {
+          margin-top: 8px;
+        }
+      }
+
+      .iconsRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 37px;
+
+        .iconBlock {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          max-width: 176px;
+          width: 100%;
+          height: 120px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+          margin: 0 16px;
+
+          .iconPic {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 12px;
+            background: no-repeat center top/contain;
+
+            &.mailIcon {
+              width: 36px;
+              height: 36px;
+              background-image: url('./images/icons/mailIcon.svg');
+            }
+
+            &.phonesIcon {
+              width: 36px;
+              height: 36px;
+              background-image: url('./images/icons/phoneIcon.svg');
+            }
+
+            &.messengersIcon {
+              width: 36px;
+              height: 36px;
+              background-image: url('./images/icons/messengersIcon.svg');
+            }
+          }
+
+          .iconText {
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 12px;
+            color: #222;
+            font-family: $sfMedium;
           }
         }
       }

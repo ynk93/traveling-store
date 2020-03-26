@@ -6,19 +6,19 @@
  */
 wp_head(); ?>
 <body>
-<div class="wrapper">
+<div class="wrapper innerPageHeader">
 
     <?php get_header(); ?>
     <section class="catalogSection">
         <div class="content">
             <div class="titleWrap innerPageTitleWrap">
-                <div class="h2">Туры</div>
+                <div class="h2"><?php _e('Туры', 'traveling-store'); ?></div>
             </div>
             <div class="catalogSectionRow">
                 <div class="catalogSideBarWrap">
                     <div class="sideBarBlock">
                         <div class="sideBarHead">
-                            <div class="h5">По категориям</div>
+                            <div class="h5"><?php _e('По категориям','traveling-store'); ?></div>
                         </div>
                         <div class="sideBarBody">
                             <div class="chbWrap">
@@ -131,15 +131,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -160,15 +160,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -189,15 +189,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -218,15 +218,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                              <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -248,15 +248,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -277,15 +277,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -306,15 +306,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -335,15 +335,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -364,15 +364,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                              <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -394,15 +394,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>

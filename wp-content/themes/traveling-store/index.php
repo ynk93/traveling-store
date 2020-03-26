@@ -20,8 +20,8 @@ wp_head(); ?>
                                 Traveling Store
                             </div>
                             <div class="slideDescription">
-                                Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>
+                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
+                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
                             </div>
                         </div>
                         <div class="tourSlidePicBlock">
@@ -36,8 +36,8 @@ wp_head(); ?>
                                 Traveling Store
                             </div>
                             <div class="slideDescription">
-                                Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>
+                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
+                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
                             </div>
                         </div>
                         <div class="tourSlidePicBlock">
@@ -52,8 +52,8 @@ wp_head(); ?>
                                 Traveling Store
                             </div>
                             <div class="slideDescription">
-                                Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>
+                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
+                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
                             </div>
                         </div>
                         <div class="tourSlidePicBlock">
@@ -72,8 +72,8 @@ wp_head(); ?>
     <section class="nthInRowSection popularProductsSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
-                <div class="h3">Популярные туры</div>
-                <a href="#" class="withTitleButton">Все туры</a>
+                <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
+                <a href="#" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
             <div class="cardsRow">
                 <div class="card">
@@ -84,15 +84,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -113,15 +113,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -142,15 +142,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -171,15 +171,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                              <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -201,15 +201,15 @@ wp_head(); ?>
                         <span class="productInfoRows">
                             <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Регион</span>
+                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Дни проведения</span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel">Время</span>
+                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -228,57 +228,57 @@ wp_head(); ?>
     <section class="nthInRowSection partnersSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
-                <div class="h3">Реклама от партнеров</div>
-                <a href="#" class="withTitleButton">стать партнером</a>
-            </div>
-            <div class="cardsRow">
-                <a href="#" class="card">
+                <div class="h3"><?php _e('Реклама от партнеров', 'traveling-store'); ?></div>
+                    <a href="#" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
+                </div>
+                <div class="cardsRow">
+                    <a href="#" class="card">
                     <span class="cardPic">
                         <img src="./images/icons/partners/uniqa.png" class="uniqaLogo">
                     </span>
-                    <span class="cardInfo">
-                        <span class="cardName">Туристическая страховка</span>
+                        <span class="cardInfo">
+                        <span class="cardName"><?php _e('Туристическая страховка', 'traveling-store'); ?></span>
                     </span>
-                </a>
-                <a href="#" class="card">
+                    </a>
+                    <a href="#" class="card">
                     <span class="cardPic">
                         <img src="./images/icons/partners/turkish-airlines%201.png" class="tuAirLogo">
                     </span>
-                    <span class="cardInfo">
-                        <span class="cardName">Авиаперелеты</span>
+                        <span class="cardInfo">
+                        <span class="cardName"><?php _e('Авиаперелеты', 'traveling-store'); ?></span>
                     </span>
-                </a>
-                <a href="#" class="card">
+                    </a>
+                    <a href="#" class="card">
                     <span class="cardPic">
                         <img src="./images/icons/partners/terrace.png" class="terraceLogo">
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="cardName">Terrace hotels</span>
                     </span>
-                </a>
-                <a href="#" class="card">
+                    </a>
+                    <a href="#" class="card">
                     <span class="cardPic">
                         <img src="./images/icons/partners/rixos.svg" class="rixosLogo">
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="cardName">rixos hotels</span>
                     </span>
-                </a>
-                <a href="#" class="card">
+                    </a>
+                    <a href="#" class="card">
                     <span class="cardPic">
                         <img src="./images/icons/partners/seraser.png" class="seraserLogo">
                     </span>
-                    <span class="cardInfo">
-                        <span class="cardName">sereser ресторан</span>
+                        <span class="cardInfo">
+                        <span class="cardName"><?php _e('sereser ресторан', 'traveling-store'); ?></span>
                     </span>
-                </a>
+                    </a>
+                </div>
             </div>
-        </div>
     </section>
     <section class="nthInRowSection categoriesSection">
         <div class="content">
             <div class="titleWrap">
-                <div class="h3">Категории</div>
+                <div class="h3"><?php _e('Категории', 'traveling-store'); ?></div>
             </div>
             <div class="cardsRow">
                 <a href="#" class="card">
@@ -286,9 +286,9 @@ wp_head(); ?>
                         <img src="./images/uploads/categoriesPics/img.png" alt="">
                     </span>
                     <span class="cardInfo">
-                        <span class="h5 cardName">Шопинг</span>
+                        <span class="h5 cardName"><?php _e('Шопинг', 'traveling-store'); ?></span>
                         <span class="p cardDescription">
-                            Что привезти из Турции, где покупать сувениры и модные бренды. Рынки, аутлеты, знаменитые торговые центры Турции. Советы экспертов и отзывы туристов о шоппинге в Турции на «Тонкостях туризма».
+                            <?php _e(' Что привезти из Турции, где покупать сувениры и модные бренды. Рынки, аутлеты, знаменитые торговые центры Турции. Советы экспертов и отзывы туристов о шоппинге в Турции на «Тонкостях туризма».', 'traveling-store'); ?>
                         </span>
                     </span>
                 </a>
@@ -297,9 +297,9 @@ wp_head(); ?>
                         <img src="./images/uploads/categoriesPics/image_2020-03-22_20-23-54.png">
                     </span>
                     <span class="cardInfo">
-                        <span class="h5 cardName">Рестораны</span>
+                        <span class="h5 cardName"><?php _e('Рестораны', 'traveling-store'); ?></span>
                         <span class="p cardDescription">
-                            Писать про превосходный сервис и отменную еду этих заведений просто нет смысла - это лучшие турецкие рестораны. Поэтому расскажу про особенности каждого. Узнайте, на какие рестораны стоит обратить свое внимание!
+                            <?php _e(' Писать про превосходный сервис и отменную еду этих заведений просто нет смысла - это лучшие турецкие рестораны. Поэтому расскажу про особенности каждого. Узнайте, на какие рестораны стоит обратить свое внимание!', 'traveling-store'); ?>
                         </span>
                     </span>
                 </a>
@@ -310,7 +310,7 @@ wp_head(); ?>
                     <span class="cardInfo">
                         <span class="h5 cardName">VIP</span>
                         <span class="p cardDescription">
-                            Существует стереотип, что Турция – это страна бюджетного отдыха, но это не совсем так. Безупречно, тут без проблем можно недорого отдохнуть, при этом совсем не чувствуя себя чем-то  обделенным.
+                            <?php _e('Существует стереотип, что Турция – это страна бюджетного отдыха, но это не совсем так. Безупречно, тут без проблем можно недорого отдохнуть, при этом совсем не чувствуя себя чем-то  обделенным.', 'traveling-store'); ?>
                         </span>
                     </span>
                 </a>
@@ -319,11 +319,11 @@ wp_head(); ?>
     </section>
     <section class="aboutUsSection">
         <div class="aboutUsSectionContent">
-            <div class="orangeMark">о нас</div>
+            <div class="orangeMark"><?php _e('о нас', 'traveling-store'); ?></div>
             <div class="h1">Traveling Store</div>
             <div class="p">
-                Краткое информация о фирме, турах, преимуществах c дальнейшем переходом на страницу с более детальной
-                информацией.
+                <?php _e('Краткое информация о фирме, турах, преимуществах c дальнейшем переходом на страницу с более детальной
+                информацией.', 'traveling-store'); ?>
             </div>
             <a href="#" class="toAboutUsButton">
                 подробнее
@@ -334,20 +334,20 @@ wp_head(); ?>
     <section class="nthInRowSection ourPreferencesSection">
         <div class="content">
             <div class="titleWrap centered">
-                <div class="h3">Наши преимущества</div>
+                <div class="h3"><?php _e('Наши преимущества', 'traveling-store'); ?></div>
             </div>
             <div class="iconsRow">
                 <div class="iconBlock">
                     <div class="iconPic supportIcon"></div>
-                    <div class="iconText">Поддержка 24/7</div>
+                    <div class="iconText"><?php _e('Поддержка 24/7', 'traveling-store'); ?></div>
                 </div>
                 <div class="iconBlock">
                     <div class="iconPic mooneyIcon"></div>
-                    <div class="iconText">Без переплат</div>
+                    <div class="iconText"><?php _e('Без переплат', 'traveling-store'); ?></div>
                 </div>
                 <div class="iconBlock">
                     <div class="iconPic cardIcon"></div>
-                    <div class="iconText">Онлайн оплата</div>
+                    <div class="iconText"><?php _e('Онлайн оплата', 'traveling-store'); ?></div>
                 </div>
             </div>
         </div>
@@ -355,11 +355,11 @@ wp_head(); ?>
     <section class="reviewsSection">
         <div class="content">
             <div class="leftSide">
-                <div class="reviewsTitle h3">Отзывы клиентов</div>
+                <div class="reviewsTitle h3"><?php _e('Отзывы клиентов', 'traveling-store'); ?></div>
                 <div class="reviewsDescription p">
-                    Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают, что
+                    <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают, что
                     путешествие по турции с Traveling Store
-                    сэкономит их время и деньги!
+                    сэкономит их время и деньги!', 'traveling-store'); ?>
                 </div>
             </div>
             <div class="rightSide">
@@ -378,9 +378,9 @@ wp_head(); ?>
                         </div>
                     </div>
                     <div class="reviewText p">
-                        Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
+                        <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
                         что путешествие по турции с Traveling Store
-                        сэкономит их время и деньги!
+                        сэкономит их время и деньги!', 'traveling-store'); ?>
                     </div>
                 </div>
                 <div class="reviewBlock">
@@ -398,9 +398,9 @@ wp_head(); ?>
                         </div>
                     </div>
                     <div class="reviewText p">
-                        Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
+                        <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
                         что путешествие по турции с Traveling Store
-                        сэкономит их время и деньги!
+                        сэкономит их время и деньги!', 'traveling-store'); ?>
                     </div>
                 </div>
             </div>
