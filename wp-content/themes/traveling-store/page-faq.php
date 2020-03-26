@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 /**
- * Template Name: Home page
+ * Template Name: FAQ page
  */
 wp_head(); ?>
 <body>

@@ -2,14 +2,14 @@
 <html lang="en">
 <?php
 /**
- * Template Name: Home page
+ * Template Name: VIP tours page
  */
 wp_head(); ?>
 <body>
 <div class="wrapper">
 
     <?php get_header(); ?>
-    <section class="innerPageSection contactUsPageSection">
+    <section class="innerPageSection textPageSection">
         <div class="content"></div>
     </section>
 

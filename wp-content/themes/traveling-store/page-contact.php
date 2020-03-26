@@ -2,14 +2,14 @@
 <html lang="en">
 <?php
 /**
- * Template Name: Home page
+ * Template Name: Contact page
  */
 wp_head(); ?>
 <body>
 <div class="wrapper">
 
     <?php get_header(); ?>
-    <section class="innerPageSection textPageSection">
+    <section class="innerPageSection contactUsPageSection">
         <div class="content"></div>
     </section>
 
