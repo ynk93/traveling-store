@@ -1230,6 +1230,118 @@ $mainBorderColor: #E7E7E7;
         }
       }
     }
+
+    .aboutUsPageRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &.swiperRow {
+        .textSide {
+          padding-right: 0;
+        }
+
+        & + .aboutUsPageRow {
+          margin-top: 120px;
+        }
+      }
+
+      & + .aboutUsPageRow {
+        margin-top: 240px;
+
+        &.swiperRow {
+          margin-top: 120px;
+        }
+      }
+
+      .leftSide, .rightSide {
+        width: 100%;
+
+        .picSide {
+          height: 360px;
+          width: 100%;
+
+          &.aboutUsPic1 {
+            background: url('./images/uploads/aboutUs.png') no-repeat center/cover;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .rightSide {
+        margin-left: 80px;
+
+        &.swiperSide {
+          position: relative;
+          margin-left: 0;
+          right: calc((-100vw + 1280px) / 2);
+          flex-shrink: 0;
+          overflow: hidden;
+          padding: 120px 0;
+          width: 50vw;
+          background: url('./images/bgPattern.png') no-repeat center/cover;
+
+          .swiper-container {
+            padding-left: 40px;
+            overflow: visible;
+          }
+        }
+      }
+
+      .textSide {
+        .aboutUsSideTitle {
+          font-family: $sfBlack;
+          margin-bottom: 20px;
+          font-size: 20px;
+          line-height: 12px;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+
+          color: $mainBlackColor;
+        }
+
+        .p {
+          line-height: 22px;
+
+          & + .p {
+            margin-top: 12px;
+          }
+        }
+      }
+
+      .swiper-container {
+        .swiper-slide {
+          max-width: 240px;
+          flex-direction: column;
+          justify-content: center;
+          display: flex;
+        }
+
+        .card {
+          width: 100%;
+          max-width: 100%;
+
+          .cardPic {
+            height: 280px;
+          }
+
+          .cardInfo {
+            padding: 33px 31px;
+            display: block;
+
+            .cardName {
+              display: block;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
   }
 
   footer.footer {

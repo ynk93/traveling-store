@@ -18,6 +18,13 @@ $(document).ready(function () {
         },
     });
 
+    var aboutUsSwiper = new Swiper('.swiper-container.aboutUsSwiper', {
+        speed: 500,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true
+    });
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > 12) {
             $('.wrapper').addClass('whiteHeader');
