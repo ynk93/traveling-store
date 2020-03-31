@@ -145,10 +145,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -174,10 +174,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -203,10 +203,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -233,10 +233,10 @@ wp_head(); ?>
 
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -262,10 +262,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -291,10 +291,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -320,10 +320,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -349,10 +349,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -379,10 +379,10 @@ wp_head(); ?>
 
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>
@@ -408,10 +408,10 @@ wp_head(); ?>
                         </span>
                         <span class="priceRow">
                             <span class="priceBlock">
-                                <span class="priceLabel">Цена от:</span>
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
                                 <span class="priceValue">$100</span>
                             </span>
-                            <a href="#" class="opencardButton">Подробнее</a>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
                     </div>

@@ -2,40 +2,42 @@
 <html lang="en">
 <?php
 /**
- * Template Name: VIP tours page
+ * Template Name: About page
  */
 wp_head(); ?>
 <body>
 <div class="wrapper innerPageHeader">
 
     <?php get_header(); ?>
-    <section class="innerPageSection textPageSection">
+    <section class="productCardSection">
         <div class="content">
             <div class="titleWrap innerPageTitleWrap">
-                <div class="h2"><?php _e('VIP Услуги', 'traveling-store'); ?></div>
+                <div class="innerPageBreadCrumbs">
+                    <span class="breadCrumb"><?php _e('Туры', 'traveling-store'); ?></span>
+                    <span class="breadCrumb"><?php _e('Анталия', 'traveling-store'); ?></span>
+                    <span class="breadCrumb"><?php _e('Экскурсия в собор Святой Софии', 'traveling-store'); ?></span>
+                </div>
+                <div class="h2"><?php _e('Экскурсия в собор Святой Софии', 'traveling-store'); ?></div>
             </div>
-            <div class="textPageContent">
-                <div class="textPageContentRow">
-                    <div class="leftSide textSide">
-                        <div class="p semibold">
-                            <?php _e('Индивидуальный отдых в Анталии давно перестал ассоциироваться с дорогим, недоступным-премиум отдыхом для среднего достатка путешественника.', 'traveling-store'); ?>
-                        </div>
-                        <div class="p grey">
-                            <?php _e('Индивидуальный отдых, в отличие от группового предоставляет Вам возможность организовать свой отдых, учитывая Ваши исключительные пожелания и интересы, индивидуальные привычки и предпочтения.', 'traveling-store'); ?>
-                        </div>
+            <div class="productCardRow">
+                <div class="productCardLeftSide">
+                    <div class="productCardPic">
+                        <img src="images/sliderPics/image%201.png">
                     </div>
-                    <div class="rightSide picSide tour1">
-                        <img src="images/uploads/vip/vip1.png" alt="">
+
+                    <div class="productCardInfoArea">
+                        <div class="productCardInfoHead">
+                            <a href="#" class="active"><?php _e('Описание','traveling-store'); ?></a>
+                            <a href="#"><?php _e('Программа экскурсии','traveling-store'); ?></a>
+                            <a href="#"><?php _e('Что включено','traveling-store'); ?></a>
+                            <a href="#"><?php _e('Важная информация','traveling-store'); ?></a>
+                        </div>
+                        <div class="productCardInfoBlocks"></div>
                     </div>
                 </div>
-                <div class="textPageContentRow">
-                    <div class="leftSide picSide tour2">
-                        <img src="images/uploads/vip/vip2.png" alt="">
-                    </div>
-                    <div class="rightSide textSide">
-                        <div class="p grey">
-                            <?php _e('Ценовая доступность организации индивидуального отдыха, предоставляемая нашим сервисом, связана с тем, что услугу здесь вы приобретаете непосредственно у исполнителя - владельца, той или иной услуги. Минуя накруток посредников, в лице агентств, гидов, уличных маклеров и т.д.', 'traveling-store'); ?>
-                        </div>
+                <div class="productCardRightSide">
+                    <div class="sideBarHead">
+                        <div class="h5"><?php _e('Расчет стоимости', 'traveling-store'); ?></div>
                     </div>
                 </div>
             </div>
@@ -44,8 +46,8 @@ wp_head(); ?>
     <section class="nthInRowSection popularProductsSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
-                <div class="h3"><?php _e('VIP туры', 'traveling-store'); ?></div>
-                <a href="#" class="withTitleButton">Все туры</a>
+                <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
+                <a href="#" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
             <div class="cardsRow">
                 <div class="card">
@@ -54,7 +56,7 @@ wp_head(); ?>
                     </span>
                     <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Индивидуальная экскурсия на яхте</span>
+                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
@@ -83,7 +85,7 @@ wp_head(); ?>
                     </span>
                     <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Индивидуальный трансфер</span>
+                            <span class="cardName h5">Храм Святого Николая</span>
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
@@ -112,7 +114,7 @@ wp_head(); ?>
                     </span>
                     <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Аренда автомобиля</span>
+                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
@@ -141,7 +143,7 @@ wp_head(); ?>
                     </span>
                     <span class="cardInfo">
                         <span class="productInfoRows">
-                             <span class="cardName h5">Заказ цветов. Бесплатная доставка</span>
+                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
@@ -171,7 +173,7 @@ wp_head(); ?>
                     </span>
                     <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Отдых в роскошном пляжном отеле</span>
+                            <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
@@ -197,7 +199,6 @@ wp_head(); ?>
             </div>
         </div>
     </section>
-
     <?php get_footer(); ?>
 
 </div>
