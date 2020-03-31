@@ -22,7 +22,15 @@ $(document).ready(function () {
         speed: 500,
         slidesPerView: 'auto',
         spaceBetween: 20,
-        freeMode: true
+        freeMode: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'progressbar',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
     });
 
     $(window).scroll(function () {

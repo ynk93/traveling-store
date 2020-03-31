@@ -72,7 +72,7 @@ wp_head(); ?>
                                      <span class="cardPic">
                                         <img src="./images/uploads/categoriesPics/image_2020-03-22_20-23-54.png">
                                     </span>
-                                        <span class="cardInfo">
+                                    <span class="cardInfo">
                                         <span class="h5 cardName"><?php _e('Рестораны', 'traveling-store'); ?></span>
                                     </span>
                                 </div>
@@ -117,6 +117,13 @@ wp_head(); ?>
                                     </span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="swiper-bottom-panel">
+                            <div class="swiper-buttons-wrap">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

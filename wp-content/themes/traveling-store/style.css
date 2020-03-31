@@ -1329,6 +1329,50 @@ button {
   padding-left: 40px;
   overflow: visible;
 }
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel {
+  position: relative;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 60px;
+}
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-pagination-progressbar {
+  width: 100%;
+  margin-left: 74px;
+  position: relative;
+  height: 2px;
+  background: #C9C9C9;
+}
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: rgba(34, 34, 34, 0.9);
+}
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-buttons-wrap {
+  max-width: 58px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-buttons-wrap .swiper-button-prev, .wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-buttons-wrap .swiper-button-next {
+  -moz-transform: 0;
+  -ms-transform: 0;
+  -webkit-transform: 0;
+  transform: 0;
+  width: 9px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  position: static;
+  background: url("./images/icons/arrow_right_black.svg") no-repeat center/contain;
+}
+.wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-buttons-wrap .swiper-button-prev {
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .wrapper section.innerPageSection .aboutUsPageRow .textSide .aboutUsSideTitle {
   font-family: "San Francisco Pro Display Black";
   margin-bottom: 20px;

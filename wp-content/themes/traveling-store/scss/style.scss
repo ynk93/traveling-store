@@ -1290,6 +1290,50 @@ $mainBorderColor: #E7E7E7;
             padding-left: 40px;
             overflow: visible;
           }
+
+          .swiper-bottom-panel {
+            position: relative;
+            margin-top: 64px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-right: 60px;
+
+            .swiper-pagination-progressbar {
+              width: 100%;
+              margin-left: 74px;
+              position: relative;
+              height: 2px;
+              background: #C9C9C9;
+
+              .swiper-pagination-progressbar-fill {
+                background: rgba(34, 34, 34, 0.9);
+              }
+            }
+
+            .swiper-buttons-wrap {
+              max-width: 58px;
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+
+              .swiper-button-prev, .swiper-button-next {
+                @include transform(0);
+                width: 9px;
+                height: 14px;
+                margin: 0;
+                padding: 0;
+                position: static;
+                background: url('./images/icons/arrow_right_black.svg') no-repeat center/contain;
+              }
+
+              .swiper-button-prev {
+                @include transform(scaleX(-1));
+              }
+            }
+          }
         }
       }
 
