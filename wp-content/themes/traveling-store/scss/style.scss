@@ -633,7 +633,10 @@ $mainBorderColor: #E7E7E7;
     .cardsRow {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+
+      .card + .card {
+        margin-left: 20px;
+      }
     }
   }
 
@@ -1457,8 +1460,8 @@ $mainBorderColor: #E7E7E7;
 
           &.mailLink {
             &:before {
-              width: 16px;
-              height: 12px;
+              width: 22px;
+              height: 22px;
               background-image: url('./images/icons/mail.svg');
             }
           }
@@ -1467,8 +1470,8 @@ $mainBorderColor: #E7E7E7;
             margin-left: 24px;
 
             &:before {
-              width: 12px;
-              height: 14px;
+              width: 22px;
+              height: 22px;
               background-image: url('./images/icons/phone.svg');
             }
           }
@@ -1486,34 +1489,41 @@ $mainBorderColor: #E7E7E7;
         width: 28px;
         height: 28px;
         margin-left: 12px;
-        background: no-repeat center/cover;
+        background: no-repeat center/contain;
 
         &.fb {
           background-image: url('./images/icons/social/facebook.svg');
+          background-size: 11px;
         }
 
         &.vk {
           background-image: url('./images/icons/social/vk.svg');
+          background-size: 25px;
         }
 
         &.insta {
           background-image: url('./images/icons/social/instagram.svg');
+          background-size: 18px;
         }
 
         &.whatsup {
           background-image: url('./images/icons/social/whatsapp.svg');
+          background-size: 22px;
         }
 
         &.telegram {
           background-image: url('./images/icons/social/telegram.svg');
+          background-size: 18px;
         }
 
         &.viber {
           background-image: url('./images/icons/social/viber.svg');
+          background-size: 22px;
         }
 
         &.skype {
           background-image: url('./images/icons/social/skype.svg');
+          background-size: 20px;
         }
       }
     }

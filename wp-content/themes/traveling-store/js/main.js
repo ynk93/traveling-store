@@ -34,7 +34,15 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 12) {
+        var scrollTreshold;
+        if($(window).width() >= 1024) {
+            scrollTreshold = 12;
+        }
+        else {
+            scrollTreshold = 0;
+        }
+
+        if ($(this).scrollTop() > scrollTreshold) {
             $('.wrapper').addClass('whiteHeader');
         } else {
             $('.wrapper').removeClass('whiteHeader');

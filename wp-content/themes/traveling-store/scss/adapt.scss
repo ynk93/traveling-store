@@ -19,5 +19,121 @@
         }
       }
     }
+
+    section.mainSection {
+      .swiper-container {
+        .swiper-buttons-wrap {
+          left: 100px;
+        }
+
+        .swiper-pagination {
+          right: 20px;
+        }
+      }
+    }
+
+    section.popularProductsSection {
+      .cardsRow {
+        .card {
+          &:last-child {
+            display: none;
+          }
+
+          max-width: calc((100% - 60px) / 4);
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 1023px) {
+  .h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .wrapper {
+    &.whiteHeader {
+      header.header {
+        top: 0;
+      }
+    }
+
+    header.header {
+      .headerInnerWrap {
+        .leftSide {
+          .cellPhoneBlock {
+            display: none;
+          }
+        }
+
+        .rightSide {
+          .selectWrapper, ul {
+            display: none;
+          }
+        }
+      }
+    }
+
+    section.mainSection {
+      height: 420px;
+
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            .slideContent {
+              .slideTitle {
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section.popularProductsSection {
+      margin: 64px 0;
+    }
+
+    section.partnersSection {
+      margin-bottom: 64px;
+    }
+
+    section.categoriesSection, section.aboutUsSection {
+      margin-bottom: 80px;
+    }
+
+    section.ourPreferencesSection {
+      margin-bottom: 70px;
+
+      .titleWrap {
+        margin-bottom: 30px;
+      }
+    }
+
+    section.reviewsSection {
+      padding-bottom: 64px;
+
+      .leftSide {
+        padding: 0 40px 0 0;
+      }
+    }
+
+    footer.footer {
+      .footerInnerRow {
+        ul {
+          li {
+            display: none;
+
+            &:first-child {
+              display: block;
+            }
+          }
+        }
+      }
+    }
   }
 }

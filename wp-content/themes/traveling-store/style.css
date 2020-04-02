@@ -765,7 +765,9 @@ button {
 .wrapper section.nthInRowSection .cardsRow {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+.wrapper section.nthInRowSection .cardsRow .card + .card {
+  margin-left: 20px;
 }
 .wrapper section.partnersSection {
   margin-bottom: 112px;
@@ -1474,16 +1476,16 @@ button {
   margin-right: 8px;
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a.mailLink:before {
-  width: 16px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
   background-image: url("./images/icons/mail.svg");
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink {
   margin-left: 24px;
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink:before {
-  width: 12px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   background-image: url("./images/icons/phone.svg");
 }
 .wrapper footer.footer .footerInnerRow {
@@ -1498,28 +1500,35 @@ button {
   width: 28px;
   height: 28px;
   margin-left: 12px;
-  background: no-repeat center/cover;
+  background: no-repeat center/contain;
 }
 .wrapper footer.footer .socialLinksWrap a.fb {
   background-image: url("./images/icons/social/facebook.svg");
+  background-size: 11px;
 }
 .wrapper footer.footer .socialLinksWrap a.vk {
   background-image: url("./images/icons/social/vk.svg");
+  background-size: 25px;
 }
 .wrapper footer.footer .socialLinksWrap a.insta {
   background-image: url("./images/icons/social/instagram.svg");
+  background-size: 18px;
 }
 .wrapper footer.footer .socialLinksWrap a.whatsup {
   background-image: url("./images/icons/social/whatsapp.svg");
+  background-size: 22px;
 }
 .wrapper footer.footer .socialLinksWrap a.telegram {
   background-image: url("./images/icons/social/telegram.svg");
+  background-size: 18px;
 }
 .wrapper footer.footer .socialLinksWrap a.viber {
   background-image: url("./images/icons/social/viber.svg");
+  background-size: 22px;
 }
 .wrapper footer.footer .socialLinksWrap a.skype {
   background-image: url("./images/icons/social/skype.svg");
+  background-size: 20px;
 }
 .wrapper .titleWrap {
   margin-bottom: 37px;
@@ -1744,5 +1753,71 @@ button {
   }
   .wrapper header.header .headerInnerWrap .rightSide > ul li + li a {
     margin-left: 12px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
+    left: 100px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-pagination {
+    right: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card {
+    max-width: calc((100% - 60px) / 4);
+  }
+  .wrapper section.popularProductsSection .cardsRow .card:last-child {
+    display: none;
+  }
+}
+@media all and (max-width: 1023px) {
+  .h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .wrapper.whiteHeader header.header {
+    top: 0;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock {
+    display: none;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper, .wrapper header.header .headerInnerWrap .rightSide ul {
+    display: none;
+  }
+  .wrapper section.mainSection {
+    height: 420px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
+    margin-bottom: 8px;
+  }
+  .wrapper section.popularProductsSection {
+    margin: 64px 0;
+  }
+  .wrapper section.partnersSection {
+    margin-bottom: 64px;
+  }
+  .wrapper section.categoriesSection, .wrapper section.aboutUsSection {
+    margin-bottom: 80px;
+  }
+  .wrapper section.ourPreferencesSection {
+    margin-bottom: 70px;
+  }
+  .wrapper section.ourPreferencesSection .titleWrap {
+    margin-bottom: 30px;
+  }
+  .wrapper section.reviewsSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.reviewsSection .leftSide {
+    padding: 0 40px 0 0;
+  }
+  .wrapper footer.footer .footerInnerRow ul li {
+    display: none;
+  }
+  .wrapper footer.footer .footerInnerRow ul li:first-child {
+    display: block;
   }
 }
