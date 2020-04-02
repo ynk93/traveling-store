@@ -49,13 +49,13 @@ $(document).ready(function () {
         }
 
 
-        parallaxImg();
+        mainPageAboutUsImgParallax();
     });
 
     var img = $('.img-parallax');
     var imgParent = img.parent();
 
-    function parallaxImg() {
+    function mainPageAboutUsImgParallax() {
         var speed = img.data('speed');
         var imgY = imgParent.offset().top;
         var winY = $(this).scrollTop();
@@ -79,6 +79,29 @@ $(document).ready(function () {
         img.css({
             top: imgPercent + '%',
             transform: 'translate(-50%, -' + imgPercent + '%)'
+        });
+    }
+
+    if($(window).width() <= 1023) {
+        initMobileProductsSwiper();
+    }
+
+
+    function initMobileProductsSwiper() {
+        var mobileSwiperWrap = $('.forMobileSwiperWrap');
+        mobileSwiperWrap.addClass('swiper-container');
+        mobileSwiperWrap.children().addClass('swiper-wrapper');
+        mobileSwiperWrap.find('.card').addClass('swiper-slide');
+
+        var mobileProductsSwiper = new Swiper('.swiper-container.forMobileSwiperWrap', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                }
+            }
         });
     }
 

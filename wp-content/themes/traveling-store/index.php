@@ -75,15 +75,16 @@ wp_head(); ?>
                 <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
                 <a href="#" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
-            <div class="cardsRow">
-                <div class="card">
+            <div class="forMobileSwiperWrap">
+                <div class="cardsRow">
+                    <div class="card">
                     <span class="cardHead">
                         <span class="cardPic">
                             <img src="./images/uploads/toursPic/image%204.png">
                         </span>
                          <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
@@ -106,15 +107,15 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
+                    </div>
+                    <div class="card">
                         <span class="cardHead">
                             <span class="cardPic">
                                 <img src="./images/uploads/toursPic/image%205.png">
                             </span>
                             <span class="cardName h5">Храм Святого Николая</span>
                         </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
@@ -137,15 +138,15 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
+                    </div>
+                    <div class="card">
                     <span class="cardHead">
                         <span class="cardPic">
                             <img src="./images/uploads/toursPic/image%206.png">
                         </span>
                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
@@ -168,15 +169,15 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
+                    </div>
+                    <div class="card">
                     <span class="cardHead">
                         <span class="cardPic">
                             <img src="./images/uploads/toursPic/image%207.png">
                         </span>
                          <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
@@ -200,15 +201,15 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
+                    </div>
+                    <div class="card">
                        <span class="cardHead">
                             <span class="cardPic">
                                 <img src="./images/uploads/toursPic/image%208.png">
                             </span>
                            <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
                        </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
                             <span class="productInfoRow">
                                 <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
@@ -231,6 +232,7 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
+                    </div>
                 </div>
             </div>
         </div>

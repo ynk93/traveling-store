@@ -96,6 +96,49 @@
 
     section.popularProductsSection {
       margin: 64px 0;
+
+      .forMobileSwiperWrap {
+        width: 100%;
+        overflow: visible;
+      }
+
+      .cardsRow {
+        .card {
+          max-width: 100%;
+
+          .cardHead {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+
+            .cardPic, .cardName {
+              max-width: calc((100% - 20px) / 2);
+              width: 100%;
+              padding: 0;
+            }
+
+            .cardName {
+              margin-left: 20px;
+              line-height: 18px;
+            }
+          }
+
+          .cardInfo {
+            padding: 20px;
+            padding-top: 0;
+
+            .productInfoRows {
+              border-top: 1px solid $mainBorderColor;
+              padding-top: 20px;
+            }
+          }
+
+          & + .card {
+            margin: 0;
+          }
+        }
+      }
     }
 
     section.partnersSection {

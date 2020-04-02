@@ -1809,6 +1809,39 @@ button {
   .wrapper section.popularProductsSection {
     margin: 64px 0;
   }
+  .wrapper section.popularProductsSection .forMobileSwiperWrap {
+    width: 100%;
+    overflow: visible;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card {
+    max-width: 100%;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardPic, .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardName {
+    max-width: calc((100% - 20px) / 2);
+    width: 100%;
+    padding: 0;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardName {
+    margin-left: 20px;
+    line-height: 18px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardInfo {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardInfo .productInfoRows {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card + .card {
+    margin: 0;
+  }
   .wrapper section.partnersSection {
     margin-bottom: 64px;
   }
