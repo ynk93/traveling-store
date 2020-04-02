@@ -397,6 +397,31 @@ button {
   justify-content: space-between;
   padding: 26px 0 14px;
 }
+.wrapper header.header .headerInnerWrap .hamburgerWrap {
+  display: none;
+  width: 24px;
+  height: 19px;
+  position: relative;
+  margin-right: 60px;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line {
+  position: absolute;
+  height: 3px;
+  display: block;
+  width: 100%;
+  background: #333333;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:first-child {
+  top: 0;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:last-child {
+  bottom: 0;
+}
 .wrapper header.header .headerInnerWrap:before {
   content: '';
   position: absolute;
@@ -1794,6 +1819,58 @@ button {
   .wrapper.whiteHeader header.header {
     top: 0;
   }
+  .wrapper header.header .headerInnerWrap:before {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .wrapper header.header .headerInnerWrap:before {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .wrapper header.header .headerInnerWrap .headerBottomLine {
+    background: rgba(51, 51, 51, 0.12);
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .logoBlock, .wrapper header.header .headerInnerWrap .rightSide .logoBlock {
+    color: #333333;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel {
+    color: rgba(51, 51, 51, 0.5);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber {
+    color: #333333;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide > ul li a {
+    color: rgba(51, 51, 51, 0.5);
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select {
+    border-color: #E7E7E7;
+    color: #333333;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
+    background-image: url("./images/icons/arrow_down-black.svg");
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper {
+    background-image: url("./images/icons/basket-black.svg");
+  }
+  .wrapper header.header .headerInnerWrap .hamburgerWrap {
+    display: block;
+  }
   .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock {
     display: none;
   }
@@ -1801,7 +1878,7 @@ button {
     display: none;
   }
   .wrapper section.mainSection {
-    height: 420px;
+    height: 520px;
   }
   .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
     margin-bottom: 8px;

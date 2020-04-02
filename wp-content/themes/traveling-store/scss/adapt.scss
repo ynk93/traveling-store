@@ -64,6 +64,69 @@
 
     header.header {
       .headerInnerWrap {
+        &:before {
+          @include transform(none);
+        }
+
+        &:before {
+          @include transform(none);
+        }
+
+        .headerBottomLine {
+          background: rgba(51, 51, 51, 0.12);
+        }
+
+        .leftSide, .rightSide {
+          .logoBlock {
+            color: $mainBlackColor;
+            @include transition(all ease-in-out .5s);
+          }
+
+          .cellPhoneBlock {
+            .cellPhoneInfo {
+              .cellPhoneLabel {
+                color: $mainGreyColor;
+                @include transition(all ease-in-out .5s);
+
+              }
+
+              .cellPhoneNumber {
+                color: $mainBlackColor;
+                @include transition(all ease-in-out .5s);
+              }
+            }
+          }
+        }
+
+        .rightSide {
+          > ul {
+            li {
+              a {
+                color: $mainGreyColor;
+              }
+            }
+          }
+
+          .selectWrapper {
+            .nice-select {
+              border-color: $mainBorderColor;
+              color: $mainBlackColor;
+
+              &:after {
+                background-image: url('./images/icons/arrow_down-black.svg');
+              }
+            }
+          }
+
+          .basketIconWrapper {
+            background-image: url('./images/icons/basket-black.svg');
+          }
+        }
+
+        .hamburgerWrap {
+          display: block;
+        }
+
         .leftSide {
           .cellPhoneBlock {
             display: none;
@@ -79,7 +142,7 @@
     }
 
     section.mainSection {
-      height: 420px;
+      height: 520px;
 
       .swiper-container {
         .swiper-wrapper {

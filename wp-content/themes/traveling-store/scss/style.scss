@@ -221,6 +221,36 @@ $mainBorderColor: #E7E7E7;
       justify-content: space-between;
       padding: 26px 0 14px;
 
+      .hamburgerWrap {
+        display: none;
+        width: 24px;
+        height: 19px;
+        position: relative;
+        margin-right: 60px;
+
+        .line {
+          position: absolute;
+          height: 3px;
+          display: block;
+          width: 100%;
+          background: $mainBlackColor;
+
+          &:first-child {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+
+          &:last-child {
+            bottom: 0;
+          }
+        }
+      }
+
       &:before {
         content: '';
         position: absolute;

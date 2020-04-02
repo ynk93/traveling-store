@@ -1,6 +1,11 @@
 <header class="header">
     <div class="content">
         <div class="headerInnerWrap">
+            <a href="#" class="hamburgerWrap">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
             <div class="leftSide">
                 <a href="index.php" class="logoBlock">Traveling store</a>
                 <a href="tel: " class="cellPhoneBlock">
