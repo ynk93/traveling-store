@@ -1001,14 +1001,13 @@ $mainBorderColor: #E7E7E7;
               flex-direction: row;
               align-items: center;
               padding: 24px;
-              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
               .h5 {
                 line-height: 12px;
               }
             }
 
             .sideBarBody {
+              border-top: 1px solid rgba(0, 0, 0, 0.1);
               padding: 24px;
             }
           }
@@ -1536,7 +1535,7 @@ $mainBorderColor: #E7E7E7;
 
         &.insta {
           background-image: url('./images/icons/social/instagram.svg');
-          background-size: 18px;
+          background-size: 20px;
         }
 
         &.whatsup {
@@ -1546,7 +1545,7 @@ $mainBorderColor: #E7E7E7;
 
         &.telegram {
           background-image: url('./images/icons/social/telegram.svg');
-          background-size: 18px;
+          background-size: 21px;
         }
 
         &.viber {

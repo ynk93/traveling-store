@@ -113,4 +113,13 @@ $(document).ready(function () {
         });
     }
 
+    $(document).on("click", '.sideBarBlock .sideBarHead', function (e) {
+        e.preventDefault();
+
+        $(this).parents('.sideBarBlock').toggleClass('opened');
+
+        $(this).siblings('.sideBarBody').slideToggle();
+
+        return false;
+    });
 });

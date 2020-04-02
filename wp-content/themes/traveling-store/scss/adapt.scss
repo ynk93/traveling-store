@@ -46,11 +46,47 @@
   }
 }
 
+@media all and(max-width: 1180px) {
+  .wrapper {
+    section.catalogSection {
+      .content {
+        .catalogSectionRow {
+          .catalogSideBarWrap {
+            min-width: 212px;
+          }
+
+          .cardsRow {
+            max-width: none;
+
+            .card {
+              max-width: calc((100% - 40px) / 3);
+
+              &:nth-child(4n + 1) {
+                margin-left: 20px;
+              }
+
+              &:nth-child(3n + 1) {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media all and(max-width: 1023px) {
   .h1 {
     font-size: 24px;
     line-height: 29px;
   }
+
+  .h2 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
   .h3 {
     font-size: 20px;
     line-height: 24px;
@@ -181,6 +217,10 @@
               padding: 0;
             }
 
+            .cardPic {
+              height: 96px;
+            }
+
             .cardName {
               margin-left: 20px;
               line-height: 18px;
@@ -199,6 +239,64 @@
 
           & + .card {
             margin: 0;
+          }
+        }
+      }
+    }
+
+    section.catalogSection {
+      .content {
+        .catalogSectionRow {
+          .catalogSideBarWrap {
+            min-width: 212px;
+          }
+
+          .cardsRow {
+            max-width: none;
+
+            .card {
+              max-width: calc((100% - 20px) / 2);
+
+              &:nth-child(3n + 1) {
+                margin-left: 20px;
+              }
+
+              &:nth-child(2n + 1) {
+                margin-left: 0;
+              }
+
+              .cardHead {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 20px;
+
+                .cardPic, .cardName {
+                  max-width: calc((100% - 20px) / 2);
+                  width: 100%;
+                  padding: 0;
+                }
+
+                .cardPic {
+                  height: 96px;
+                }
+
+                .cardName {
+                  margin-left: 20px;
+                  line-height: 18px;
+                }
+              }
+
+              .cardInfo {
+                padding: 20px;
+                padding-top: 0;
+
+                .productInfoRows {
+                  border-top: 1px solid $mainBorderColor;
+                  padding-top: 20px;
+                }
+              }
+            }
           }
         }
       }
@@ -236,6 +334,156 @@
 
             &:first-child {
               display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width: 767px) {
+  .wrapper {
+    .titleWrap.innerPageTitleWrap {
+      margin: 40px 0 32px;
+    }
+
+    section.catalogSection {
+      padding-bottom: 40px;
+
+      .content {
+        .catalogSectionRow {
+          flex-direction: column;
+
+          .catalogSideBarWrap {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 32px;
+
+            .sideBarBlock {
+              & + .sideBarBlock {
+                margin-top: 16px;
+              }
+
+              &.opened {
+                .sideBarHead {
+                  &:after {
+                    @include transform(scaleY(-1));
+                  }
+                }
+              }
+
+              .sideBarHead {
+                position: relative;
+                cursor: pointer;
+
+                &:after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  right: 24px;
+                  top: 0;
+                  bottom: 0;
+                  margin: auto 0;
+                  width: 9px;
+                  height: 6px;
+                  background: url('./images/icons/arrow_down-black.svg') no-repeat center/contain;
+                }
+              }
+
+              .sideBarBody {
+                display: none;
+              }
+            }
+          }
+
+          .cardsRow {
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+
+            .card {
+              max-width: 100%;
+              width: 100%;
+              margin: 0 0 20px 0 !important;
+            }
+          }
+        }
+      }
+    }
+
+    footer.footer {
+      .footerInnerRow {
+        flex-direction: column;
+
+        & + .footerInnerRow {
+          flex-direction: column-reverse;
+        }
+
+        .copyRight {
+          padding-top: 32px;
+        }
+
+        .socialLinksWrap {
+          padding: 32px 0;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          border-bottom: 1px solid $mainBorderColor;
+
+          a {
+            margin: 0 16px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        ul {
+          flex-wrap: wrap;
+          justify-content: center;
+          padding-bottom: 8px;
+
+          li {
+            margin: 0;
+            margin-bottom: 24px;
+
+            &:first-child {
+              display: none;
+            }
+
+            display: block;
+          }
+        }
+
+        .contactLinks {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          border-top: 1px solid $mainBorderColor;
+          border-bottom: 1px solid $mainBorderColor;
+          padding: 32px 0;
+
+          a {
+            width: 100%;
+            max-width: 50%;
+            text-align: center;
+
+
+            &.mailLink, &.phoneLink {
+              &:before {
+                width: 32px;
+                height: 32px;
+                margin: 0 auto 16px;
+                display: block;
+              }
+            }
+
+            & + a {
+              border-left: 1px solid $mainBorderColor;
             }
           }
         }
