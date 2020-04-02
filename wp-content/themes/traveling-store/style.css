@@ -378,6 +378,7 @@ button {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .wrapper header.header {
   z-index: 3;
@@ -1735,4 +1736,13 @@ button {
   height: 10px;
   background: url("./images/icons/check_icon.svg") no-repeat center;
   background-size: contain;
+}
+
+@media all and (max-width: 1279px) {
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock {
+    margin-left: 20px;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide > ul li + li a {
+    margin-left: 12px;
+  }
 }

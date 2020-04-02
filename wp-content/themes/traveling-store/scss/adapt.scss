@@ -1,0 +1,23 @@
+@media all and(max-width: 1279px) {
+  .wrapper {
+    header.header {
+      .headerInnerWrap {
+        .leftSide {
+          .cellPhoneBlock {
+            margin-left: 20px;
+          }
+        }
+
+        .rightSide {
+          > ul {
+            li + li {
+              a {
+                margin-left: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

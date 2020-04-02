@@ -124,22 +124,24 @@ wp_head(); ?>
                 </div>
                 <div class="cardsRow">
                     <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%204.png">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%204.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
                         <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -153,22 +155,24 @@ wp_head(); ?>
                     </span>
                     </div>
                     <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%205.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
+                        <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%205.png">
+                            </span>
                             <span class="cardName h5">Храм Святого Николая</span>
+                        </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -182,22 +186,24 @@ wp_head(); ?>
                     </span>
                     </div>
                     <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%206.png">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%206.png">
+                        </span>
+                        <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
                         <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -211,168 +217,24 @@ wp_head(); ?>
                     </span>
                     </div>
                     <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%207.png">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%207.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
                         <span class="cardInfo">
                         <span class="productInfoRows">
-                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">14:00-18:00</span>
-                            </span>
-                        </span>
-
-                        <span class="priceRow">
-                            <span class="priceBlock">
-                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-                                <span class="priceValue">$100</span>
-                            </span>
-                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%208.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Кеков</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">14:00-18:00</span>
-                            </span>
-                        </span>
-                        <span class="priceRow">
-                            <span class="priceBlock">
-                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-                                <span class="priceValue">$100</span>
-                            </span>
-                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%204.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Кеков</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">14:00-18:00</span>
-                            </span>
-                        </span>
-                        <span class="priceRow">
-                            <span class="priceBlock">
-                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-                                <span class="priceValue">$100</span>
-                            </span>
-                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%205.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Кеков</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">14:00-18:00</span>
-                            </span>
-                        </span>
-                        <span class="priceRow">
-                            <span class="priceBlock">
-                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-                                <span class="priceValue">$100</span>
-                            </span>
-                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%206.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Кеков</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">14:00-18:00</span>
-                            </span>
-                        </span>
-                        <span class="priceRow">
-                            <span class="priceBlock">
-                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-                                <span class="priceValue">$100</span>
-                            </span>
-                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
-                        </span>
-                    </span>
-                    </div>
-                    <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%207.png">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="productInfoRows">
-                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Кеков</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
-                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                            </span>
-                            <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -387,22 +249,336 @@ wp_head(); ?>
                     </span>
                     </div>
                     <div class="card">
-                    <span class="cardPic">
-                        <img src="images/uploads/toursPic/image%208.png">
-                    </span>
+                       <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%208.png">
+                            </span>
+                           <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
+                       </span>
                         <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%204.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                        <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%205.png">
+                            </span>
+                            <span class="cardName h5">Храм Святого Николая</span>
+                        </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%206.png">
+                        </span>
+                        <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%207.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                       <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%208.png">
+                            </span>
+                           <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
+                       </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%204.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                        <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%205.png">
+                            </span>
+                            <span class="cardName h5">Храм Святого Николая</span>
+                        </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%206.png">
+                        </span>
+                        <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%207.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
+                    </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">14:00-18:00</span>
+                            </span>
+                        </span>
+
+                        <span class="priceRow">
+                            <span class="priceBlock">
+                                <span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
+                                <span class="priceValue">$100</span>
+                            </span>
+                            <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
+                        </span>
+                    </span>
+                    </div>
+                    <div class="card">
+                       <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%208.png">
+                            </span>
+                           <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
+                       </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Кеков</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                            </span>
+                            <span class="productInfoRow">
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>

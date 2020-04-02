@@ -201,6 +201,7 @@ $mainBorderColor: #E7E7E7;
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   header.header {
@@ -1752,3 +1753,5 @@ $mainBorderColor: #E7E7E7;
     }
   }
 }
+
+@import "adapt";
