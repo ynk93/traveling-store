@@ -688,12 +688,15 @@ $mainBorderColor: #E7E7E7;
         .cardInfo {
           padding: 0;
           text-align: center;
+          align-items: center;
+          justify-content: center;
+          height: 45px;
 
           .cardName {
             font-family: $sfBold;
             text-align: center;
             font-size: 11px;
-            line-height: 45px;
+            line-height: 18px;
             letter-spacing: 0.02em;
             text-transform: uppercase;
           }
@@ -1595,10 +1598,22 @@ $mainBorderColor: #E7E7E7;
   }
 
   .card {
+    display: flex;
+    height: auto;
+    flex-direction: column;
     max-width: calc((100% - 80px) / 5);
     width: 100%;
     background: #FFFFFF;
     @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+
+    .cardHead {
+      display: block;
+
+      .cardName {
+        display: block;
+        padding: 16px 16px 0;
+      }
+    }
 
     .cardPic {
       position: relative;
