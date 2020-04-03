@@ -1147,6 +1147,7 @@ button {
   object-fit: cover;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1154,6 +1155,18 @@ button {
   height: 68px;
   line-height: 68px;
   border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead .bottomLine {
+  height: 1px;
+  width: 64px;
+  position: absolute;
+  bottom: 0;
+  background: #F87F27;
+  left: 32px;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a {
   display: block;
@@ -1163,14 +1176,72 @@ button {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a.active {
   color: #333333;
+  font-family: "San Francisco Pro Display Medium";
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks {
   padding: 28px 32px 24px;
 }
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock.active {
+  display: flex;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p.semibold {
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+  opacity: 1;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p + .p {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide {
+  flex-shrink: 0;
+  max-width: 240px;
+  width: 100%;
+  background: rgba(46, 132, 234, 0.05);
+  margin-right: 32px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow + .productInfoRow {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow .productInfoRowLabel {
+  opacity: 0.5;
+  max-width: 50%;
+  width: 100%;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow .productInfoRowValue {
+  text-align: right;
+  font-family: "San Francisco Pro Display Medium";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .rightSide {
+  width: 100%;
+}
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
   max-width: 340px;
 }
-.wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead {
+.wrapper .sideBarHead {
   display: flex;
   flex-direction: row;
   align-items: center;

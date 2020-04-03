@@ -122,4 +122,30 @@ $(document).ready(function () {
 
         return false;
     });
+
+    $(document).on('click', '.productCardInfoHead a', function (e) {
+        e.preventDefault();
+
+        var self = $(this);
+
+        self.siblings('a').removeClass('active');
+
+        self.addClass('active');
+
+        $(this).parents('.productCardInfoArea').find('.infoBlock').removeClass('active');
+        $(this).parents('.productCardInfoArea').find('.infoBlock').eq(self.index()).addClass('active');
+
+        calculateBottomLinePosition(self);
+
+        return false;
+    });
+
+    function calculateBottomLinePosition(object) {
+        var bottomLineMargin = object.offset().left - object.parents('.productCardRow').offset().left;
+
+        object.siblings('.bottomLine').css({
+            width: object.width(),
+            left: bottomLineMargin
+        });
+    }
 });
