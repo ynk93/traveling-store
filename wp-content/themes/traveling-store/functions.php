@@ -83,7 +83,7 @@
 		function traveling_store_scripts_setup() {
 			$release_version = '1.001';
 
-			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/js/libs/css3-animate-it.min.js' ), array( 'jquery' ), '1.0', true );
+			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/js/libs/css3-animate-it.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-swiper', get_theme_file_uri( '/js/libs/swiper.min.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-magnific-popup', get_theme_file_uri( '/js/libs/mfp.min.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/js/libs/jquery.nice-select.min.js' ), array( 'jquery' ), '1.0', true );

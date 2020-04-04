@@ -159,7 +159,13 @@ wp_head(); ?>
                     </div>
                     <div class="productCardSideBarTourParams">
                         <div class="productCardParamWrap">
-                            <div id="datepicker" class="calendar"></div>
+                            <div class="date-picker">
+                                <div class="input">
+                                    <div class="result"><?php _e('Выберите дату', 'traveling-store') ?><span></span></div>
+                                    <button class="calendarIcon"></button>
+                                </div>
+                                <div class="calendar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

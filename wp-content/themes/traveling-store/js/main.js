@@ -33,6 +33,60 @@ $(document).ready(function () {
         }
     });
 
+    var tourDayIndexesEnabled = [0, 0, 1, 1, 0, 1, 0];
+
+    $(".calendar").datepicker({
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        autoHide: true,
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        beforeShowDay: function (date) {
+            var day = date.getDay();
+
+            if (day == 0 && tourDayIndexesEnabled[0] == 1) {
+                return [true];
+            }
+            if (day == 1 && tourDayIndexesEnabled[1] == 1) {
+                return [true];
+            }
+            if (day == 2 && tourDayIndexesEnabled[2] == 1) {
+                return [true];
+            }
+            if (day == 3 && tourDayIndexesEnabled[3] == 1) {
+                return [true];
+            }
+            if (day == 4 && tourDayIndexesEnabled[4] == 1) {
+                return [true];
+            }
+            if (day == 5 && tourDayIndexesEnabled[5] == 1) {
+                return [true];
+            }
+            if (day == 6 && tourDayIndexesEnabled[6] == 1) {
+                return [true];
+            }
+            return [false];
+        }
+    });
+
+
+    $(document).on('click', '.date-picker .input', function (e) {
+        var $me = $(this),
+            $parent = $me.parents('.date-picker');
+        $parent.toggleClass('open');
+    });
+
+
+    $(".calendar").on("change", function () {
+        var $me = $(this),
+            $selected = $me.val(),
+            $parent = $me.parents('.date-picker');
+
+        $parent.addClass('datePicked');
+        $parent.toggleClass('open');
+        $parent.find('.result').children('span').html($selected);
+    });
+
     $(window).scroll(function () {
         var scrollTreshold;
         if ($(window).width() >= 1024) {

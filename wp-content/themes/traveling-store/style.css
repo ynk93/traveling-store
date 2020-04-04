@@ -271,6 +271,187 @@ button {
   display: block;
 }
 
+.date-picker {
+  margin: 200px auto;
+}
+
+.date-picker {
+  height: 100%;
+  background: white;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s 0s ease-in-out;
+}
+
+.date-picker .input {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.date-picker .input .result, .date-picker .input button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.date-picker .input .result {
+  width: calc(100% - 40px);
+  height: 100%;
+  line-height: 38px;
+  font-size: 14px;
+  padding: 0 16px;
+  color: rgba(51, 51, 51, 0.5);
+  box-sizing: border-box;
+}
+.date-picker .input .result span {
+  font-size: 14px;
+  color: #333333;
+}
+
+.date-picker .input button {
+  cursor: pointer;
+  width: 40px;
+  height: 100%;
+  background: #F87F27 url("./images/icons/calendar_icon.svg") no-repeat center;
+  color: white;
+  line-height: 40px;
+  border: 0;
+  padding: 0;
+}
+
+.date-picker .input button:focus {
+  outline: 0;
+}
+
+.date-picker .calendar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.date-picker .ui-datepicker-inline {
+  position: relative;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.date-picker .ui-datepicker-header {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #E7E7E7;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  position: relative;
+}
+
+.date-picker .ui-datepicker-prev, .date-picker .ui-datepicker-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  width: 8px;
+  height: 10px;
+  background: url("./images/icons/arrow_down-right.svg") no-repeat center/contain;
+}
+.date-picker .ui-datepicker-prev.ui-datepicker-prev-hover, .date-picker .ui-datepicker-prev.ui-datepicker-next-hover, .date-picker .ui-datepicker-next.ui-datepicker-prev-hover, .date-picker .ui-datepicker-next.ui-datepicker-next-hover {
+  border: 0;
+}
+
+.ui-datepicker td, .ui-datepicker th {
+  line-height: 28px;
+  padding: 0;
+  width: 28px;
+  margin: 0;
+}
+.ui-datepicker td:first-child, .ui-datepicker th:first-child {
+  padding-left: 18px;
+}
+.ui-datepicker td:last-child, .ui-datepicker th:last-child {
+  padding-right: 18px;
+}
+
+.date-picker .ui-datepicker-prev {
+  left: 16px;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.date-picker .ui-datepicker-next {
+  right: 16px;
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.date-picker .ui-datepicker-title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+}
+
+.date-picker .ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+  margin: 11px 0;
+}
+
+.date-picker .ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.date-picker .ui-state-default {
+  display: block;
+  text-decoration: none;
+  line-height: 28px;
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.date-picker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+.date-picker .ui-state-default:hover.ui-state-active {
+  background: #F87F27;
+}
+
+.date-picker .ui-state-highlight {
+  color: #2E84EA;
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.date-picker .ui-state-active {
+  font-family: "San Francisco Pro Display Medium";
+  font-weight: normal;
+  background: #F87F27;
+  color: #fff;
+}
+
+.date-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 2px solid transparent;
+}
+
 .h1 {
   font-size: 36px;
   line-height: 43px;
@@ -1240,6 +1421,40 @@ button {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
   max-width: 340px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams {
+  padding: 24px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap {
+  height: 40px;
+  position: relative;
+  border: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .date-picker {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+  line-height: 40px;
+  overflow: visible;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .date-picker .calendar {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 44px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .date-picker .calendar .ui-datepicker-calendar {
+  font-family: "San Francisco Pro Display Medium";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .date-picker.datePicked .input .result {
+  font-size: 0;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .date-picker.open .calendar {
+  opacity: 1;
+  visibility: visible;
 }
 .wrapper .sideBarHead {
   display: flex;

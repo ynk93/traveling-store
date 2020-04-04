@@ -17,6 +17,8 @@ Text Domain: traveling-store
 
 @import "nice-select";
 
+@import "date-picker-styles";
+
 $sfLight: 'San Francisco Pro Display Light';
 $sfRegular: 'San Francisco Pro Display Regular';
 $sfMedium: 'San Francisco Pro Display Medium';
@@ -1182,6 +1184,53 @@ $mainBorderColor: #E7E7E7;
 
         .productCardRightSide {
           max-width: 340px;
+
+          .productCardSideBarTourParams {
+            padding: 24px;
+            border-bottom: 1px solid $mainBorderColor;
+
+            .productCardParamWrap {
+              height: 40px;
+              position: relative;
+              border: 1px solid $mainBorderColor;
+
+              .date-picker {
+                width: 100%;
+                height: 100%;
+                border: 0;
+                margin: 0;
+                box-shadow: none;
+                line-height: 40px;
+                overflow: visible;
+
+                .calendar {
+                  position: absolute;
+                  opacity: 0;
+                  visibility: hidden;
+                  top: 44px;
+
+                  .ui-datepicker-calendar {
+                    font-family: $sfMedium;
+                  }
+                }
+
+                &.datePicked {
+                  .input {
+                    .result {
+                      font-size: 0;
+                    }
+                  }
+                }
+
+                &.open {
+                  .calendar {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
