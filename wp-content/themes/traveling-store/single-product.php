@@ -157,6 +157,11 @@ wp_head(); ?>
                     <div class="sideBarHead">
                         <div class="h5"><?php _e('Расчет стоимости', 'traveling-store'); ?></div>
                     </div>
+                    <div class="productCardSideBarTourParams">
+                        <div class="productCardParamWrap">
+                            <div id="datepicker" class="calendar"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

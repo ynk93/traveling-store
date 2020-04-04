@@ -69,8 +69,9 @@
 			wp_enqueue_style( 'traveling-store-animations', get_theme_file_uri( '/css/libs/animations.css' ) );
 			wp_enqueue_style( 'traveling-store-mfp-popup', get_theme_file_uri( '/css/libs/mfp-popup.css' ) );
 			wp_enqueue_style( 'traveling-store-swiper', get_theme_file_uri( '/css/libs/swiper.min.css' ) );
+            wp_enqueue_style( 'traveling-store-jquery-ui', get_theme_file_uri( '/css/libs/jquery-ui.min.css' ) );
 
-			wp_enqueue_style( 'traveling-store-style', get_theme_file_uri( '/style.css' ), array(), $release_version );
+            wp_enqueue_style( 'traveling-store-style', get_theme_file_uri( '/style.css' ), array(), $release_version );
 		}
 
 	endif;
@@ -86,8 +87,9 @@
 			wp_enqueue_script( 'traveling-store-swiper', get_theme_file_uri( '/js/libs/swiper.min.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-magnific-popup', get_theme_file_uri( '/js/libs/mfp.min.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/js/libs/jquery.nice-select.min.js' ), array( 'jquery' ), '1.0', true );
+            wp_enqueue_script( 'traveling-store-jquery-ui', get_theme_file_uri( '/js/libs/jquery-ui.min.js' ), array( 'jquery' ), '1.0', true );
 
-			wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.js' ), array( 'jquery' ), $release_version, true );
+            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.js' ), array( 'jquery' ), $release_version, true );
 		}
 
 	endif;
