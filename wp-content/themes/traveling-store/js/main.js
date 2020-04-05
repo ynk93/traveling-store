@@ -69,18 +69,26 @@ $(document).ready(function () {
         }
     });
 
+    $('select[name=adultPersonsNumPicker]').siblings('.nice-select').find('.current').append('<span class="resultLabel">(взрослый)</span>')
 
-    $(document).on('click', '.date-picker .input', function (e) {
+    $(document).on('click', '.card-param-picker .input', function (e) {
         var $me = $(this),
-            $parent = $me.parents('.date-picker');
+            $parent = $me.parents('.card-param-picker');
         $parent.toggleClass('open');
     });
 
+    $(document).on('change', 'select[name=adultPersonsNumPicker]', function () {
+        if (this.value > 1) {
+            $(this).siblings('.nice-select').find('.current').append('<span class="resultLabel">(взрослых)</span>');
+        } else {
+            $(this).siblings('.nice-select').find('.current').append('<span class="resultLabel">(взрослый)</span>');
+        }
+    });
 
     $(".calendar").on("change", function () {
         var $me = $(this),
             $selected = $me.val(),
-            $parent = $me.parents('.date-picker');
+            $parent = $me.parents('.card-param-picker');
 
         $parent.addClass('datePicked');
         $parent.toggleClass('open');
@@ -166,6 +174,54 @@ $(document).ready(function () {
             }
         });
     }
+
+    $(document).on('click', '.counterInputButton', function (e) {
+        e.preventDefault();
+
+        var weightInput = $(this).siblings('input'),
+            currValue = weightInput.val(),
+            step = 1,
+            newValue;
+
+        if ($(this).hasClass('counterInputDecreaseButton')) {
+            newValue = parseFloat(currValue) - parseFloat(step);
+        } else {
+            newValue = parseFloat(currValue) + parseFloat(step);
+        }
+
+        if (newValue < 0) {
+            newValue = 0;
+        }
+
+        newValue = parseInt(newValue);
+
+        weightInput.val(newValue);
+        weightInput.trigger("change");
+
+    });
+
+    function updateChbResult() {
+        var childUnder3 = 0,
+            childBtwn4and6 = 0,
+            childBtwn7and12 = 0,
+            parent = $('.childrensData .counterInputElement');
+
+        childUnder3 = parent.find('input[name=childUntil3]').val();
+
+        childBtwn4and6 = parent.find('input[name=childBtwn4and6]').val();
+
+        childBtwn7and12 = parent.find('input[name=childBtwn7and12]').val();
+
+        var childNumPickerRow = '<span class="innerResult">' + childUnder3 + '<span class="resultLabel">(до 3 лет)</span>, ' +
+            childBtwn4and6 + '<span class="resultLabel">(4-6 лет)</span>, ' + childBtwn7and12 +
+            '<span class="resultLabel">(7-12 лет)</span></span>';
+
+        $('.child-num-picker').find('.result').html(childNumPickerRow);
+    }
+
+    $(document).on('change', '.childrensData .counterInputElement input', function () {
+        updateChbResult();
+    });
 
     $(document).on("click", '.sideBarBlock .sideBarHead', function (e) {
         e.preventDefault();

@@ -11,11 +11,11 @@ $sfSemiBold: 'San Francisco Pro Display Medium';
 $sfBold: 'San Francisco Pro Display Bold';
 $sfBlack: 'San Francisco Pro Display Black';
 
-.date-picker {
+.card-param-picker {
   margin: 200px auto;
 }
 
-.date-picker {
+.card-param-picker {
   height: 100%;
   background: white;
   position: relative;
@@ -23,19 +23,20 @@ $sfBlack: 'San Francisco Pro Display Black';
   transition: all 0.3s 0s ease-in-out;
 }
 
-.date-picker .input {
+.card-param-picker .input {
   width: 100%;
   height: 100%;
   font-size: 0;
   cursor: pointer;
 }
 
-.date-picker .input .result, .date-picker .input button {
+.card-param-picker .input .result, .card-param-picker .input button {
   display: inline-block;
   vertical-align: top;
 }
 
-.date-picker .input .result {
+.card-param-picker .input .result {
+  position: relative;
   width: calc(100% - 40px);
   height: 100%;
   line-height: 38px;
@@ -50,22 +51,30 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.date-picker .input button {
+.card-param-picker .input button {
   cursor: pointer;
   width: 40px;
   height: 100%;
-  background: $mainColor url('./images/icons/calendar_icon.svg') no-repeat center;
   color: white;
   line-height: 40px;
   border: 0;
   padding: 0;
+
+  &.calendarIcon {
+    background: $mainColor url('./images/icons/calendar_icon.svg') no-repeat center;
+  }
+
+  &.arrowIcon {
+    background: url('./images/icons/arrow_down-black.svg') no-repeat center/7px;
+    border-left: 1px solid $mainBorderColor;
+  }
 }
 
-.date-picker .input button:focus {
+.card-param-picker .input button:focus {
   outline: 0;
 }
 
-.date-picker .calendar {
+.card-param-picker .calendar {
   position: relative;
   width: 100%;
   background: #fff;
@@ -73,14 +82,14 @@ $sfBlack: 'San Francisco Pro Display Black';
   overflow: hidden;
 }
 
-.date-picker .ui-datepicker-inline {
+.card-param-picker .ui-datepicker-inline {
   position: relative;
   width: 100%;
   border: 1px solid $mainBorderColor;
   @include border-radius(0);
 }
 
-.date-picker .ui-datepicker-header {
+.card-param-picker .ui-datepicker-header {
   height: 50px;
   line-height: 50px;
   background: #fff;
@@ -91,7 +100,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   position: relative;
 }
 
-.date-picker .ui-datepicker-prev, .date-picker .ui-datepicker-next {
+.card-param-picker .ui-datepicker-prev, .card-param-picker .ui-datepicker-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -123,17 +132,17 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.date-picker .ui-datepicker-prev {
+.card-param-picker .ui-datepicker-prev {
   left: 16px;
   @include transform(rotate(90deg));
 }
 
-.date-picker .ui-datepicker-next {
+.card-param-picker .ui-datepicker-next {
   right: 16px;
   @include transform(rotate(-90deg));
 }
 
-.date-picker .ui-datepicker-title {
+.card-param-picker .ui-datepicker-title {
   text-align: center;
   font-size: 14px;
   line-height: 50px;
@@ -141,20 +150,20 @@ $sfBlack: 'San Francisco Pro Display Black';
   color: $mainBlackColor;
 }
 
-.date-picker .ui-datepicker-calendar {
+.card-param-picker .ui-datepicker-calendar {
   width: 100%;
   text-align: center;
   margin: 11px 0;
 }
 
-.date-picker .ui-datepicker-calendar thead tr th span {
+.card-param-picker .ui-datepicker-calendar thead tr th span {
   display: block;
   width: 100%;
   margin-bottom: 5px;
   font-size: 13px;
 }
 
-.date-picker .ui-state-default {
+.card-param-picker .ui-state-default {
   display: block;
   text-decoration: none;
   line-height: 28px;
@@ -165,7 +174,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   padding: 0;
 }
 
-.date-picker .ui-state-default:hover {
+.card-param-picker .ui-state-default:hover {
   background: rgba(0, 0, 0, 0.02);
 
   &.ui-state-active {
@@ -173,12 +182,19 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.date-picker .ui-state-highlight {
-  color: #2E84EA;
-  font-family: $sfBold;
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 0;
 }
 
-.date-picker {
+.card-param-picker .ui-datepicker-today {
+  opacity: 1;
+  .ui-state-default {
+    color: #2E84EA;
+    font-family: $sfBold;
+  }
+}
+
+.card-param-picker {
   .ui-state-active {
     font-family: $sfMedium;
     font-weight: normal;
@@ -187,6 +203,6 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.date-picker .ui-datepicker-unselectable .ui-state-default {
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
   border: 2px solid transparent;
 }

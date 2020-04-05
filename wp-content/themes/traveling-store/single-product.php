@@ -159,12 +159,100 @@ wp_head(); ?>
                     </div>
                     <div class="productCardSideBarTourParams">
                         <div class="productCardParamWrap">
-                            <div class="date-picker">
+                            <div class="card-param-picker date-picker">
                                 <div class="input">
-                                    <div class="result"><?php _e('Выберите дату', 'traveling-store') ?><span></span></div>
+                                    <div class="result"><?php _e('Выберите дату', 'traveling-store') ?><span></span>
+                                    </div>
                                     <button class="calendarIcon"></button>
                                 </div>
-                                <div class="calendar"></div>
+                                <div class="calendar card-picker-drop"></div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker time-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="timeSelector" id="">
+                                            <option value="9-12">09:00 - 12:00</option>
+                                            <option value="9-12">13:00 - 15:00</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker adults-num-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="adultPersonsNumPicker" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker child-num-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <?php _e('Укажите количество детей', 'traveling-store') ?>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                                <div class="childrensData card-picker-drop">
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            Дети (до 3х лет)
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childUntil3">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            Дети (4-6 лет)
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childBtwn4and6">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            Дети (7-12 лет)
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childBtwn7and12">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker lang-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="langPicker" id="">
+                                            <option value="rus">Русский</option>
+                                            <option value="eng">Английский</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
                             </div>
                         </div>
                     </div>

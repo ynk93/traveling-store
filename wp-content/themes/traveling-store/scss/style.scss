@@ -28,7 +28,6 @@ $sfBlack: 'San Francisco Pro Display Black';
 
 $barlowFont: 'Barlow Condensed', sans-serif;
 
-
 $mainColor: #F87F27;
 $mainBlackColor: #333333;
 $mainLightColor: rgba(255, 255, 255, 0.6);
@@ -99,6 +98,52 @@ $mainBorderColor: #E7E7E7;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+}
+.counterInputElement {
+  position: relative;
+  max-width: 92px;
+  height: 40px;
+  width: 100%;
+
+  input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid $mainBorderColor;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+    font-family: $sfSemiBold;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: $mainBlackColor;
+    padding: 0 28px;
+  }
+
+  .counterInputDecreaseButton, .counterInputIncreaseButton {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    width: 34px;
+    height: 100%;
+
+    background: no-repeat center/10px;
+  }
+
+  .counterInputDecreaseButton {
+    left: 0;
+    background-image: url('./images/icons/minus_icon.svg');
+  }
+
+  .counterInputIncreaseButton {
+    right: 0;
+    background-image: url('./images/icons/plus_icon.svg');
+  }
 }
 
 .wrapper {
@@ -1187,14 +1232,17 @@ $mainBorderColor: #E7E7E7;
 
           .productCardSideBarTourParams {
             padding: 24px;
-            border-bottom: 1px solid $mainBorderColor;
 
             .productCardParamWrap {
               height: 40px;
               position: relative;
               border: 1px solid $mainBorderColor;
 
-              .date-picker {
+              & + .productCardParamWrap {
+                margin-top: 12px;
+              }
+
+              .card-param-picker {
                 width: 100%;
                 height: 100%;
                 border: 0;
@@ -1203,7 +1251,24 @@ $mainBorderColor: #E7E7E7;
                 line-height: 40px;
                 overflow: visible;
 
-                .calendar {
+                &.child-num-picker {
+                  .result {
+                    .innerResult {
+                      color: $mainBlackColor;
+
+                      .resultLabel {
+                        color: $mainGreyColor;
+                        margin-left: 4px;
+                      }
+                    }
+                  }
+                }
+
+                &.date-picker {
+                  z-index: 4;
+                }
+
+                .card-picker-drop {
                   position: absolute;
                   opacity: 0;
                   visibility: hidden;
@@ -1223,9 +1288,82 @@ $mainBorderColor: #E7E7E7;
                 }
 
                 &.open {
-                  .calendar {
+                  .input button {
+                    &.arrowIcon {
+                      @include transform(scaleY(-1));
+                    }
+                  }
+
+                  .card-picker-drop {
                     opacity: 1;
                     visibility: visible;
+                  }
+                }
+
+                .resultLabel {
+                  margin-left: 6px;
+                  font-size: 13px;
+                  color: $mainGreyColor;
+                }
+
+                .nice-select {
+                  position: static;
+                  border: 0;
+                  height: 38px;
+                  padding: 0;
+                  width: 100%;
+
+                  .list {
+                    width: 100%;
+                    @include border-radius(0);
+
+                    li.option {
+                      color: $mainBlackColor;
+
+                      &.selected {
+                        color: #fff;
+                        background: $mainColor !important;
+                      }
+
+                      &:hover {
+                        color: $mainBlackColor;
+                        background: #f6f6f6;
+
+                        &.selected {
+                          color: #fff;
+                          background: $mainColor;
+                        }
+                      }
+                    }
+                  }
+
+                  &:after {
+                    display: none;
+                  }
+                }
+
+                .childrensData {
+                  padding: 16px;
+                  z-index: 3;
+                  width: 100%;
+                  background: #fff;
+                  border: 1px solid $mainBorderColor;
+
+                  .row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+
+                    & + .row {
+                      margin-top: 12px;
+                    }
+
+                    .chbRowLabel {
+                      font-size: 14px;
+                      line-height: 20px;
+                      color: $mainGreyColor;
+                    }
                   }
                 }
               }
