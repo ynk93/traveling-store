@@ -1489,6 +1489,7 @@ input[type=number] {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams {
   padding: 24px;
+  border-bottom: 1px solid #E7E7E7;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap {
   height: 40px;
@@ -1595,6 +1596,32 @@ input[type=number] {
   font-size: 14px;
   line-height: 20px;
   color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap {
+  padding: 24px 24px 32px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap .productPriceRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap .productPriceAddToBasket {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-top: 24px;
 }
 .wrapper .sideBarHead {
   display: flex;

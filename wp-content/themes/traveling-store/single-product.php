@@ -256,6 +256,16 @@ wp_head(); ?>
                             </div>
                         </div>
                     </div>
+
+                    <div class="productCardPriceWrap">
+                        <div class="productPriceRow">
+                            <div class="label">Общая стоимость</div>
+                            <div class="value">$120</div>
+                        </div>
+                        <a href="#" class="productPriceAddToBasket">
+                            <span>Добавить в корзину</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

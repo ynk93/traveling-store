@@ -99,6 +99,7 @@ $mainBorderColor: #E7E7E7;
   text-align: center;
   color: #fff;
 }
+
 .counterInputElement {
   position: relative;
   max-width: 92px;
@@ -1232,6 +1233,7 @@ $mainBorderColor: #E7E7E7;
 
           .productCardSideBarTourParams {
             padding: 24px;
+            border-bottom: 1px solid $mainBorderColor;
 
             .productCardParamWrap {
               height: 40px;
@@ -1367,6 +1369,27 @@ $mainBorderColor: #E7E7E7;
                   }
                 }
               }
+            }
+          }
+
+          .productCardPriceWrap {
+            padding: 24px 24px 32px;
+
+            .productPriceRow {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 16px;
+              line-height: 20px;
+              color: $mainBlackColor;
+              font-family: $sfBold;
+            }
+
+            .productPriceAddToBasket {
+              @include mainYellowButton(48px);
+              display: block;
+              margin-top: 24px;
             }
           }
         }
