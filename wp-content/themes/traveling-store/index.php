@@ -241,7 +241,7 @@ wp_head(); ?>
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
                 <div class="h3"><?php _e('Реклама от партнеров', 'traveling-store'); ?></div>
-                <a href="#" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
+                <a href="#" class="withTitleButton"><?php _e('Стать партнером', 'traveling-store'); ?></a>
             </div>
             <div class="cardsRow">
                 <a href="#" class="card">

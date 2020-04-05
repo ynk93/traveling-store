@@ -1213,7 +1213,9 @@ input[type=number] {
   left: 0;
   right: 0;
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   background: no-repeat center/contain;
 }
@@ -2603,6 +2605,43 @@ input[type=number] {
   .wrapper .titleWrap.innerPageTitleWrap {
     margin: 40px 0 32px;
   }
+  .wrapper section.mainSection {
+    height: auto;
+    padding-top: 112px;
+    padding-bottom: 0;
+  }
+  .wrapper section.mainSection .swiper-container {
+    height: 296px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent {
+    display: none;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
+    display: none;
+  }
+  .wrapper section.nthInRowSection .cardsRow {
+    flex-direction: column;
+  }
+  .wrapper section.nthInRowSection .cardsRow .card {
+    max-width: 100%;
+  }
+  .wrapper section.nthInRowSection .cardsRow .card + .card {
+    margin: 20px 0 0;
+  }
+  .wrapper section.reviewsSection .content {
+    flex-direction: column;
+  }
+  .wrapper section.reviewsSection .content .leftSide {
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+  .wrapper section.reviewsSection .content .rightSide {
+    flex-direction: column;
+  }
+  .wrapper section.reviewsSection .content .rightSide .reviewBlock {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
   .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoHead {
     overflow: auto;
     overflow-y: hidden;
@@ -2657,6 +2696,17 @@ input[type=number] {
   .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
     border-top: 1px solid #E7E7E7;
     display: none;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow .iconBlock {
+    max-width: 100%;
+    width: 100%;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow .iconBlock + .iconBlock {
+    margin-top: 20px;
   }
   .wrapper .titleWrap.withButtonTitleWrap .withTitleButton {
     font-family: "San Francisco Pro Display Regular";

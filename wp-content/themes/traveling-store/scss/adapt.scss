@@ -493,6 +493,60 @@
       margin: 40px 0 32px;
     }
 
+    section.mainSection {
+      height: auto;
+      padding-top: 112px;
+      padding-bottom: 0;
+
+      .swiper-container {
+        height: 296px;
+
+        .swiper-wrapper {
+          .swiper-slide {
+            .slideContent {
+              display: none;
+            }
+          }
+        }
+
+        .swiper-buttons-wrap {
+          display: none;
+        }
+      }
+    }
+
+    section.nthInRowSection .cardsRow {
+      flex-direction: column;
+
+      .card {
+        max-width: 100%;
+
+        & + .card {
+          margin: 20px 0 0;
+        }
+      }
+    }
+
+    section.reviewsSection {
+      .content {
+        flex-direction: column;
+
+        .leftSide {
+          padding-right: 0;
+          margin-bottom: 24px;
+        }
+
+        .rightSide {
+          flex-direction: column;
+
+          .reviewBlock {
+            max-width: 100%;
+            margin: 0 0 20px 0;
+          }
+        }
+      }
+    }
+
     section.productCardSection {
       .content {
         .productCardRow {
@@ -565,6 +619,22 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+
+    section.ourPreferencesSection {
+      .iconsRow {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .iconBlock {
+          max-width: 100%;
+          width: 100%;
+
+          & + .iconBlock {
+            margin-top: 20px;
           }
         }
       }

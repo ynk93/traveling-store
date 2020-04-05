@@ -906,7 +906,9 @@ $mainBorderColor: #E7E7E7;
           left: 0;
           right: 0;
           position: absolute;
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           margin: auto;
           background: no-repeat center/contain;
 
