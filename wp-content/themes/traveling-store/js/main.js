@@ -168,8 +168,7 @@ $(document).ready(function () {
             spaceBetween: 20,
             breakpoints: {
                 767: {
-                    slidesPerView: 1,
-                    spaceBetween: 0
+                    slidesPerView: 1
                 }
             }
         });
@@ -223,12 +222,33 @@ $(document).ready(function () {
         updateChbResult();
     });
 
+    $(document).on('click', '.infoBlock .sideBarHead', function (e) {
+        e.preventDefault();
+
+        $(this).siblings('.infoBlockRows').slideToggle();
+        $(this).parents('.leftSide').toggleClass('open');
+
+        return false;
+    });
+
+    $(document).on('click', '.productCardRightSide .sideBarHead', function () {
+        $(this).parents('.productCardSection').removeClass('openSettings');
+    });
+
     $(document).on("click", '.sideBarBlock .sideBarHead', function (e) {
         e.preventDefault();
 
         $(this).parents('.sideBarBlock').toggleClass('opened');
 
         $(this).siblings('.sideBarBody').slideToggle();
+
+        return false;
+    });
+
+    $(document).on('click', '.productCardSettingsTrigger', function (e) {
+        e.preventDefault();
+
+        $(this).parents('.productCardSection').addClass('openSettings');
 
         return false;
     });

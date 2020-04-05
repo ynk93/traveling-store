@@ -308,7 +308,7 @@ input[type=number] {
 
 .card-param-picker .input .result {
   position: relative;
-  width: calc(100% - 40px);
+  width: 100%;
   height: 100%;
   line-height: 38px;
   font-size: 14px;
@@ -322,6 +322,8 @@ input[type=number] {
 }
 
 .card-param-picker .input button {
+  position: absolute;
+  right: 0;
   cursor: pointer;
   width: 40px;
   height: 100%;
@@ -334,6 +336,7 @@ input[type=number] {
   background: #F87F27 url("./images/icons/calendar_icon.svg") no-repeat center;
 }
 .card-param-picker .input button.arrowIcon {
+  pointer-events: none;
   background: url("./images/icons/arrow_down-black.svg") no-repeat center/7px;
   border-left: 1px solid #E7E7E7;
 }
@@ -2073,6 +2076,10 @@ input[type=number] {
 .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child:after {
   display: none;
 }
+.wrapper .productCardSettingsTriggerWrapper {
+  display: none;
+  z-index: 8;
+}
 .wrapper .card {
   display: flex;
   height: auto;
@@ -2291,8 +2298,81 @@ input[type=number] {
     line-height: 24px;
   }
 
+  .wrapper.product-page {
+    padding-bottom: 72px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap {
+    margin: 40px 0 32px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs {
+    font-size: 15px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:after {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 8px;
+    margin: auto 0;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #333333;
+    opacity: 0.3;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:first-child:before {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child:after {
+    display: none;
+  }
   .wrapper.whiteHeader header.header {
     top: 0;
+  }
+  .wrapper .productCardSettingsTriggerWrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 32px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  }
+  .wrapper .productCardSettingsTriggerWrapper .cardName, .wrapper .productCardSettingsTriggerWrapper .productCardSettingsTrigger {
+    max-width: calc((100% - 23px) / 2);
+    width: 100%;
+  }
+  .wrapper .productCardSettingsTriggerWrapper .cardName {
+    margin-right: 24px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333333;
+    font-family: "San Francisco Pro Display Bold";
+  }
+  .wrapper .productCardSettingsTriggerWrapper .productCardSettingsTrigger {
+    background: #F87F27;
+    height: 47px;
+    line-height: 48px;
+    width: 100%;
+    font-family: "San Francisco Pro Display Bold";
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
   }
   .wrapper header.header .headerInnerWrap:before {
     -moz-transform: none;
@@ -2450,6 +2530,62 @@ input[type=number] {
   .wrapper section.ourPreferencesSection .titleWrap {
     margin-bottom: 30px;
   }
+  .wrapper section.productCardSection.openSettings .content .productCardRow .productCardRightSide {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .wrapper section.productCardSection .content .productCardRow {
+    flex-direction: column;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide, .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPic {
+    height: 256px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    margin: 0;
+    z-index: 9;
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead {
+    position: relative;
+    cursor: pointer;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead:after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 22px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 14px;
+    height: 14px;
+    background: url("./images/icons/close_icon.svg") no-repeat center/contain;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead .h5 {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "San Francisco Pro Display Bold";
+  }
   .wrapper section.reviewsSection {
     padding-bottom: 64px;
   }
@@ -2466,6 +2602,71 @@ input[type=number] {
 @media all and (max-width: 767px) {
   .wrapper .titleWrap.innerPageTitleWrap {
     margin: 40px 0 32px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoHead {
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoHead a {
+    display: flex;
+    white-space: nowrap;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks {
+    padding: 32px 16px 24px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock {
+    flex-direction: column;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .infoBlockContent .p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p:not(.semibold), .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .infoBlockContent .p:not(.semibold) {
+    color: #7E7E7E;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide.open .sideBarHead:after, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide.open .sideBarHead:after {
+    -moz-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead {
+    border: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead:after, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: url("./images/icons/arrow_down-black.svg") no-repeat center/contain;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
+    border-top: 1px solid #E7E7E7;
+    display: none;
+  }
+  .wrapper .titleWrap.withButtonTitleWrap .withTitleButton {
+    font-family: "San Francisco Pro Display Regular";
+    color: #7E7E7E;
+    border: 0;
+    height: auto;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: right;
+    text-transform: none;
   }
   .wrapper section.catalogSection {
     padding-bottom: 40px;

@@ -6,7 +6,7 @@
  */
 wp_head(); ?>
 <body>
-<div class="wrapper innerPageHeader">
+<div class="wrapper innerPageHeader product-page">
 
     <?php get_header(); ?>
     <section class="productCardSection">
@@ -268,6 +268,12 @@ wp_head(); ?>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="productCardSettingsTriggerWrapper">
+            <div class="cardName"> Экскурсия в собор Святой Софии</div>
+            <a href="#" class="productCardSettingsTrigger">
+                <span>расчет стоимости</span>
+            </a>
         </div>
     </section>
     <section class="nthInRowSection popularProductsSection">

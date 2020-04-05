@@ -1921,6 +1921,11 @@ $mainBorderColor: #E7E7E7;
     }
   }
 
+  .productCardSettingsTriggerWrapper {
+    display: none;
+    z-index: 8;
+  }
+
   .card {
     display: flex;
     height: auto;
