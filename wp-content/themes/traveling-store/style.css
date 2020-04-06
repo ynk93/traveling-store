@@ -2813,6 +2813,20 @@ input[type=number] {
   .wrapper section.textPageSection .textPageContentRow + .textPageContentRow {
     margin-top: 32px;
   }
+  .wrapper section.innerPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow {
+    flex-direction: column;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock + .iconBlock {
+    margin-top: 16px;
+  }
   .wrapper section.innerPageSection.faqPageSection {
     padding-bottom: 64px;
   }

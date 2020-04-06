@@ -800,6 +800,24 @@
     }
 
     section.innerPageSection {
+      padding-bottom: 64px;
+
+      .contactUsContent {
+        .iconsRow {
+          flex-direction: column;
+
+          .iconBlock {
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
+
+            & + .iconBlock {
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+
       &.faqPageSection {
         padding-bottom: 64px;
       }
