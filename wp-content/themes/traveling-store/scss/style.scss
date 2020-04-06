@@ -1410,6 +1410,10 @@ $mainBorderColor: #E7E7E7;
   section.innerPageSection {
     padding-bottom: 112px;
 
+    & + section.popularProductsSection {
+      margin-top: 0;
+    }
+
     .content {
       flex-direction: column;
     }

@@ -473,6 +473,50 @@
       }
     }
 
+    section.textPageSection {
+      .content {
+        padding: 0;
+
+        .titleWrap {
+          padding: 0 16px;
+        }
+      }
+
+      .textPageContentRow {
+        flex-direction: column;
+
+        & + .textPageContentRow {
+          margin-top: 64px;
+        }
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+
+          .leftSide {
+            margin-top: 32px;
+          }
+
+          .rightSide {
+            margin-top: 0;
+          }
+        }
+
+        .leftSide, .rightSide {
+          max-width: 100%;
+          width: 100%;
+          margin: 0;
+        }
+
+        .textSide {
+          padding: 0 16px;
+        }
+
+        .rightSide {
+          margin-top: 32px;
+        }
+      }
+    }
+
     section.productCardSection {
       &.openSettings {
         .content {
@@ -560,11 +604,14 @@
       }
     }
   }
-
 }
 
 @media all and(max-width: 767px) {
   .wrapper {
+    .content {
+      padding: 0 16px;
+    }
+
     .titleWrap.innerPageTitleWrap {
       margin: 40px 0 32px;
     }
@@ -740,6 +787,40 @@
               }
             }
           }
+        }
+      }
+    }
+
+    section.textPageSection {
+      padding-bottom: 64px;
+
+      .textPageContentRow + .textPageContentRow {
+        margin-top: 32px;
+      }
+    }
+
+    section.innerPageSection {
+      &.faqPageSection {
+        padding-bottom: 64px;
+      }
+
+      .faqBlock {
+        max-width: 100%;
+        padding: 20px 16px;
+
+        .faqTitle {
+          line-height: 20px;
+          margin-bottom: 8px;
+        }
+
+        .faqText {
+          font-size: 15px;
+          line-height: 22px;
+          color: #7e7e7e;
+        }
+
+        & + .faqBlock {
+          margin-top: 24px;
         }
       }
     }

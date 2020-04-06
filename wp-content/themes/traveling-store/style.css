@@ -1638,6 +1638,9 @@ input[type=number] {
 .wrapper section.innerPageSection {
   padding-bottom: 112px;
 }
+.wrapper section.innerPageSection + section.popularProductsSection {
+  margin-top: 0;
+}
 .wrapper section.innerPageSection .content {
   flex-direction: column;
 }
@@ -2578,6 +2581,38 @@ input[type=number] {
   .wrapper section.ourPreferencesSection .titleWrap {
     margin-bottom: 30px;
   }
+  .wrapper section.textPageSection .content {
+    padding: 0;
+  }
+  .wrapper section.textPageSection .content .titleWrap {
+    padding: 0 16px;
+  }
+  .wrapper section.textPageSection .textPageContentRow {
+    flex-direction: column;
+  }
+  .wrapper section.textPageSection .textPageContentRow + .textPageContentRow {
+    margin-top: 64px;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) .leftSide {
+    margin-top: 32px;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) .rightSide {
+    margin-top: 0;
+  }
+  .wrapper section.textPageSection .textPageContentRow .leftSide, .wrapper section.textPageSection .textPageContentRow .rightSide {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .wrapper section.textPageSection .textPageContentRow .textSide {
+    padding: 0 16px;
+  }
+  .wrapper section.textPageSection .textPageContentRow .rightSide {
+    margin-top: 32px;
+  }
   .wrapper section.productCardSection.openSettings .content .productCardRow .productCardRightSide {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -2648,6 +2683,9 @@ input[type=number] {
   }
 }
 @media all and (max-width: 767px) {
+  .wrapper .content {
+    padding: 0 16px;
+  }
   .wrapper .titleWrap.innerPageTitleWrap {
     margin: 40px 0 32px;
   }
@@ -2768,6 +2806,31 @@ input[type=number] {
     margin: 0 auto;
     max-width: 248px;
     width: 100%;
+  }
+  .wrapper section.textPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.textPageSection .textPageContentRow + .textPageContentRow {
+    margin-top: 32px;
+  }
+  .wrapper section.innerPageSection.faqPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.innerPageSection .faqBlock {
+    max-width: 100%;
+    padding: 20px 16px;
+  }
+  .wrapper section.innerPageSection .faqBlock .faqTitle {
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  .wrapper section.innerPageSection .faqBlock .faqText {
+    font-size: 15px;
+    line-height: 22px;
+    color: #7e7e7e;
+  }
+  .wrapper section.innerPageSection .faqBlock + .faqBlock {
+    margin-top: 24px;
   }
   .wrapper section.ourPreferencesSection .iconsRow {
     flex-direction: column;
