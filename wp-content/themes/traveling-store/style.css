@@ -2266,6 +2266,12 @@ input[type=number] {
   .wrapper section.popularProductsSection .cardsRow .card:last-child {
     display: none;
   }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow.swiperRow .leftSide {
+    padding-right: 40px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow.swiperRow .rightSide.swiperSide {
+    right: -20px;
+  }
 }
 @media all and (max-width: 1180px) {
   .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap {
@@ -2439,6 +2445,46 @@ input[type=number] {
   }
   .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
     margin-bottom: 8px;
+  }
+  .wrapper section.aboutUsPageSection .content {
+    padding: 0;
+  }
+  .wrapper section.aboutUsPageSection .content .titleWrap {
+    padding: 0 20px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow {
+    flex-direction: column;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .swiper-container .swiper-slide {
+    max-width: 176px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .swiper-container .swiper-slide .card .cardPic {
+    height: 200px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow + .aboutUsPageRow.swiperRow {
+    margin-top: 64px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .textSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .textSide {
+    padding: 0 20px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .p, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .p {
+    font-size: 15px;
+    line-height: 22px;
+    color: #7e7e7e;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide {
+    margin-top: 40px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide {
+    max-width: 100%;
+    width: 100%;
+    right: 0 !important;
+    padding: 80px 0;
   }
   .wrapper section.popularProductsSection {
     margin: 64px 0;
@@ -2696,6 +2742,32 @@ input[type=number] {
   .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
     border-top: 1px solid #E7E7E7;
     display: none;
+  }
+  .wrapper section.aboutUsPageSection.innerPageSection {
+    padding-bottom: 60px;
+  }
+  .wrapper section.aboutUsPageSection .content .titleWrap {
+    padding: 0 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .picSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .picSide {
+    height: 280px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .textSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .textSide {
+    padding: 0 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container {
+    padding-left: 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel {
+    padding: 0;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-buttons-wrap, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-buttons-wrap {
+    display: none;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-pagination, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-pagination {
+    margin: 0 auto;
+    max-width: 248px;
+    width: 100%;
   }
   .wrapper section.ourPreferencesSection .iconsRow {
     flex-direction: column;

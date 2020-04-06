@@ -43,6 +43,22 @@
         }
       }
     }
+
+    section.aboutUsPageSection {
+      .aboutUsPageRow {
+        &.swiperRow {
+          .leftSide {
+            padding-right: 40px;
+          }
+
+          .rightSide {
+            &.swiperSide {
+              right: -20px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -273,6 +289,65 @@
       }
     }
 
+    section.aboutUsPageSection {
+      .content {
+        padding: 0;
+
+        .titleWrap {
+          padding: 0 20px;
+        }
+      }
+
+      .aboutUsPageRow {
+        flex-direction: column;
+
+        .swiper-container {
+          .swiper-slide {
+            max-width: 176px;
+
+            .card {
+              .cardPic {
+                height: 200px;
+              }
+            }
+          }
+        }
+
+        & + .aboutUsPageRow {
+          &.swiperRow {
+            margin-top: 64px;
+          }
+        }
+
+        .leftSide, .rightSide {
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+
+          .textSide {
+            padding: 0 20px;
+          }
+
+          .p {
+            font-size: 15px;
+            line-height: 22px;
+            color: #7e7e7e;
+          }
+        }
+
+        .rightSide {
+          margin-top: 40px;
+
+          &.swiperSide {
+            max-width: 100%;
+            width: 100%;
+            right: 0 !important;
+            padding: 80px 0;
+          }
+        }
+      }
+    }
+
     section.popularProductsSection {
       margin: 64px 0;
 
@@ -485,6 +560,7 @@
       }
     }
   }
+
 }
 
 @media all and(max-width: 767px) {
@@ -616,6 +692,50 @@
                     border-top: 1px solid $mainBorderColor;
                     display: none;
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    section.aboutUsPageSection {
+      &.innerPageSection {
+        padding-bottom: 60px;
+      }
+
+      .content {
+        .titleWrap {
+          padding: 0 16px;
+        }
+      }
+
+      .aboutUsPageRow {
+        .leftSide, .rightSide {
+          .picSide {
+            height: 280px;
+          }
+
+          .textSide {
+            padding: 0 16px;
+          }
+
+          &.swiperSide {
+            .swiper-container {
+              padding-left: 16px;
+
+              .swiper-bottom-panel {
+                padding: 0;
+
+                .swiper-buttons-wrap {
+                  display: none;
+                }
+
+                .swiper-pagination {
+                  margin: 0 auto;
+                  max-width: 248px;
+                  width: 100%;
                 }
               }
             }
