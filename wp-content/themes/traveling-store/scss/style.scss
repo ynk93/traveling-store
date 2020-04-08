@@ -149,6 +149,7 @@ $mainBorderColor: #E7E7E7;
 
 .wrapper {
   font-family: $sfRegular;
+  overflow: hidden;
 
   &.whiteHeader {
     header.header {
@@ -1719,6 +1720,212 @@ $mainBorderColor: #E7E7E7;
               display: block;
               text-align: center;
             }
+          }
+        }
+      }
+    }
+  }
+
+  section.basketPageSection {
+    .basketPageContent {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+
+      .basketLeftSide {
+        max-width: 100%;
+        width: 100%;
+
+        .basketItemRow {
+          max-height: 140px;
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          background: #fff;
+          @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+
+          & + .basketItemRow {
+            margin-top: 16px;
+          }
+
+          .itemPic {
+            max-width: 120px;
+            height: 144px;
+            width: 100%;
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .itemInfo {
+            max-width: 240px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 14px 24px;
+            border-right: 1px solid $mainBorderColor;
+
+            .itemName {
+              font-size: 14px;
+              line-height: 18px;
+              color: $mainBlackColor;
+              font-family: $sfBold;
+            }
+
+            .infoBlock {
+              margin-top: 12px;
+
+              .label {
+                font-size: 13px;
+                line-height: 10px;
+                color: #7E7E7E;
+                margin-bottom: 8px;
+              }
+
+              .value {
+                font-size: 13px;
+                line-height: 10px;
+                font-family: $sfSemiBold;
+                color: $mainBlackColor;
+
+                .date + .time {
+                  margin-left: 8px;
+
+                  &:before {
+                    content: '';
+                    @include inline-block(middle);
+                    height: 12px;
+                    width: 1px;
+                    background: #D0D0D0;
+                    position: relative;
+                    top: -1px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+            }
+          }
+
+          .itemNumbersInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+
+            .itemBlock {
+              flex-direction: column;
+
+              .itemRow {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                & + .itemRow {
+                  margin-top: 8px;
+                }
+
+                .itemRowName {
+                  width: 115px;
+                  padding-right: 20px;
+                  font-weight: 600;
+                  font-size: 13px;
+                  line-height: 10px;
+                  color: $mainBlackColor;
+                }
+
+                .itemRowNumberBlock {
+                  width: 40px;
+                  height: 40px;
+                  border: 1px solid rgba(0, 0, 0, 0.12);
+                  font-size: 14px;
+                  line-height: 40px;
+                  text-align: center;
+                  color: $mainBlackColor;
+                }
+              }
+            }
+          }
+
+          .itemPrice {
+            display: flex;
+            flex-direction: column;
+            max-width: 132px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid $mainBorderColor;
+          }
+        }
+      }
+
+      .rightSideSideBar {
+        margin-left: 40px;
+        max-width: 340px;
+        width: 100%;
+        @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+        padding: 24px;
+        background: #fff;
+
+        .basketSideBarHead {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 16px;
+          line-height: 20px;
+          color: $mainBlackColor;
+          font-family: $sfBold;
+          margin-bottom: 24px;
+        }
+
+        .confirmOrderButton {
+          @include mainYellowButton(48px);
+          display: block;
+          margin-bottom: 12px;
+        }
+
+        .continueShoppingButton {
+          @include mainYellowButton(48px);
+          display: block;
+          background: #fff;
+          color: $mainBlackColor;
+          border: 1px solid $mainBorderColor;
+          margin-bottom: 12px;
+        }
+
+        .sideBarInfoBlock {
+          background: rgba(46, 132, 234, 0.06);
+          padding: 16px;
+          color: $mainBlackColor;
+
+          .sideBarInfoTitle {
+            font-size: 14px;
+            font-family: $sfBold;
+            margin-bottom: 7px;
+
+            &:before {
+              content: '';
+              position: relative;
+              top: -1px;
+              @include inline-block(middle);
+              width: 16px;
+              height: 16px;
+              margin-right: 10px;
+              background: url('./images/icons/checked.svg') no-repeat center/contain;
+            }
+          }
+
+          .sideBarInfoText {
+            font-size: 13px;
+            line-height: 16px;
+            opacity: 0.5;
           }
         }
       }

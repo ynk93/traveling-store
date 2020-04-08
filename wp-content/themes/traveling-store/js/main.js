@@ -157,6 +157,22 @@ $(document).ready(function () {
         }
     }
 
+    $(window).resize(function () {
+        if ($(window).width() <= 1023) {
+            initMobileProductsSwiper();
+        }
+
+        if ($(window).width() >= 1024) {
+            if ($(document).scrollTop() > 12) {
+                $('.wrapper').addClass('whiteHeader');
+            }
+        } else {
+            if ($(this).scrollTop() > 0) {
+                $('.wrapper').addClass('whiteHeader');
+            }
+        }
+    });
+
     function initMobileProductsSwiper() {
         var mobileSwiperWrap = $('.forMobileSwiperWrap');
         mobileSwiperWrap.addClass('swiper-container');

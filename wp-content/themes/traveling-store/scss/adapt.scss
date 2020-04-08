@@ -639,15 +639,15 @@
     }
 
     section.nthInRowSection .cardsRow {
-      flex-direction: column;
-
-      .card {
-        max-width: 100%;
-
-        & + .card {
-          margin: 20px 0 0;
-        }
-      }
+      //flex-direction: column;
+      //
+      //.card {
+      //  max-width: 100%;
+      //
+      //  & + .card {
+      //    margin: 20px 0 0;
+      //  }
+      //}
     }
 
     section.reviewsSection {
