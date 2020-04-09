@@ -13,54 +13,28 @@ wp_head(); ?>
     <section class="mainSection">
         <div class="swiper-container mainSwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="content">
-                        <div class="slideContent">
-                            <div class="h1 slideTitle">
-                                Traveling Store
+
+                <?php $slider = get_field('slider');
+                foreach ($slider as $slide_item) : ?>
+
+                    <div class="swiper-slide">
+                        <div class="content">
+                            <div class="slideContent">
+                                <div class="h1 slideTitle">
+                                    <?php echo $slide_item['slide']['title']; ?>
+                                </div>
+                                <div class="slideDescription">
+                                    <?php echo $slide_item['slide']['text']; ?>
+                                </div>
                             </div>
-                            <div class="slideDescription">
-                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
+                            <div class="tourSlidePicBlock">
+                                <img src="<?php echo $slide_item['slide']['background']['url']; ?>" alt="" class="src">
                             </div>
-                        </div>
-                        <div class="tourSlidePicBlock">
-                            <img src="./images/sliderPics/image%203.png" alt="" class="src">
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="content">
-                        <div class="slideContent">
-                            <div class="h1 slideTitle">
-                                Traveling Store
-                            </div>
-                            <div class="slideDescription">
-                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
-                            </div>
-                        </div>
-                        <div class="tourSlidePicBlock">
-                            <img src="./images/sliderPics/image%202.png" alt="" class="src">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="content">
-                        <div class="slideContent">
-                            <div class="h1 slideTitle">
-                                Traveling Store
-                            </div>
-                            <div class="slideDescription">
-                                <?php _e('Ваш путеводитель по Турции! Экскурсии, рестораны, шопинг, VIP экскурсии и многое другое!
-                                Откройте для себя Турцию всместе с <span class="bold">Traveling Store!</span>', 'traveling-store'); ?>
-                            </div>
-                        </div>
-                        <div class="tourSlidePicBlock">
-                            <img src="./images/sliderPics/image%201.png" alt="" class="src">
-                        </div>
-                    </div>
-                </div>
+
+                <?php endforeach; ?>
+
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-buttons-wrap">
@@ -69,6 +43,7 @@ wp_head(); ?>
             </div>
         </div>
     </section>
+
     <section class="nthInRowSection popularProductsSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
@@ -225,56 +200,36 @@ wp_head(); ?>
             </div>
         </div>
     </section>
+
     <section class="nthInRowSection partnersSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
                 <div class="h3"><?php _e('Реклама от партнеров', 'traveling-store'); ?></div>
-                    <a href="#" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
-                </div>
-                <div class="cardsRow">
-                    <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/icons/partners/uniqa.png" class="uniqaLogo">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="cardName"><?php _e('Туристическая страховка', 'traveling-store'); ?></span>
-                    </span>
-                    </a>
-                    <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/icons/partners/turkish-airlines%201.png" class="tuAirLogo">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="cardName"><?php _e('Авиаперелеты', 'traveling-store'); ?></span>
-                    </span>
-                    </a>
-                    <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/icons/partners/terrace.png" class="terraceLogo">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="cardName">Terrace hotels</span>
-                    </span>
-                    </a>
-                    <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/icons/partners/rixos.svg" class="rixosLogo">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="cardName">rixos hotels</span>
-                    </span>
-                    </a>
-                    <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/icons/partners/seraser.png" class="seraserLogo">
-                    </span>
-                        <span class="cardInfo">
-                        <span class="cardName"><?php _e('sereser ресторан', 'traveling-store'); ?></span>
-                    </span>
-                    </a>
-                </div>
+                <a href="#" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
             </div>
+
+            <div class="cardsRow">
+
+                <?php $partners = get_field('partners');
+                foreach ($partners as $partners_item) :
+                    var_dump($partners_item);?>
+
+                    <a href="<?php echo $partners_item['link']['url']; ?>" target="<?php echo $partners_item['link']['target']; ?>" class="card">
+                        <span class="cardPic">
+                            <img src="<?php echo $partners_item['image']['url']; ?>" class="uniqaLogo">
+                        </span>
+                            <span class="cardInfo">
+                            <span class="cardName"><?php echo $partners_item['title']; ?></span>
+                        </span>
+                    </a>
+
+                <?php endforeach; ?>
+
+            </div>
+
+        </div>
     </section>
+
     <section class="nthInRowSection categoriesSection">
         <div class="content">
             <div class="titleWrap">
@@ -317,41 +272,48 @@ wp_head(); ?>
             </div>
         </div>
     </section>
+
     <section class="aboutUsSection">
         <div class="aboutUsSectionContent">
+            <?php $about = get_field('about'); ?>
+
             <div class="orangeMark"><?php _e('о нас', 'traveling-store'); ?></div>
-            <div class="h1">Traveling Store</div>
+            <div class="h1"><?php echo $about['title']; ?></div>
             <div class="p">
-                <?php _e('Краткое информация о фирме, турах, преимуществах c дальнейшем переходом на страницу с более детальной
-                информацией.', 'traveling-store'); ?>
+                <?php echo $about['text']; ?>
             </div>
             <a href="#" class="toAboutUsButton">
                 подробнее
             </a>
         </div>
         <div class="aboutUsBg img-parallax" data-speed="-1.25"></div>
+
+
     </section>
+
     <section class="nthInRowSection ourPreferencesSection">
         <div class="content">
             <div class="titleWrap centered">
                 <div class="h3"><?php _e('Наши преимущества', 'traveling-store'); ?></div>
             </div>
             <div class="iconsRow">
-                <div class="iconBlock">
-                    <div class="iconPic supportIcon"></div>
-                    <div class="iconText"><?php _e('Поддержка 24/7', 'traveling-store'); ?></div>
-                </div>
-                <div class="iconBlock">
-                    <div class="iconPic mooneyIcon"></div>
-                    <div class="iconText"><?php _e('Без переплат', 'traveling-store'); ?></div>
-                </div>
-                <div class="iconBlock">
-                    <div class="iconPic cardIcon"></div>
-                    <div class="iconText"><?php _e('Онлайн оплата', 'traveling-store'); ?></div>
-                </div>
+
+                <?php $testimonials = get_field('testimonials');
+                foreach ($testimonials as $testimonials_item) : ?>
+                    <div class="iconBlock">
+                        <div class="iconPic">
+                            <img src="<?php echo $testimonials_item['image']['url']; ?>" alt="">
+                        </div>
+                        <div class="iconText"><?php echo $testimonials_item['title']; ?></div>
+                    </div>
+
+                <?php endforeach; ?>
+
             </div>
+
         </div>
     </section>
+
     <section class="reviewsSection">
         <div class="content">
             <div class="leftSide">

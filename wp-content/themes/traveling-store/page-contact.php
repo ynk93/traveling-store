@@ -11,32 +11,30 @@ wp_head(); ?>
     <?php get_header(); ?>
     <section class="innerPageSection contactUsPageSection">
         <div class="content">
+            <?php $text = get_field('text_content'); ?>
+
             <div class="titleWrap innerPageTitleWrap">
                 <div class="h2"> <?php _e('Контакты', 'traveling-store'); ?></div>
             </div>
             <div class="textPageContent">
                 <div class="contactUsContent">
                     <div class="p">
-                        <?php _e('<span class="bold">Traveling Store</span> - это многоканальный контактный центр, который занимается обслуживанием туристических объектов по всей Турции, информационной консультацией туристов, приемом и обработкой заявок, подтверждением брони
-                        и консультационным сопровождением до окончания тура.', 'traveling-store'); ?>
-                    </div>
-                    <div class="p">
-                        <?php _e('Наши консультанты готовы ответить на все Ваши вопросы <span class="bold">24/7.</span>', 'traveling-store'); ?>
+                        <?php echo $text; ?>
                     </div>
 
                     <div class="iconsRow">
-                        <a href="mailto: ex@gmail.com" class="iconBlock">
-                            <div class="iconPic mailIcon"></div>
-                            <div class="iconText"><?php _e('ex@gmail.com', 'traveling-store'); ?></div>
-                        </a>
-                        <a href="tel: 8 067 01 02 013" class="iconBlock">
-                            <div class="iconPic phonesIcon"></div>
-                            <div class="iconText"><?php _e('8 067 01 02 013', 'traveling-store'); ?></div>
-                        </a>
-                        <div class="iconBlock">
-                            <div class="iconPic messengersIcon"></div>
-                            <div class="iconText"><?php _e('Messengers', 'traveling-store'); ?></div>
-                        </div>
+                        <?php $contacts = get_field('contact_items');
+                        foreach ($contacts as $contact_items):
+                            print_r($contacts);
+                            ?>
+                            <a href="<?php echo $contact_items['info']['link']; ?>" class="iconBlock">
+                                <div class="iconPic mailIcon">
+                                    <img src="<?php echo $contact_items['info']['image']; ?>" alt="">
+                                </div>
+                                <div class="iconText"><?php echo $contact_items['info']['title']; ?></div>
+                            </a>
+
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
