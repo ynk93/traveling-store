@@ -1927,6 +1927,7 @@ input[type=number] {
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPic {
   max-width: 120px;
+  flex-shrink: 0;
   height: 144px;
   width: 100%;
 }
@@ -1937,11 +1938,12 @@ input[type=number] {
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo {
   max-width: 240px;
+  min-width: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 14px 24px;
+  padding: 14px 1.6vw;
   border-right: 1px solid #E7E7E7;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .itemName {
@@ -1988,9 +1990,13 @@ input[type=number] {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  padding: 0 1.6vw;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock {
   flex-direction: column;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
+  margin-left: 1.6vw;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
   display: flex;
@@ -2026,6 +2032,10 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   border-left: 1px solid #E7E7E7;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile {
+  display: none;
 }
 .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
   margin-left: 40px;
@@ -2497,6 +2507,18 @@ input[type=number] {
   .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(3n + 1) {
     margin-left: 0;
   }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo {
+    padding: 10px;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+    width: 100px;
+    padding-right: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    padding: 20px;
+    max-width: 260px;
+    margin-left: 20px;
+  }
 }
 @media all and (max-width: 1023px) {
   .h1 {
@@ -2647,6 +2669,79 @@ input[type=number] {
   }
   .wrapper header.header .headerInnerWrap .rightSide .selectWrapper, .wrapper header.header .headerInnerWrap .rightSide ul {
     display: none;
+  }
+  .wrapper section.basketPageSection .basketPageContent {
+    flex-direction: column;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow {
+    flex-wrap: wrap;
+    max-height: none;
+    height: auto;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemInfo {
+    padding: 14px 24px;
+    max-width: calc(100% - 120px);
+    border: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo {
+    margin-top: 28px;
+    padding: 0;
+    justify-content: flex-start;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock {
+    max-width: 50%;
+    width: 100%;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
+    padding: 15px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+    font-size: 12px;
+    line-height: 10px;
+    color: #7E7E7E;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 4px;
+    border: 0;
+    background: transparent;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow {
+    border-top: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
+    border-left: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemPrice {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemPrice .onlyOnMobile {
+    display: inline;
+  }
+  .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    margin: 20px 0 0;
+    padding: 20px 16px;
   }
   .wrapper section.mainSection {
     height: 520px;

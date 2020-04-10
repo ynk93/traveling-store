@@ -1751,6 +1751,7 @@ $mainBorderColor: #E7E7E7;
 
           .itemPic {
             max-width: 120px;
+            flex-shrink: 0;
             height: 144px;
             width: 100%;
 
@@ -1763,11 +1764,12 @@ $mainBorderColor: #E7E7E7;
 
           .itemInfo {
             max-width: 240px;
+            min-width: 200px;
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 14px 24px;
+            padding: 14px 1.6vw;
             border-right: 1px solid $mainBorderColor;
 
             .itemName {
@@ -1817,9 +1819,14 @@ $mainBorderColor: #E7E7E7;
             align-items: center;
             justify-content: space-evenly;
             width: 100%;
+            padding: 0 1.6vw;
 
             .itemBlock {
               flex-direction: column;
+
+              & + .itemBlock {
+                margin-left: 1.6vw;
+              }
 
               .itemRow {
                 display: flex;
@@ -1861,6 +1868,11 @@ $mainBorderColor: #E7E7E7;
             justify-content: center;
             align-items: center;
             border-left: 1px solid $mainBorderColor;
+            font-family: $sfBold;
+
+            .onlyOnMobile {
+              display: none;
+            }
           }
         }
       }

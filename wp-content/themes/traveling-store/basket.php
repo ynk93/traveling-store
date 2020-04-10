@@ -60,7 +60,10 @@ wp_head(); ?>
                             </div>
                         </div>
                         <div class="itemPrice">
-                            <div class="h5">120$</div>
+                            <span class="onlyOnMobile h5">Стоимость</span>
+                            <div class="h5">
+                                120$
+                            </div>
                         </div>
                     </div>
                     <div class="basketItemRow">
@@ -106,7 +109,10 @@ wp_head(); ?>
                             </div>
                         </div>
                         <div class="itemPrice">
-                            <div class="h5">120$</div>
+                            <span class="onlyOnMobile h5">Стоимость</span>
+                            <div class="h5">
+                                120$
+                            </div>
                         </div>
                     </div>
                 </div>
