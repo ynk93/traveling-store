@@ -18,6 +18,8 @@
 			register_nav_menu( 'header-nav', 'Main header navigation' );
 //			register_nav_menu( 'sidebar-nav', 'Categories sidebar navigation' );
 			register_nav_menu( 'footer-nav', 'Main footer navigation' );
+			register_nav_menu( 'contacts-footer-nav', 'Contacts footer navigation' );
+			register_nav_menu( 'social-footer-nav', 'Social footer navigation' );
 
 			//  woocommerce setup
 			add_theme_support( 'woocommerce' );

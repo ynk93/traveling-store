@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 /**
- * Template Name: FAQ page
+ * Template Name: Cart page
  */
 wp_head(); ?>
 <body>

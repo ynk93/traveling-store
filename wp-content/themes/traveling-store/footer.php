@@ -1,32 +1,70 @@
 <footer class="footer">
     <div class="content">
+
         <div class="footerInnerRow">
-            <ul>
-                <li><a href="index.php" class="mainPageLinkLogo">Traveling Store</a></li>
-                <li><a href="catalog.php">Туры</a></li>
-                <li><a href="#">Рестораны</a></li>
-                <li><a href="#">Шопинг</a></li>
-                <li><a href="#">VIP</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Вопросы-ответы</a></li>
-            </ul>
-            <div class="contactLinks">
-                <a href="mailto: ex@gmail.com" class="mailLink">ex@gmail.com</a>
-                <a href="tel: 8 067 01 02 013" class="phoneLink">8 067 01 02 013</a>
-            </div>
+
+			<?php $footer_navigation_menu = wp_nav_menu( [
+				'theme_location' => 'footer-navigation',
+				'container'      => false,
+				'menu_class'     => 'menu',
+				'menu_id'        => '',
+				'echo'           => false,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'          => 0,
+			] );
+
+				if ( $footer_navigation_menu ) {
+					echo $footer_navigation_menu;
+				}
+
+				$contacts_footer_navigation_menu = wp_nav_menu( [
+					'theme_location' => 'contacts-footer-nav',
+					'container'      => false,
+					'menu_class'     => 'menu',
+					'menu_id'        => '',
+					'echo'           => false,
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth'          => 0,
+				] );
+
+				if ( $contacts_footer_navigation_menu ) : ?>
+
+                    <div class="contactLinks">
+
+						<?php echo $contacts_footer_navigation_menu ?>
+
+                    </div>
+
+				<?php endif; ?>
+
         </div>
+
         <div class="footerInnerRow">
-            <span class="copyRight p">Traveling Store 2020 ©. Все права защищены.</span>
-            <div class="socialLinksWrap">
-                <a href="#" class="fb"></a>
-                <a href="#" class="vk"></a>
-                <a href="#" class="insta"></a>
-                <a href="#" class="skype"></a>
-                <a href="#" class="viber"></a>
-                <a href="#" class="whatsup"></a>
-                <a href="#" class="telegram"></a>
-            </div>
+
+            <span class="copyRight p">
+                <?php _e( 'Traveling Store 2020 ©. All rights reserved.', 'traveling-store' ); ?>
+            </span>
+
+			<?php $social_footer_navigation_menu = wp_nav_menu( [
+				'theme_location' => 'social-footer-nav',
+				'container'      => false,
+				'menu_id'        => '',
+				'echo'           => false,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'          => 0,
+			] );
+
+				if ( $social_footer_navigation_menu ) : ?>
+
+                    <div class="socialLinksWrap">
+
+						<?php echo $social_footer_navigation_menu; ?>
+
+                    </div>
+
+				<?php endif; ?>
+
         </div>
+
     </div>
 </footer>
