@@ -1726,12 +1726,78 @@ $mainBorderColor: #E7E7E7;
     }
   }
 
-  section.basketPageSection {
-    .basketPageContent {
+  section.basketPageSection, section.checkoutPageSection {
+    .basketPageContent, .checkoutPageContent {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       width: 100%;
+
+      .basketItemRow, .basketItem {
+        .itemPic {
+          max-width: 120px;
+          flex-shrink: 0;
+          height: 144px;
+          width: 100%;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .itemInfo {
+          max-width: 240px;
+          min-width: 200px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 14px 1.6vw;
+          border-right: 1px solid $mainBorderColor;
+
+          .itemName {
+            font-size: 14px;
+            line-height: 18px;
+            color: $mainBlackColor;
+            font-family: $sfBold;
+          }
+
+          .infoBlock {
+            margin-top: 12px;
+
+            .label {
+              font-size: 13px;
+              line-height: 10px;
+              color: #7E7E7E;
+              margin-bottom: 8px;
+            }
+
+            .value {
+              font-size: 13px;
+              line-height: 10px;
+              font-family: $sfSemiBold;
+              color: $mainBlackColor;
+
+              .date + .time {
+                margin-left: 8px;
+
+                &:before {
+                  content: '';
+                  @include inline-block(middle);
+                  height: 12px;
+                  width: 1px;
+                  background: #D0D0D0;
+                  position: relative;
+                  top: -1px;
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
 
       .basketLeftSide {
         max-width: 100%;
@@ -1747,70 +1813,6 @@ $mainBorderColor: #E7E7E7;
 
           & + .basketItemRow {
             margin-top: 16px;
-          }
-
-          .itemPic {
-            max-width: 120px;
-            flex-shrink: 0;
-            height: 144px;
-            width: 100%;
-
-            img {
-              object-fit: cover;
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          .itemInfo {
-            max-width: 240px;
-            min-width: 200px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 14px 1.6vw;
-            border-right: 1px solid $mainBorderColor;
-
-            .itemName {
-              font-size: 14px;
-              line-height: 18px;
-              color: $mainBlackColor;
-              font-family: $sfBold;
-            }
-
-            .infoBlock {
-              margin-top: 12px;
-
-              .label {
-                font-size: 13px;
-                line-height: 10px;
-                color: #7E7E7E;
-                margin-bottom: 8px;
-              }
-
-              .value {
-                font-size: 13px;
-                line-height: 10px;
-                font-family: $sfSemiBold;
-                color: $mainBlackColor;
-
-                .date + .time {
-                  margin-left: 8px;
-
-                  &:before {
-                    content: '';
-                    @include inline-block(middle);
-                    height: 12px;
-                    width: 1px;
-                    background: #D0D0D0;
-                    position: relative;
-                    top: -1px;
-                    margin-right: 8px;
-                  }
-                }
-              }
-            }
           }
 
           .itemNumbersInfo {
@@ -1877,6 +1879,14 @@ $mainBorderColor: #E7E7E7;
         }
       }
 
+      .checkoutLeftSide {
+        padding: 48px 80px;
+        max-width: 100%;
+        width: 100%;
+        background: #fff;
+        @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+      }
+
       .rightSideSideBar {
         margin-left: 40px;
         max-width: 340px;
@@ -1938,6 +1948,142 @@ $mainBorderColor: #E7E7E7;
             font-size: 13px;
             line-height: 16px;
             opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  section.checkoutPageSection {
+    .checkoutPageContent {
+      .checkoutContent {
+        max-width: 555px;
+        width: 100%;
+
+
+        .inputRowWrap {
+          & + .inputRowWrap {
+            margin-top: 24px;
+          }
+        }
+
+        .inputLabel {
+          font-size: 14px;
+          line-height: 20px;
+          font-family: $sfBold;
+          margin-bottom: 12px;
+          color: $mainBlackColor;
+        }
+
+        .inputRow {
+          display: flex;
+          flex-direction: row;
+
+          .inputWrap {
+            width: 100%;
+
+            input {
+              appearance: none;
+              -webkit-appearance: none;
+              height: 48px;
+              width: 100%;
+              line-height: 48px;
+              border: 1px solid $mainBorderColor;
+              padding: 0 16px;
+              font-size: 14px;
+              color: $mainBlackColor;
+            }
+
+            @include placeholderColor($mainGreyColor);
+          }
+
+          &.twoInputs {
+            .inputWrap {
+              max-width: calc((100% - 14px) / 2);
+
+              & + .inputWrap {
+                margin-left: 14px;
+              }
+            }
+          }
+
+          &.threeInputs {
+            .inputWrap {
+              max-width: calc((100% - 28px) / 3);
+
+              & + .inputWrap {
+                margin-left: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .rightSideSideBar {
+        padding: 0;
+
+        .checkoutSideBarHead, .sideBarBottom {
+          padding: 24px;
+          border-bottom: 1px solid $mainBorderColor;
+
+          .basketSideBarHeadRow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+            line-height: 20px;
+            color: $mainBlackColor;
+            font-family: $sfBold;
+          }
+
+          .greenSideBarLabel {
+            font-family: $sfMedium;
+            margin-top: 8px;
+            font-size: 13px;
+            line-height: 10px;
+            color: #269E39;
+          }
+        }
+
+        .basketItem {
+          padding: 28px 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          & + .basketItem {
+            border-top: 1px solid $mainBorderColor;
+          }
+
+          .itemPic {
+            max-width: 100px;
+            width: 100%;
+            height: 176px;
+          }
+
+          .itemInfo {
+            border: 0;
+            padding: 0 20px;
+          }
+        }
+
+        .sideBarBottom {
+          padding: 24px;
+          border-bottom: 0;
+          border-top: 1px solid $mainBorderColor;
+
+          .confirmOrderButton {
+            @include mainYellowButton(48px);
+            max-width: 100%;
+            margin: 20px 0 16px;
+          }
+
+          .p {
+            a {
+              color: #2E84EA;
+              text-decoration: underline;
+            }
           }
         }
       }

@@ -1902,41 +1902,24 @@ input[type=number] {
   display: block;
   text-align: center;
 }
-.wrapper section.basketPageSection .basketPageContent {
+.wrapper section.basketPageSection .basketPageContent, .wrapper section.basketPageSection .checkoutPageContent, .wrapper section.checkoutPageSection .basketPageContent, .wrapper section.checkoutPageSection .checkoutPageContent {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide {
-  max-width: 100%;
-  width: 100%;
-}
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow {
-  max-height: 140px;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  background: #fff;
-  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
-}
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow + .basketItemRow {
-  margin-top: 16px;
-}
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPic {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic {
   max-width: 120px;
   flex-shrink: 0;
   height: 144px;
   width: 100%;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPic img {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo {
   max-width: 240px;
   min-width: 200px;
   width: 100%;
@@ -1946,31 +1929,31 @@ input[type=number] {
   padding: 14px 1.6vw;
   border-right: 1px solid #E7E7E7;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .itemName {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .itemName, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .itemName, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .itemName, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .itemName, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .itemName, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .itemName, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .itemName, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .itemName {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
   font-family: "San Francisco Pro Display Bold";
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .infoBlock {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock {
   margin-top: 12px;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .infoBlock .label {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .label {
   font-size: 13px;
   line-height: 10px;
   color: #7E7E7E;
   margin-bottom: 8px;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .infoBlock .value {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value {
   font-size: 13px;
   line-height: 10px;
   font-family: "San Francisco Pro Display Medium";
   color: #333333;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .infoBlock .value .date + .time {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time {
   margin-left: 8px;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo .infoBlock .value .date + .time:before {
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before {
   content: '';
   display: inline-block;
   vertical-align: middle;
@@ -1984,7 +1967,24 @@ input[type=number] {
   top: -1px;
   margin-right: 8px;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide {
+  max-width: 100%;
+  width: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow {
+  max-height: 140px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow + .basketItemRow {
+  margin-top: 16px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1992,21 +1992,21 @@ input[type=number] {
   width: 100%;
   padding: 0 1.6vw;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock {
   flex-direction: column;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
   margin-left: 1.6vw;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow {
   margin-top: 8px;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
   width: 115px;
   padding-right: 20px;
   font-weight: 600;
@@ -2014,7 +2014,7 @@ input[type=number] {
   line-height: 10px;
   color: #333333;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
   width: 40px;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -2023,7 +2023,7 @@ input[type=number] {
   text-align: center;
   color: #333333;
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice {
   display: flex;
   flex-direction: column;
   max-width: 132px;
@@ -2034,10 +2034,19 @@ input[type=number] {
   border-left: 1px solid #E7E7E7;
   font-family: "San Francisco Pro Display Bold";
 }
-.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile {
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile {
   display: none;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+.wrapper section.basketPageSection .basketPageContent .checkoutLeftSide, .wrapper section.basketPageSection .checkoutPageContent .checkoutLeftSide, .wrapper section.checkoutPageSection .basketPageContent .checkoutLeftSide, .wrapper section.checkoutPageSection .checkoutPageContent .checkoutLeftSide {
+  padding: 48px 80px;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
   margin-left: 40px;
   max-width: 340px;
   width: 100%;
@@ -2047,7 +2056,7 @@ input[type=number] {
   padding: 24px;
   background: #fff;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketSideBarHead {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketSideBarHead {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2058,7 +2067,7 @@ input[type=number] {
   font-family: "San Francisco Pro Display Bold";
   margin-bottom: 24px;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .confirmOrderButton {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .confirmOrderButton {
   background: #F87F27;
   height: 48px;
   line-height: 49px;
@@ -2071,7 +2080,7 @@ input[type=number] {
   display: block;
   margin-bottom: 12px;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .continueShoppingButton {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .continueShoppingButton {
   background: #F87F27;
   height: 48px;
   line-height: 49px;
@@ -2087,17 +2096,17 @@ input[type=number] {
   border: 1px solid #E7E7E7;
   margin-bottom: 12px;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock {
   background: rgba(46, 132, 234, 0.06);
   padding: 16px;
   color: #333333;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle {
   font-size: 14px;
   font-family: "San Francisco Pro Display Bold";
   margin-bottom: 7px;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before {
   content: '';
   position: relative;
   top: -1px;
@@ -2111,10 +2120,130 @@ input[type=number] {
   margin-right: 10px;
   background: url("./images/icons/checked.svg") no-repeat center/contain;
 }
-.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText {
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText {
   font-size: 13px;
   line-height: 16px;
   opacity: 0.5;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent {
+  max-width: 555px;
+  width: 100%;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRowWrap + .inputRowWrap {
+  margin-top: 24px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "San Francisco Pro Display Bold";
+  margin-bottom: 12px;
+  color: #333333;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap {
+  width: 100%;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap input {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  border: 1px solid #E7E7E7;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #333333;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap {
+  max-width: calc((100% - 14px) / 2);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap + .inputWrap {
+  margin-left: 14px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap {
+  max-width: calc((100% - 28px) / 3);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap + .inputWrap {
+  margin-left: 14px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
+  padding: 0;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom {
+  padding: 24px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead .basketSideBarHeadRow, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .basketSideBarHeadRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead .greenSideBarLabel, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .greenSideBarLabel {
+  font-family: "San Francisco Pro Display Medium";
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 10px;
+  color: #269E39;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem {
+  padding: 28px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem + .basketItem {
+  border-top: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem .itemPic {
+  max-width: 100px;
+  width: 100%;
+  height: 176px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem .itemInfo {
+  border: 0;
+  padding: 0 20px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom {
+  padding: 24px;
+  border-bottom: 0;
+  border-top: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .confirmOrderButton {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  max-width: 100%;
+  margin: 20px 0 16px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .p a {
+  color: #2E84EA;
+  text-decoration: underline;
 }
 .wrapper footer.footer .content {
   display: flex;

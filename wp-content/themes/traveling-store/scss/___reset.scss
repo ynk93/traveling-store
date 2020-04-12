@@ -82,3 +82,17 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+@mixin placeholderColor($color) {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color;
+  }
+}

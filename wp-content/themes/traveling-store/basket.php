@@ -60,7 +60,7 @@ wp_head(); ?>
                             </div>
                         </div>
                         <div class="itemPrice">
-                            <span class="onlyOnMobile h5">Стоимость</span>
+                            <span class="onlyOnMobile h5"><?php _e('Стоимость', 'traveling-store')?></span>
                             <div class="h5">
                                 120$
                             </div>
@@ -109,7 +109,7 @@ wp_head(); ?>
                             </div>
                         </div>
                         <div class="itemPrice">
-                            <span class="onlyOnMobile h5">Стоимость</span>
+                            <span class="onlyOnMobile h5"><?php _e('Стоимость', 'traveling-store')?></span>
                             <div class="h5">
                                 120$
                             </div>
@@ -118,21 +118,21 @@ wp_head(); ?>
                 </div>
                 <div class="rightSideSideBar">
                     <div class="basketSideBarHead">
-                        <span class="label">Итого</span>
+                        <span class="label"><?php _e('Итого', 'traveling-store'); ?></span>
                         <span class="value confirmationPrice">$240</span>
                     </div>
                     <a href="#" class="confirmOrderButton">
-                        <span>Оформить заказ</span>
+                        <span><?php _e('Оформить заказ', 'traveling-store'); ?></span>
                     </a>
                     <a href="#" class="continueShoppingButton">
-                        <span>Продолжить поиск</span>
+                        <span><?php _e('Продолжить поиск', 'traveling-store'); ?></span>
                     </a>
                     <div class="sideBarInfoBlock">
-                        <div class="sideBarInfoTitle">Гарантия лучшей цены</div>
+                        <div class="sideBarInfoTitle"><?php _e('Гарантия лучшей цены', 'traveling-store'); ?></div>
                         <div class="sideBarInfoText">
-                            Наш сервис даёт возможность туристическому объекту-исполнителю, предоставить услугу
+                            <?php _e('Наш сервис даёт возможность туристическому объекту-исполнителю, предоставить услугу
                             туристам, минуя посредников, агентств и т. п. Что в разы сокращает стоимость туристических
-                            услуг.
+                            услуг.', 'traveling-store'); ?>
                         </div>
                     </div>
                 </div>
