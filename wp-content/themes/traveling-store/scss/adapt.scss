@@ -711,12 +711,10 @@
 
     footer.footer {
       .footerInnerRow {
-        ul {
-          li {
-            display: none;
-
-            &:first-child {
-              display: block;
+        .menu {
+          ul {
+            li {
+              display: none;
             }
           }
         }
@@ -1059,19 +1057,50 @@
     }
 
     footer.footer {
+      padding: 0;
+
       .footerInnerRow {
         flex-direction: column;
+        margin: 0;
+
+        .leftSideWrap {
+          flex-direction: column;
+          width: 100%;
+
+          .turSabBlock {
+            padding: 32px 0;
+            width: 100%;
+            border-bottom: 1px solid $mainBorderColor;
+            flex-direction: column;
+            text-align: center;
+            margin-right: 0;
+
+            .turSabPic {
+              margin: 0 auto 12px;
+              width: 105px;
+              height: 38px;
+            }
+
+            .turSabLicense {
+              text-transform: uppercase;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
+        }
 
         & + .footerInnerRow {
           flex-direction: column-reverse;
         }
 
         .copyRight {
-          padding-top: 32px;
+          padding: 32px 16px 24px;
         }
 
         .socialLinksWrap {
-          padding: 32px 0;
+          padding: 28px 0;
           width: 100%;
           display: flex;
           flex-direction: row;
@@ -1079,8 +1108,17 @@
           justify-content: center;
           border-bottom: 1px solid $mainBorderColor;
 
+          ul {
+            li {
+              margin: 4px 16px;
+            }
+
+            li + li {
+              margin-left: 16px;
+            }
+          }
+
           a {
-            margin: 0 16px;
             width: 40px;
             height: 40px;
           }
@@ -1089,17 +1127,22 @@
         ul {
           flex-wrap: wrap;
           justify-content: center;
-          padding-bottom: 8px;
 
           li {
             margin: 0;
             margin-bottom: 24px;
-
-            &:first-child {
-              display: none;
-            }
-
             display: block;
+          }
+        }
+
+        .menu {
+          padding: 0 16px;
+          ul {
+            padding-bottom: 8px;
+
+            li {
+              display: block;
+            }
           }
         }
 
@@ -1112,23 +1155,31 @@
           border-bottom: 1px solid $mainBorderColor;
           padding: 32px 0;
 
-          a {
+          ul {
             width: 100%;
-            max-width: 50%;
-            text-align: center;
 
+            li {
+              margin: 0;
 
-            &.mailLink, &.phoneLink {
-              &:before {
-                width: 32px;
-                height: 32px;
-                margin: 0 auto 16px;
-                display: block;
+              &.mailLink, &.phoneLink {
+                width: 100%;
+                max-width: 50%;
+                text-align: center;
+                margin: 0;
+
+                a {
+                  &:before {
+                    width: 32px;
+                    height: 32px;
+                    margin: 0 auto 16px;
+                    display: block;
+                  }
+                }
               }
-            }
 
-            & + a {
-              border-left: 1px solid $mainBorderColor;
+              &.mailLink {
+                border-left: 1px solid $mainBorderColor;
+              }
             }
           }
         }

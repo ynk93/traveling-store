@@ -2263,6 +2263,38 @@ input[type=number] {
   border: 0;
   padding: 0;
 }
+.wrapper footer.footer .footerInnerRow .leftSideWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-right: 16px;
+  padding-right: 16px;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabPic {
+  width: 65px;
+  height: 24px;
+  background: url("./images/icons/tursab 1.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 16px;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock:after {
+  content: '';
+  display: block;
+  width: 1px;
+  right: 0;
+  height: 20px;
+  background: #E7E7E7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
 .wrapper footer.footer .footerInnerRow ul {
   display: flex;
   flex-direction: row;
@@ -2286,6 +2318,25 @@ input[type=number] {
 .wrapper footer.footer .footerInnerRow .contactLinks {
   text-align: right;
 }
+.wrapper footer.footer .footerInnerRow .contactLinks ul {
+  flex-direction: row-reverse;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink a:before {
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/icons/mail.svg");
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink a:before {
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/icons/phone.svg");
+}
 .wrapper footer.footer .footerInnerRow .contactLinks a {
   display: inline-block;
   vertical-align: middle;
@@ -2295,6 +2346,7 @@ input[type=number] {
   font-family: "San Francisco Pro Display Medium";
   font-size: 14px;
   line-height: 12px;
+  color: #333333;
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a:before {
   content: '';
@@ -2308,23 +2360,41 @@ input[type=number] {
   background: no-repeat center/contain;
   margin-right: 8px;
 }
-.wrapper footer.footer .footerInnerRow .contactLinks a.mailLink:before {
-  width: 22px;
-  height: 22px;
-  background-image: url("./images/icons/mail.svg");
-}
-.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink {
-  margin-left: 24px;
-}
-.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink:before {
-  width: 22px;
-  height: 22px;
-  background-image: url("./images/icons/phone.svg");
-}
 .wrapper footer.footer .footerInnerRow {
   margin-bottom: 20px;
 }
-.wrapper footer.footer .socialLinksWrap a {
+.wrapper footer.footer .socialLinksWrap ul li + li {
+  margin-left: 12px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.fb a {
+  background-image: url("./images/icons/social/facebook.svg");
+  background-size: 11px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.vk a {
+  background-image: url("./images/icons/social/vk.svg");
+  background-size: 25px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.insta a {
+  background-image: url("./images/icons/social/instagram.svg");
+  background-size: 20px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.whatsup a {
+  background-image: url("./images/icons/social/whatsapp.svg");
+  background-size: 22px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.telegram a {
+  background-image: url("./images/icons/social/telegram.svg");
+  background-size: 21px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.viber a {
+  background-image: url("./images/icons/social/viber.svg");
+  background-size: 22px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.skype a {
+  background-image: url("./images/icons/social/skype.svg");
+  background-size: 20px;
+}
+.wrapper footer.footer .socialLinksWrap ul li a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -2332,36 +2402,8 @@ input[type=number] {
   *display: inline;
   width: 28px;
   height: 28px;
-  margin-left: 12px;
   background: no-repeat center/contain;
-}
-.wrapper footer.footer .socialLinksWrap a.fb {
-  background-image: url("./images/icons/social/facebook.svg");
-  background-size: 11px;
-}
-.wrapper footer.footer .socialLinksWrap a.vk {
-  background-image: url("./images/icons/social/vk.svg");
-  background-size: 25px;
-}
-.wrapper footer.footer .socialLinksWrap a.insta {
-  background-image: url("./images/icons/social/instagram.svg");
-  background-size: 20px;
-}
-.wrapper footer.footer .socialLinksWrap a.whatsup {
-  background-image: url("./images/icons/social/whatsapp.svg");
-  background-size: 22px;
-}
-.wrapper footer.footer .socialLinksWrap a.telegram {
-  background-image: url("./images/icons/social/telegram.svg");
-  background-size: 21px;
-}
-.wrapper footer.footer .socialLinksWrap a.viber {
-  background-image: url("./images/icons/social/viber.svg");
-  background-size: 22px;
-}
-.wrapper footer.footer .socialLinksWrap a.skype {
-  background-image: url("./images/icons/social/skype.svg");
-  background-size: 20px;
+  font-size: 0;
 }
 .wrapper .titleWrap {
   margin-bottom: 37px;
@@ -3104,11 +3146,8 @@ input[type=number] {
   .wrapper section.reviewsSection .leftSide {
     padding: 0 40px 0 0;
   }
-  .wrapper footer.footer .footerInnerRow ul li {
+  .wrapper footer.footer .footerInnerRow .menu ul li {
     display: none;
-  }
-  .wrapper footer.footer .footerInnerRow ul li:first-child {
-    display: block;
   }
 }
 @media all and (max-width: 767px) {
@@ -3337,17 +3376,44 @@ input[type=number] {
     width: 100%;
     margin: 0 0 20px 0 !important;
   }
+  .wrapper footer.footer {
+    padding: 0;
+  }
   .wrapper footer.footer .footerInnerRow {
     flex-direction: column;
+    margin: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock {
+    padding: 32px 0;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabPic {
+    margin: 0 auto 12px;
+    width: 105px;
+    height: 38px;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabLicense {
+    text-transform: uppercase;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock:after {
+    display: none;
   }
   .wrapper footer.footer .footerInnerRow + .footerInnerRow {
     flex-direction: column-reverse;
   }
   .wrapper footer.footer .footerInnerRow .copyRight {
-    padding-top: 32px;
+    padding: 32px 16px 24px;
   }
   .wrapper footer.footer .footerInnerRow .socialLinksWrap {
-    padding: 32px 0;
+    padding: 28px 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -3355,23 +3421,33 @@ input[type=number] {
     justify-content: center;
     border-bottom: 1px solid #E7E7E7;
   }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap ul li {
+    margin: 4px 16px;
+  }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap ul li + li {
+    margin-left: 16px;
+  }
   .wrapper footer.footer .footerInnerRow .socialLinksWrap a {
-    margin: 0 16px;
     width: 40px;
     height: 40px;
   }
   .wrapper footer.footer .footerInnerRow ul {
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 8px;
   }
   .wrapper footer.footer .footerInnerRow ul li {
     margin: 0;
     margin-bottom: 24px;
     display: block;
   }
-  .wrapper footer.footer .footerInnerRow ul li:first-child {
-    display: none;
+  .wrapper footer.footer .footerInnerRow .menu {
+    padding: 0 16px;
+  }
+  .wrapper footer.footer .footerInnerRow .menu ul {
+    padding-bottom: 8px;
+  }
+  .wrapper footer.footer .footerInnerRow .menu ul li {
+    display: block;
   }
   .wrapper footer.footer .footerInnerRow .contactLinks {
     display: flex;
@@ -3382,18 +3458,25 @@ input[type=number] {
     border-bottom: 1px solid #E7E7E7;
     padding: 32px 0;
   }
-  .wrapper footer.footer .footerInnerRow .contactLinks a {
+  .wrapper footer.footer .footerInnerRow .contactLinks ul {
+    width: 100%;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li {
+    margin: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink, .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink {
     width: 100%;
     max-width: 50%;
     text-align: center;
+    margin: 0;
   }
-  .wrapper footer.footer .footerInnerRow .contactLinks a.mailLink:before, .wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink:before {
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink a:before, .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink a:before {
     width: 32px;
     height: 32px;
     margin: 0 auto 16px;
     display: block;
   }
-  .wrapper footer.footer .footerInnerRow .contactLinks a + a {
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink {
     border-left: 1px solid #E7E7E7;
   }
 }

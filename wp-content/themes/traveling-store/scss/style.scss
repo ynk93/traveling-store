@@ -2111,6 +2111,42 @@ $mainBorderColor: #E7E7E7;
         padding: 0;
       }
 
+      .leftSideWrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .turSabBlock {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: relative;
+          margin-right: 16px;
+          padding-right: 16px;
+
+          .turSabPic {
+            width: 65px;
+            height: 24px;
+            background: url('./images/icons/tursab 1.svg') no-repeat center;
+            background-size: contain;
+            margin-right: 16px;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            width: 1px;
+            right: 0;
+            height: 20px;
+            background: $mainBorderColor;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+          }
+        }
+      }
+
 
       ul {
         display: flex;
@@ -2141,11 +2177,42 @@ $mainBorderColor: #E7E7E7;
       .contactLinks {
         text-align: right;
 
+        ul {
+          flex-direction: row-reverse;
+
+          li {
+            margin-left: 24px;
+
+            &.mailLink {
+              a {
+                &:before {
+                  width: 22px;
+                  height: 22px;
+                  background-image: url('./images/icons/mail.svg');
+                }
+              }
+            }
+
+            &.phoneLink {
+              margin-left: 24px;
+
+              a {
+                &:before {
+                  width: 22px;
+                  height: 22px;
+                  background-image: url('./images/icons/phone.svg');
+                }
+              }
+            }
+          }
+        }
+
         a {
           @include inline-block(middle);
           font-family: $sfMedium;
           font-size: 14px;
           line-height: 12px;
+          color: $mainBlackColor;
 
           &:before {
             content: '';
@@ -2154,24 +2221,6 @@ $mainBorderColor: #E7E7E7;
             @include inline-block(middle);
             background: no-repeat center/contain;
             margin-right: 8px;
-          }
-
-          &.mailLink {
-            &:before {
-              width: 22px;
-              height: 22px;
-              background-image: url('./images/icons/mail.svg');
-            }
-          }
-
-          &.phoneLink {
-            margin-left: 24px;
-
-            &:before {
-              width: 22px;
-              height: 22px;
-              background-image: url('./images/icons/phone.svg');
-            }
           }
         }
       }
@@ -2182,46 +2231,68 @@ $mainBorderColor: #E7E7E7;
     }
 
     .socialLinksWrap {
-      a {
-        @include inline-block(middle);
-        width: 28px;
-        height: 28px;
-        margin-left: 12px;
-        background: no-repeat center/contain;
+      ul {
+        li {
+          & + li {
+            margin-left: 12px;
+          }
 
-        &.fb {
-          background-image: url('./images/icons/social/facebook.svg');
-          background-size: 11px;
-        }
+          &.fb {
+            a {
+              background-image: url('./images/icons/social/facebook.svg');
+              background-size: 11px;
+            }
+          }
 
-        &.vk {
-          background-image: url('./images/icons/social/vk.svg');
-          background-size: 25px;
-        }
+          &.vk {
+            a {
+              background-image: url('./images/icons/social/vk.svg');
+              background-size: 25px;
+            }
+          }
 
-        &.insta {
-          background-image: url('./images/icons/social/instagram.svg');
-          background-size: 20px;
-        }
+          &.insta {
+            a {
+              background-image: url('./images/icons/social/instagram.svg');
+              background-size: 20px;
+            }
+          }
 
-        &.whatsup {
-          background-image: url('./images/icons/social/whatsapp.svg');
-          background-size: 22px;
-        }
+          &.whatsup {
+            a {
+              background-image: url('./images/icons/social/whatsapp.svg');
+              background-size: 22px;
+            }
+          }
 
-        &.telegram {
-          background-image: url('./images/icons/social/telegram.svg');
-          background-size: 21px;
-        }
+          &.telegram {
+            a {
+              background-image: url('./images/icons/social/telegram.svg');
+              background-size: 21px;
+            }
+          }
 
-        &.viber {
-          background-image: url('./images/icons/social/viber.svg');
-          background-size: 22px;
-        }
+          &.viber {
+            a {
+              background-image: url('./images/icons/social/viber.svg');
+              background-size: 22px;
+            }
+          }
 
-        &.skype {
-          background-image: url('./images/icons/social/skype.svg');
-          background-size: 20px;
+          &.skype {
+            a {
+              background-image: url('./images/icons/social/skype.svg');
+              background-size: 20px;
+            }
+          }
+
+          a {
+            @include inline-block(middle);
+            width: 28px;
+            height: 28px;
+            background: no-repeat center/contain;
+            font-size: 0;
+          }
         }
       }
     }
