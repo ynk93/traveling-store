@@ -11,11 +11,19 @@ wp_head(); ?>
     <?php get_header(); ?>
 
     <section class="innerPageSection basketPageSection">
+
         <div class="content">
-            <div class="titleWrap innerPageTitleWrap">-->
-                <div class="h2"><?php _e('Моя корзина', 'traveling-store'); ?></div>
+
+            <div class="titleWrap innerPageTitleWrap">
+                <div class="h2">
+                    <?php _e('Моя корзина', 'traveling-store'); ?>
+                </div>
             </div>
+
             <div class="basketPageContent">
+
+	            <?php get_template_part('woocommerce/cart/cart')?>
+
                 <div class="basketLeftSide">
                     <div class="basketItemRow">
                         <div class="itemPic">
@@ -116,6 +124,7 @@ wp_head(); ?>
                         </div>
                     </div>
                 </div>
+
                 <div class="rightSideSideBar">
                     <div class="basketSideBarHead">
                         <span class="label"><?php _e('Итого', 'traveling-store'); ?></span>
@@ -136,8 +145,11 @@ wp_head(); ?>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
     <?php get_footer(); ?>
