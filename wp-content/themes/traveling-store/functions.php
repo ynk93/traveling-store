@@ -102,6 +102,10 @@
 	            wp_enqueue_script( 'traveling-store-shop', get_theme_file_uri( '/js/ajax/shop.min.js' ), array( 'jquery' ), $release_version, true );
             }
 
+            if ( is_cart() ) {
+	            wp_enqueue_script( 'traveling-store-cart', get_theme_file_uri( '/js/ajax/cart.js' ), array( 'jquery' ), $release_version, true );
+            }
+
 		}
 
 	endif;
@@ -175,3 +179,12 @@
 		wp_die();
 
 	}
+
+	// test
+
+//	add_action('init', 'test');
+//	function test() {
+//
+//		WC()->cart->add_to_cart(31, 1);
+//
+//	}
