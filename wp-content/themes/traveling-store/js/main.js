@@ -294,4 +294,9 @@ $(document).ready(function () {
             left: bottomLineMargin
         });
     }
+
+    $(document).on('change', '.checkoutContent .paymentTypeWrap input[type=radio]', function () {
+        $('.paymentTypeWrap').find('.radioContent').slideUp();
+        $(this).parents('.radioWrap').find('.radioContent').slideToggle();
+    });
 });

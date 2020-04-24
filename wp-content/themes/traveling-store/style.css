@@ -2129,8 +2129,35 @@ input[type=number] {
   max-width: 555px;
   width: 100%;
 }
-.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRowWrap + .inputRowWrap {
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .peoplesDataWrap {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 40px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .peoplesDataWrap .inputRowWrap + .inputRowWrap {
   margin-top: 24px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .placeDataWrap {
+  margin-bottom: 40px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .placeDataWrap .inputRowWrap + .inputRowWrap {
+  margin-top: 12px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .contactTypeWrap {
+  margin-bottom: 32px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .contactTypeWrap .inputLabel {
+  margin-bottom: 16px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .paymentTypeWrap .inputLabel {
+  margin-bottom: 16px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .paymentTypeWrap .radioContent {
+  padding-top: 8px;
+  display: none;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .paymentTypeWrap .radioContent .p .bold {
+  color: #333333;
 }
 .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputLabel {
   font-size: 14px;
@@ -2138,6 +2165,12 @@ input[type=number] {
   font-family: "San Francisco Pro Display Bold";
   margin-bottom: 12px;
   color: #333333;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .fakeInputRowWrap {
+  margin-bottom: 20px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .fakeInputRowWrap .inputLabel {
+  margin-bottom: 8px;
 }
 .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow {
   display: flex;
@@ -2168,6 +2201,15 @@ input[type=number] {
 .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.chbRow .chbWrap + .chbWrap {
+  margin: 0 0 0 48px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.radioRow {
+  flex-direction: column;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.radioRow .chbWrap + .chbWrap {
+  margin: 20px 0 0 0;
 }
 .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap {
   max-width: calc((100% - 14px) / 2);
@@ -2573,6 +2615,33 @@ input[type=number] {
 }
 .wrapper .chbWrap + .chbWrap {
   margin-top: 12px;
+}
+.wrapper .chbWrap.radioWrap .checkmark {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.wrapper .chbWrap.radioWrap .container input:checked ~ .checkmark {
+  background-color: #fff;
+  border-color: #E7E7E7;
+}
+.wrapper .chbWrap.radioWrap .container input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+.wrapper .chbWrap.radioWrap .container .checkmark:after {
+  display: block;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #F87F27;
 }
 .wrapper .chbWrap .container {
   display: block;

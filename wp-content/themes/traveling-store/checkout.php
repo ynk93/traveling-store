@@ -17,35 +17,128 @@ wp_head(); ?>
             </div>
             <div class="checkoutPageContent">
                 <div class="checkoutLeftSide">
-                    <div class="checkoutContent">
-                        <div class="inputRowWrap">
-                            <div class="inputLabel">
-                                Взрослый 1
+                    <form class="checkoutContent">
+                        <div class="peoplesDataWrap">
+                            <div class="fakeInputRowWrap">
+                                <div class="inputLabel">
+                                    Состав группы
+                                </div>
+                                <div class="innerLabel">
+                                    <div class="p">Введите имя и фамилию всех членов экскурсионной группы.</div>
+                                </div>
                             </div>
-                            <div class="inputRow twoInputs">
-                                <div class="inputWrap"><input type="text" placeholder="Имя"></div>
-                                <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
+                            <div class="inputRowWrap">
+                                <div class="inputLabel">
+                                    Взрослый 1
+                                </div>
+                                <div class="inputRow twoInputs">
+                                    <div class="inputWrap"><input type="text" placeholder="Имя"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
+                                </div>
+                            </div>
+                            <div class="inputRowWrap">
+                                <div class="inputLabel">
+                                    Взрослый 2
+                                </div>
+                                <div class="inputRow twoInputs">
+                                    <div class="inputWrap"><input type="text" placeholder="Имя"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
+                                </div>
+                            </div>
+                            <div class="inputRowWrap">
+                                <div class="inputLabel">
+                                    Ребенок 1
+                                </div>
+                                <div class="inputRow twoInputs">
+                                    <div class="inputWrap"><input type="text" placeholder="Имя"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="inputRowWrap">
-                            <div class="inputLabel">
-                                Взрослый 2
+                        <div class="placeDataWrap">
+                            <div class="inputRowWrap">
+                                <div class="inputRow threeInputs">
+                                    <div class="inputWrap"><input type="text" placeholder="Ваш регион"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Название отеля"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Номер комнаты"></div>
+                                </div>
                             </div>
-                            <div class="inputRow twoInputs">
-                                <div class="inputWrap"><input type="text" placeholder="Имя"></div>
-                                <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
-                            </div>
-                        </div>
-                        <div class="inputRowWrap">
-                            <div class="inputLabel">
-                                Ребенок 1
-                            </div>
-                            <div class="inputRow twoInputs">
-                                <div class="inputWrap"><input type="text" placeholder="Имя"></div>
-                                <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
+                            <div class="inputRowWrap">
+                                <div class="inputRow twoInputs">
+                                    <div class="inputWrap"><input type="text" placeholder="E-mail"></div>
+                                    <div class="inputWrap"><input type="text" placeholder="Номер телефона"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="contactTypeWrap">
+                            <div class="inputRowWrap">
+                                <div class="inputLabel">
+                                    Выберете мессенджер для связи с Вами:
+                                </div>
+                                <div class="inputRow chbRow">
+                                    <div class="chbWrap">
+                                        <label class="container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="chbLabel">WhatsApp</span>
+                                        </label>
+                                    </div>
+                                    <div class="chbWrap">
+                                        <label class="container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="chbLabel">Viber</span>
+                                        </label>
+                                    </div>
+                                    <div class="chbWrap">
+                                        <label class="container">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            <span class="chbLabel">Telegram</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paymentTypeWrap">
+                            <div class="inputRowWrap">
+                                <div class="inputLabel">
+                                    Выберете сособ оплаты:
+                                </div>
+                                <div class="inputRow radioRow">
+                                    <div class="chbWrap radioWrap">
+                                        <label class="container">
+                                            <input type="radio" name="paymentType">
+                                            <span class="checkmark"></span>
+                                            <span class="chbLabel">Оплата онлайн</span>
+                                        </label>
+                                        <div class="radioContent">
+                                            <div class="p">
+                                                Выбирая способ оплаты <span class="bold">“Оплата онлайн”</span> Вас
+                                                перенаправит на страницу
+                                                сервиса <span class="bold">LiqPay</span> для произведения оплаты онлайн
+                                                с помощью банковской
+                                                карты.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chbWrap radioWrap">
+                                        <label class="container">
+                                            <input type="radio" name="paymentType">
+                                            <span class="checkmark"></span>
+                                            <span class="chbLabel">Оплатить на месте</span>
+                                        </label>
+                                        <div class="radioContent">
+                                            <div class="p">
+                                                Выбирая способ оплаты <span class="bold">“Оплатить на месте”</span> Вы
+                                                оплатите экскурсию перед её началом.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="rightSideSideBar">
                     <div class="checkoutSideBarHead">
@@ -94,6 +187,7 @@ wp_head(); ?>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <?php get_footer(); ?>
