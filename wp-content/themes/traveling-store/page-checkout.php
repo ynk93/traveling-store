@@ -21,15 +21,15 @@ wp_head(); ?>
                         <div class="peoplesDataWrap">
                             <div class="fakeInputRowWrap">
                                 <div class="inputLabel">
-                                    Состав группы
+                                    <?php _e('Состав группы', 'traveling-store'); ?>
                                 </div>
                                 <div class="innerLabel">
-                                    <div class="p">Введите имя и фамилию всех членов экскурсионной группы.</div>
+                                    <div class="p"><?php _e('Введите имя и фамилию всех членов экскурсионной группы.', 'traveling-store'); ?></div>
                                 </div>
                             </div>
                             <div class="inputRowWrap">
                                 <div class="inputLabel">
-                                    Взрослый 1
+                                    <?php _e('Взрослый 1', 'traveling-store'); ?>
                                 </div>
                                 <div class="inputRow twoInputs">
                                     <div class="inputWrap"><input type="text" placeholder="Имя"></div>
@@ -38,7 +38,7 @@ wp_head(); ?>
                             </div>
                             <div class="inputRowWrap">
                                 <div class="inputLabel">
-                                    Взрослый 2
+                                    <?php _e('Взрослый 2', 'traveling-store'); ?>
                                 </div>
                                 <div class="inputRow twoInputs">
                                     <div class="inputWrap"><input type="text" placeholder="Имя"></div>
@@ -47,7 +47,7 @@ wp_head(); ?>
                             </div>
                             <div class="inputRowWrap">
                                 <div class="inputLabel">
-                                    Ребенок 1
+                                    <?php _e('Ребенок 1', 'traveling-store'); ?>
                                 </div>
                                 <div class="inputRow twoInputs">
                                     <div class="inputWrap"><input type="text" placeholder="Имя"></div>
@@ -73,28 +73,28 @@ wp_head(); ?>
                         <div class="contactTypeWrap">
                             <div class="inputRowWrap">
                                 <div class="inputLabel">
-                                    Выберете мессенджер для связи с Вами:
+                                    <?php _e('Выберете мессенджер для связи с Вами:', 'traveling-store'); ?>
                                 </div>
                                 <div class="inputRow chbRow">
                                     <div class="chbWrap">
                                         <label class="container">
                                             <input type="checkbox">
                                             <span class="checkmark"></span>
-                                            <span class="chbLabel">WhatsApp</span>
+                                            <span class="chbLabel"><?php _e('WhatsApp', 'traveling-store'); ?></span>
                                         </label>
                                     </div>
                                     <div class="chbWrap">
                                         <label class="container">
                                             <input type="checkbox">
                                             <span class="checkmark"></span>
-                                            <span class="chbLabel">Viber</span>
+                                            <span class="chbLabel"><?php _e('Viber', 'traveling-store'); ?></span>
                                         </label>
                                     </div>
                                     <div class="chbWrap">
                                         <label class="container">
                                             <input type="checkbox">
                                             <span class="checkmark"></span>
-                                            <span class="chbLabel">Telegram</span>
+                                            <span class="chbLabel"><?php _e('Telegram', 'traveling-store'); ?></span>
                                         </label>
                                     </div>
                                 </div>
@@ -103,22 +103,22 @@ wp_head(); ?>
                         <div class="paymentTypeWrap">
                             <div class="inputRowWrap">
                                 <div class="inputLabel">
-                                    Выберете сособ оплаты:
+                                    <?php _e('Выберете сособ оплаты:', 'traveling-store'); ?>
                                 </div>
                                 <div class="inputRow radioRow">
                                     <div class="chbWrap radioWrap">
                                         <label class="container">
                                             <input type="radio" name="paymentType">
                                             <span class="checkmark"></span>
-                                            <span class="chbLabel">Оплата онлайн</span>
+                                            <span class="chbLabel"><?php _e('Оплата онлайн', 'traveling-store'); ?></span>
                                         </label>
                                         <div class="radioContent">
                                             <div class="p">
-                                                Выбирая способ оплаты <span class="bold">“Оплата онлайн”</span> Вас
+                                                <?php _e('Выбирая способ оплаты <span class="bold">“Оплата онлайн”</span> Вас
                                                 перенаправит на страницу
                                                 сервиса <span class="bold">LiqPay</span> для произведения оплаты онлайн
                                                 с помощью банковской
-                                                карты.
+                                                карты.', 'traveling-store'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -126,12 +126,12 @@ wp_head(); ?>
                                         <label class="container">
                                             <input type="radio" name="paymentType">
                                             <span class="checkmark"></span>
-                                            <span class="chbLabel">Оплатить на месте</span>
+                                            <span class="chbLabel"><?php _e('Оплатить на месте', 'traveling-store'); ?></span>
                                         </label>
                                         <div class="radioContent">
                                             <div class="p">
-                                                Выбирая способ оплаты <span class="bold">“Оплатить на месте”</span> Вы
-                                                оплатите экскурсию перед её началом.
+                                                <?php _e('Выбирая способ оплаты <span class="bold">“Оплатить на месте”</span> Вы
+                                                оплатите экскурсию перед её началом.', 'traveling-store'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@ wp_head(); ?>
                             <span class="value confirmationPrice">$120</span>
                         </div>
                         <div class="greenSideBarLabel">
-                            Без дополнительных сборов и комиссий.
+                            <?php _e('Без дополнительных сборов и комиссий.', 'traveling-store'); ?>
                         </div>
                     </div>
                     <div class="basketItem">
@@ -178,11 +178,11 @@ wp_head(); ?>
                         </div>
                         <a href="#" class="confirmOrderButton">
                             <span>
-                                Подтвердить заказ
+                                <?php _e('Подтвердить заказ', 'traveling-store'); ?>
                             </span>
                         </a>
                         <div class="p">
-                            Оформляя заказ, вы тем самым принимаете <a href="#">Общие условия и положения</a>.
+                            <?php _e('Оформляя заказ, вы тем самым принимаете <a href="#">Общие условия и положения</a>.', 'traveling-store'); ?>
                         </div>
                     </div>
                 </div>

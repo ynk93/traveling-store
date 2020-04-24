@@ -2721,7 +2721,7 @@ input[type=number] {
   .wrapper section.popularProductsSection .cardsRow .card {
     max-width: calc((100% - 60px) / 4);
   }
-  .wrapper section.popularProductsSection .cardsRow .card:last-child {
+  .wrapper section.popularProductsSection .cardsRow .card:nth-child(5) {
     display: none;
   }
   .wrapper section.aboutUsPageSection .aboutUsPageRow.swiperRow .leftSide {
