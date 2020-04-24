@@ -83,6 +83,11 @@
 	if ( ! function_exists( 'traveling_store_scripts_setup' ) ) :
 
 		function traveling_store_scripts_setup() {
+
+			global $wp_query;
+
+			$term = $wp_query->get_queried_object();
+
 			$release_version = '1.001';
 
 			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/js/libs/css3-animate-it.js' ), array( 'jquery' ), '1.0', true );
@@ -91,8 +96,95 @@
 			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/js/libs/jquery.nice-select.min.js' ), array( 'jquery' ), '1.0', true );
             wp_enqueue_script( 'traveling-store-jquery-ui', get_theme_file_uri( '/js/libs/jquery-ui.min.js' ), array( 'jquery' ), '1.0', true );
 
-            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.js' ), array( 'jquery' ), $release_version, true );
+            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.min.js' ), array( 'jquery' ), $release_version, true );
+
+            if ( is_shop() || is_product_tag() || is_product_category() || taxonomy_is_product_attribute($term->taxonomy) ) {
+	            wp_enqueue_script( 'traveling-store-shop', get_theme_file_uri( '/js/ajax/shop.min.js' ), array( 'jquery' ), $release_version, true );
+            }
+
+            if ( is_cart() ) {
+	            wp_enqueue_script( 'traveling-store-cart', get_theme_file_uri( '/js/ajax/cart.js' ), array( 'jquery' ), $release_version, true );
+            }
+
 		}
 
 	endif;
 	add_action( 'wp_enqueue_scripts', 'traveling_store_scripts_setup' );
+
+	// Shop filters ajax loop
+	add_action( 'wp_ajax_traveling_store_shop_filters', 'traveling_store_shop_filters' );
+	add_action( 'wp_ajax_nopriv_traveling_store_shop_filters', 'traveling_store_shop_filters' );
+	function traveling_store_shop_filters() {
+
+		$args = array(
+			'post_type'      => 'product',
+			'posts_per_page' => 12,
+			'post_status'    => 'publish',
+			'perm'           => 'readable'
+		);
+
+		$args = array_merge( $args, wp_parse_args( $_GET['query'] ) );
+
+		//  Attributes query
+		if ( isset($args['pa_regions']) && !empty($args['pa_regions']) ) {
+
+			$regions_args = array(
+				'taxonomy'        => 'pa_regions',
+				'field'           => 'slug',
+				'terms'           =>  explode(",", $args['pa_regions']),
+				'operator'        => 'IN',
+			);
+
+			$args['tax_query'][] = $regions_args;
+
+		}
+
+		if ( ! isset( $args['order'] ) ) {
+			$args = array_merge( $args, array(
+				'orderby' => 'menu_order+title',
+				'order'   => 'ASC',
+			) );
+		} else {
+			$args['orderby'] = 'meta_value_num';
+		}
+
+		if ( ! isset( $args['tax_query'] ) ) {
+			$args['tax_query'] = array();
+		}
+		$args['tax_query'][] = array(
+			'taxonomy' => 'product_visibility',
+			'terms'    => array( 'exclude-from-catalog', 'hidden' ),
+			'field'    => 'slug',
+			'operator' => 'NOT IN',
+		);
+
+		$loop = new WP_Query( $args );
+
+		$total = $loop->found_posts;
+
+		if ( $loop->have_posts() ) {
+
+			echo '<input type="hidden" class="total-count" data-count="' . $total . '" />';
+
+			while ( $loop->have_posts() ) : $loop->the_post();
+				$post_id = get_the_ID();
+
+				get_template_part( 'template-parts/catalog-product' );
+
+			endwhile;
+		} else {
+			echo __( '<div class="empty-product">Поиск не дал результатов</div>' );
+		}
+
+		wp_die();
+
+	}
+
+	// test
+
+//	add_action('init', 'test');
+//	function test() {
+//
+//		WC()->cart->add_to_cart(31, 1);
+//
+//	}
