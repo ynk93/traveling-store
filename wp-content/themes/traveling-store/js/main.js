@@ -161,6 +161,9 @@ $(document).ready(function () {
         if ($(window).width() <= 1023) {
             initMobileProductsSwiper();
         }
+        else {
+            destroyProductsSwiper();
+        }
 
         if ($(window).width() >= 1024) {
             if ($(document).scrollTop() > 12) {
@@ -173,13 +176,15 @@ $(document).ready(function () {
         }
     });
 
+    var mobileProductsSwiper;
+
     function initMobileProductsSwiper() {
         var mobileSwiperWrap = $('.forMobileSwiperWrap');
         mobileSwiperWrap.addClass('swiper-container');
         mobileSwiperWrap.children().addClass('swiper-wrapper');
         mobileSwiperWrap.find('.card').addClass('swiper-slide');
 
-        var mobileProductsSwiper = new Swiper('.swiper-container.forMobileSwiperWrap', {
+        mobileProductsSwiper = new Swiper('.swiper-container.forMobileSwiperWrap', {
             slidesPerView: 2,
             spaceBetween: 20,
             breakpoints: {
@@ -188,6 +193,15 @@ $(document).ready(function () {
                 }
             }
         });
+    }
+
+    function destroyProductsSwiper() {
+        var mobileSwiperWrap = $('.forMobileSwiperWrap');
+        mobileSwiperWrap.removeClass('swiper-container');
+        mobileSwiperWrap.children().removeClass('swiper-wrapper');
+        mobileSwiperWrap.find('.card').removeClass('swiper-slide');
+
+        mobileProductsSwiper.destroy(true, true);
     }
 
     $(document).on('click', '.counterInputButton', function (e) {
@@ -294,4 +308,9 @@ $(document).ready(function () {
             left: bottomLineMargin
         });
     }
+
+    $(document).on('change', '.checkoutContent .paymentTypeWrap input[type=radio]', function () {
+        $('.paymentTypeWrap').find('.radioContent').slideUp();
+        $(this).parents('.radioWrap').find('.radioContent').slideToggle();
+    });
 });

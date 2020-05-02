@@ -1960,10 +1960,50 @@ $mainBorderColor: #E7E7E7;
         max-width: 555px;
         width: 100%;
 
+        .peoplesDataWrap {
+          padding-bottom: 40px;
+          border-bottom: 1px solid $mainBorderColor;
+          margin-bottom: 40px;
 
-        .inputRowWrap {
-          & + .inputRowWrap {
-            margin-top: 24px;
+          .inputRowWrap {
+            & + .inputRowWrap {
+              margin-top: 24px;
+            }
+          }
+        }
+
+        .placeDataWrap {
+          margin-bottom: 40px;
+
+          .inputRowWrap {
+            & + .inputRowWrap {
+              margin-top: 12px;
+            }
+          }
+        }
+
+        .contactTypeWrap {
+          margin-bottom: 32px;
+
+          .inputLabel {
+            margin-bottom: 16px;
+          }
+        }
+
+        .paymentTypeWrap {
+          .inputLabel {
+            margin-bottom: 16px;
+          }
+
+          .radioContent {
+            padding-top: 8px;
+            display: none;
+
+            .p {
+              .bold {
+                color: $mainBlackColor;
+              }
+            }
           }
         }
 
@@ -1973,6 +2013,14 @@ $mainBorderColor: #E7E7E7;
           font-family: $sfBold;
           margin-bottom: 12px;
           color: $mainBlackColor;
+        }
+
+        .fakeInputRowWrap {
+          margin-bottom: 20px;
+
+          .inputLabel {
+            margin-bottom: 8px;
+          }
         }
 
         .inputRow {
@@ -1995,6 +2043,24 @@ $mainBorderColor: #E7E7E7;
             }
 
             @include placeholderColor($mainGreyColor);
+          }
+
+          &.chbRow {
+            .chbWrap {
+              & + .chbWrap {
+                margin: 0 0 0 48px;
+              }
+            }
+          }
+
+          &.radioRow {
+            flex-direction: column;
+
+            .chbWrap {
+              & + .chbWrap {
+                margin: 20px 0 0 0;
+              }
+            }
           }
 
           &.twoInputs {
@@ -2474,6 +2540,35 @@ $mainBorderColor: #E7E7E7;
   .chbWrap {
     & + .chbWrap {
       margin-top: 12px;
+    }
+
+    &.radioWrap {
+      .checkmark {
+        @include border-radius(50%);
+      }
+
+      .container input:checked ~ .checkmark {
+        background-color: #fff;
+        border-color: $mainBorderColor;
+      }
+
+      .container input:checked ~ .checkmark:after {
+        opacity: 1;
+      }
+
+      .container .checkmark:after {
+        display: block;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 10px;
+        height: 10px;
+        @include border-radius(50%);
+        background: $mainColor;
+      }
     }
 
     .container {
