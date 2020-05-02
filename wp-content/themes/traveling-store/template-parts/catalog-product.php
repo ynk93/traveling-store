@@ -37,7 +37,7 @@
 		<span class="priceRow">
 			<span class="priceBlock">
 				<span class="priceLabel"><?php _e('Цена от:', 'traveling-store'); ?></span>
-				<span class="priceValue"><?php echo $product_regular_price; ?></span>
+				<span class="priceValue"><?php echo $product_regular_price . get_woocommerce_currency_symbol(); ?></span>
 			</span>
 			<span class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></span>
 		</span>

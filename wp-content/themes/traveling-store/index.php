@@ -50,7 +50,7 @@ wp_head(); ?>
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
                 <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
-                <a href="#" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
+                <a href="<?php echo get_site_url() . '/tours/'; ?>" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
             <div class="cardsRow">
 
@@ -88,26 +88,32 @@ wp_head(); ?>
 
     <section class="nthInRowSection partnersSection">
         <div class="content">
+
             <div class="titleWrap withButtonTitleWrap">
-                <div class="h3"><?php _e('Реклама от партнеров', 'traveling-store'); ?></div>
-                <a href="#" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
+                <div class="h3"><?php _e( 'Реклама от партнеров', 'traveling-store' ); ?></div>
+                <a href="#partners" class="withTitleButton"><?php _e( 'стать партнером', 'traveling-store' ); ?></a>
             </div>
 
             <div class="cardsRow">
 
-                <?php $partners = get_field('partners');
-                foreach ($partners as $partners_item) : ?>
+				<?php $partners = get_field( 'partners' );
+					foreach ( $partners as $partners_item ) : ?>
 
-                    <a href="<?php echo $partners_item['link']['url']; ?>" target="<?php echo $partners_item['link']['target']; ?>" class="card">
+                        <a href="<?php echo $partners_item['link']['url']; ?>"
+                           target="<?php echo $partners_item['link']['target']; ?>" class="card">
                         <span class="cardPic">
-                            <img src="<?php echo $partners_item['image']['url']; ?>" class="uniqaLogo">
+                            <?php echo wp_get_attachment_image( $partners_item['image']['ID'], array(
+	                            73,
+	                            73,
+	                            false
+                            ), false ); ?>
                         </span>
                             <span class="cardInfo">
                             <span class="cardName"><?php echo $partners_item['title']; ?></span>
                         </span>
-                    </a>
+                        </a>
 
-                <?php endforeach; ?>
+					<?php endforeach; ?>
 
             </div>
 
@@ -120,39 +126,47 @@ wp_head(); ?>
                 <div class="h3"><?php _e('Категории', 'traveling-store'); ?></div>
             </div>
             <div class="cardsRow">
-                <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/categoriesPics/img.png" alt="">
-                    </span>
-                    <span class="cardInfo">
-                        <span class="h5 cardName"><?php _e('Шопинг', 'traveling-store'); ?></span>
-                        <span class="p cardDescription">
-                            <?php _e(' Что привезти из Турции, где покупать сувениры и модные бренды. Рынки, аутлеты, знаменитые торговые центры Турции. Советы экспертов и отзывы туристов о шоппинге в Турции на «Тонкостях туризма».', 'traveling-store'); ?>
+
+                <?php
+	                $category_taxonomy = 'product_cat';
+	                $orderby      = 'menu_order';
+
+	                $show_count   = 0;
+	                $pad_counts   = 0;
+	                $title        = '';
+
+	                $args_cat = array(
+		                'taxonomy'     => $category_taxonomy,
+		                'child_of'     => 0,
+		                'parent'       => '',
+		                'orderby'      => $orderby,
+		                'show_count'   => $show_count,
+		                'pad_counts'   => $pad_counts,
+		                'hierarchical' => 0,
+		                'title_li'     => $title,
+		                'hide_empty'   => 0,
+		                'exclude'      => 15
+	                );
+
+	                $categories = get_categories( $args_cat );
+
+	                foreach ( $categories as $category ) : ?>
+
+                    <a href="#" class="card">
+                        <span class="cardPic">
+                                <?php $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+	                                echo wp_get_attachment_image( $thumbnail_id, array( 240, 280 ), false ); ?>
                         </span>
-                    </span>
-                </a>
-                <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/categoriesPics/image_2020-03-22_20-23-54.png">
-                    </span>
-                    <span class="cardInfo">
-                        <span class="h5 cardName"><?php _e('Рестораны', 'traveling-store'); ?></span>
-                        <span class="p cardDescription">
-                            <?php _e(' Писать про превосходный сервис и отменную еду этих заведений просто нет смысла - это лучшие турецкие рестораны. Поэтому расскажу про особенности каждого. Узнайте, на какие рестораны стоит обратить свое внимание!', 'traveling-store'); ?>
+                        <span class="cardInfo">
+                            <span class="h5 cardName"><?php echo $category->name; ?></span>
+                            <span class="p cardDescription">
+                                <?php echo $category->category_description; ?>
+                            </span>
                         </span>
-                    </span>
-                </a>
-                <a href="#" class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/categoriesPics/img%20(2).png" alt="">
-                    </span>
-                    <span class="cardInfo">
-                        <span class="h5 cardName">VIP</span>
-                        <span class="p cardDescription">
-                            <?php _e('Существует стереотип, что Турция – это страна бюджетного отдыха, но это не совсем так. Безупречно, тут без проблем можно недорого отдохнуть, при этом совсем не чувствуя себя чем-то  обделенным.', 'traveling-store'); ?>
-                        </span>
-                    </span>
-                </a>
+                    </a>
+
+                <?php endforeach; ?>
+
             </div>
         </div>
     </section>

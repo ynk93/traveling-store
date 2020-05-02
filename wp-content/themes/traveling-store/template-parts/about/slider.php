@@ -14,19 +14,45 @@
 
 			<div class="swiper-wrapper">
 
-				<?php foreach ( $about_item['slider_content'] as $slide ) :
-					var_dump($slide);?>
-				<a href="<?php echo $slide['link']['url']; ?>"  target="_self" class="swiper-slide">
-					<div class="card">
-						<span class="cardPic">
-							<?php echo wp_get_attachment_image($slide['image']['ID'], array(240, 280), false); ?>
-						</span>
-						<span class="cardInfo">
-							<span class="h5 cardName"><?php echo $slide['ttitle']; ?></span>
-						</span>
-					</div>
-				</a>
-				<?php endforeach; ?>
+				<?php
+					$category_taxonomy = 'product_cat';
+					$orderby           = 'menu_order';
+
+					$show_count = 0;
+					$pad_counts = 0;
+					$title      = '';
+
+					$args_cat = array(
+						'taxonomy'     => $category_taxonomy,
+						'child_of'     => 0,
+						'parent'       => '',
+						'orderby'      => $orderby,
+						'show_count'   => $show_count,
+						'pad_counts'   => $pad_counts,
+						'hierarchical' => 0,
+						'title_li'     => $title,
+						'hide_empty'   => 0,
+						'exclude'      => 15
+					);
+
+					$categories = get_categories( $args_cat );
+
+					foreach ( $categories as $category ) : ?>
+
+                        <a href="<?php echo get_site_url() . '/tours/category/' . $category->slug . '/'; ?>" target="_self"
+                           class="swiper-slide">
+                            <div class="card">
+                            <span class="cardPic">
+                                <?php $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+	                                echo wp_get_attachment_image( $thumbnail_id, array( 240, 280 ), false ); ?>
+                            </span>
+                                <span class="cardInfo">
+                                <span class="h5 cardName"><?php echo $category->name; ?></span>
+                            </span>
+                            </div>
+                        </a>
+
+					<?php endforeach; ?>
 
 			</div>
 

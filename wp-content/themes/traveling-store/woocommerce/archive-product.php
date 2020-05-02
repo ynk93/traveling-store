@@ -9,8 +9,6 @@
 	wp_head();
 
 	$term = $wp_query->get_queried_object();
-
-	var_dump($term);
 ?>
 <body>
 <div class="wrapper innerPageHeader">
@@ -72,8 +70,6 @@
 			                'field'    => 'slug',
 			                'operator' => 'NOT IN',
 		                );
-
-		                var_dump($args);
 
 		                $loop = new WP_Query( $args );
 
