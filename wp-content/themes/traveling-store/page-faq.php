@@ -10,6 +10,7 @@ wp_head(); ?>
 <div class="wrapper innerPageHeader">
 
     <?php get_header(); ?>
+
     <section class="innerPageSection faqPageSection">
         <div class="content">
             <div class="titleWrap innerPageTitleWrap">
