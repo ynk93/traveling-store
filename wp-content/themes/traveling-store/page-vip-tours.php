@@ -4,6 +4,9 @@
 /**
  * Template Name: VIP tours page
  */
+
+$vip = get_field("vip_content");
+
 wp_head(); ?>
 <body>
 <div class="wrapper innerPageHeader">
@@ -13,36 +16,28 @@ wp_head(); ?>
 
     <section class="innerPageSection textPageSection">
         <div class="content">
-            <div class="titleWrap innerPageTitleWrap">
-                <div class="h2"><?php _e('VIP Услуги', 'traveling-store'); ?></div>
-            </div>
+
             <div class="textPageContent">
-                <div class="textPageContentRow">
-                    <div class="leftSide textSide">
-                        <div class="p semibold">
-                            <?php _e('Индивидуальный отдых в Анталии давно перестал ассоциироваться с дорогим, недоступным-премиум отдыхом для среднего достатка путешественника.', 'traveling-store'); ?>
-                        </div>
-                        <div class="p grey">
-                            <?php _e('Индивидуальный отдых, в отличие от группового предоставляет Вам возможность организовать свой отдых, учитывая Ваши исключительные пожелания и интересы, индивидуальные привычки и предпочтения.', 'traveling-store'); ?>
-                        </div>
-                    </div>
-                    <div class="rightSide picSide tour1">
-                        <img src="images/uploads/vip/vip1.png" alt="">
-                    </div>
-                </div>
-                <div class="textPageContentRow">
-                    <div class="leftSide picSide tour2">
-                        <img src="images/uploads/vip/vip2.png" alt="">
-                    </div>
-                    <div class="rightSide textSide">
-                        <div class="p grey">
-                            <?php _e('Ценовая доступность организации индивидуального отдыха, предоставляемая нашим сервисом, связана с тем, что услугу здесь вы приобретаете непосредственно у исполнителя - владельца, той или иной услуги. Минуя накруток посредников, в лице агентств, гидов, уличных маклеров и т.д.', 'traveling-store'); ?>
-                        </div>
-                    </div>
-                </div>
+
+                <?php foreach ( $vip as $vip_item ) :
+
+                    $vip_item_layout = $vip_item["acf_fc_layout"];
+                    switch ($vip_item_layout) {
+                        case "text_and_image":
+                            include( locate_template( 'template-parts/vip/text_and_image.php' ) );
+                            break;
+                        case "image_and_text":
+                            include( locate_template( 'template-parts/vip/image_and_text.php' ) );
+                            break;
+                    }
+
+                endforeach; ?>
+
             </div>
+
         </div>
     </section>
+
     <section class="nthInRowSection popularProductsSection">
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
