@@ -12,6 +12,11 @@ $(document).ready(function () {
                 return '<span class="' + className + '"><span class="innerBullet"></span></span>';
             }
         },
+        breakpoints: {
+            768: {
+                effect: 'fade',
+            }
+        },
         navigation: {
             nextEl: '.swiper-button-right',
             prevEl: '.swiper-button-left',

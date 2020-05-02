@@ -739,14 +739,56 @@
       padding-bottom: 0;
 
       .swiper-container {
-        height: 296px;
+        height: auto;
 
         .swiper-wrapper {
           .swiper-slide {
-            .slideContent {
-              display: none;
+            .content {
+              flex-direction: column;
+              padding: 0;
+
+              .slideContent {
+                display: block;
+                padding: 0 16px;
+                margin: 0;
+
+                .slideTitle, .slideDescription {
+                  @include transition(none !important);
+                  @include transform(none !important);
+                }
+
+                .slideTitle {
+                  color: $mainBlackColor;
+                }
+
+                .slideDescription {
+                  color: $mainGreyColor;
+
+                  .bold {
+                    color: $mainBlackColor;
+                  }
+                }
+              }
+
+              .tourSlidePicBlock {
+                height: 296px;
+                margin-top: 32px;
+                @include transform(none !important);
+                position: relative;
+
+                &:after {
+                  background: linear-gradient(0deg, rgba(51, 51, 51, 0.15) rgba(51, 51, 51, 0.15));
+                  opacity: 1;
+                }
+              }
             }
           }
+        }
+
+        .swiper-pagination {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
         }
 
         .swiper-buttons-wrap {
@@ -783,6 +825,7 @@
         max-width: 100%;
       }
     }
+
     section.reviewsSection {
       .content {
         flex-direction: column;

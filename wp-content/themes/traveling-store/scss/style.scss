@@ -31,7 +31,7 @@ $barlowFont: 'Barlow Condensed', sans-serif;
 $mainColor: #F87F27;
 $mainBlackColor: #333333;
 $mainLightColor: rgba(255, 255, 255, 0.6);
-$mainGreyColor: rgba(51, 51, 51, 0.50);
+$mainGreyColor: rgba(51, 51, 51, 0.5);
 $mainBorderColor: #E7E7E7;
 
 .h1 {
@@ -460,6 +460,7 @@ $mainBorderColor: #E7E7E7;
           position: relative;
           margin-left: 41px;
           height: 30px;
+          height: 30px;
           width: 42px;
           background: url('./images/icons/basket.svg') no-repeat left center/29px;
 
@@ -535,16 +536,19 @@ $mainBorderColor: #E7E7E7;
       }
 
       .swiper-pagination {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 24px;
-        height: 100%;
-        right: calc(((100vw - 1280px) / 2) - 8px);
-        bottom: 0;
-        top: 0;
-        left: inherit;
+        @media all and(min-width: 768px) {
+
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 24px;
+          height: 100%;
+          right: calc(((100vw - 1280px) / 2) - 8px);
+          bottom: 0;
+          top: 0;
+          left: inherit;
+        }
 
         .swiper-pagination-bullet {
           width: 24px;
@@ -778,6 +782,7 @@ $mainBorderColor: #E7E7E7;
       width: 100%;
       overflow: visible;
     }
+
     .card {
       max-width: calc((100% - 40px) / 3);
 
