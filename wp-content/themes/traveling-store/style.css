@@ -1065,10 +1065,6 @@ input[type=number] {
   max-height: 70px;
   object-fit: contain;
 }
-.wrapper section.partnersSection .cardsRow .card .cardPic img.seraserLogo {
-  width: 145px;
-  height: 32px;
-}
 .wrapper section.partnersSection .cardsRow .card .cardInfo {
   padding: 0;
   text-align: center;
