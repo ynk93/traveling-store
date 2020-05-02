@@ -2,81 +2,34 @@
 	<div class="leftSide">
 		<div class="textSide">
 			<div class="aboutUsSideTitle">
-				<?php _e( 'что мы предлагаем?', 'traveling-store' ); ?>
+				<?php echo $about_item['title']; ?>
 			</div>
 			<div class="p">
-				<?php _e( 'Мы предлогаем не только экскурсии по достопримечательностям Турции, но также мыготовы
-                            предоставить Вам VIP услуги - трансфер от/до аэропорта, шофера, говорящего на вашем языке,
-                            путешествия на яхте и многое другое. Если Вы впервые в турции и не знаете куда пойти за
-                            покупками - мы готовы помочт Вам и с этим! Так же мы можем подсказать в какой ресторан Вам
-                            отрпавится.', 'traveling-store' ); ?>
+				<?php echo $about_item['text']; ?>
 			</div>
 		</div>
 	</div>
 	<div class="rightSide swiperSide">
 		<div class="swiper-container aboutUsSwiper">
+
 			<div class="swiper-wrapper">
-				<div class="swiper-slide">
+
+				<?php foreach ( $about_item['slider_content'] as $slide ) :
+					var_dump($slide);?>
+				<a href="<?php echo $slide['link']['url']; ?>"  target="_self" class="swiper-slide">
 					<div class="card">
-                                    <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/img.png" alt="">
-                                    </span>
+						<span class="cardPic">
+							<?php echo wp_get_attachment_image($slide['image']['ID'], array(240, 280), false); ?>
+						</span>
 						<span class="cardInfo">
-                                        <span class="h5 cardName"><?php _e( 'Шопинг', 'traveling-store' ); ?></span>
-                                    </span>
+							<span class="h5 cardName"><?php echo $slide['ttitle']; ?></span>
+						</span>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-                                     <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/image_2020-03-22_20-23-54.png">
-                                    </span>
-						<span class="cardInfo">
-                                        <span class="h5 cardName"><?php _e( 'Рестораны', 'traveling-store' ); ?></span>
-                                    </span>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-                                    <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/img%20(2).png" alt="">
-                                    </span>
-						<span class="cardInfo">
-                                        <span class="h5 cardName">VIP</span>
-                                    </span>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-                                    <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/img.png" alt="">
-                                    </span>
-						<span class="cardInfo">
-                                        <span class="h5 cardName"><?php _e( 'Шопинг', 'traveling-store' ); ?></span>
-                                    </span>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-                                     <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/image_2020-03-22_20-23-54.png">
-                                    </span>
-						<span class="cardInfo">
-                                        <span class="h5 cardName"><?php _e( 'Рестораны', 'traveling-store' ); ?></span>
-                                    </span>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-                                    <span class="cardPic">
-                                        <img src="./images/uploads/categoriesPics/img%20(2).png" alt="">
-                                    </span>
-						<span class="cardInfo">
-                                        <span class="h5 cardName">VIP</span>
-                                    </span>
-					</div>
-				</div>
+				</a>
+				<?php endforeach; ?>
+
 			</div>
+
 			<div class="swiper-bottom-panel">
 				<div class="swiper-buttons-wrap">
 					<div class="swiper-button-prev"></div>
@@ -84,6 +37,7 @@
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
+
 		</div>
 	</div>
 </div>
