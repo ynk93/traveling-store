@@ -152,7 +152,7 @@ wp_head(); ?>
 
 	                foreach ( $categories as $category ) : ?>
 
-                    <a href="#" class="card">
+                    <a href="<?php echo get_site_url() . '/tours/category/' . $category->slug . '/'; ?>" class="card">
                         <span class="cardPic">
                                 <?php $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
 	                                echo wp_get_attachment_image( $thumbnail_id, array( 240, 280 ), false ); ?>
