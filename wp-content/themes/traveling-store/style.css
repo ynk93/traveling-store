@@ -1059,25 +1059,11 @@ input[type=number] {
   border-bottom: 1px solid #E7E7E7;
 }
 .wrapper section.partnersSection .cardsRow .card .cardPic img {
-  width: auto;
-  height: auto;
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-height: 70px;
   object-fit: contain;
-}
-.wrapper section.partnersSection .cardsRow .card .cardPic img.uniqaLogo {
-  width: 73px;
-  height: 73px;
-}
-.wrapper section.partnersSection .cardsRow .card .cardPic img.tuAirLogo {
-  width: 153px;
-  height: 50px;
-}
-.wrapper section.partnersSection .cardsRow .card .cardPic img.terraceLogo {
-  width: 166px;
-  height: 107px;
-}
-.wrapper section.partnersSection .cardsRow .card .cardPic img.rixosLogo {
-  width: 160px;
-  height: 50px;
 }
 .wrapper section.partnersSection .cardsRow .card .cardPic img.seraserLogo {
   width: 145px;

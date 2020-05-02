@@ -737,34 +737,11 @@ $mainBorderColor: #E7E7E7;
           border-bottom: 1px solid $mainBorderColor;
 
           img {
-            width: auto;
-            height: auto;
+            width: 100%;
+            max-width: 150px;
+            height: 100%;
+            max-height: 70px;
             object-fit: contain;
-
-            &.uniqaLogo {
-              width: 73px;
-              height: 73px;
-            }
-
-            &.tuAirLogo {
-              width: 153px;
-              height: 50px;
-            }
-
-            &.terraceLogo {
-              width: 166px;
-              height: 107px;
-            }
-
-            &.rixosLogo {
-              width: 160px;
-              height: 50px;
-            }
-
-            &.seraserLogo {
-              width: 145px;
-              height: 32px;
-            }
           }
         }
 
