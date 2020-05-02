@@ -102,11 +102,7 @@ wp_head(); ?>
                         <a href="<?php echo $partners_item['link']['url']; ?>"
                            target="<?php echo $partners_item['link']['target']; ?>" class="card">
                         <span class="cardPic">
-                            <?php echo wp_get_attachment_image( $partners_item['image']['ID'], array(
-	                            73,
-	                            73,
-	                            false
-                            ), false ); ?>
+                            <?php echo wp_get_attachment_image( $partners_item['image']['ID'], 'full', false ); ?>
                         </span>
                             <span class="cardInfo">
                             <span class="cardName"><?php echo $partners_item['title']; ?></span>
@@ -180,8 +176,8 @@ wp_head(); ?>
             <div class="p">
                 <?php echo $about['text']; ?>
             </div>
-            <a href="#" class="toAboutUsButton">
-                подробнее
+            <a href="<?php echo $about['button']['url']; ?>" target="_self" class="toAboutUsButton">
+	            <?php echo $about['button']['title']; ?>
             </a>
         </div>
         <div class="aboutUsBg img-parallax" data-speed="-1.25"></div>
