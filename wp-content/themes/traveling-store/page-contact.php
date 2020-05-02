@@ -4,6 +4,7 @@
 /**
  * Template Name: Contact page
  */
+
 wp_head(); ?>
 <body>
 <div class="wrapper innerPageHeader">

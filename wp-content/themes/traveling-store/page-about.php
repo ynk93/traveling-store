@@ -4,6 +4,7 @@
 /**
  * Template Name: About page
  */
+
 wp_head(); ?>
 <body>
 <div class="wrapper innerPageHeader">

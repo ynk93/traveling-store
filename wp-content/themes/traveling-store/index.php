@@ -37,10 +37,12 @@ wp_head(); ?>
 
             </div>
             <div class="swiper-pagination"></div>
+
             <div class="swiper-buttons-wrap">
                 <div class="swiper-button-left"></div>
                 <div class="swiper-button-right"></div>
             </div>
+
         </div>
     </section>
 
