@@ -1,0 +1,211 @@
+$mainColor: #F87F27;
+$mainBlackColor: #333333;
+$mainLightColor: rgba(255, 255, 255, 0.6);
+$mainGreyColor: rgba(51, 51, 51, 0.50);
+$mainBorderColor: #E7E7E7;
+
+$sfLight: 'San Francisco Pro Display Light';
+$sfRegular: 'San Francisco Pro Display Regular';
+$sfMedium: 'San Francisco Pro Display Medium';
+$sfSemiBold: 'San Francisco Pro Display Medium';
+$sfBold: 'San Francisco Pro Display Bold';
+$sfBlack: 'San Francisco Pro Display Black';
+
+.card-param-picker {
+  margin: 200px auto;
+}
+
+.card-param-picker {
+  height: 100%;
+  background: white;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s 0s ease-in-out;
+}
+
+.card-param-picker .input {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.card-param-picker .input .result, .card-param-picker .input button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-param-picker .input .result {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+  font-size: 14px;
+  padding: 0 16px;
+  color: $mainGreyColor;
+  box-sizing: border-box;
+
+  span {
+    font-size: 14px;
+    color: $mainBlackColor;
+  }
+}
+
+.card-param-picker .input button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 100%;
+  color: white;
+  line-height: 40px;
+  border: 0;
+  padding: 0;
+
+  &.calendarIcon {
+    background: $mainColor url('./images/icons/calendar_icon.svg') no-repeat center;
+  }
+
+  &.arrowIcon {
+    pointer-events: none;
+    background: url('./images/icons/arrow_down-black.svg') no-repeat center/7px;
+    border-left: 1px solid $mainBorderColor;
+  }
+}
+
+.card-param-picker .input button:focus {
+  outline: 0;
+}
+
+.card-param-picker .calendar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.card-param-picker .ui-datepicker-inline {
+  position: relative;
+  width: 100%;
+  border: 1px solid $mainBorderColor;
+  @include border-radius(0);
+}
+
+.card-param-picker .ui-datepicker-header {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid $mainBorderColor;
+  @include border-radius(0);
+  color: #fff;
+  position: relative;
+}
+
+.card-param-picker .ui-datepicker-prev, .card-param-picker .ui-datepicker-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  width: 8px;
+  height: 10px;
+  background: url('./images/icons/arrow_down-right.svg') no-repeat center/contain;
+
+  &.ui-datepicker-prev-hover, &.ui-datepicker-next-hover {
+    border: 0;
+  }
+}
+
+.ui-datepicker {
+  td, th {
+    line-height: 28px;
+    padding: 0;
+    width: 28px;
+    margin: 0;
+
+    &:first-child {
+      padding-left: 18px;
+    }
+
+    &:last-child {
+      padding-right: 18px;
+    }
+  }
+}
+
+.card-param-picker .ui-datepicker-prev {
+  left: 16px;
+  @include transform(rotate(90deg));
+}
+
+.card-param-picker .ui-datepicker-next {
+  right: 16px;
+  @include transform(rotate(-90deg));
+}
+
+.card-param-picker .ui-datepicker-title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  font-family: $sfMedium;
+  color: $mainBlackColor;
+}
+
+.card-param-picker .ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+  margin: 11px 0;
+}
+
+.card-param-picker .ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.card-param-picker .ui-state-default {
+  display: block;
+  text-decoration: none;
+  line-height: 28px;
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.card-param-picker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02);
+
+  &.ui-state-active {
+    background: $mainColor;
+  }
+}
+
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 0;
+}
+
+.card-param-picker .ui-datepicker-today {
+  opacity: 1;
+  .ui-state-default {
+    color: #2E84EA;
+    font-family: $sfBold;
+  }
+}
+
+.card-param-picker {
+  .ui-state-active {
+    font-family: $sfMedium;
+    font-weight: normal;
+    background: $mainColor;
+    color: #fff;
+  }
+}
+
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 2px solid transparent;
+}

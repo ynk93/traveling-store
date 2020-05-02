@@ -6,7 +6,7 @@
  */
 wp_head(); ?>
 <body>
-<div class="wrapper innerPageHeader">
+<div class="wrapper innerPageHeader product-page">
 
     <?php get_header(); ?>
     <section class="productCardSection">
@@ -27,20 +27,255 @@ wp_head(); ?>
 
                     <div class="productCardInfoArea">
                         <div class="productCardInfoHead">
-                            <a href="#" class="active"><?php _e('Описание','traveling-store'); ?></a>
-                            <a href="#"><?php _e('Программа экскурсии','traveling-store'); ?></a>
-                            <a href="#"><?php _e('Что включено','traveling-store'); ?></a>
-                            <a href="#"><?php _e('Важная информация','traveling-store'); ?></a>
+                            <a href="#" class="active"><?php _e('Описание', 'traveling-store'); ?></a>
+                            <a href="#"><?php _e('Программа экскурсии', 'traveling-store'); ?></a>
+                            <a href="#"><?php _e('Что включено', 'traveling-store'); ?></a>
+                            <a href="#"><?php _e('Важная информация', 'traveling-store'); ?></a>
+                            <div class="bottomLine"></div>
                         </div>
-                        <div class="productCardInfoBlocks"></div>
+                        <div class="productCardInfoBlocks">
+                            <div class="infoBlock active">
+                                <div class="leftSide">
+                                    <div class="sideBarHead">
+                                        <div class="h5"><?php _e('О мероприятии', 'traveling-store'); ?>/div>
+                                    </div>
+                                    <div class="infoBlockRows">
+                                        <span class="productInfoRow">
+                                            <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowValue">Стамбул</span>
+                                        </span>
+                                        <span class="productInfoRow">
+                                            <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowValue">Вт,Ср,Пт</span>
+                                        </span>
+                                        <span class="productInfoRow">
+                                            <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowValue">14:00-18:00</span>
+                                        </span>
+                                        <span class="productInfoRow">
+                                            <span class="productInfoRowLabel"><?php _e('Длительность', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowValue">~2 часа</span>
+                                        </span>
+                                        <span class="productInfoRow">
+                                            <span class="productInfoRowLabel"><?php _e('Язык', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowValue">
+                                                Русский, Английский, Турецкий
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="rightSide">
+                                    <div class="infoBlockContent">
+                                        <div class="p semibold">
+                                            <?php _e('В центре исторической части Стамбула вы найдете собор Святой Софии, который
+                                            является
+                                            символом величия страны и демонстрирует великолепие византийского зодчества.','traveling-store'); ?>
+                                        </div>
+                                        <div class="p">
+                                            <?php _e('Сегодня собор является одним из наиболее знаменитых музеев мира, экспозиции
+                                            которого
+                                            поражают своим великолепием и повествуют интересную историю страны и ее
+                                            народа.
+                                            На
+                                            месте современного собора постоянно возводились культовые сооружения,
+                                            которые по
+                                            различным причинам постоянно разрушались.','traveling-store'); ?>
+                                        </div>
+                                        <div class="p">
+                                            <?php _e('Строительство собора было начато в 994 году, именно с этой даты начинается
+                                            официальная история современного собора. Император Византии Юстиниан решил
+                                            продемонстрировать всему миру все величие и богатство страны, ну и конечно,
+                                            увековечить свое имя. На строительстве трудились более десяти тысяч зодчих,
+                                            со
+                                            всего
+                                            мира завозились самые лучшие и самые дорогие материалы.','traveling-store'); ?>
+                                        </div>
+                                        <div class="p">
+                                            <?php _e('В отделке стен зодчие использовали уникальный розовый, белый и зеленый
+                                            мрамор.
+                                            Переходы оформлены резными фризами, которые покрыты слоем золота. В
+                                            убранстве
+                                            много
+                                            слоновой кости, украшений из жемчуга, инкрустированных драгоценных камней.
+                                            Как
+                                            гласит легенда, император планировал стены из превосходного мрамора покрыть
+                                            слоем
+                                            золота. Остановило Юстиниана только предсказание, согласно которому собору
+                                            грозил
+                                            захват и разграбление.','traveling-store'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infoBlock">
+                                <div class="infoBlockContent">
+                                    <div class="p">
+                                        <?php _e('Сегодня собор является одним из наиболее знаменитых музеев мира, экспозиции
+                                            которого
+                                            поражают своим великолепием и повествуют интересную историю страны и ее
+                                            народа.
+                                            На
+                                            месте современного собора постоянно возводились культовые сооружения,
+                                            которые по
+                                            различным причинам постоянно разрушались.','traveling-store'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infoBlock">
+                                <div class="infoBlockContent">
+                                    <div class="p">
+                                        <?php _e('Строительство собора было начато в 994 году, именно с этой даты начинается
+                                            официальная история современного собора. Император Византии Юстиниан решил
+                                            продемонстрировать всему миру все величие и богатство страны, ну и конечно,
+                                            увековечить свое имя. На строительстве трудились более десяти тысяч зодчих,
+                                            со
+                                            всего
+                                            мира завозились самые лучшие и самые дорогие материалы.','traveling-store'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="infoBlock">
+                                <div class="infoBlockContent">
+                                    <div class="p">
+                                        <?php _e('В отделке стен зодчие использовали уникальный розовый, белый и зеленый
+                                            мрамор.
+                                            Переходы оформлены резными фризами, которые покрыты слоем золота. В
+                                            убранстве
+                                            много
+                                            слоновой кости, украшений из жемчуга, инкрустированных драгоценных камней.
+                                            Как
+                                            гласит легенда, император планировал стены из превосходного мрамора покрыть
+                                            слоем
+                                            золота. Остановило Юстиниана только предсказание, согласно которому собору
+                                            грозил
+                                            захват и разграбление.','traveling-store'); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="productCardRightSide">
                     <div class="sideBarHead">
                         <div class="h5"><?php _e('Расчет стоимости', 'traveling-store'); ?></div>
                     </div>
+                    <div class="productCardSideBarTourParams">
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker date-picker">
+                                <div class="input">
+                                    <div class="result"><?php _e('Выберите дату', 'traveling-store') ?><span></span>
+                                    </div>
+                                    <button class="calendarIcon"></button>
+                                </div>
+                                <div class="calendar card-picker-drop"></div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker time-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="timeSelector" id="">
+                                            <option value="9-12">09:00 - 12:00</option>
+                                            <option value="9-12">13:00 - 15:00</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker adults-num-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="adultPersonsNumPicker" id="">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker child-num-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <?php _e('Укажите количество детей', 'traveling-store') ?>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                                <div class="childrensData card-picker-drop">
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            <?php _e('Дети (до 3х лет)', 'traveling-store'); ?>
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childUntil3">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            <?php _e('Дети (4-6 лет)', 'traveling-store'); ?>
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childBtwn4and6">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="chbRowLabel">
+                                            <?php _e('Дети (7-12 лет)', 'traveling-store'); ?>
+                                        </div>
+                                        <div class="counterInputElement">
+                                            <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+                                            <input type="number" value="0" name="childBtwn7and12">
+                                            <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCardParamWrap">
+                            <div class="card-param-picker lang-picker">
+                                <div class="input">
+                                    <div class="result">
+                                        <select name="langPicker" id="">
+                                            <option value="rus">Русский</option>
+                                            <option value="eng">Английский</option>
+                                        </select>
+                                    </div>
+                                    <button class="arrowIcon"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="productCardPriceWrap">
+                        <div class="productPriceRow">
+                            <div class="label"><?php _e('Общая стоимость', 'traveling-store'); ?></div>
+                            <div class="value">$120</div>
+                        </div>
+                        <a href="#" class="productPriceAddToBasket">
+                            <span><?php _e('Добавить в корзину', 'traveling-store'); ?></span>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="productCardSettingsTriggerWrapper">
+            <div class="cardName">Экскурсия в собор Святой Софии</div>
+            <a href="#" class="productCardSettingsTrigger">
+                <span><?php _e('расчет стоимости', 'traveling-store'); ?></span>
+            </a>
         </div>
     </section>
     <section class="nthInRowSection popularProductsSection">
@@ -49,24 +284,27 @@ wp_head(); ?>
                 <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
                 <a href="#" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
-            <div class="cardsRow">
-                <div class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/toursPic/image%204.png">
+            <div class="forMobileSwiperWrap">
+                <div class="cardsRow">
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%204.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -78,24 +316,26 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/toursPic/image%205.png">
-                    </span>
-                    <span class="cardInfo">
-                        <span class="productInfoRows">
+                    </div>
+                    <div class="card">
+                        <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%205.png">
+                            </span>
                             <span class="cardName h5">Храм Святого Николая</span>
+                        </span>
+                        <span class="cardInfo">
+                        <span class="productInfoRows">
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -107,24 +347,26 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/toursPic/image%206.png">
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%206.png">
+                        </span>
+                        <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -136,24 +378,26 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/toursPic/image%207.png">
+                    </div>
+                    <div class="card">
+                    <span class="cardHead">
+                        <span class="cardPic">
+                            <img src="./images/uploads/toursPic/image%207.png">
+                        </span>
+                         <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                     </span>
-                    <span class="cardInfo">
+                        <span class="cardInfo">
                         <span class="productInfoRows">
-                             <span class="cardName h5">Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -166,24 +410,26 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
-                </div>
-                <div class="card">
-                    <span class="cardPic">
-                        <img src="./images/uploads/toursPic/image%208.png">
-                    </span>
-                    <span class="cardInfo">
+                    </div>
+                    <div class="card">
+                       <span class="cardHead">
+                            <span class="cardPic">
+                                <img src="./images/uploads/toursPic/image%208.png">
+                            </span>
+                           <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
+                       </span>
+                        <span class="cardInfo">
                         <span class="productInfoRows">
-                            <span class="cardName h5">Храм Святого Николая и остров Кекова. Храм Святого Николая и остров Кекова.</span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Регион','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Кеков</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Дни проведения','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">Вт,Ср,Пт</span>
                             </span>
                             <span class="productInfoRow">
-                                <span class="productInfoRowLabel"><?php _e('Время','traveling-store'); ?></span>
+                                <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
                                 <span class="productInfoRowValue">14:00-18:00</span>
                             </span>
                         </span>
@@ -195,6 +441,7 @@ wp_head(); ?>
                             <a href="#" class="opencardButton"><?php _e('Подробнее', 'traveling-store'); ?></a>
                         </span>
                     </span>
+                    </div>
                 </div>
             </div>
         </div>

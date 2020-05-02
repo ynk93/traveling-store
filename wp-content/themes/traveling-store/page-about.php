@@ -15,9 +15,12 @@ wp_head(); ?>
                 <div class="h2"> <?php _e('О нас', 'traveling-store'); ?></div>
             </div>
             <div class="aboutUsPageRow">
+                <?php $about = get_field('content');
+                var_dump($about);
+                ?>
                 <div class="leftSide">
                     <div class="picSide aboutUsPic1">
-                        <img src="images/uploads/aboutUs.png">
+                        <img src="<?php echo $about['image_and_text']['image']?>">
                     </div>
                 </div>
                 <div class="rightSide">
@@ -26,15 +29,10 @@ wp_head(); ?>
                             Traveling Store
                         </div>
                         <div class="p">
-                            <?php _e('Наша компания - это многоканальный контактный центр, который занимается обслуживанием
-                            туристических объектов в Анталии, информационной консультацией туристов 24/7, приемом и
-                            обработкой заявок, подтверждением брони и консультационным сопровождением до окончания тура.', 'traveling-store'); ?>
+                            <?php echo $about['image_and_text']['text']; ?>
                         </div>
                         <div class="p">
-                            <?php _e('Площадка принципа « Заказчик - Исполнитель» особенно актуальна для туристического региона
-                            Анталии. Исключая череду посредников между туристом и исполнителем тура, сервис облегчает
-                            организацию отдыха. А также повышает надежность и ответственность исполнителя тура, делая
-                            его «публичным» на рынке услуг.', 'traveling-store'); ?>
+                            <?php echo $about['image_and_text']['text']; ?>
                         </div>
                     </div>
                 </div>

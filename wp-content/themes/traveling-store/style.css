@@ -80,6 +80,17 @@ button {
   letter-spacing: inherit;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 @font-face {
   font-family: 'San Francisco Pro Display Thin';
   src: url("./fonts/SFProDisplay-Thin.eot");
@@ -271,6 +282,204 @@ button {
   display: block;
 }
 
+.card-param-picker {
+  margin: 200px auto;
+}
+
+.card-param-picker {
+  height: 100%;
+  background: white;
+  position: relative;
+  overflow: visible;
+  transition: all 0.3s 0s ease-in-out;
+}
+
+.card-param-picker .input {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.card-param-picker .input .result, .card-param-picker .input button {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card-param-picker .input .result {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 38px;
+  font-size: 14px;
+  padding: 0 16px;
+  color: rgba(51, 51, 51, 0.5);
+  box-sizing: border-box;
+}
+.card-param-picker .input .result span {
+  font-size: 14px;
+  color: #333333;
+}
+
+.card-param-picker .input button {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 100%;
+  color: white;
+  line-height: 40px;
+  border: 0;
+  padding: 0;
+}
+.card-param-picker .input button.calendarIcon {
+  background: #F87F27 url("./images/icons/calendar_icon.svg") no-repeat center;
+}
+.card-param-picker .input button.arrowIcon {
+  pointer-events: none;
+  background: url("./images/icons/arrow_down-black.svg") no-repeat center/7px;
+  border-left: 1px solid #E7E7E7;
+}
+
+.card-param-picker .input button:focus {
+  outline: 0;
+}
+
+.card-param-picker .calendar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.card-param-picker .ui-datepicker-inline {
+  position: relative;
+  width: 100%;
+  border: 1px solid #E7E7E7;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.card-param-picker .ui-datepicker-header {
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid #E7E7E7;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  position: relative;
+}
+
+.card-param-picker .ui-datepicker-prev, .card-param-picker .ui-datepicker-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  width: 8px;
+  height: 10px;
+  background: url("./images/icons/arrow_down-right.svg") no-repeat center/contain;
+}
+.card-param-picker .ui-datepicker-prev.ui-datepicker-prev-hover, .card-param-picker .ui-datepicker-prev.ui-datepicker-next-hover, .card-param-picker .ui-datepicker-next.ui-datepicker-prev-hover, .card-param-picker .ui-datepicker-next.ui-datepicker-next-hover {
+  border: 0;
+}
+
+.ui-datepicker td, .ui-datepicker th {
+  line-height: 28px;
+  padding: 0;
+  width: 28px;
+  margin: 0;
+}
+.ui-datepicker td:first-child, .ui-datepicker th:first-child {
+  padding-left: 18px;
+}
+.ui-datepicker td:last-child, .ui-datepicker th:last-child {
+  padding-right: 18px;
+}
+
+.card-param-picker .ui-datepicker-prev {
+  left: 16px;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.card-param-picker .ui-datepicker-next {
+  right: 16px;
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.card-param-picker .ui-datepicker-title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 50px;
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+}
+
+.card-param-picker .ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+  margin: 11px 0;
+}
+
+.card-param-picker .ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.card-param-picker .ui-state-default {
+  display: block;
+  text-decoration: none;
+  line-height: 28px;
+  font-size: 13px;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.card-param-picker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+.card-param-picker .ui-state-default:hover.ui-state-active {
+  background: #F87F27;
+}
+
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 0;
+}
+
+.card-param-picker .ui-datepicker-today {
+  opacity: 1;
+}
+.card-param-picker .ui-datepicker-today .ui-state-default {
+  color: #2E84EA;
+  font-family: "San Francisco Pro Display Bold";
+}
+
+.card-param-picker .ui-state-active {
+  font-family: "San Francisco Pro Display Medium";
+  font-weight: normal;
+  background: #F87F27;
+  color: #fff;
+}
+
+.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+  border: 2px solid transparent;
+}
+
 .h1 {
   font-size: 36px;
   line-height: 43px;
@@ -313,8 +522,49 @@ button {
   font-family: "San Francisco Pro Display Regular";
 }
 
+.counterInputElement {
+  position: relative;
+  max-width: 92px;
+  height: 40px;
+  width: 100%;
+}
+.counterInputElement input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #E7E7E7;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-family: "San Francisco Pro Display Medium";
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #333333;
+  padding: 0 28px;
+}
+.counterInputElement .counterInputDecreaseButton, .counterInputElement .counterInputIncreaseButton {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 34px;
+  height: 100%;
+  background: no-repeat center/10px;
+}
+.counterInputElement .counterInputDecreaseButton {
+  left: 0;
+  background-image: url("./images/icons/minus_icon.svg");
+}
+.counterInputElement .counterInputIncreaseButton {
+  right: 0;
+  background-image: url("./images/icons/plus_icon.svg");
+}
+
 .wrapper {
   font-family: "San Francisco Pro Display Regular";
+  overflow: hidden;
 }
 .wrapper.whiteHeader header.header {
   position: fixed;
@@ -378,6 +628,7 @@ button {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .wrapper header.header {
   z-index: 3;
@@ -395,6 +646,31 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 26px 0 14px;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap {
+  display: none;
+  width: 24px;
+  height: 19px;
+  position: relative;
+  margin-right: 60px;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line {
+  position: absolute;
+  height: 3px;
+  display: block;
+  width: 100%;
+  background: #333333;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:first-child {
+  top: 0;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.wrapper header.header .headerInnerWrap .hamburgerWrap .line:last-child {
+  bottom: 0;
 }
 .wrapper header.header .headerInnerWrap:before {
   content: '';
@@ -764,7 +1040,9 @@ button {
 .wrapper section.nthInRowSection .cardsRow {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+.wrapper section.nthInRowSection .cardsRow .card + .card {
+  margin-left: 20px;
 }
 .wrapper section.partnersSection {
   margin-bottom: 112px;
@@ -805,12 +1083,15 @@ button {
 .wrapper section.partnersSection .cardsRow .card .cardInfo {
   padding: 0;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
 }
 .wrapper section.partnersSection .cardsRow .card .cardInfo .cardName {
   font-family: "San Francisco Pro Display Bold";
   text-align: center;
   font-size: 11px;
-  line-height: 45px;
+  line-height: 18px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
@@ -933,7 +1214,9 @@ button {
   left: 0;
   right: 0;
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   background: no-repeat center/contain;
 }
@@ -1059,12 +1342,12 @@ button {
   flex-direction: row;
   align-items: center;
   padding: 24px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead .h5 {
   line-height: 12px;
 }
 .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarBody {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 24px;
 }
 .wrapper section.catalogSection .content .catalogSectionRow .cardsRow {
@@ -1116,6 +1399,7 @@ button {
   object-fit: cover;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -1123,6 +1407,18 @@ button {
   height: 68px;
   line-height: 68px;
   border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead .bottomLine {
+  height: 1px;
+  width: 64px;
+  position: absolute;
+  bottom: 0;
+  background: #F87F27;
+  left: 32px;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a {
   display: block;
@@ -1132,14 +1428,208 @@ button {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a.active {
   color: #333333;
+  font-family: "San Francisco Pro Display Medium";
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks {
   padding: 28px 32px 24px;
 }
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock {
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock.active {
+  display: flex;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p.semibold {
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+  opacity: 1;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p + .p {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide {
+  flex-shrink: 0;
+  max-width: 240px;
+  width: 100%;
+  background: rgba(46, 132, 234, 0.05);
+  margin-right: 32px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow + .productInfoRow {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow .productInfoRowLabel {
+  opacity: 0.5;
+  max-width: 50%;
+  width: 100%;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows .productInfoRow .productInfoRowValue {
+  text-align: right;
+  font-family: "San Francisco Pro Display Medium";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .rightSide {
+  width: 100%;
+}
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
   max-width: 340px;
 }
-.wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead {
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams {
+  padding: 24px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap {
+  height: 40px;
+  position: relative;
+  border: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap + .productCardParamWrap {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  box-shadow: none;
+  line-height: 40px;
+  overflow: visible;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.child-num-picker .result .innerResult {
+  color: #333333;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.child-num-picker .result .innerResult .resultLabel {
+  color: rgba(51, 51, 51, 0.5);
+  margin-left: 4px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.date-picker {
+  z-index: 4;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .card-picker-drop {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 44px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .card-picker-drop .ui-datepicker-calendar {
+  font-family: "San Francisco Pro Display Medium";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.datePicked .input .result {
+  font-size: 0;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.open .input button.arrowIcon {
+  -moz-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.open .card-picker-drop {
+  opacity: 1;
+  visibility: visible;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .resultLabel {
+  margin-left: 6px;
+  font-size: 13px;
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select {
+  position: static;
+  border: 0;
+  height: 38px;
+  padding: 0;
+  width: 100%;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select .list {
+  width: 100%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select .list li.option {
+  color: #333333;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select .list li.option.selected {
+  color: #fff;
+  background: #F87F27 !important;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select .list li.option:hover {
+  color: #333333;
+  background: #f6f6f6;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select .list li.option:hover.selected {
+  color: #fff;
+  background: #F87F27;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .nice-select:after {
+  display: none;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .childrensData {
+  padding: 16px;
+  z-index: 3;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #E7E7E7;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .childrensData .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .childrensData .row + .row {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .childrensData .row .chbRowLabel {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap {
+  padding: 24px 24px 32px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap .productPriceRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPriceWrap .productPriceAddToBasket {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-top: 24px;
+}
+.wrapper .sideBarHead {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1148,6 +1638,9 @@ button {
 }
 .wrapper section.innerPageSection {
   padding-bottom: 112px;
+}
+.wrapper section.innerPageSection + section.popularProductsSection {
+  margin-top: 0;
 }
 .wrapper section.innerPageSection .content {
   flex-direction: column;
@@ -1409,6 +1902,349 @@ button {
   display: block;
   text-align: center;
 }
+.wrapper section.basketPageSection .basketPageContent, .wrapper section.basketPageSection .checkoutPageContent, .wrapper section.checkoutPageSection .basketPageContent, .wrapper section.checkoutPageSection .checkoutPageContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic {
+  max-width: 120px;
+  flex-shrink: 0;
+  height: 144px;
+  width: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo {
+  max-width: 240px;
+  min-width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 1.6vw;
+  border-right: 1px solid #E7E7E7;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .itemName, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .itemName, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .itemName, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .itemName, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .itemName, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .itemName, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .itemName, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .itemName {
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock {
+  margin-top: 12px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .label, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .label {
+  font-size: 13px;
+  line-height: 10px;
+  color: #7E7E7E;
+  margin-bottom: 8px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value {
+  font-size: 13px;
+  line-height: 10px;
+  font-family: "San Francisco Pro Display Medium";
+  color: #333333;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time {
+  margin-left: 8px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value .date + .time:before, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value .date + .time:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  height: 12px;
+  width: 1px;
+  background: #D0D0D0;
+  position: relative;
+  top: -1px;
+  margin-right: 8px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide {
+  max-width: 100%;
+  width: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow {
+  max-height: 140px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow + .basketItemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow + .basketItemRow {
+  margin-top: 16px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0 1.6vw;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock {
+  flex-direction: column;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
+  margin-left: 1.6vw;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow {
+  margin-top: 8px;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+  width: 115px;
+  padding-right: 20px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 10px;
+  color: #333333;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  color: #333333;
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice {
+  display: flex;
+  flex-direction: column;
+  max-width: 132px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #E7E7E7;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile {
+  display: none;
+}
+.wrapper section.basketPageSection .basketPageContent .checkoutLeftSide, .wrapper section.basketPageSection .checkoutPageContent .checkoutLeftSide, .wrapper section.checkoutPageSection .basketPageContent .checkoutLeftSide, .wrapper section.checkoutPageSection .checkoutPageContent .checkoutLeftSide {
+  padding: 48px 80px;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
+  margin-left: 40px;
+  max-width: 340px;
+  width: 100%;
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  background: #fff;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .basketSideBarHead, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketSideBarHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+  margin-bottom: 24px;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .confirmOrderButton, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .confirmOrderButton {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: block;
+  margin-bottom: 12px;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .continueShoppingButton, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .continueShoppingButton {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: block;
+  background: #fff;
+  color: #333333;
+  border: 1px solid #E7E7E7;
+  margin-bottom: 12px;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock {
+  background: rgba(46, 132, 234, 0.06);
+  padding: 16px;
+  color: #333333;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle {
+  font-size: 14px;
+  font-family: "San Francisco Pro Display Bold";
+  margin-bottom: 7px;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoTitle:before {
+  content: '';
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background: url("./images/icons/checked.svg") no-repeat center/contain;
+}
+.wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText {
+  font-size: 13px;
+  line-height: 16px;
+  opacity: 0.5;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent {
+  max-width: 555px;
+  width: 100%;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRowWrap + .inputRowWrap {
+  margin-top: 24px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "San Francisco Pro Display Bold";
+  margin-bottom: 12px;
+  color: #333333;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap {
+  width: 100%;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap input {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 48px;
+  width: 100%;
+  line-height: 48px;
+  border: 1px solid #E7E7E7;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #333333;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow .inputWrap ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap {
+  max-width: calc((100% - 14px) / 2);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap + .inputWrap {
+  margin-left: 14px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap {
+  max-width: calc((100% - 28px) / 3);
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap + .inputWrap {
+  margin-left: 14px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
+  padding: 0;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom {
+  padding: 24px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead .basketSideBarHeadRow, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .basketSideBarHeadRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  font-family: "San Francisco Pro Display Bold";
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .checkoutSideBarHead .greenSideBarLabel, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .greenSideBarLabel {
+  font-family: "San Francisco Pro Display Medium";
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 10px;
+  color: #269E39;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem {
+  padding: 28px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem + .basketItem {
+  border-top: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem .itemPic {
+  max-width: 100px;
+  width: 100%;
+  height: 176px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .basketItem .itemInfo {
+  border: 0;
+  padding: 0 20px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom {
+  padding: 24px;
+  border-bottom: 0;
+  border-top: 1px solid #E7E7E7;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .confirmOrderButton {
+  background: #F87F27;
+  height: 48px;
+  line-height: 49px;
+  width: 100%;
+  font-family: "San Francisco Pro Display Bold";
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  max-width: 100%;
+  margin: 20px 0 16px;
+}
+.wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarBottom .p a {
+  color: #2E84EA;
+  text-decoration: underline;
+}
 .wrapper footer.footer .content {
   display: flex;
   flex-direction: column;
@@ -1426,6 +2262,38 @@ button {
 .wrapper footer.footer .footerInnerRow + .footerInnerRow {
   border: 0;
   padding: 0;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin-right: 16px;
+  padding-right: 16px;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabPic {
+  width: 65px;
+  height: 24px;
+  background: url("./images/icons/tursab 1.svg") no-repeat center;
+  background-size: contain;
+  margin-right: 16px;
+}
+.wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock:after {
+  content: '';
+  display: block;
+  width: 1px;
+  right: 0;
+  height: 20px;
+  background: #E7E7E7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 .wrapper footer.footer .footerInnerRow ul {
   display: flex;
@@ -1450,6 +2318,25 @@ button {
 .wrapper footer.footer .footerInnerRow .contactLinks {
   text-align: right;
 }
+.wrapper footer.footer .footerInnerRow .contactLinks ul {
+  flex-direction: row-reverse;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink a:before {
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/icons/mail.svg");
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink {
+  margin-left: 24px;
+}
+.wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink a:before {
+  width: 22px;
+  height: 22px;
+  background-image: url("./images/icons/phone.svg");
+}
 .wrapper footer.footer .footerInnerRow .contactLinks a {
   display: inline-block;
   vertical-align: middle;
@@ -1459,6 +2346,7 @@ button {
   font-family: "San Francisco Pro Display Medium";
   font-size: 14px;
   line-height: 12px;
+  color: #333333;
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a:before {
   content: '';
@@ -1472,23 +2360,41 @@ button {
   background: no-repeat center/contain;
   margin-right: 8px;
 }
-.wrapper footer.footer .footerInnerRow .contactLinks a.mailLink:before {
-  width: 16px;
-  height: 12px;
-  background-image: url("./images/icons/mail.svg");
-}
-.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink {
-  margin-left: 24px;
-}
-.wrapper footer.footer .footerInnerRow .contactLinks a.phoneLink:before {
-  width: 12px;
-  height: 14px;
-  background-image: url("./images/icons/phone.svg");
-}
 .wrapper footer.footer .footerInnerRow {
   margin-bottom: 20px;
 }
-.wrapper footer.footer .socialLinksWrap a {
+.wrapper footer.footer .socialLinksWrap ul li + li {
+  margin-left: 12px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.fb a {
+  background-image: url("./images/icons/social/facebook.svg");
+  background-size: 11px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.vk a {
+  background-image: url("./images/icons/social/vk.svg");
+  background-size: 25px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.insta a {
+  background-image: url("./images/icons/social/instagram.svg");
+  background-size: 20px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.whatsup a {
+  background-image: url("./images/icons/social/whatsapp.svg");
+  background-size: 22px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.telegram a {
+  background-image: url("./images/icons/social/telegram.svg");
+  background-size: 21px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.viber a {
+  background-image: url("./images/icons/social/viber.svg");
+  background-size: 22px;
+}
+.wrapper footer.footer .socialLinksWrap ul li.skype a {
+  background-image: url("./images/icons/social/skype.svg");
+  background-size: 20px;
+}
+.wrapper footer.footer .socialLinksWrap ul li a {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
@@ -1496,29 +2402,8 @@ button {
   *display: inline;
   width: 28px;
   height: 28px;
-  margin-left: 12px;
-  background: no-repeat center/cover;
-}
-.wrapper footer.footer .socialLinksWrap a.fb {
-  background-image: url("./images/icons/social/facebook.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.vk {
-  background-image: url("./images/icons/social/vk.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.insta {
-  background-image: url("./images/icons/social/instagram.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.whatsup {
-  background-image: url("./images/icons/social/whatsapp.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.telegram {
-  background-image: url("./images/icons/social/telegram.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.viber {
-  background-image: url("./images/icons/social/viber.svg");
-}
-.wrapper footer.footer .socialLinksWrap a.skype {
-  background-image: url("./images/icons/social/skype.svg");
+  background: no-repeat center/contain;
+  font-size: 0;
 }
 .wrapper .titleWrap {
   margin-bottom: 37px;
@@ -1582,13 +2467,27 @@ button {
 .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child:after {
   display: none;
 }
+.wrapper .productCardSettingsTriggerWrapper {
+  display: none;
+  z-index: 8;
+}
 .wrapper .card {
+  display: flex;
+  height: auto;
+  flex-direction: column;
   max-width: calc((100% - 80px) / 5);
   width: 100%;
   background: #FFFFFF;
   -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
+}
+.wrapper .card .cardHead {
+  display: block;
+}
+.wrapper .card .cardHead .cardName {
+  display: block;
+  padding: 16px 16px 0;
 }
 .wrapper .card .cardPic {
   position: relative;
@@ -1735,4 +2634,849 @@ button {
   height: 10px;
   background: url("./images/icons/check_icon.svg") no-repeat center;
   background-size: contain;
+}
+
+@media all and (max-width: 1279px) {
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock {
+    margin-left: 20px;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide > ul li + li a {
+    margin-left: 12px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
+    left: 100px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-pagination {
+    right: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card {
+    max-width: calc((100% - 60px) / 4);
+  }
+  .wrapper section.popularProductsSection .cardsRow .card:last-child {
+    display: none;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow.swiperRow .leftSide {
+    padding-right: 40px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow.swiperRow .rightSide.swiperSide {
+    right: -20px;
+  }
+}
+@media all and (max-width: 1180px) {
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap {
+    min-width: 212px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow {
+    max-width: none;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card {
+    max-width: calc((100% - 40px) / 3);
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(4n + 1) {
+    margin-left: 20px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo {
+    padding: 10px;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+    width: 100px;
+    padding-right: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    padding: 20px;
+    max-width: 260px;
+    margin-left: 20px;
+  }
+}
+@media all and (max-width: 1023px) {
+  .h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .h2 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .wrapper.product-page {
+    padding-bottom: 72px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap {
+    margin: 40px 0 32px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs {
+    font-size: 15px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:after {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 8px;
+    margin: auto 0;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #333333;
+    opacity: 0.3;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:first-child:before {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child {
+    display: none;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap .innerPageBreadCrumbs .breadCrumb:last-child:after {
+    display: none;
+  }
+  .wrapper.whiteHeader header.header {
+    top: 0;
+  }
+  .wrapper .productCardSettingsTriggerWrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 32px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  }
+  .wrapper .productCardSettingsTriggerWrapper .cardName, .wrapper .productCardSettingsTriggerWrapper .productCardSettingsTrigger {
+    max-width: calc((100% - 23px) / 2);
+    width: 100%;
+  }
+  .wrapper .productCardSettingsTriggerWrapper .cardName {
+    margin-right: 24px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333333;
+    font-family: "San Francisco Pro Display Bold";
+  }
+  .wrapper .productCardSettingsTriggerWrapper .productCardSettingsTrigger {
+    background: #F87F27;
+    height: 47px;
+    line-height: 48px;
+    width: 100%;
+    font-family: "San Francisco Pro Display Bold";
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+  .wrapper header.header .headerInnerWrap:before {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .wrapper header.header .headerInnerWrap:before {
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .wrapper header.header .headerInnerWrap .headerBottomLine {
+    background: rgba(51, 51, 51, 0.12);
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .logoBlock, .wrapper header.header .headerInnerWrap .rightSide .logoBlock {
+    color: #333333;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneLabel {
+    color: rgba(51, 51, 51, 0.5);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneInfo .cellPhoneNumber {
+    color: #333333;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide > ul li a {
+    color: rgba(51, 51, 51, 0.5);
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select {
+    border-color: #E7E7E7;
+    color: #333333;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
+    background-image: url("./images/icons/arrow_down-black.svg");
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper {
+    background-image: url("./images/icons/basket-black.svg");
+  }
+  .wrapper header.header .headerInnerWrap .hamburgerWrap {
+    display: block;
+  }
+  .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock {
+    display: none;
+  }
+  .wrapper header.header .headerInnerWrap .rightSide .selectWrapper, .wrapper header.header .headerInnerWrap .rightSide ul {
+    display: none;
+  }
+  .wrapper section.basketPageSection .basketPageContent {
+    flex-direction: column;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow {
+    flex-wrap: wrap;
+    max-height: none;
+    height: auto;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemInfo, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemInfo {
+    padding: 14px 24px;
+    max-width: calc(100% - 120px);
+    border: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo {
+    margin-top: 28px;
+    padding: 0;
+    justify-content: flex-start;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock {
+    max-width: 50%;
+    width: 100%;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow {
+    padding: 15px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowName {
+    font-size: 12px;
+    line-height: 10px;
+    color: #7E7E7E;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 4px;
+    border: 0;
+    background: transparent;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock .itemRow + .itemRow {
+    border-top: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemNumbersInfo .itemBlock + .itemBlock {
+    border-left: 1px solid #E7E7E7;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemPrice {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+  }
+  .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemPrice .onlyOnMobile, .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .basketItemRow .itemPrice .onlyOnMobile {
+    display: inline;
+  }
+  .wrapper section.basketPageSection .basketPageContent .rightSideSideBar {
+    margin: 20px 0 0;
+    padding: 20px 16px;
+  }
+  .wrapper section.mainSection {
+    height: 520px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
+    margin-bottom: 8px;
+  }
+  .wrapper section.aboutUsPageSection .content {
+    padding: 0;
+  }
+  .wrapper section.aboutUsPageSection .content .titleWrap {
+    padding: 0 20px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow {
+    flex-direction: column;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .swiper-container .swiper-slide {
+    max-width: 176px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .swiper-container .swiper-slide .card .cardPic {
+    height: 200px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow + .aboutUsPageRow.swiperRow {
+    margin-top: 64px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .textSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .textSide {
+    padding: 0 20px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .p, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .p {
+    font-size: 15px;
+    line-height: 22px;
+    color: #7e7e7e;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide {
+    margin-top: 40px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide {
+    max-width: 100%;
+    width: 100%;
+    right: 0 !important;
+    padding: 80px 0;
+  }
+  .wrapper section.popularProductsSection {
+    margin: 64px 0;
+  }
+  .wrapper section.popularProductsSection .forMobileSwiperWrap {
+    width: 100%;
+    overflow: visible;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card {
+    max-width: 100%;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardPic, .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardName {
+    max-width: calc((100% - 20px) / 2);
+    width: 100%;
+    padding: 0;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardPic {
+    height: 96px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardHead .cardName {
+    margin-left: 20px;
+    line-height: 18px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardInfo {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card .cardInfo .productInfoRows {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 20px;
+  }
+  .wrapper section.popularProductsSection .cardsRow .card + .card {
+    margin: 0;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap {
+    min-width: 212px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow {
+    max-width: none;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card {
+    max-width: calc((100% - 20px) / 2);
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(3n + 1) {
+    margin-left: 20px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardHead .cardPic, .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardHead .cardName {
+    max-width: calc((100% - 20px) / 2);
+    width: 100%;
+    padding: 0;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardHead .cardPic {
+    height: 96px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardHead .cardName {
+    margin-left: 20px;
+    line-height: 18px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardInfo {
+    padding: 20px;
+    padding-top: 0;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card .cardInfo .productInfoRows {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 20px;
+  }
+  .wrapper section.partnersSection {
+    margin-bottom: 64px;
+  }
+  .wrapper section.categoriesSection, .wrapper section.aboutUsSection {
+    margin-bottom: 80px;
+  }
+  .wrapper section.ourPreferencesSection {
+    margin-bottom: 70px;
+  }
+  .wrapper section.ourPreferencesSection .titleWrap {
+    margin-bottom: 30px;
+  }
+  .wrapper section.textPageSection .content {
+    padding: 0;
+  }
+  .wrapper section.textPageSection .content .titleWrap {
+    padding: 0 16px;
+  }
+  .wrapper section.textPageSection .textPageContentRow {
+    flex-direction: column;
+  }
+  .wrapper section.textPageSection .textPageContentRow + .textPageContentRow {
+    margin-top: 64px;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) .leftSide {
+    margin-top: 32px;
+  }
+  .wrapper section.textPageSection .textPageContentRow:nth-child(even) .rightSide {
+    margin-top: 0;
+  }
+  .wrapper section.textPageSection .textPageContentRow .leftSide, .wrapper section.textPageSection .textPageContentRow .rightSide {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .wrapper section.textPageSection .textPageContentRow .textSide {
+    padding: 0 16px;
+  }
+  .wrapper section.textPageSection .textPageContentRow .rightSide {
+    margin-top: 32px;
+  }
+  .wrapper section.productCardSection.openSettings .content .productCardRow .productCardRightSide {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .wrapper section.productCardSection .content .productCardRow {
+    flex-direction: column;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide, .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardPic {
+    height: 256px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    margin: 0;
+    z-index: 9;
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead {
+    position: relative;
+    cursor: pointer;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead:after {
+    content: '';
+    position: absolute;
+    display: block;
+    right: 22px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 14px;
+    height: 14px;
+    background: url("./images/icons/close_icon.svg") no-repeat center/contain;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead .h5 {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "San Francisco Pro Display Bold";
+  }
+  .wrapper section.reviewsSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.reviewsSection .leftSide {
+    padding: 0 40px 0 0;
+  }
+  .wrapper footer.footer .footerInnerRow .menu ul li {
+    display: none;
+  }
+}
+@media all and (max-width: 767px) {
+  .wrapper .content {
+    padding: 0 16px;
+  }
+  .wrapper .titleWrap.innerPageTitleWrap {
+    margin: 40px 0 32px;
+  }
+  .wrapper section.mainSection {
+    height: auto;
+    padding-top: 112px;
+    padding-bottom: 0;
+  }
+  .wrapper section.mainSection .swiper-container {
+    height: 296px;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent {
+    display: none;
+  }
+  .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
+    display: none;
+  }
+  .wrapper section.reviewsSection .content {
+    flex-direction: column;
+  }
+  .wrapper section.reviewsSection .content .leftSide {
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+  .wrapper section.reviewsSection .content .rightSide {
+    flex-direction: column;
+  }
+  .wrapper section.reviewsSection .content .rightSide .reviewBlock {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoHead {
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoHead a, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoHead a {
+    display: flex;
+    white-space: nowrap;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks {
+    padding: 32px 16px 24px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock {
+    flex-direction: column;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .infoBlockContent .p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p:not(.semibold), .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .infoBlockContent .p:not(.semibold) {
+    color: #7E7E7E;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide.open .sideBarHead:after, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide.open .sideBarHead:after {
+    -moz-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead {
+    border: 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead:after, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .sideBarHead:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: url("./images/icons/arrow_down-black.svg") no-repeat center/contain;
+  }
+  .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
+    border-top: 1px solid #E7E7E7;
+    display: none;
+  }
+  .wrapper section.aboutUsPageSection.innerPageSection {
+    padding-bottom: 60px;
+  }
+  .wrapper section.aboutUsPageSection .content .titleWrap {
+    padding: 0 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .picSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .picSide {
+    height: 280px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide .textSide, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide .textSide {
+    padding: 0 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container {
+    padding-left: 16px;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel {
+    padding: 0;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-buttons-wrap, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-buttons-wrap {
+    display: none;
+  }
+  .wrapper section.aboutUsPageSection .aboutUsPageRow .leftSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-pagination, .wrapper section.aboutUsPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container .swiper-bottom-panel .swiper-pagination {
+    margin: 0 auto;
+    max-width: 248px;
+    width: 100%;
+  }
+  .wrapper section.textPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.textPageSection .textPageContentRow + .textPageContentRow {
+    margin-top: 32px;
+  }
+  .wrapper section.innerPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow {
+    flex-direction: column;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock {
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+  .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock + .iconBlock {
+    margin-top: 16px;
+  }
+  .wrapper section.innerPageSection.faqPageSection {
+    padding-bottom: 64px;
+  }
+  .wrapper section.innerPageSection .faqBlock {
+    max-width: 100%;
+    padding: 20px 16px;
+  }
+  .wrapper section.innerPageSection .faqBlock .faqTitle {
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  .wrapper section.innerPageSection .faqBlock .faqText {
+    font-size: 15px;
+    line-height: 22px;
+    color: #7e7e7e;
+  }
+  .wrapper section.innerPageSection .faqBlock + .faqBlock {
+    margin-top: 24px;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow .iconBlock {
+    max-width: 100%;
+    width: 100%;
+  }
+  .wrapper section.ourPreferencesSection .iconsRow .iconBlock + .iconBlock {
+    margin-top: 20px;
+  }
+  .wrapper .titleWrap.withButtonTitleWrap .withTitleButton {
+    font-family: "San Francisco Pro Display Regular";
+    color: #7E7E7E;
+    border: 0;
+    height: auto;
+    font-size: 15px;
+    line-height: 14px;
+    text-align: right;
+    text-transform: none;
+  }
+  .wrapper section.catalogSection {
+    padding-bottom: 40px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow {
+    flex-direction: column;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock + .sideBarBlock {
+    margin-top: 16px;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock.opened .sideBarHead:after {
+    -moz-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead {
+    position: relative;
+    cursor: pointer;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarHead:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 9px;
+    height: 6px;
+    background: url("./images/icons/arrow_down-black.svg") no-repeat center/contain;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarBody {
+    display: none;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .wrapper section.catalogSection .content .catalogSectionRow .cardsRow .card {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 20px 0 !important;
+  }
+  .wrapper footer.footer {
+    padding: 0;
+  }
+  .wrapper footer.footer .footerInnerRow {
+    flex-direction: column;
+    margin: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock {
+    padding: 32px 0;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabPic {
+    margin: 0 auto 12px;
+    width: 105px;
+    height: 38px;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabLicense {
+    text-transform: uppercase;
+  }
+  .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock:after {
+    display: none;
+  }
+  .wrapper footer.footer .footerInnerRow + .footerInnerRow {
+    flex-direction: column-reverse;
+  }
+  .wrapper footer.footer .footerInnerRow .copyRight {
+    padding: 32px 16px 24px;
+  }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap {
+    padding: 28px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: 1px solid #E7E7E7;
+  }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap ul li {
+    margin: 4px 16px;
+  }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap ul li + li {
+    margin-left: 16px;
+  }
+  .wrapper footer.footer .footerInnerRow .socialLinksWrap a {
+    width: 40px;
+    height: 40px;
+  }
+  .wrapper footer.footer .footerInnerRow ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrapper footer.footer .footerInnerRow ul li {
+    margin: 0;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .wrapper footer.footer .footerInnerRow .menu {
+    padding: 0 16px;
+  }
+  .wrapper footer.footer .footerInnerRow .menu ul {
+    padding-bottom: 8px;
+  }
+  .wrapper footer.footer .footerInnerRow .menu ul li {
+    display: block;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 32px 0;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul {
+    width: 100%;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li {
+    margin: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink, .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink {
+    width: 100%;
+    max-width: 50%;
+    text-align: center;
+    margin: 0;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink a:before, .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink a:before {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 16px;
+    display: block;
+  }
+  .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink {
+    border-left: 1px solid #E7E7E7;
+  }
 }

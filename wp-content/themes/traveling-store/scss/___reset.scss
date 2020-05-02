@@ -71,3 +71,28 @@ button {
   font: inherit;
   letter-spacing: inherit;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@mixin placeholderColor($color) {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color;
+  }
+}
