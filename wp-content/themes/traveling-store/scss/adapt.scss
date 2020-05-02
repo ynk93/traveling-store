@@ -767,6 +767,22 @@
       //}
     }
 
+    section.partnersSection {
+      .swiper-container {
+        max-width: 240px;
+        margin-left: 0;
+
+        .card {
+          max-width: none;
+        }
+      }
+    }
+
+    section.categoriesSection {
+      .card {
+        max-width: 100%;
+      }
+    }
     section.reviewsSection {
       .content {
         flex-direction: column;
@@ -1137,6 +1153,7 @@
 
         .menu {
           padding: 0 16px;
+
           ul {
             padding-bottom: 8px;
 

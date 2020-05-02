@@ -160,8 +160,7 @@ $(document).ready(function () {
     $(window).resize(function () {
         if ($(window).width() <= 1023) {
             initMobileProductsSwiper();
-        }
-        else {
+        } else {
             destroyProductsSwiper();
         }
 
@@ -172,6 +171,28 @@ $(document).ready(function () {
         } else {
             if ($(this).scrollTop() > 0) {
                 $('.wrapper').addClass('whiteHeader');
+            }
+        }
+    });
+
+    var partnersSwiper = new Swiper('.swiper-container.partnersSwiper', {
+        slidesPerView: 5,
+        speed: 500,
+        breakpoints: {
+            768: {
+                slideToClickedSlide: true,
+                slidesPerView: 1
+            }
+        }
+    });
+
+    var categoriesSwiper = new Swiper('.swiper-container.categoriesSwiper', {
+        slidesPerView: 3,
+        speed: 500,
+        breakpoints: {
+            768: {
+                slideToClickedSlide: true,
+                slidesPerView: 1
             }
         }
     });

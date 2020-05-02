@@ -1050,6 +1050,10 @@ input[type=number] {
 .wrapper section.partnersSection {
   margin-bottom: 112px;
 }
+.wrapper section.partnersSection .swiper-container {
+  width: 100%;
+  overflow: visible;
+}
 .wrapper section.partnersSection .cardsRow .card .cardPic {
   display: flex;
   flex-direction: column;
@@ -1082,6 +1086,10 @@ input[type=number] {
 }
 .wrapper section.categoriesSection {
   margin-bottom: 160px;
+}
+.wrapper section.categoriesSection .swiper-container {
+  width: 100%;
+  overflow: visible;
 }
 .wrapper section.categoriesSection .card {
   max-width: calc((100% - 40px) / 3);
@@ -3224,6 +3232,16 @@ input[type=number] {
   }
   .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
     display: none;
+  }
+  .wrapper section.partnersSection .swiper-container {
+    max-width: 240px;
+    margin-left: 0;
+  }
+  .wrapper section.partnersSection .swiper-container .card {
+    max-width: none;
+  }
+  .wrapper section.categoriesSection .card {
+    max-width: 100%;
   }
   .wrapper section.reviewsSection .content {
     flex-direction: column;

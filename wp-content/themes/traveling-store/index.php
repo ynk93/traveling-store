@@ -50,37 +50,38 @@ wp_head(); ?>
         <div class="content">
             <div class="titleWrap withButtonTitleWrap">
                 <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
-                <a href="<?php echo get_site_url() . '/tours/'; ?>" class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
+                <a href="<?php echo get_site_url() . '/tours/'; ?>"
+                   class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
             </div>
             <div class="cardsRow">
 
-	            <?php
+                <?php
 
-		            $args = array(
-			            'post_type'      => 'product',
-			            'posts_per_page' => 5,
-			            'post_status'    => 'publish',
-			            'perm'           => 'readable',
-			            'paged'          => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
-			            'product_tag'    => get_query_var( 'product_tag' ) ? get_query_var( 'product_tag' ) : '',
-			            'tax_query'      => array()
-		            );
+                $args = array(
+                    'post_type' => 'product',
+                    'posts_per_page' => 5,
+                    'post_status' => 'publish',
+                    'perm' => 'readable',
+                    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                    'product_tag' => get_query_var('product_tag') ? get_query_var('product_tag') : '',
+                    'tax_query' => array()
+                );
 
-		            $loop = new WP_Query( $args );
+                $loop = new WP_Query($args);
 
-		            if ( $loop->have_posts() ) {
-			            while ( $loop->have_posts() ) : $loop->the_post();
-				            $post_id = get_the_ID();
+                if ($loop->have_posts()) {
+                    while ($loop->have_posts()) : $loop->the_post();
+                        $post_id = get_the_ID();
 
-				            get_template_part( 'template-parts/catalog-product' );
+                        get_template_part('template-parts/catalog-product');
 
-			            endwhile;
-		            } else {
-			            echo __( '<div class="empty-product">Not found</div>' );
-		            }
-		            wp_reset_postdata();
+                    endwhile;
+                } else {
+                    echo __('<div class="empty-product">Not found</div>');
+                }
+                wp_reset_postdata();
 
-	            ?>
+                ?>
 
             </div>
         </div>
@@ -90,27 +91,29 @@ wp_head(); ?>
         <div class="content">
 
             <div class="titleWrap withButtonTitleWrap">
-                <div class="h3"><?php _e( 'Реклама от партнеров', 'traveling-store' ); ?></div>
-                <a href="#partners" class="withTitleButton"><?php _e( 'стать партнером', 'traveling-store' ); ?></a>
+                <div class="h3"><?php _e('Реклама от партнеров', 'traveling-store'); ?></div>
+                <a href="#partners" class="withTitleButton"><?php _e('стать партнером', 'traveling-store'); ?></a>
             </div>
 
-            <div class="cardsRow">
+            <div class="swiper-container partnersSwiper">
+                <div class="cardsRow swiper-wrapper">
 
-				<?php $partners = get_field( 'partners' );
-					foreach ( $partners as $partners_item ) : ?>
+                    <?php $partners = get_field('partners');
+                    foreach ($partners as $partners_item) : ?>
 
                         <a href="<?php echo $partners_item['link']['url']; ?>"
-                           target="<?php echo $partners_item['link']['target']; ?>" class="card">
+                           target="<?php echo $partners_item['link']['target']; ?>" class="card swiper-slide">
                         <span class="cardPic">
-                            <?php echo wp_get_attachment_image( $partners_item['image']['ID'], 'full', false ); ?>
+                            <?php echo wp_get_attachment_image($partners_item['image']['ID'], 'full', false); ?>
                         </span>
                             <span class="cardInfo">
                             <span class="cardName"><?php echo $partners_item['title']; ?></span>
                         </span>
                         </a>
 
-					<?php endforeach; ?>
+                    <?php endforeach; ?>
 
+                </div>
             </div>
 
         </div>
@@ -121,48 +124,51 @@ wp_head(); ?>
             <div class="titleWrap">
                 <div class="h3"><?php _e('Категории', 'traveling-store'); ?></div>
             </div>
-            <div class="cardsRow">
 
-                <?php
-	                $category_taxonomy = 'product_cat';
-	                $orderby      = 'menu_order';
+            <div class="swiper-container categoriesSwiper">
+                <div class="cardsRow swiper-wrapper">
+                    <?php
+                    $category_taxonomy = 'product_cat';
+                    $orderby = 'menu_order';
 
-	                $show_count   = 0;
-	                $pad_counts   = 0;
-	                $title        = '';
+                    $show_count = 0;
+                    $pad_counts = 0;
+                    $title = '';
 
-	                $args_cat = array(
-		                'taxonomy'     => $category_taxonomy,
-		                'child_of'     => 0,
-		                'parent'       => '',
-		                'orderby'      => $orderby,
-		                'show_count'   => $show_count,
-		                'pad_counts'   => $pad_counts,
-		                'hierarchical' => 0,
-		                'title_li'     => $title,
-		                'hide_empty'   => 0,
-		                'exclude'      => 15
-	                );
+                    $args_cat = array(
+                        'taxonomy' => $category_taxonomy,
+                        'child_of' => 0,
+                        'parent' => '',
+                        'orderby' => $orderby,
+                        'show_count' => $show_count,
+                        'pad_counts' => $pad_counts,
+                        'hierarchical' => 0,
+                        'title_li' => $title,
+                        'hide_empty' => 0,
+                        'exclude' => 15
+                    );
 
-	                $categories = get_categories( $args_cat );
+                    $categories = get_categories($args_cat);
 
-	                foreach ( $categories as $category ) : ?>
+                    foreach ($categories as $category) : ?>
 
-                    <a href="<?php echo get_site_url() . '/tours/category/' . $category->slug . '/'; ?>" class="card">
+                        <a href="<?php echo get_site_url() . '/tours/category/' . $category->slug . '/'; ?>"
+                           class="card swiper-slide">
                         <span class="cardPic">
-                                <?php $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
-	                                echo wp_get_attachment_image( $thumbnail_id, array( 240, 280 ), false ); ?>
+                                <?php $thumbnail_id = get_term_meta($category->term_id, 'thumbnail_id', true);
+                                echo wp_get_attachment_image($thumbnail_id, array(240, 280), false); ?>
                         </span>
-                        <span class="cardInfo">
+                            <span class="cardInfo">
                             <span class="h5 cardName"><?php echo $category->name; ?></span>
                             <span class="p cardDescription">
                                 <?php echo $category->category_description; ?>
                             </span>
                         </span>
-                    </a>
+                        </a>
 
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
 
+                </div>
             </div>
         </div>
     </section>
@@ -177,7 +183,7 @@ wp_head(); ?>
                 <?php echo $about['text']; ?>
             </div>
             <a href="<?php echo $about['button']['url']; ?>" target="_self" class="toAboutUsButton">
-	            <?php echo $about['button']['title']; ?>
+                <?php echo $about['button']['title']; ?>
             </a>
         </div>
         <div class="aboutUsBg img-parallax" data-speed="-1.25"></div>

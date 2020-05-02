@@ -726,6 +726,11 @@ $mainBorderColor: #E7E7E7;
   section.partnersSection {
     margin-bottom: 112px;
 
+    .swiper-container {
+      width: 100%;
+      overflow: visible;
+    }
+
     .cardsRow {
       .card {
         .cardPic {
@@ -769,6 +774,10 @@ $mainBorderColor: #E7E7E7;
   section.categoriesSection {
     margin-bottom: 160px;
 
+    .swiper-container {
+      width: 100%;
+      overflow: visible;
+    }
     .card {
       max-width: calc((100% - 40px) / 3);
 
