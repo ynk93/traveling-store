@@ -18,7 +18,7 @@
 			<?php
 				while ( have_posts() ) : the_post(); ?>
 
-                    <div class="textPageContent">
+                    <div class="textPageContent privacyPolicyContent">
 						<?php the_content(); ?>
                     </div>
 

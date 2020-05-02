@@ -69,11 +69,15 @@ $mainBorderColor: #E7E7E7;
   font-family: $sfBold;
 }
 
-.p {
+.p, .privacyPolicyContent p {
   font-size: 14px;
   line-height: 20px;
   color: $mainGreyColor;
   font-family: $sfRegular;
+
+  & + p {
+    margin-top: 18px;
+  }
 }
 
 @mixin nonInkButton() {

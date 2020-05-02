@@ -515,11 +515,14 @@ input[type=number] {
   font-family: "San Francisco Pro Display Bold";
 }
 
-.p {
+.p, .privacyPolicyContent p {
   font-size: 14px;
   line-height: 20px;
   color: rgba(51, 51, 51, 0.5);
   font-family: "San Francisco Pro Display Regular";
+}
+.p + p, .privacyPolicyContent p + p {
+  margin-top: 18px;
 }
 
 .counterInputElement {
