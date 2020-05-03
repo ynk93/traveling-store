@@ -29,7 +29,7 @@ $gallery_img_ids = $product->get_gallery_image_ids();
 
 if ( $main_img_id || $gallery_img_ids ) : ?>
 
-	<div class="product-sider swiper-container">
+	<div class="swiper-container productCardPicsSwiper">
 
 		<div class="swiper-wrapper">
 
@@ -49,6 +49,8 @@ if ( $main_img_id || $gallery_img_ids ) : ?>
 
 		</div>
 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 	</div>
 
 <?php endif; ?>

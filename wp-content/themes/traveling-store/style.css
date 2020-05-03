@@ -1370,6 +1370,20 @@ input[type=number] {
 .wrapper section.productCardSection .content {
   flex-direction: column;
 }
+.wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper.hideArrows .swiper-button-prev, .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper.hideArrows .swiper-button-next {
+  display: none;
+}
+.wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper .swiper-button-prev, .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper .swiper-button-next {
+  background: url("./images/icons/arrow_right_1.svg") no-repeat center/contain;
+  width: 20px;
+  height: 20px;
+}
+.wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper .swiper-button-prev {
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .wrapper section.productCardSection .content .productCardRow {
   display: flex;
   flex-direction: row;

@@ -1092,6 +1092,25 @@ $mainBorderColor: #E7E7E7;
     .content {
       flex-direction: column;
 
+      .swiper-container {
+        &.productCardPicsSwiper {
+          &.hideArrows {
+            .swiper-button-prev, .swiper-button-next {
+              display: none;
+            }
+          }
+          .swiper-button-prev, .swiper-button-next {
+            background: url('./images/icons/arrow_right_1.svg') no-repeat center/contain;
+            width: 20px;
+            height: 20px;
+          }
+
+          .swiper-button-prev {
+            @include transform(scaleX(-1));
+          }
+        }
+      }
+
       .productCardRow {
         display: flex;
         flex-direction: row;

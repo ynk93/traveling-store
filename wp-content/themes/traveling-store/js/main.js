@@ -38,6 +38,15 @@ $(document).ready(function () {
         }
     });
 
+    var productCardPicsSwiper = new Swiper('.swiper-container.productCardPicsSwiper',{
+        speed: 500,
+        watchOverflow: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
     var tourDayIndexesEnabled = [0, 0, 1, 1, 0, 1, 0];
 
     $(".calendar").datepicker({
