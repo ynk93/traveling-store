@@ -46,46 +46,47 @@ wp_head(); ?>
         </div>
     </section>
 
-    <section class="nthInRowSection popularProductsSection">
-        <div class="content">
-            <div class="titleWrap withButtonTitleWrap">
-                <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
-                <a href="<?php echo get_site_url() . '/tours/'; ?>"
-                   class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
-            </div>
-            <div class="cardsRow">
+	<?php $args = array(
+		'post_type'      => 'product',
+		'posts_per_page' => 5,
+		'post_status'    => 'publish',
+		'perm'           => 'readable',
+		'tax_query' => array(
+			'relation' => 'AND',
+			array(
+				'taxonomy' => 'product_tag',
+				'field' => 'slug',
+				'terms' => 'popular'
+			)
+		),
+	);
 
-                <?php
+		$loop = new WP_Query( $args );
+		if ( $loop->have_posts() ) : ?>
 
-                $args = array(
-                    'post_type' => 'product',
-                    'posts_per_page' => 5,
-                    'post_status' => 'publish',
-                    'perm' => 'readable',
-                    'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                    'product_tag' => get_query_var('product_tag') ? get_query_var('product_tag') : '',
-                    'tax_query' => array()
-                );
+            <section class="nthInRowSection popularProductsSection">
+                <div class="content">
+                    <div class="titleWrap withButtonTitleWrap">
+                        <div class="h3"><?php _e( 'Популярные туры', 'traveling-store' ); ?></div>
+                        <a href="<?php echo get_site_url() . '/tours/'; ?>"
+                           class="withTitleButton"><?php _e( 'Все туры', 'traveling-store' ); ?></a>
+                    </div>
+                    <div class="cardsRow">
 
-                $loop = new WP_Query($args);
+						<?php while ( $loop->have_posts() ) : $loop->the_post();
+							$post_id = get_the_ID();
 
-                if ($loop->have_posts()) {
-                    while ($loop->have_posts()) : $loop->the_post();
-                        $post_id = get_the_ID();
+							get_template_part( 'template-parts/catalog-product' );
 
-                        get_template_part('template-parts/catalog-product');
+						endwhile; ?>
 
-                    endwhile;
-                } else {
-                    echo __('<div class="empty-product">Not found</div>');
-                }
-                wp_reset_postdata();
+                    </div>
+                </div>
+            </section>
 
-                ?>
-
-            </div>
-        </div>
-    </section>
+		<?php endif;
+		wp_reset_postdata();
+	?>
 
     <section class="nthInRowSection partnersSection">
         <div class="content">

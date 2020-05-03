@@ -5,7 +5,8 @@
 	$product_img = get_the_post_thumbnail( $product_id, array(232, 160), array('alt' => get_the_title(), 'titlle' => get_the_title() . ' - Traveling Store') );
 
 	$product = wc_get_product( $product_id );
-	$product_regular_price = $product->get_regular_price();
+	$product_regular_price = $product->get_price();
+	$product_attributes = $product->get_attributes();
 ?>
 
 <a href="<?php echo $product_url; ?>" class="card" target="_self" id="product-<?php echo $product_id; ?>" data-id="<?php echo $product_id; ?>">
@@ -19,20 +20,43 @@
 
 	<span class="cardInfo">
 
-		<span class="productInfoRows">
-			<span class="productInfoRow">
-				<span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
-				<span class="productInfoRowValue">Кеков</span>
-			</span>
-			<span class="productInfoRow">
-				<span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
-				<span class="productInfoRowValue">Вт,Ср,Пт</span>
-			</span>
-			<span class="productInfoRow">
-				<span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
-				<span class="productInfoRowValue">14:00-18:00</span>
-			</span>
-		</span>
+        <?php if ( $product_attributes ) : ?>
+
+            <span class="productInfoRows">
+
+                <?php foreach ( $product_attributes as $product_attribute ) : ?>
+
+                    <span class="productInfoRow">
+                        <span class="productInfoRowLabel">
+                            <?php echo wc_attribute_label($product_attribute->get_name(), $product); ?>
+                        </span>
+                        <span class="productInfoRowValue">
+
+                            <?php $options = $product_attribute->get_terms();
+
+                            $options_count = count($options);
+                            $i = 0;
+
+                            foreach ( $options as $option ) {
+
+                                $i++;
+                                $separator = '';
+
+                                if ( $options_count !== $i ) {
+                                    $separator = ', ';
+                                }
+
+                                echo $option->name . $separator;
+
+                            } ?>
+                        </span>
+                    </span>
+
+                <?php endforeach; ?>
+
+            </span>
+
+        <?php endif; ?>
 
 		<span class="priceRow">
 			<span class="priceBlock">
