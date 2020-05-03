@@ -1401,6 +1401,7 @@ input[type=number] {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide {
   margin-right: 44px;
+  max-width: calc(100% - 344px);
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic {
   height: 400px;

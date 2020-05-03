@@ -1126,6 +1126,7 @@ $mainBorderColor: #E7E7E7;
 
         .productCardLeftSide {
           margin-right: 44px;
+          max-width: calc(100% - 344px);
 
           .productCardPic {
             height: 400px;
