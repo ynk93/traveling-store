@@ -19,6 +19,12 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
+$product_attributes = $product->get_attributes();
+
+$excursion_program = get_field('excursion_program');
+$what_is_included = get_field('what_is_included');
+$important_information = get_field('important_information');
+
 /**
  * Hook: woocommerce_before_single_product.
  *
@@ -39,7 +45,7 @@ if ( post_password_required() ) {
 
         <div class="productCardLeftSide">
 
-            <div class="productCardPic">
+            <div class="productCardPic" style="overflow: hidden;">
 
                 <?php woocommerce_show_product_images(); ?>
 
@@ -54,124 +60,92 @@ if ( post_password_required() ) {
                     <div class="bottomLine"></div>
                 </div>
                 <div class="productCardInfoBlocks">
+
                     <div class="infoBlock active">
-                        <div class="leftSide">
-                            <div class="sideBarHead">
-                                <div class="h5"><?php _e('О мероприятии', 'traveling-store'); ?></div>
-                            </div>
-                            <div class="infoBlockRows">
+
+	                    <?php if ( $product_attributes ) : ?>
+
+                            <div class="leftSide">
+                                <div class="sideBarHead">
+                                    <div class="h5"><?php _e('About event', 'traveling-store'); ?></div>
+                                </div>
+                                <div class="infoBlockRows">
+
+                                    <?php foreach ( $product_attributes as $product_attribute ) : ?>
+
                                         <span class="productInfoRow">
-                                            <span class="productInfoRowLabel"><?php _e('Регион', 'traveling-store'); ?></span>
-                                            <span class="productInfoRowValue">Стамбул</span>
-                                        </span>
-                                <span class="productInfoRow">
-                                            <span class="productInfoRowLabel"><?php _e('Дни проведения', 'traveling-store'); ?></span>
-                                            <span class="productInfoRowValue">Вт,Ср,Пт</span>
-                                        </span>
-                                <span class="productInfoRow">
-                                            <span class="productInfoRowLabel"><?php _e('Время', 'traveling-store'); ?></span>
-                                            <span class="productInfoRowValue">14:00-18:00</span>
-                                        </span>
-                                <span class="productInfoRow">
-                                            <span class="productInfoRowLabel"><?php _e('Длительность', 'traveling-store'); ?></span>
-                                            <span class="productInfoRowValue">~2 часа</span>
-                                        </span>
-                                <span class="productInfoRow">
-                                            <span class="productInfoRowLabel"><?php _e('Язык', 'traveling-store'); ?></span>
+                                            <span class="productInfoRowLabel">
+                                                <?php echo wc_attribute_label($product_attribute->get_name(), $product); ?>
+                                            </span>
                                             <span class="productInfoRowValue">
-                                                Русский, Английский, Турецкий
+
+                                                <?php $options = $product_attribute->get_terms();
+
+                                                $options_count = count( $options );
+                                                $i             = 0;
+
+                                                foreach ( $options as $option ) {
+
+                                                    $i ++;
+                                                    $separator = '';
+
+                                                    if ( $options_count !== $i ) {
+                                                        $separator = ', ';
+                                                        }
+
+                                                        echo $option->name . $separator;
+
+                                                    } ?>
+
                                             </span>
                                         </span>
+
+                                    <?php endforeach; ?>
+
+                                </div>
                             </div>
-                        </div>
+
+                        <?php endif; ?>
+
                         <div class="rightSide">
                             <div class="infoBlockContent">
-                                <div class="p semibold">
-									<?php _e('В центре исторической части Стамбула вы найдете собор Святой Софии, который
-                                            является
-                                            символом величия страны и демонстрирует великолепие византийского зодчества.','traveling-store'); ?>
-                                </div>
-                                <div class="p">
-									<?php _e('Сегодня собор является одним из наиболее знаменитых музеев мира, экспозиции
-                                            которого
-                                            поражают своим великолепием и повествуют интересную историю страны и ее
-                                            народа.
-                                            На
-                                            месте современного собора постоянно возводились культовые сооружения,
-                                            которые по
-                                            различным причинам постоянно разрушались.','traveling-store'); ?>
-                                </div>
-                                <div class="p">
-									<?php _e('Строительство собора было начато в 994 году, именно с этой даты начинается
-                                            официальная история современного собора. Император Византии Юстиниан решил
-                                            продемонстрировать всему миру все величие и богатство страны, ну и конечно,
-                                            увековечить свое имя. На строительстве трудились более десяти тысяч зодчих,
-                                            со
-                                            всего
-                                            мира завозились самые лучшие и самые дорогие материалы.','traveling-store'); ?>
-                                </div>
-                                <div class="p">
-									<?php _e('В отделке стен зодчие использовали уникальный розовый, белый и зеленый
-                                            мрамор.
-                                            Переходы оформлены резными фризами, которые покрыты слоем золота. В
-                                            убранстве
-                                            много
-                                            слоновой кости, украшений из жемчуга, инкрустированных драгоценных камней.
-                                            Как
-                                            гласит легенда, император планировал стены из превосходного мрамора покрыть
-                                            слоем
-                                            золота. Остановило Юстиниана только предсказание, согласно которому собору
-                                            грозил
-                                            захват и разграбление.','traveling-store'); ?>
-                                </div>
+
+                                <?php echo woocommerce_template_single_excerpt(); ?>
+
                             </div>
                         </div>
                     </div>
-                    <div class="infoBlock">
-                        <div class="infoBlockContent">
-                            <div class="p">
-								<?php _e('Сегодня собор является одним из наиболее знаменитых музеев мира, экспозиции
-                                            которого
-                                            поражают своим великолепием и повествуют интересную историю страны и ее
-                                            народа.
-                                            На
-                                            месте современного собора постоянно возводились культовые сооружения,
-                                            которые по
-                                            различным причинам постоянно разрушались.','traveling-store'); ?>
+
+                    <?php if ( $excursion_program ) : ?>
+
+                        <div class="infoBlock">
+                            <div class="infoBlockContent">
+                                <?php echo $excursion_program; ?>
                             </div>
                         </div>
-                    </div>
-                    <div class="infoBlock">
-                        <div class="infoBlockContent">
-                            <div class="p">
-								<?php _e('Строительство собора было начато в 994 году, именно с этой даты начинается
-                                            официальная история современного собора. Император Византии Юстиниан решил
-                                            продемонстрировать всему миру все величие и богатство страны, ну и конечно,
-                                            увековечить свое имя. На строительстве трудились более десяти тысяч зодчих,
-                                            со
-                                            всего
-                                            мира завозились самые лучшие и самые дорогие материалы.','traveling-store'); ?>
+
+                    <?php endif; ?>
+
+	                <?php if ( $what_is_included ) : ?>
+
+                        <div class="infoBlock">
+                            <div class="infoBlockContent">
+				                <?php echo $what_is_included; ?>
                             </div>
                         </div>
-                    </div>
-                    <div class="infoBlock">
-                        <div class="infoBlockContent">
-                            <div class="p">
-								<?php _e('В отделке стен зодчие использовали уникальный розовый, белый и зеленый
-                                            мрамор.
-                                            Переходы оформлены резными фризами, которые покрыты слоем золота. В
-                                            убранстве
-                                            много
-                                            слоновой кости, украшений из жемчуга, инкрустированных драгоценных камней.
-                                            Как
-                                            гласит легенда, император планировал стены из превосходного мрамора покрыть
-                                            слоем
-                                            золота. Остановило Юстиниана только предсказание, согласно которому собору
-                                            грозил
-                                            захват и разграбление.','traveling-store'); ?>
+
+	                <?php endif; ?>
+
+	                <?php if ( $important_information ) : ?>
+
+                        <div class="infoBlock">
+                            <div class="infoBlockContent">
+				                <?php echo $important_information; ?>
                             </div>
                         </div>
-                    </div>
+
+	                <?php endif; ?>
+
                 </div>
             </div>
 
