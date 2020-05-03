@@ -1094,6 +1094,8 @@ $mainBorderColor: #E7E7E7;
 
       .swiper-container {
         &.productCardPicsSwiper {
+          height: 100%;
+
           &.hideArrows {
             .swiper-button-prev, .swiper-button-next {
               display: none;

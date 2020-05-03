@@ -1370,6 +1370,9 @@ input[type=number] {
 .wrapper section.productCardSection .content {
   flex-direction: column;
 }
+.wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper {
+  height: 100%;
+}
 .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper.hideArrows .swiper-button-prev, .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper.hideArrows .swiper-button-next {
   display: none;
 }
