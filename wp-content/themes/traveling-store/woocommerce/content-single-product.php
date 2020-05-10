@@ -156,6 +156,9 @@ if ( post_password_required() ) {
                 <div class="h5"><?php _e('Расчет стоимости', 'traveling-store'); ?></div>
             </div>
             <div class="productCardSideBarTourParams">
+
+	            <?php woocommerce_template_single_add_to_cart(); ?>
+
                 <div class="productCardParamWrap">
                     <div class="card-param-picker date-picker">
                         <div class="input">
@@ -253,16 +256,17 @@ if ( post_password_required() ) {
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div class="productCardPriceWrap">
-                <div class="productPriceRow">
-                    <div class="label"><?php _e('Общая стоимость', 'traveling-store'); ?></div>
-                    <div class="value">$120</div>
-                </div>
+
+                <?php woocommerce_template_single_price(); ?>
+
                 <a href="#" class="productPriceAddToBasket">
                     <span><?php _e('Добавить в корзину', 'traveling-store'); ?></span>
                 </a>
+
             </div>
         </div>
 
