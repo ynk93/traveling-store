@@ -185,6 +185,6 @@
 //	add_action('init', 'test');
 //	function test() {
 //
-//		WC()->cart->add_to_cart(31, 1);
+//		WC()->cart->empty_cart();
 //
 //	}
