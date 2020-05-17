@@ -112,8 +112,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		                    ?>
                         </div>
 
-                        <?php var_dump($item_data); ?>
-
                         <?php if ( !empty($item_data['date']) ) : ?>
 
                             <div class="infoBlock">
@@ -152,34 +150,46 @@ do_action( 'woocommerce_before_cart' ); ?>
                     </div>
 
                     <div class="itemNumbersInfo">
-                        <div class="itemBlock">
-                            <div class="itemRow">
-                                <div class="itemRowName">
-                                    <?php _e('Adults', 'traveling-tour'); ?>
-                                </div>
-                                <div class="itemRowNumberBlock">0</div>
-                            </div>
-                            <div class="itemRow">
-                                <div class="itemRowName">
-	                                <?php _e('Children (up to 3 years)', 'traveling-tour'); ?>
-                                </div>
-                                <div class="itemRowNumberBlock">0</div>
-                            </div>
-                        </div>
-                        <div class="itemBlock">
-                            <div class="itemRow">
-                                <div class="itemRowName">
-	                                <?php _e('Children (4-6 years old)', 'traveling-tour'); ?>
-                                </div>
-                                <div class="itemRowNumberBlock">0</div>
-                            </div>
-                            <div class="itemRow">
-                                <div class="itemRowName">
-	                                <?php _e('Children (7 - 12 years old)', 'traveling-tour'); ?>
-                                </div>
-                                <div class="itemRowNumberBlock">0</div>
-                            </div>
-                        </div>
+                        <?php
+                            $person_types = $_product->get_person_types();
+	                        $person_types_count = count($person_types);
+	                        $i = 0;
+	                        $g = 0;
+
+                            foreach ( $person_types as $person_type ) :
+
+                                if ( $i == 0) {
+	                                echo '<div class="itemBlock">';
+                                }
+
+                                $person_type_name = $person_type->get_name();
+                                $person_type_value = 0;
+
+                                $data_person_types = $item_data['person_types'];
+
+                                foreach ( $data_person_types as $data_person_type_name => $data_person_type_value ) {
+                                    if ( $data_person_type_name == $person_type_name ) {
+	                                    $person_type_value = $data_person_type_value;
+                                    }
+                                }
+
+                                $i++;
+	                            $g++; ?>
+
+                                    <div class="itemRow">
+                                        <div class="itemRowName">
+			                                <?php echo $person_type_name; ?>
+                                        </div>
+                                        <div class="itemRowNumberBlock">
+	                                        <?php echo $person_type_value; ?>
+                                        </div>
+                                    </div>
+
+                            <?php if ( $i == 2  || $g == $person_types_count) {
+	                            echo '</div>';
+	                            $i = 0;
+                            }
+                            endforeach; ?>
                     </div>
 
                     <div class="itemPrice product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
