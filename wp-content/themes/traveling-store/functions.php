@@ -88,7 +88,7 @@
 
 			$term = $wp_query->get_queried_object();
 
-			$release_version = '1.001';
+			$release_version = '1.002';
 
 			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/js/libs/css3-animate-it.js' ), array( 'jquery' ), '1.0', true );
 			wp_enqueue_script( 'traveling-store-swiper', get_theme_file_uri( '/js/libs/swiper.min.js' ), array( 'jquery' ), '1.0', true );
@@ -96,7 +96,7 @@
 			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/js/libs/jquery.nice-select.min.js' ), array( 'jquery' ), '1.0', true );
             wp_enqueue_script( 'traveling-store-jquery-ui', get_theme_file_uri( '/js/libs/jquery-ui.min.js' ), array( 'jquery' ), '1.0', true );
 
-            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.min.js' ), array( 'jquery' ), $release_version, true );
+            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/js/main.js' ), array( 'jquery' ), $release_version, true );
 
             if ( is_shop() || is_product_tag() || is_product_category() || taxonomy_is_product_attribute($term->taxonomy) ) {
 	            wp_enqueue_script( 'traveling-store-shop', get_theme_file_uri( '/js/ajax/shop.min.js' ), array( 'jquery' ), $release_version, true );

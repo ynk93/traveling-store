@@ -11,6 +11,12 @@ $sfSemiBold: 'San Francisco Pro Display Medium';
 $sfBold: 'San Francisco Pro Display Bold';
 $sfBlack: 'San Francisco Pro Display Black';
 
+.wc-bookings-date-picker-date-fields {
+  position: absolute;
+  top: 0;
+  display: flex;
+}
+
 .card-param-picker {
   margin: 200px auto;
 }
@@ -30,7 +36,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   cursor: pointer;
 }
 
-.card-param-picker .input .result, .card-param-picker .input button {
+.card-param-picker .input .result, .card-param-picker .input .button {
   display: inline-block;
   vertical-align: top;
 }
@@ -51,7 +57,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.card-param-picker .input button {
+.card-param-picker .input .button {
   position: absolute;
   right: 0;
   cursor: pointer;
@@ -73,7 +79,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 }
 
-.card-param-picker .input button:focus {
+.card-param-picker .input .button:focus {
   outline: 0;
 }
 

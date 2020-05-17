@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         </div>
         <div class="productCardSideBarTourParams">
 
-            <div class="productCardParamWrap">
+            <div class="productCardParamWrap calendar">
                 <div class="card-param-picker date-picker">
                     <div class="input">
                         <div class="result">

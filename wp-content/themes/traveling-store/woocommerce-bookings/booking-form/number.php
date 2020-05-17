@@ -28,15 +28,19 @@ $min   = isset( $field['min'] ) ? $field['min'] : null;
 $name  = $field['name'];
 $step  = isset( $field['step'] ) ? $field['step'] : null;
 ?>
-<p class="form-field form-field-wide <?php echo esc_attr( implode( ' ', $class ) ); ?>">
-	<label for="<?php echo esc_attr( $name ); ?>"><?php echo esc_html( $label ); ?>:</label>
-	<input
-		type="number"
-		value="<?php echo ( ! empty( $min ) ) ? esc_attr( $min ) : 0; ?>"
-		step="<?php echo ( isset( $step ) ) ? esc_attr( $step ) : ''; ?>"
-		min="<?php echo ( isset( $min ) ) ? esc_attr( $min ) : ''; ?>"
-		max="<?php echo ( isset( $max ) ) ? esc_attr( $max ) : ''; ?>"
-		name="<?php echo esc_attr( $name ); ?>"
-		id="<?php echo esc_attr( $name ); ?>"
-		/> <?php echo ( ! empty( $after ) ) ? esc_html( $after ) : ''; ?>
-</p>
+<div class="form-field form-field-wide row <?php echo esc_attr( implode( ' ', $class ) ); ?>">
+	<label for="<?php echo esc_attr( $name ); ?>" class="chbRowLabel"><?php echo esc_html( $label ); ?>:</label>
+    <div class="counterInputElement">
+        <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
+        <input
+                type="number"
+                value="<?php echo ( ! empty( $min ) ) ? esc_attr( $min ) : 0; ?>"
+                step="<?php echo ( isset( $step ) ) ? esc_attr( $step ) : ''; ?>"
+                min="<?php echo ( isset( $min ) ) ? esc_attr( $min ) : ''; ?>"
+                max="<?php echo ( isset( $max ) ) ? esc_attr( $max ) : ''; ?>"
+                name="<?php echo esc_attr( $name ); ?>"
+                id="<?php echo esc_attr( $name ); ?>"
+        /> <?php echo ( ! empty( $after ) ) ? esc_html( $after ) : ''; ?>
+        <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
+    </div>
+</div>

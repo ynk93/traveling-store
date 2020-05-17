@@ -45,15 +45,8 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
         <div class="productCardSideBarTourParams">
 
-            <div class="productCardParamWrap">
-                <div class="card-param-picker date-picker">
-                    <div class="input">
-                        <div class="result"><?php _e('Выберите дату', 'traveling-store') ?><span></span>
-                        </div>
-                        <button class="calendarIcon"></button>
-                    </div>
-                    <div class="calendar card-picker-drop"></div>
-                </div>
+            <div class="productCardParamWrap bookingCalendar">
+
             </div>
 
             <div class="productCardParamWrap">
@@ -65,7 +58,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
                                 <option value="9-12">13:00 - 15:00</option>
                             </select>
                         </div>
-                        <button class="arrowIcon"></button>
+                        <div class="button arrowIcon"></div>
                     </div>
                 </div>
             </div>
@@ -76,45 +69,14 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
                     <div class="input">
                         <div class="result">
-							<?php _e('Укажите количество детей', 'traveling-store') ?>
+							<?php _e('Укажите количество персон', 'traveling-store') ?>
                         </div>
-                        <button class="arrowIcon"></button>
+                        <div class="button arrowIcon"></div>
                     </div>
 
                     <div class="childrensData card-picker-drop">
 
 	                    <?php $booking_form->output(); ?>
-
-                        <div class="row">
-                            <div class="chbRowLabel">
-								<?php _e('Дети (до 3х лет)', 'traveling-store'); ?>
-                            </div>
-                            <div class="counterInputElement">
-                                <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
-                                <input type="number" value="0" name="childUntil3">
-                                <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="chbRowLabel">
-								<?php _e('Дети (4-6 лет)', 'traveling-store'); ?>
-                            </div>
-                            <div class="counterInputElement">
-                                <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
-                                <input type="number" value="0" name="childBtwn4and6">
-                                <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="chbRowLabel">
-								<?php _e('Дети (7-12 лет)', 'traveling-store'); ?>
-                            </div>
-                            <div class="counterInputElement">
-                                <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
-                                <input type="number" value="0" name="childBtwn7and12">
-                                <a href="#" class="counterInputButton counterInputIncreaseButton"></a>
-                            </div>
-                        </div>
 
                     </div>
 
@@ -131,7 +93,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
                                 <option value="eng">Английский</option>
                             </select>
                         </div>
-                        <button class="arrowIcon"></button>
+                        <div class="button arrowIcon"></div>
                     </div>
                 </div>
             </div>
@@ -139,24 +101,24 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         </div>
 
         <div class="productCardPriceWrap">
+
             <div class="productPriceRow">
-                <div class="label"><?php _e('Общая стоимость', 'traveling-store'); ?></div>
-                <div class="value">
-                    <div class="wc-bookings-booking-cost" style="display:none" data-raw-price=""></div>
-                </div>
+                <div class="wc-bookings-booking-cost" style="display:none" data-raw-price=""></div>
             </div>
-            <a href="#" class="productPriceAddToBasket">
-                <span><?php _e('Добавить в корзину', 'traveling-store'); ?></span>
-            </a>
+
+	        <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+
+            <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( is_callable( array( $product, 'get_id' ) ) ? $product->get_id() : $product->id ); ?>" class="wc-booking-product-id" />
+
+            <button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt productPriceAddToBasket disabled" style="display:none">
+                <span>
+                    <?php _e('Добавить в корзину', 'traveling-store'); ?>
+                </span>
+            </button>
+
         </div>
 
 	</div>
-
-	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
-	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( is_callable( array( $product, 'get_id' ) ) ? $product->get_id() : $product->id ); ?>" class="wc-booking-product-id" />
-
-	<button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt disabled" style="display:none"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

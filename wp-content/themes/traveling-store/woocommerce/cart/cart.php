@@ -27,9 +27,51 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 	<?php
 		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+
 			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
-			var_dump(WC()->cart->get_cart());
 			$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+
+			$item_data = array();
+			$booking_data = apply_filters( 'woocommerce_get_item_data', array(), $cart_item );
+
+			foreach ( $booking_data as $booking_data_item ) {
+
+			    if ( $booking_data_item['name'] == 'Booking Date' ) {
+
+			        $t = strtotime($booking_data_item['value']);
+			        $date = date('d M Y', $t);
+
+				    $item_data['date'] = $date;
+
+                } else {
+
+				    $item_data['person_types'][$booking_data_item['name']] = $booking_data_item['value'];
+
+                }
+            }
+
+            foreach ( $_product->get_attributes() as $product_attribute ) {
+
+			    $attribute_name = wc_attribute_label($product_attribute->get_name());
+			    $attribute_terms = $product_attribute->get_terms();
+
+			    $i = 0;
+
+			    foreach ( $attribute_terms as $attribute_term ) {
+
+			        $i++;
+
+			        if ( $i !== count($attribute_terms) ) {
+				        $term_name = $attribute_term->name . ', ';
+                    } else {
+				        $term_name = $attribute_term->name;
+                    }
+
+				    $item_data['attributes'][$attribute_name] .= $term_name;
+
+                }
+
+            }
 
 			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
@@ -61,7 +103,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			                    do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
 			                    // Meta data.
-			                    echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+			                    //echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
 
 			                    // Backorder notification.
 			                    if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
@@ -70,22 +112,42 @@ do_action( 'woocommerce_before_cart' ); ?>
 		                    ?>
                         </div>
 
-                        <div class="infoBlock">
-                            <div class="label">
-	                            <?php _e('Date and time', 'traveling-tour'); ?>
-                            </div>
-                            <div class="value">
-                                <span class="date">20 марта 2020</span>
-                                <span class="time">12:00</span>
-                            </div>
-                        </div>
+                        <?php var_dump($item_data); ?>
 
-                        <div class="infoBlock">
-                            <div class="label">
-	                            <?php _e('Language', 'traveling-tour'); ?>
+                        <?php if ( !empty($item_data['date']) ) : ?>
+
+                            <div class="infoBlock">
+                                <div class="label">
+                                    <?php _e('Date and time', 'traveling-tour'); ?>
+                                </div>
+                                <div class="value">
+                                    <span class="date"><?php echo $item_data['date']; ?></span>
+
+	                                <?php if ( !empty($item_data['attributes']['Time']) ) : ?>
+                                        <span class="time"><?php echo $item_data['attributes']['Time']; ?></span>
+	                                <?php endif; ?>
+
+                                </div>
                             </div>
-                            <div class="value">английский</div>
-                        </div>
+
+                        <?php endif; ?>
+
+	                    <?php if ( ! empty( $item_data['attributes'] ) ) :
+		                    foreach ( $item_data['attributes'] as $attribute_name => $attribute_value ) :
+			                    if ( $attribute_name !== 'Time' ) : ?>
+
+                                    <div class="infoBlock">
+                                        <div class="label">
+                                            <?php echo $attribute_name; ?>
+                                        </div>
+                                        <div class="value">
+                                            <?php echo $attribute_value; ?>
+                                        </div>
+                                    </div>
+
+			                    <?php endif;
+		                    endforeach;
+	                    endif; ?>
 
                     </div>
 
@@ -176,6 +238,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                 </div>
 				<?php
 			}
+
 		}
 	?>
 

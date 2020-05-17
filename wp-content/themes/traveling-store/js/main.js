@@ -83,6 +83,12 @@ $(document).ready(function () {
         }
     });
 
+    if ($('.card-picker-drop .wc-bookings-date-picker').length) {
+
+        $('.productCardParamWrap.bookingCalendar').append($('.wc-bookings-date-picker'));
+
+    }
+
     $('select[name=adultPersonsNumPicker]').siblings('.nice-select').find('.current').append('<span class="resultLabel">(взрослый)</span>')
 
     $(document).on('click', '.card-param-picker .input', function (e) {
