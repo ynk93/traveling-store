@@ -17,19 +17,24 @@ $sfBlack: 'San Francisco Pro Display Black';
   display: flex;
 }
 
-.card-param-picker {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker.wc-bookings-date-picker {
   margin: 200px auto;
 }
 
-.card-param-picker {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker {
   height: 100%;
+  width: calc(100% + 2px);
+  top: -1px;
+  box-shadow: none;
+  left: -1px;
+  border: 1px solid $mainBorderColor;
   background: white;
   position: relative;
   overflow: visible;
   transition: all 0.3s 0s ease-in-out;
 }
 
-.card-param-picker .input {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .input {
   width: 100%;
   height: 100%;
   font-size: 0;
@@ -73,8 +78,9 @@ $sfBlack: 'San Francisco Pro Display Black';
   }
 
   &.arrowIcon {
+
     pointer-events: none;
-    background: url('./images/icons/arrow_down-black.svg') no-repeat center/7px;
+    background: #fff url('./images/icons/arrow_down-black.svg') no-repeat center/7px;
     border-left: 1px solid $mainBorderColor;
   }
 }
@@ -83,7 +89,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   outline: 0;
 }
 
-.card-param-picker .calendar {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .calendar {
   position: relative;
   width: 100%;
   background: #fff;
@@ -91,14 +97,14 @@ $sfBlack: 'San Francisco Pro Display Black';
   overflow: hidden;
 }
 
-.card-param-picker .ui-datepicker-inline {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-inline {
   position: relative;
   width: 100%;
   border: 1px solid $mainBorderColor;
   @include border-radius(0);
 }
 
-.card-param-picker .ui-datepicker-header {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-header {
   height: 50px;
   line-height: 50px;
   background: #fff;
@@ -109,7 +115,7 @@ $sfBlack: 'San Francisco Pro Display Black';
   position: relative;
 }
 
-.card-param-picker .ui-datepicker-prev, .card-param-picker .ui-datepicker-next {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -130,88 +136,108 @@ $sfBlack: 'San Francisco Pro Display Black';
     padding: 0;
     width: 28px;
     margin: 0;
+    border: 0 !important;
 
     &:first-child {
-      padding-left: 18px;
+      padding-left: 18px !important;
     }
 
     &:last-child {
-      padding-right: 18px;
+      padding-right: 18px !important;
     }
   }
 }
 
-.card-param-picker .ui-datepicker-prev {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev {
   left: 16px;
   @include transform(rotate(90deg));
 }
 
-.card-param-picker .ui-datepicker-next {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next {
   right: 16px;
   @include transform(rotate(-90deg));
 }
 
-.card-param-picker .ui-datepicker-title {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-title {
   text-align: center;
   font-size: 14px;
   line-height: 50px;
+  padding: 0;
+  text-transform: none;
   font-family: $sfMedium;
   color: $mainBlackColor;
 }
 
-.card-param-picker .ui-datepicker-calendar {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-calendar {
   width: 100%;
   text-align: center;
   margin: 11px 0;
 }
 
-.card-param-picker .ui-datepicker-calendar thead tr th span {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-calendar thead tr th span {
   display: block;
   width: 100%;
   margin-bottom: 5px;
   font-size: 13px;
+  text-transform: none;
+  color: #000000 !important;
 }
 
-.card-param-picker .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-default {
   display: block;
   text-decoration: none;
   line-height: 28px;
   font-size: 13px;
   text-align: center;
   border: 0;
-  background: transparent;
+  background: transparent !important;
+  color: #000 !important;
   padding: 0;
 }
 
-.card-param-picker .ui-state-default:hover {
-  background: rgba(0, 0, 0, 0.02);
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02) !important;
 
   &.ui-state-active {
-    background: $mainColor;
+    background: $mainColor !important;
   }
 }
 
-.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-unselectable .ui-state-default {
   border: 0;
 }
 
-.card-param-picker .ui-datepicker-today {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-today {
   opacity: 1;
   .ui-state-default {
-    color: #2E84EA;
+    color: #2E84EA !important;
     font-family: $sfBold;
+    &.ui-state-active {
+      font-family: $sfMedium;
+      font-weight: normal;
+      background: $mainColor !important;
+      color: #fff !important;
+    }
   }
 }
 
-.card-param-picker {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker td.ui-datepicker-other-month {
+  background: transparent;
+}
+
+.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
+  background: $mainColor !important;
+}
+
+.card-param-picker.wc-bookings-date-picker .ui-datepicker {
   .ui-state-active {
     font-family: $sfMedium;
     font-weight: normal;
-    background: $mainColor;
-    color: #fff;
+    background: $mainColor !important;
+    color: #fff !important;
   }
 }
 
-.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-unselectable .ui-state-default {
   border: 2px solid transparent;
 }

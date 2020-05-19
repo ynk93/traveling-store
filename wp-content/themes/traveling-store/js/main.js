@@ -274,17 +274,22 @@ $(document).ready(function () {
         var childUnder3 = 0,
             childBtwn4and6 = 0,
             childBtwn7and12 = 0,
+            adult = 1;
             parent = $('.childrensData .counterInputElement');
 
-        childUnder3 = parent.find('input[name=childUntil3]').val();
+        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3113]').val();
 
-        childBtwn4and6 = parent.find('input[name=childBtwn4and6]').val();
+        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3114]').val();
 
-        childBtwn7and12 = parent.find('input[name=childBtwn7and12]').val();
+        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3115]').val();
 
-        var childNumPickerRow = '<span class="innerResult">' + childUnder3 + '<span class="resultLabel">(до 3 лет)</span>, ' +
-            childBtwn4and6 + '<span class="resultLabel">(4-6 лет)</span>, ' + childBtwn7and12 +
-            '<span class="resultLabel">(7-12 лет)</span></span>';
+        adult = parent.find('input[name=wc_bookings_field_persons_3112]').val();
+
+        var childNumPickerRow = '<span class="innerResult">' +
+            adult + '<span class="resultLabel">(взрослый)</span>, ' +
+            childUnder3 + '<span class="resultLabel">(до 3 лет)</span>, ' +
+            childBtwn4and6 + '<span class="resultLabel">(4-6 лет)</span>, ' +
+            childBtwn7and12 + '<span class="resultLabel">(7-12 лет)</span></span>';
 
         $('.child-num-picker').find('.result').html(childNumPickerRow);
     }

@@ -298,19 +298,24 @@ input[type=number] {
   display: flex;
 }
 
-.card-param-picker {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker.wc-bookings-date-picker {
   margin: 200px auto;
 }
 
-.card-param-picker {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker {
   height: 100%;
+  width: calc(100% + 2px);
+  top: -1px;
+  box-shadow: none;
+  left: -1px;
+  border: 1px solid #E7E7E7;
   background: white;
   position: relative;
   overflow: visible;
   transition: all 0.3s 0s ease-in-out;
 }
 
-.card-param-picker .input {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .input {
   width: 100%;
   height: 100%;
   font-size: 0;
@@ -353,7 +358,7 @@ input[type=number] {
 }
 .card-param-picker .input .button.arrowIcon {
   pointer-events: none;
-  background: url("./images/icons/arrow_down-black.svg") no-repeat center/7px;
+  background: #fff url("./images/icons/arrow_down-black.svg") no-repeat center/7px;
   border-left: 1px solid #E7E7E7;
 }
 
@@ -361,7 +366,7 @@ input[type=number] {
   outline: 0;
 }
 
-.card-param-picker .calendar {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .calendar {
   position: relative;
   width: 100%;
   background: #fff;
@@ -369,7 +374,7 @@ input[type=number] {
   overflow: hidden;
 }
 
-.card-param-picker .ui-datepicker-inline {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-inline {
   position: relative;
   width: 100%;
   border: 1px solid #E7E7E7;
@@ -378,7 +383,7 @@ input[type=number] {
   border-radius: 0;
 }
 
-.card-param-picker .ui-datepicker-header {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-header {
   height: 50px;
   line-height: 50px;
   background: #fff;
@@ -391,7 +396,7 @@ input[type=number] {
   position: relative;
 }
 
-.card-param-picker .ui-datepicker-prev, .card-param-picker .ui-datepicker-next {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -401,7 +406,7 @@ input[type=number] {
   height: 10px;
   background: url("./images/icons/arrow_down-right.svg") no-repeat center/contain;
 }
-.card-param-picker .ui-datepicker-prev.ui-datepicker-prev-hover, .card-param-picker .ui-datepicker-prev.ui-datepicker-next-hover, .card-param-picker .ui-datepicker-next.ui-datepicker-prev-hover, .card-param-picker .ui-datepicker-next.ui-datepicker-next-hover {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev.ui-datepicker-next-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next.ui-datepicker-prev-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover {
   border: 0;
 }
 
@@ -410,15 +415,16 @@ input[type=number] {
   padding: 0;
   width: 28px;
   margin: 0;
+  border: 0 !important;
 }
 .ui-datepicker td:first-child, .ui-datepicker th:first-child {
-  padding-left: 18px;
+  padding-left: 18px !important;
 }
 .ui-datepicker td:last-child, .ui-datepicker th:last-child {
-  padding-right: 18px;
+  padding-right: 18px !important;
 }
 
-.card-param-picker .ui-datepicker-prev {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev {
   left: 16px;
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -426,7 +432,7 @@ input[type=number] {
   transform: rotate(90deg);
 }
 
-.card-param-picker .ui-datepicker-next {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next {
   right: 16px;
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -434,65 +440,84 @@ input[type=number] {
   transform: rotate(-90deg);
 }
 
-.card-param-picker .ui-datepicker-title {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-title {
   text-align: center;
   font-size: 14px;
   line-height: 50px;
+  padding: 0;
+  text-transform: none;
   font-family: "San Francisco Pro Display Medium";
   color: #333333;
 }
 
-.card-param-picker .ui-datepicker-calendar {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-calendar {
   width: 100%;
   text-align: center;
   margin: 11px 0;
 }
 
-.card-param-picker .ui-datepicker-calendar thead tr th span {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-calendar thead tr th span {
   display: block;
   width: 100%;
   margin-bottom: 5px;
   font-size: 13px;
+  text-transform: none;
+  color: #000000 !important;
 }
 
-.card-param-picker .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-default {
   display: block;
   text-decoration: none;
   line-height: 28px;
   font-size: 13px;
   text-align: center;
   border: 0;
-  background: transparent;
+  background: transparent !important;
+  color: #000 !important;
   padding: 0;
 }
 
-.card-param-picker .ui-state-default:hover {
-  background: rgba(0, 0, 0, 0.02);
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02) !important;
 }
-.card-param-picker .ui-state-default:hover.ui-state-active {
-  background: #F87F27;
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-default:hover.ui-state-active {
+  background: #F87F27 !important;
 }
 
-.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-unselectable .ui-state-default {
   border: 0;
 }
 
-.card-param-picker .ui-datepicker-today {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-today {
   opacity: 1;
 }
-.card-param-picker .ui-datepicker-today .ui-state-default {
-  color: #2E84EA;
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-today .ui-state-default {
+  color: #2E84EA !important;
   font-family: "San Francisco Pro Display Bold";
 }
-
-.card-param-picker .ui-state-active {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-active {
   font-family: "San Francisco Pro Display Medium";
   font-weight: normal;
-  background: #F87F27;
-  color: #fff;
+  background: #F87F27 !important;
+  color: #fff !important;
 }
 
-.card-param-picker .ui-datepicker-unselectable .ui-state-default {
+.card-param-picker.wc-bookings-date-picker .ui-datepicker td.ui-datepicker-other-month {
+  background: transparent;
+}
+
+.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
+  background: #F87F27 !important;
+}
+
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-state-active {
+  font-family: "San Francisco Pro Display Medium";
+  font-weight: normal;
+  background: #F87F27 !important;
+  color: #fff !important;
+}
+
+.card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-unselectable .ui-state-default {
   border: 2px solid transparent;
 }
 
@@ -861,7 +886,7 @@ input[type=number] {
   border-radius: 50%;
   font-family: "San Francisco Pro Display Bold";
   color: #fff;
-  font-size: 13px;
+  font-size: 10px;
   line-height: 18px;
   text-align: center;
 }
@@ -1383,7 +1408,20 @@ input[type=number] {
 .wrapper section.productCardSection {
   width: 100%;
 }
+.wrapper section.productCardSection .woocommerce-notices-wrapper {
+  margin-top: 20px;
+}
+.wrapper section.productCardSection .woocommerce-notices-wrapper .woocommerce-message {
+  font-size: 14px;
+  line-height: 26px;
+  color: rgba(51, 51, 51, 0.5);
+}
+.wrapper section.productCardSection .woocommerce-notices-wrapper .woocommerce-message a {
+  color: #333333;
+  text-decoration: underline;
+}
 .wrapper section.productCardSection .content {
+  padding: 0;
   flex-direction: column;
 }
 .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper {
@@ -1417,7 +1455,7 @@ input[type=number] {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide {
   margin-right: 44px;
-  max-width: calc(100% - 344px);
+  max-width: calc(100% - 388px);
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardPic {
   height: 400px;
@@ -1475,6 +1513,10 @@ input[type=number] {
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "San Francisco Pro Display Regular";
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p.semibold {
   font-family: "San Francisco Pro Display Medium";
@@ -1522,6 +1564,18 @@ input[type=number] {
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide {
   max-width: 340px;
+  width: 100%;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .wc-bookings-booking-form .wc-bookings-booking-cost {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 24px;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams {
   padding: 24px;
@@ -1544,6 +1598,11 @@ input[type=number] {
   line-height: 40px;
   overflow: visible;
 }
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.child-num-picker .result {
+  overflow-x: scroll;
+  width: calc(100% - 60px);
+  white-space: nowrap;
+}
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.child-num-picker .result .innerResult {
   color: #333333;
 }
@@ -1552,7 +1611,8 @@ input[type=number] {
   margin-left: 4px;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.date-picker {
-  z-index: 4;
+  z-index: 34;
+  position: relative;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker .card-picker-drop {
   position: absolute;
@@ -1566,7 +1626,7 @@ input[type=number] {
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.datePicked .input .result {
   font-size: 0;
 }
-.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.open .input button.arrowIcon {
+.wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.open .input .button.arrowIcon {
   -moz-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
   -webkit-transform: scaleY(-1);
@@ -1657,7 +1717,9 @@ input[type=number] {
   text-align: center;
   color: #fff;
   display: block;
-  margin-top: 24px;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
 }
 .wrapper .sideBarHead {
   display: flex;
@@ -2596,10 +2658,15 @@ input[type=number] {
   justify-content: space-between;
 }
 .wrapper .card .cardInfo .productInfoRows .productInfoRow .productInfoRowLabel {
+  max-width: 50%;
+  width: 100%;
   color: rgba(51, 51, 51, 0.5);
   line-height: 18px;
 }
 .wrapper .card .cardInfo .productInfoRows .productInfoRow .productInfoRowValue {
+  max-width: 50%;
+  width: 100%;
+  text-align: right;
   line-height: 18px;
   color: #333333;
   font-family: "San Francisco Pro Display Medium";

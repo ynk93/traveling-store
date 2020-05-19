@@ -475,7 +475,7 @@ $mainBorderColor: #E7E7E7;
             @include border-radius(50%);
             font-family: $sfBold;
             color: #fff;
-            font-size: 13px;
+            font-size: 10px;
             line-height: 18px;
             text-align: center;
           }
@@ -1089,7 +1089,25 @@ $mainBorderColor: #E7E7E7;
   section.productCardSection {
     width: 100%;
 
+
+
+    .woocommerce-notices-wrapper {
+      margin-top: 20px;
+
+      .woocommerce-message {
+        font-size: 14px;
+        line-height: 26px;
+        color: $mainGreyColor;
+
+        a {
+          color: $mainBlackColor;
+          text-decoration: underline;
+        }
+      }
+    }
+
     .content {
+      padding: 0;
       flex-direction: column;
 
       .swiper-container {
@@ -1126,7 +1144,7 @@ $mainBorderColor: #E7E7E7;
 
         .productCardLeftSide {
           margin-right: 44px;
-          max-width: calc(100% - 344px);
+          max-width: calc(100% - 388px);
 
           .productCardPic {
             height: 400px;
@@ -1188,6 +1206,10 @@ $mainBorderColor: #E7E7E7;
               .infoBlockContent {
                 display: flex;
                 flex-direction: column;
+                font-size: 14px;
+                line-height: 20px;
+                color: $mainGreyColor;
+                font-family: $sfRegular;
 
                 .p {
                   &.semibold {
@@ -1251,6 +1273,19 @@ $mainBorderColor: #E7E7E7;
 
         .productCardRightSide {
           max-width: 340px;
+          width: 100%;
+
+          .wc-bookings-booking-form .wc-bookings-booking-cost {
+            background: transparent;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 24px;
+          }
 
           .productCardSideBarTourParams {
             padding: 24px;
@@ -1276,6 +1311,10 @@ $mainBorderColor: #E7E7E7;
 
                 &.child-num-picker {
                   .result {
+                    overflow-x: scroll;
+                    width: calc(100% - 60px);
+                    white-space: nowrap;
+
                     .innerResult {
                       color: $mainBlackColor;
 
@@ -1288,7 +1327,8 @@ $mainBorderColor: #E7E7E7;
                 }
 
                 &.date-picker {
-                  z-index: 4;
+                  z-index: 34;
+                  position: relative;
                 }
 
                 .card-picker-drop {
@@ -1311,7 +1351,7 @@ $mainBorderColor: #E7E7E7;
                 }
 
                 &.open {
-                  .input button {
+                  .input .button {
                     &.arrowIcon {
                       @include transform(scaleY(-1));
                     }
@@ -1410,7 +1450,9 @@ $mainBorderColor: #E7E7E7;
             .productPriceAddToBasket {
               @include mainYellowButton(48px);
               display: block;
-              margin-top: 24px;
+              box-shadow: none;
+              border: 0;
+              cursor: pointer;
             }
           }
         }
@@ -2509,11 +2551,16 @@ $mainBorderColor: #E7E7E7;
           justify-content: space-between;
 
           .productInfoRowLabel {
+            max-width: 50%;
+            width: 100%;
             color: $mainGreyColor;
             line-height: 18px;
           }
 
           .productInfoRowValue {
+            max-width: 50%;
+            width: 100%;
+            text-align: right;
             line-height: 18px;
             color: $mainBlackColor;
             font-family: $sfSemiBold;
