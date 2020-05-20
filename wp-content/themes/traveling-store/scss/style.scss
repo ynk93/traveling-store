@@ -1795,10 +1795,15 @@ $mainBorderColor: #E7E7E7;
 
       .basketItemRow, .basketItem {
         .itemPic {
-          max-width: 120px;
+          max-width: 140px;
           flex-shrink: 0;
-          height: 144px;
           width: 100%;
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
 
           img {
             object-fit: cover;
@@ -1836,7 +1841,7 @@ $mainBorderColor: #E7E7E7;
 
             .value {
               font-size: 13px;
-              line-height: 10px;
+              line-height: 15px;
               font-family: $sfSemiBold;
               color: $mainBlackColor;
 
@@ -1864,7 +1869,7 @@ $mainBorderColor: #E7E7E7;
         width: 100%;
 
         .basketItemRow {
-          max-height: 140px;
+          min-height: 140px;
           display: flex;
           width: 100%;
           flex-direction: row;
@@ -1904,7 +1909,7 @@ $mainBorderColor: #E7E7E7;
                   padding-right: 20px;
                   font-weight: 600;
                   font-size: 13px;
-                  line-height: 10px;
+                  line-height: 17px;
                   color: $mainBlackColor;
                 }
 

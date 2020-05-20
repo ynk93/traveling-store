@@ -2001,10 +2001,14 @@ input[type=number] {
   width: 100%;
 }
 .wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic {
-  max-width: 120px;
+  max-width: 140px;
   flex-shrink: 0;
-  height: 144px;
   width: 100%;
+}
+.wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic a, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic a, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic a, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic a, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic a, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic a, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic a, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .wrapper section.basketPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemPic img, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemPic img {
   object-fit: cover;
@@ -2038,7 +2042,7 @@ input[type=number] {
 }
 .wrapper section.basketPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.basketPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .basketPageContent .basketItem .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItemRow .itemInfo .infoBlock .value, .wrapper section.checkoutPageSection .checkoutPageContent .basketItem .itemInfo .infoBlock .value {
   font-size: 13px;
-  line-height: 10px;
+  line-height: 15px;
   font-family: "San Francisco Pro Display Medium";
   color: #333333;
 }
@@ -2064,7 +2068,7 @@ input[type=number] {
   width: 100%;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow {
-  max-height: 140px;
+  min-height: 140px;
   display: flex;
   width: 100%;
   flex-direction: row;
@@ -2103,7 +2107,7 @@ input[type=number] {
   padding-right: 20px;
   font-weight: 600;
   font-size: 13px;
-  line-height: 10px;
+  line-height: 17px;
   color: #333333;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide .basketItemRow .itemNumbersInfo .itemBlock .itemRow .itemRowNumberBlock {
