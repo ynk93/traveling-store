@@ -1,0 +1,165 @@
+table.mainTable {
+    width: 682px;
+    margin: 0 auto;
+    border: 1px solid #ebebeb;
+    border-spacing: 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+table.mainTable span {
+    color: #7E7E7E;
+    vertical-align: middle;
+}
+
+table.mainTable p {
+    color: #7E7E7E;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+table.mainTable p + p {
+    margin-top: 8px;
+}
+
+.bottomTextWrap {
+    padding: 24px 20px;
+    display: block;
+    border-top: 1px solid #ebebeb;
+}
+
+.bottomTextWrap .bold {
+    margin-bottom: 8px;
+    display: block;
+}
+
+table.mainTable span.bold {
+    padding: 0;
+    color: #000;
+    font-weight: bold;
+}
+
+a.textLink {
+    color: #148EFF;
+}
+
+table.mainTable .mailHead {
+    display: block;
+    line-height: 24px;
+    padding: 26px 20px;
+}
+
+table.mainTable .logo {
+    display: block;
+    width: 155px;
+    height: 55px;
+    background: url('../images/mailTemplates/logo.png') no-repeat center/contain;
+}
+
+table.logoRowTable {
+    padding: 10px 0;
+    width: 100%;
+    border-top: 1px solid #EBEBEB;
+}
+
+.ticketNumWrap {
+    padding-right: 20px;
+    display: block;
+    text-align: right;
+    margin-left: auto;
+}
+
+.ticketNumWrap span {
+    display: block;
+    padding: 0;
+}
+
+.ticketNumWrap .ticketNumber {
+    color: #F87F27;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.mainDataTable {
+    border-spacing: 0;
+}
+
+table.mainDataTable span {
+    display: block;
+    padding: 0 20px;
+    color: #000;
+}
+
+.mainDataTable tbody tr td {
+    border-top: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    height: 56px;
+    width: calc(100% / 4);
+}
+
+.mainDataTable tr td:first-child {
+    border-left: 0;
+    font-weight: bold;
+}
+
+.mainDataTable tr.mainRow td {
+    border-top: 11px solid #ebebeb;
+}
+
+.mainDataTable tr.mainRow td td {
+    border-top: 0;
+    border-left: 0;
+    font-size: 12px;
+    line-height: 12px;
+    height: 24px;
+    border-bottom: 1px solid #ebebeb;
+    font-weight: normal;
+    color: #7E7E7E;
+
+}
+
+.mainDataTable tr.mainRow td tr:last-child td {
+    border-bottom: 0;
+}
+
+.mainDataTable table {
+    border-spacing: 0;
+}
+
+.mainDataTable tr.mainRow td td span span{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+.mainDataTable tr.mainRow td td span {
+    padding: 0 14px 0 20px;
+}
+
+.mainDataTable tr.mainRow td td .innerSpanDescription {
+    color: #7e7e7e;
+}
+
+.bottomTableRow {
+    border-top: 1px solid #ebebeb;
+    padding: 24px 0;
+}
+
+.bottomTableRow td {
+    padding: 0 20px;
+}
+.bottomTableRow td:last-child {
+    text-align: right;
+    width: 100%;
+}
+
+.bottomTableRow td a {
+    color: #222;
+    text-decoration: none;
+}
+
+.bottomTableRow .contactBlock {
+    padding-left: 30px;
+}
+
+
