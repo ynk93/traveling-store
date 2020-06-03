@@ -2924,6 +2924,22 @@ input[type=number] {
   background-size: contain;
 }
 
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+  background: transparent;
+  border-radius: 0;
+}
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods {
+  padding: 0;
+  border: 0;
+}
+
+.wc_payment_method .chbLabel {
+  font-size: 14px;
+  line-height: 12px;
+  font-family: "San Francisco Pro Display Regular";
+}
+
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding: 0;
 }
@@ -3250,6 +3266,9 @@ input[type=number] {
   .wrapper section.mainSection .swiper-container .swiper-wrapper .swiper-slide .slideContent .slideTitle {
     margin-bottom: 8px;
   }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutLeftSide {
+    padding: 24px;
+  }
   .wrapper section.aboutUsPageSection .content {
     padding: 0;
   }
@@ -3543,6 +3562,36 @@ input[type=number] {
   }
   .wrapper section.mainSection .swiper-container .swiper-buttons-wrap {
     display: none;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent {
+    flex-direction: column;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent {
+    max-width: 100%;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.chbRow {
+    flex-direction: column;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.chbRow .chbWrap + .chbWrap {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs, .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs {
+    flex-direction: column;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap, .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap {
+    max-width: 100%;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.twoInputs .inputWrap + .inputWrap, .wrapper section.checkoutPageSection .checkoutPageContent .checkoutContent .inputRow.threeInputs .inputWrap + .inputWrap {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .checkoutLeftSide {
+    padding: 24px;
+  }
+  .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
+    max-width: 100%;
+    margin: 24px 0 0;
   }
   .wrapper section.partnersSection .swiper-container {
     max-width: 240px;

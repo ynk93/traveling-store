@@ -447,6 +447,14 @@
       }
     }
 
+    section.checkoutPageSection {
+      .checkoutPageContent {
+        .checkoutLeftSide {
+          padding: 24px;
+        }
+      }
+    }
+
     section.aboutUsPageSection {
       .content {
         padding: 0;
@@ -832,6 +840,51 @@
 
         .swiper-buttons-wrap {
           display: none;
+        }
+      }
+    }
+
+    section.checkoutPageSection {
+      .checkoutPageContent {
+        flex-direction: column;
+
+        .checkoutContent {
+          max-width: 100%;
+
+          .inputRow {
+            &.chbRow {
+              flex-direction: column;
+
+              .chbWrap {
+                & + .chbWrap {
+                  margin-left: 0;
+                  margin-top: 20px;
+                }
+              }
+            }
+            &.twoInputs, &.threeInputs {
+              flex-direction: column;
+
+              .inputWrap {
+                max-width: 100%;
+
+                & + .inputWrap {
+                  margin-left: 0;
+                  margin-top: 20px;
+                }
+
+              }
+            }
+          }
+        }
+
+        .checkoutLeftSide {
+          padding: 24px;
+        }
+
+        .rightSideSideBar {
+          max-width: 100%;
+          margin: 24px 0 0;
         }
       }
     }
