@@ -229,7 +229,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
                     </div>
 
-                    <div class="product-remove" style="display: none">
+                    <div class="product-remove">
 		                <?php
 			                echo apply_filters( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				                'woocommerce_cart_item_remove_link',

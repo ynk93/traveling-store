@@ -94,6 +94,8 @@
       .basketPageContent {
         .basketLeftSide {
           .basketItemRow {
+            position: relative;
+
             .itemInfo {
               padding: 10px;
             }
@@ -103,10 +105,16 @@
                 .itemRow {
                   .itemRowName {
                     width: 100px;
-                    padding-right: 0;
+                    //padding-right: 0;
                   }
                 }
               }
+            }
+
+            .product-remove {
+              position: absolute;
+              right: 10px;
+              top: 10px;
             }
           }
         }
@@ -115,6 +123,90 @@
           padding: 20px;
           max-width: 260px;
           margin-left: 20px;
+        }
+      }
+    }
+
+    section.basketPageSection {
+      .basketPageContent {
+        .basketLeftSide, .rightSideSideBar {
+          .basketItemRow {
+            flex-wrap: wrap;
+            max-height: none;
+            height: auto;
+
+            .itemInfo {
+              padding: 14px 24px;
+              max-width: calc(100% - 140px);
+              border: 0;
+              min-width: 0;
+            }
+
+            .itemNumbersInfo {
+              margin-top: 28px;
+              padding: 0;
+              justify-content: flex-start;
+              border-top: 1px solid $mainBorderColor;
+              border-bottom: 1px solid $mainBorderColor;
+
+
+              .itemBlock {
+                max-width: 50%;
+                width: 100%;
+
+                .itemRow {
+                  padding: 15px 16px;
+                  justify-content: space-between;
+
+                  .itemRowName {
+                    font-size: 12px;
+                    line-height: 10px;
+                    color: #7E7E7E;
+                  }
+
+                  .itemRowNumberBlock {
+                    width: auto;
+                    height: auto;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-top: 4px;
+                    border: 0;
+                    background: transparent;
+                  }
+
+                  & + .itemRow {
+                    margin: 0;
+                    border-top: 1px solid $mainBorderColor;
+                  }
+                }
+
+                & + .itemBlock {
+                  border-left: 1px solid $mainBorderColor;
+                  margin-left: 0;
+                }
+              }
+            }
+
+            .itemPrice {
+              width: 100%;
+              max-width: 100%;
+              text-align: left;
+              padding: 28px 16px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              border: 0;
+
+              .onlyOnMobile {
+                display: inline;
+              }
+            }
+          }
+        }
+
+        .rightSideSideBar {
+          padding: 20px 16px;
         }
       }
     }
@@ -312,74 +404,22 @@
           margin: 0;
 
           .basketItemRow {
-            flex-wrap: wrap;
-            max-height: none;
-            height: auto;
-
             .itemInfo {
-              padding: 14px 24px;
+              padding: 14px 40px 14px 14px;
               max-width: calc(100% - 120px);
-              border: 0;
+            }
+
+            .itemPic {
+              max-width: 120px;
             }
 
             .itemNumbersInfo {
-              margin-top: 28px;
-              padding: 0;
-              justify-content: flex-start;
-              border-top: 1px solid $mainBorderColor;
-              border-bottom: 1px solid $mainBorderColor;
-
-
               .itemBlock {
-                max-width: 50%;
-                width: 100%;
-
-                .itemRow {
-                  padding: 15px 16px;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: flex-start;
-
-                  .itemRowName {
-                    font-size: 12px;
-                    line-height: 10px;
-                    color: #7E7E7E;
-                  }
-
-                  .itemRowNumberBlock {
-                    width: auto;
-                    height: auto;
-                    font-size: 14px;
-                    line-height: 20px;
-                    margin-top: 4px;
-                    border: 0;
-                    background: transparent;
-                  }
-
-                  & + .itemRow {
-                    border-top: 1px solid $mainBorderColor;
-                  }
-                }
-
-                & + .itemBlock {
-                  border-left: 1px solid $mainBorderColor;
-                }
-              }
-            }
-
-            .itemPrice {
-              width: 100%;
-              max-width: 100%;
-              text-align: left;
-              padding: 28px 16px;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              align-items: center;
-              border: 0;
-
-              .onlyOnMobile {
-                display: inline;
+                //.itemRow {
+                //  flex-direction: column;
+                //  justify-content: center;
+                //  align-items: flex-start;
+                //}
               }
             }
           }
@@ -387,7 +427,6 @@
 
         .rightSideSideBar {
           margin: 20px 0 0;
-          padding: 20px 16px;
         }
       }
     }

@@ -1090,7 +1090,6 @@ $mainBorderColor: #E7E7E7;
     width: 100%;
 
 
-
     .woocommerce-notices-wrapper {
       margin-top: 20px;
 
@@ -1119,6 +1118,7 @@ $mainBorderColor: #E7E7E7;
               display: none;
             }
           }
+
           .swiper-button-prev, .swiper-button-next {
             background: url('./images/icons/arrow_right_1.svg') no-repeat center/contain;
             width: 20px;
@@ -1862,6 +1862,23 @@ $mainBorderColor: #E7E7E7;
             }
           }
         }
+
+        .product-remove {
+          min-width: 40px;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+            background: url('./images/icons/close_icon.svg') no-repeat center/12px;
+          }
+        }
       }
 
       .basketLeftSide {
@@ -2095,7 +2112,7 @@ $mainBorderColor: #E7E7E7;
           .inputWrap {
             width: 100%;
 
-            input {
+            input, .select2-container--default .select2-selection--single {
               appearance: none;
               -webkit-appearance: none;
               height: 48px;
@@ -2105,6 +2122,17 @@ $mainBorderColor: #E7E7E7;
               padding: 0 16px;
               font-size: 14px;
               color: $mainBlackColor;
+              border-radius: 0;
+
+              .select2-selection__rendered {
+                line-height: 46px;
+              }
+
+              .select2-selection__arrow {
+                bottom: 0;
+                margin: auto 0;
+                top: 1px;
+              }
             }
 
             @include placeholderColor($mainGreyColor);
@@ -2112,6 +2140,10 @@ $mainBorderColor: #E7E7E7;
 
           &.chbRow {
             .chbWrap {
+              p.form-row {
+                display: none;
+              }
+
               & + .chbWrap {
                 margin: 0 0 0 48px;
               }
@@ -2208,6 +2240,7 @@ $mainBorderColor: #E7E7E7;
             @include mainYellowButton(48px);
             max-width: 100%;
             margin: 20px 0 16px;
+            border: 0;
           }
 
           .p {
@@ -2713,6 +2746,35 @@ $mainBorderColor: #E7E7E7;
       background-size: contain;
     }
   }
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+}
+
+.select2-dropdown {
+  border-color: $mainBorderColor;
+
+  .select2-search {
+    display: none;
+  }
+
+  .select2-results {
+    .select2-results__option {
+      font-size: 14px;
+      line-height: 28px;
+      color: $mainBlackColor;
+      height: 28px;
+      font-family: $sfRegular;
+      border-top: 1px solid $mainBorderColor;
+      padding: 0 6px;
+    }
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+  background: $mainColor;
+  color: #fff;
 }
 
 @import "adapt";
