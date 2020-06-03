@@ -23,9 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="titleWrap innerPageTitleWrap">
 	<div class="innerPageBreadCrumbs">
-		<span class="breadCrumb"><?php _e('Туры', 'traveling-store'); ?></span>
-		<span class="breadCrumb"><?php _e('Анталия', 'traveling-store'); ?></span>
-		<span class="breadCrumb"><?php _e('Экскурсия в собор Святой Софии', 'traveling-store'); ?></span>
+		<span class="breadCrumb"><?php _e('Tours', 'traveling-store'); ?></span>
+		<span class="breadCrumb"><?php the_title(); ?></span>
 	</div>
 	<div class="h2">
 		<?php the_title(); ?>
