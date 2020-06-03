@@ -2,7 +2,8 @@
 	/**
 	 * Setup Traveling Store Theme.
 	 */
-//  Theme setup
+
+	//  Theme setup
 	if ( ! function_exists( 'traveling_store_setup' ) ) :
 
 		function traveling_store_setup() {
@@ -177,6 +178,90 @@
 		}
 
 		wp_die();
+
+	}
+
+	//  Checkout payment replace
+	remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+	add_action( 'woocommerce_checkout_place_payment', 'woocommerce_checkout_payment', 20 );
+
+	//  Checkout custom fields
+	add_filter( 'woocommerce_billing_fields', 'traveling_store_remove_checkout_fields', 10, 1 );
+	function traveling_store_remove_checkout_fields( $address_fields ) {
+
+		$address_fields['billing_company']['required'] = false;
+		$address_fields['billing_city']['required'] = false;
+		$address_fields['billing_postcode']['required'] = false;
+		$address_fields['billing_country']['required'] = false;
+
+		return $address_fields;
+
+	}
+
+	function traveling_store_checkout_messenger_field( $checkout ) {
+
+		echo '<div class="chbWrap"><label class="container">';
+
+		woocommerce_form_field( 'whatsapp', array(
+			'type'          => 'checkbox',
+		), $checkout->get_value( 'whatsapp' ));
+
+		echo '<span class="checkmark"></span>'
+		     . '<span class="chbLabel">WhatsApp</span>'
+		     . '</label>'
+		     . '</div>';
+
+		echo '<div class="chbWrap"><label class="container">';
+
+		woocommerce_form_field( 'viber', array(
+			'type'          => 'checkbox',
+		), $checkout->get_value( 'viber' ));
+
+		echo '<span class="checkmark"></span>'
+		     . '<span class="chbLabel">Viber</span>'
+		     . '</label>'
+		     . '</div>';
+
+		echo '<div class="chbWrap"><label class="container">';
+
+		woocommerce_form_field( 'telegram', array(
+			'type'          => 'checkbox',
+		), $checkout->get_value( 'telegram' ));
+
+		echo '<span class="checkmark"></span>'
+		     . '<span class="chbLabel">Telegram</span>'
+		     . '</label>'
+		     . '</div>';
+
+	}
+
+	add_action( 'woocommerce_checkout_update_order_meta', 'traveling_store_checkout_messenger_field_update_order_meta' );
+	function traveling_store_checkout_messenger_field_update_order_meta( $order_id ) {
+
+		if ( ! empty( $_POST['whatsapp'] ) ) {
+			update_post_meta( $order_id, 'whatsapp', sanitize_text_field( $_POST['whatsapp'] ) );
+		}
+
+		if ( ! empty( $_POST['viber'] ) ) {
+			update_post_meta( $order_id, 'viber', sanitize_text_field( $_POST['viber'] ) );
+		}
+
+		if ( ! empty( $_POST['telegram'] ) ) {
+			update_post_meta( $order_id, 'telegram', sanitize_text_field( $_POST['telegram'] ) );
+		}
+
+	}
+
+	add_action( 'woocommerce_admin_order_data_after_billing_address', 'traveling_store_checkout_messenger_field_display_admin_order_meta', 10, 1 );
+	function traveling_store_checkout_messenger_field_display_admin_order_meta($order) {
+
+		$whatsapp_value = get_post_meta( $order->id, 'whatsapp', true ) == 1 ? 'Yes' : 'No';
+		$viber_value = get_post_meta( $order->id, 'viber', true ) == 1 ? 'Yes' : 'No';
+		$telegram_value = get_post_meta( $order->id, 'telegram', true ) == 1 ? 'Yes' : 'No';
+
+		echo '<p><strong>' . __( 'WhatsApp' ) . ':</strong> ' . $whatsapp_value . '</p>'
+		     . '<p><strong>' . __( 'Viber' ) . ':</strong> ' . $viber_value . '</p>'
+		     . '<p><strong>' . __( 'Telegram' ) . ':</strong> ' . $telegram_value . '</p>';
 
 	}
 

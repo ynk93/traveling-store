@@ -606,6 +606,96 @@ input[type=number] {
   background-image: url("./images/icons/plus_icon.svg");
 }
 
+.woocommerce-checkout #payment {
+  background: transparent;
+}
+.woocommerce-checkout #payment ul.payment_methods {
+  padding: 0;
+  font-size: 14px;
+  font-family: "San Francisco Pro Display Regular";
+  border-bottom: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods li {
+  margin-bottom: 20px;
+}
+.woocommerce-checkout #payment ul.payment_methods li:last-child {
+  margin-bottom: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods li > input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.woocommerce-checkout #payment ul.payment_methods li > input:checked ~ label .checkmark::after {
+  opacity: 1;
+}
+.woocommerce-checkout #payment ul.payment_methods li > input:checked ~ label .chbLabel {
+  color: #333333;
+}
+.woocommerce-checkout #payment ul.payment_methods li > label {
+  display: block;
+  position: relative;
+  padding-left: 31px;
+  line-height: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.woocommerce-checkout #payment ul.payment_methods li > label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.woocommerce-checkout #payment ul.payment_methods li > label .checkmark::after {
+  content: '';
+  display: block;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 4px;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #F87F27;
+}
+.woocommerce-checkout #payment ul.payment_methods li > label .chbLabel {
+  font-size: 14px;
+  font-family: "San Francisco Pro Display Regular";
+  color: rgba(51, 51, 51, 0.5);
+}
+.woocommerce-checkout #payment div.payment_box {
+  color: #333333;
+  background-color: #f5f5f5;
+  margin-bottom: 0;
+}
+.woocommerce-checkout #payment div.payment_box::before {
+  border: 1em solid #f5f5f5;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+#wc-bluesnap-cc-form .bluesnap-input-div {
+  background-color: #fff;
+}
+
 .wrapper {
   font-family: "San Francisco Pro Display Regular";
   overflow: hidden;
