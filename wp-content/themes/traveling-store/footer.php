@@ -1,3 +1,16 @@
+<div id="successOrderPopup" class="white-popup zoom-anim-dialog mfp-hide">
+    <div class="popupContent">
+        <div class="popupIcon"></div>
+        <div class="h5">Ваш заказ получен!</div>
+        <div class="p">
+            Спасибо, мы получили Ваш заказ, в течение часа вам придет электронный ваучер на почту или WhatsApp /
+            Viber!
+        </div>
+        <a href="#" class="continueShoppingButton">
+            Продолжить просмотр
+        </a>
+    </div>
+</div>
 <footer class="footer">
     <div class="content">
 
@@ -41,10 +54,10 @@
 
         <div class="footerInnerRow">
             <div class="leftSideWrap">
-                <div class="turSabBlock">
+                <a href="#successOrderPopup" class="popup-with-zoom-anim turSabBlock">
                     <div class="turSabPic"></div>
                     <div class="turSabLicense p">License №12521</div>
-                </div>
+                </a>
                 <span class="copyRight p">
                 <?php _e('Traveling Store 2020 ©. All rights reserved.', 'traveling-store'); ?>
             </span>

@@ -83,6 +83,10 @@ $(document).ready(function () {
         }
     });
 
+    $(".wc-bookings-date-picker-date-fields input").on("change",function (){
+        $(this).parent().addClass('showFields');
+    });
+
     if ($('.card-picker-drop .wc-bookings-date-picker').length) {
 
         $('.productCardParamWrap.bookingCalendar').append($('.wc-bookings-date-picker'));
@@ -95,6 +99,7 @@ $(document).ready(function () {
         var $me = $(this),
             $parent = $me.parents('.card-param-picker');
         $parent.toggleClass('open');
+        $parent.find('.picker.calendar').slideToggle();
     });
 
     $(document).on('change', 'select[name=adultPersonsNumPicker]', function () {
@@ -113,6 +118,22 @@ $(document).ready(function () {
         $parent.addClass('datePicked');
         $parent.toggleClass('open');
         $parent.find('.result').children('span').html($selected);
+    });
+
+    $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
     });
 
     $(window).scroll(function () {

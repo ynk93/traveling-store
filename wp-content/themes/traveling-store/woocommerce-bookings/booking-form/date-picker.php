@@ -28,32 +28,30 @@ $month_before_day = strpos( __( 'F j, Y', 'woocommerce-bookings' ), 'F' ) < strp
 
 <fieldset class="wc-bookings-date-picker card-param-picker date-picker wc-bookings-date-picker-<?php echo esc_attr( $product_type ); ?> <?php echo esc_attr( implode( ' ', $class ) ); ?>">
 
-    <div class="picker calendar" data-display="<?php echo esc_attr( $display ); ?>" data-duration-unit="<?php echo esc_attr( $duration_unit ); ?>" data-default-availability="<?php echo $default_availability ? 'true' : 'false'; ?>" data-min_date="<?php echo ! empty( $min_date_js ) ? esc_attr( $min_date_js ) : 0; ?>" data-max_date="<?php echo esc_attr( $max_date_js ); ?>" data-default_date="<?php echo esc_attr( $default_date ); ?>" data-is_range_picker_enabled="<?php echo $is_range_picker_enabled ? 1 : 0; ?>"></div>
-
-	<?php if ( 'always_visible' !== $display ) : ?>
+    <?php if ( 'always_visible' !== $display ) : ?>
 
         <div class="input">
             <div class="result">
-				<?php _e('Выберите дату', 'traveling-store') ?>
+                <?php _e('Выберите дату', 'traveling-store') ?>
 
                 <div class="wc-bookings-date-picker-date-fields">
 
-		            <?php
-			            // woocommerce_bookings_mdy_format filter to choose between month/day/year and day/month/year format.
-			            if ( $month_before_day && apply_filters( 'woocommerce_bookings_mdy_format', true ) ) :
-				            ?>
+                    <?php
+                    // woocommerce_bookings_mdy_format filter to choose between month/day/year and day/month/year format.
+                    if ( $month_before_day && apply_filters( 'woocommerce_bookings_mdy_format', true ) ) :
+                        ?>
 
-                            <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_month" placeholder="<?php esc_attr_e( 'mm', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_month" />
-                            <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_day" placeholder="<?php esc_attr_e( 'dd', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_day" />
+                        <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_month" placeholder="<?php esc_attr_e( 'mm', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_month" />
+                        <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_day" placeholder="<?php esc_attr_e( 'dd', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_day" />
 
-			            <?php else : ?>
+                    <?php else : ?>
 
-                            <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_day" placeholder="<?php esc_attr_e( 'dd', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_day" />
-                            <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_month" placeholder="<?php esc_attr_e( 'mm', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_month" />
+                        <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_day" placeholder="<?php esc_attr_e( 'dd', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_day" />
+                        <input type="text" autocomplete="off" name="<?php echo esc_attr( $name ); ?>_month" placeholder="<?php esc_attr_e( 'mm', 'woocommerce-bookings' ); ?>" size="2" class="booking_date_month" />
 
-			            <?php endif; ?>
+                    <?php endif; ?>
 
-                        <input type="text" autocomplete="off" value="<?php echo esc_attr( date( 'Y' ) ); ?>" name="<?php echo esc_attr( $name ); ?>_year" placeholder="<?php esc_attr_e( 'YYYY', 'woocommerce-bookings' ); ?>" size="4" class="booking_date_year" />
+                    <input type="text" autocomplete="off" value="<?php echo esc_attr( date( 'Y' ) ); ?>" name="<?php echo esc_attr( $name ); ?>_year" placeholder="<?php esc_attr_e( 'YYYY', 'woocommerce-bookings' ); ?>" size="4" class="booking_date_year" />
 
                 </div>
 
@@ -61,7 +59,9 @@ $month_before_day = strpos( __( 'F j, Y', 'woocommerce-bookings' ), 'F' ) < strp
             <div class="button calendarIcon"></div>
         </div>
 
-	<?php endif; ?>
+    <?php endif; ?>
+
+    <div class="picker calendar" data-display="<?php echo esc_attr( $display ); ?>" data-duration-unit="<?php echo esc_attr( $duration_unit ); ?>" data-default-availability="<?php echo $default_availability ? 'true' : 'false'; ?>" data-min_date="<?php echo ! empty( $min_date_js ) ? esc_attr( $min_date_js ) : 0; ?>" data-max_date="<?php echo esc_attr( $max_date_js ); ?>" data-default_date="<?php echo esc_attr( $default_date ); ?>" data-is_range_picker_enabled="<?php echo $is_range_picker_enabled ? 1 : 0; ?>"></div>
 
 	<?php if ( 'customer' === $duration_type && $is_range_picker_enabled ) : ?>
 		<div class="wc-bookings-date-picker-date-fields">
