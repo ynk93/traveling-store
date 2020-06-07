@@ -316,6 +316,36 @@
     }
 
     header.header {
+
+      &.showMenu {
+        .headerInnerWrap {
+          .rightSide {
+            > ul {
+              @include transform(none);
+
+              li {
+                opacity: 1;
+                @include transform(none);
+              }
+            }
+          }
+
+          .hamburgerWrap {
+            .line:first-child {
+              @include transform(translateY(8px) rotate(45deg));
+            }
+
+            .line:nth-child(2) {
+              opacity: 0;
+            }
+
+            .line:last-child {
+              @include transform(translateY(-8px) rotate(-45deg));
+            }
+          }
+        }
+      }
+
       .headerInnerWrap {
         &:before {
           @include transform(none);
@@ -352,8 +382,15 @@
         }
 
         .rightSide {
+          position: relative;
+          z-index: 1;
+
           > ul {
             li {
+              @include transform(translateX(50px));
+              opacity: 0;
+              @include transition(all ease-in-out .35s);
+
               a {
                 color: $mainGreyColor;
               }
@@ -372,11 +409,13 @@
           }
 
           .basketIconWrapper {
+            z-index: 3;
             background-image: url('./images/icons/basket-black.svg');
           }
         }
 
         .hamburgerWrap {
+          z-index: 3;
           display: block;
         }
 
@@ -387,8 +426,48 @@
         }
 
         .rightSide {
-          .selectWrapper, ul {
+          .selectWrapper {
             display: none;
+          }
+
+          .hamburgerWrap {
+            .line {
+              transition: all ease .5s;
+            }
+          }
+
+          > ul {
+            display: flex;
+            position: fixed;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            height: 100vh;
+            width: 100vw;
+            background: #fff;
+            z-index: 1;
+            flex-direction: column;
+            justify-content: center;
+            @include transform(translateX(-100%));
+            @include transition(all ease .75s);
+
+            li {
+              & + li {
+                a {
+                  margin-left: 0;
+                  margin-top: 28px;
+                }
+              }
+
+              a {
+                display: block;
+                font-size: 24px !important;
+                line-height: 28px;
+                color: #000 !important;
+              }
+            }
           }
         }
       }
@@ -862,6 +941,7 @@
                 }
               }
             }
+
             &.twoInputs, &.threeInputs {
               flex-direction: column;
 

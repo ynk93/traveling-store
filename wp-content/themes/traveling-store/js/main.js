@@ -120,6 +120,14 @@ $(document).ready(function () {
         $parent.find('.result').children('span').html($selected);
     });
 
+    $(document).on('click', '.hamburgerWrap', function (e) {
+        e.preventDefault();
+
+        $(this).parents('header.header').toggleClass('showMenu');
+
+        return false;
+    });
+
     $(document).on('click', '.checkoutLeftSide .chbWrap .container', function (e) {
         e.preventDefault();
 
