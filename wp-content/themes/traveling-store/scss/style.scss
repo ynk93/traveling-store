@@ -1410,6 +1410,7 @@ $paymentBoxColor: #f5f5f5;
               }
 
               .card-param-picker {
+                cursor: pointer;
                 width: 100%;
                 height: 100%;
                 border: 0;
@@ -2084,6 +2085,17 @@ $paymentBoxColor: #f5f5f5;
         width: 100%;
         background: #fff;
         @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
+
+        .chbRow {
+          .container {
+            &.checked {
+              .checkmark {
+                background: $mainColor;
+                border-color: $mainColor;
+              }
+            }
+          }
+        }
       }
 
       .rightSideSideBar {

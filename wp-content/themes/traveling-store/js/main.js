@@ -120,6 +120,15 @@ $(document).ready(function () {
         $parent.find('.result').children('span').html($selected);
     });
 
+    $(document).on('click', '.checkoutLeftSide .chbWrap .container', function (e) {
+        e.preventDefault();
+
+        $(this).toggleClass('checked');
+        $(this).find('input').trigger('click');
+
+        return false;
+    });
+
     $('.popup-with-zoom-anim').magnificPopup({
         type: 'inline',
 
