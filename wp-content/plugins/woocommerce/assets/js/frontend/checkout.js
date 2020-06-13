@@ -400,9 +400,9 @@ jQuery( function( $ ) {
 
 						// Add new errors returned by this event
 						if ( data.messages ) {
-							$form.prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-updateOrderReview">' + data.messages + '</div>' ); // eslint-disable-line max-len
+							$form.find('.checkoutLeftSide').prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-updateOrderReview">' + data.messages + '</div>' ); // eslint-disable-line max-len
 						} else {
-							$form.prepend( data );
+							$form.find('.checkoutLeftSide').prepend( data );
 						}
 
 						// Lose focus for all fields
@@ -558,7 +558,7 @@ jQuery( function( $ ) {
 		},
 		submit_error: function( error_message ) {
 			$( '.woocommerce-NoticeGroup-checkout, .woocommerce-error, .woocommerce-message' ).remove();
-			wc_checkout_form.$checkout_form.prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' + error_message + '</div>' ); // eslint-disable-line max-len
+			wc_checkout_form.$checkout_form.find('.checkoutLeftSide').prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">' + error_message + '</div>' ); // eslint-disable-line max-len
 			wc_checkout_form.$checkout_form.removeClass( 'processing' ).unblock();
 			wc_checkout_form.$checkout_form.find( '.input-text, select, input:checkbox' ).trigger( 'validate' ).blur();
 			wc_checkout_form.scroll_to_notices();

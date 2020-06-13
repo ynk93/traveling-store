@@ -397,4 +397,31 @@ $(document).ready(function () {
         $('.paymentTypeWrap').find('.radioContent').slideUp();
         $(this).parents('.radioWrap').find('.radioContent').slideToggle();
     });
+
+    function openSuccessOrderPopup() { // get the class name in arguments here
+        $.magnificPopup.open({
+            items: {
+                src: '#successOrderPopup',
+            },
+            type: 'inline',
+            midClick: true,
+            removalDelay: 100,
+            mainClass: 'my-mfp-zoom-in',
+            callbacks: {
+                open: function () {
+                    $('body').addClass('fixed');
+
+                },
+                close: function () {
+                    $('body').removeClass('fixed');
+                    window.location = '/';
+                }
+            }
+        });
+    }
+
+    if ($('#successOrderPopup').hasClass('active')) {
+        openSuccessOrderPopup();
+    }
+
 });

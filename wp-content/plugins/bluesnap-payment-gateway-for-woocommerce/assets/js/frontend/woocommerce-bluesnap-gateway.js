@@ -141,7 +141,7 @@
 				if( typeof codes[errorCode] === "undefined" ) {
 					scroll = true;
 				}
-				wc_bluesnap_form.get_form().prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout" data-bluesnap-error="' + errorCode + '" data-bluesnap-tag="' + data.tagId + '"><div class="woocommerce-error">' + data.message + '</div></div>' );
+				wc_bluesnap_form.get_form().find('.checkoutLeftSide').prepend( '<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout" data-bluesnap-error="' + errorCode + '" data-bluesnap-tag="' + data.tagId + '"><div class="woocommerce-error">' + data.message + '</div></div>' );
 			}
 		);
 		wc_bluesnap_form.get_form().removeClass( 'processing' ).unblock();
