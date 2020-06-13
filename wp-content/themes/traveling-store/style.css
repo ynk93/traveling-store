@@ -2337,6 +2337,26 @@ input[type=number] {
   line-height: 16px;
   opacity: 0.5;
 }
+.wrapper .woocommerce-NoticeGroup {
+  font-size: 14px;
+  line-height: 28px;
+}
+.wrapper .woocommerce-NoticeGroup ul:before {
+  display: none;
+}
+.wrapper .woocommerce-NoticeGroup ul li {
+  position: relative;
+  display: block;
+}
+.wrapper .woocommerce-NoticeGroup ul li:before {
+  content: "\e016";
+  color: #b81c23;
+  font-family: WooCommerce;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -30px;
+}
 .wrapper .wc-bookings-date-picker-date-fields {
   pointer-events: none;
   opacity: 0;

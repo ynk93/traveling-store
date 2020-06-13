@@ -2165,6 +2165,32 @@ $paymentBoxColor: #f5f5f5;
     }
   }
 
+  .woocommerce-NoticeGroup {
+    font-size: 14px;
+    line-height: 28px;
+
+    ul {
+      &:before {
+        display: none;
+      }
+
+      li {
+        position: relative;
+        display: block;
+
+        &:before {
+          content: "\e016";
+          color: #b81c23;
+          font-family: WooCommerce;
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: -30px;
+        }
+      }
+    }
+  }
+
   .wc-bookings-date-picker-date-fields {
     pointer-events: none;
     opacity: 0;
@@ -3025,7 +3051,6 @@ $paymentBoxColor: #f5f5f5;
   transition: all 0.2s ease-in-out;
 
 
-
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   -ms-transform: scale(0.8);
@@ -3063,10 +3088,12 @@ $paymentBoxColor: #f5f5f5;
   -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
+
 /* animate in */
 .my-mfp-zoom-in.mfp-ready.mfp-bg {
   opacity: 0.8;
 }
+
 /* animate out */
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
   opacity: 0;

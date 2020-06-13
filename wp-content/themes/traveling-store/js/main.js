@@ -38,7 +38,7 @@ $(document).ready(function () {
         }
     });
 
-    var productCardPicsSwiper = new Swiper('.swiper-container.productCardPicsSwiper',{
+    var productCardPicsSwiper = new Swiper('.swiper-container.productCardPicsSwiper', {
         speed: 500,
         watchOverflow: true,
         navigation: {
@@ -83,7 +83,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".wc-bookings-date-picker-date-fields input").on("change",function (){
+    $(".wc-bookings-date-picker-date-fields input").on("change", function () {
         $(this).parent().addClass('showFields');
     });
 
@@ -98,6 +98,9 @@ $(document).ready(function () {
     $(document).on('click', '.card-param-picker .input', function (e) {
         var $me = $(this),
             $parent = $me.parents('.card-param-picker');
+
+        $('.card-param-picker.open').removeClass('open');
+
         $parent.toggleClass('open');
         $parent.find('.picker.calendar').slideToggle();
     });
@@ -313,7 +316,7 @@ $(document).ready(function () {
             childBtwn4and6 = 0,
             childBtwn7and12 = 0,
             adult = 1;
-            parent = $('.childrensData .counterInputElement');
+        parent = $('.childrensData .counterInputElement');
 
         childUnder3 = parent.find('input[name=wc_bookings_field_persons_3113]').val();
 
