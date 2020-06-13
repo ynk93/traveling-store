@@ -13,6 +13,12 @@ wp_head(); ?>
 
     <?php get_header(); ?>
 
+	<?php if (is_wc_endpoint_url('order-received')) {
+
+		wc_get_template('checkout/thankyou.php');
+
+	} ?>
+
     <section class="innerPageSection checkoutPageSection">
         <div class="content">
             <div class="titleWrap innerPageTitleWrap">-->

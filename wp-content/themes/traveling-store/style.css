@@ -1690,7 +1690,7 @@ input[type=number] {
   overflow: visible;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardSideBarTourParams .productCardParamWrap .card-param-picker.child-num-picker .result {
-  overflow-x: scroll;
+  overflow: hidden;
   width: calc(100% - 60px);
   white-space: nowrap;
 }

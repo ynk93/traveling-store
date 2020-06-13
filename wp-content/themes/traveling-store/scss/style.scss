@@ -1421,7 +1421,7 @@ $paymentBoxColor: #f5f5f5;
 
                 &.child-num-picker {
                   .result {
-                    overflow-x: scroll;
+                    overflow: hidden;
                     width: calc(100% - 60px);
                     white-space: nowrap;
 
