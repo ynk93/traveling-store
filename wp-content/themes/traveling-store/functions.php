@@ -265,6 +265,28 @@
 
 	}
 
+	//  Persons checkout fields
+	add_action( 'woocommerce_checkout_update_order_meta', 'traveling_store_checkout_persons_field_update_order_meta' );
+	function traveling_store_checkout_persons_field_update_order_meta( $order_id ) {
+
+		$order = wc_get_order( $order_id );
+
+		var_dump($order);
+
+//		if ( ! empty( $_POST['whatsapp'] ) ) {
+//			update_post_meta( $order_id, 'whatsapp', sanitize_text_field( $_POST['whatsapp'] ) );
+//		}
+//
+//		if ( ! empty( $_POST['viber'] ) ) {
+//			update_post_meta( $order_id, 'viber', sanitize_text_field( $_POST['viber'] ) );
+//		}
+//
+//		if ( ! empty( $_POST['telegram'] ) ) {
+//			update_post_meta( $order_id, 'telegram', sanitize_text_field( $_POST['telegram'] ) );
+//		}
+
+	}
+
 	// test
 
 //	add_action('init', 'test');
