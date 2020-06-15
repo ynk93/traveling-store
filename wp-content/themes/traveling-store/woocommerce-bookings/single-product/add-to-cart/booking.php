@@ -16,32 +16,33 @@
  * @since   1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
 }
 
 global $product;
 
-if ( ! $product->is_purchasable() ) {
-	return;
+if (!$product->is_purchasable()) {
+    return;
 }
 
-$nonce = wp_create_nonce( 'find-booked-day-blocks' );
+$nonce = wp_create_nonce('find-booked-day-blocks');
 
-do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+do_action('woocommerce_before_add_to_cart_form'); ?>
 
 
-<noscript><?php esc_html_e( 'Your browser must support JavaScript in order to make a booking.', 'woocommerce-bookings' ); ?></noscript>
+<noscript><?php esc_html_e('Your browser must support JavaScript in order to make a booking.', 'woocommerce-bookings'); ?></noscript>
 
-<form class="cart productCardRightSide" method="post" enctype='multipart/form-data' data-nonce="<?php echo esc_attr( $nonce ); ?>">
+<form class="cart productCardRightSide" method="post" enctype='multipart/form-data'
+      data-nonce="<?php echo esc_attr($nonce); ?>">
 
     <div class="sideBarHead">
         <div class="h5"><?php _e('Расчет стоимости', 'traveling-store'); ?></div>
     </div>
 
-	<div id="wc-bookings-booking-form" class="wc-bookings-booking-form" style="display:none">
+    <div id="wc-bookings-booking-form" class="wc-bookings-booking-form" style="display:none">
 
-		<?php do_action( 'woocommerce_before_booking_form' ); ?>
+        <?php do_action('woocommerce_before_booking_form'); ?>
 
         <div class="productCardSideBarTourParams">
 
@@ -69,14 +70,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
                     <div class="input">
                         <div class="result">
-							<?php _e('Укажите количество персон', 'traveling-store') ?>
+                            <span class="innerResult">1
+                                <span class="resultLabel">(взрослый)</span>, 0
+                                <span class="resultLabel">(до 3 лет)</span>, 0
+                                <span class="resultLabel">(4-6 лет)</span>, 0
+                                <span class="resultLabel">(7-12 лет)</span>
+                            </span>
                         </div>
                         <div class="button arrowIcon"></div>
                     </div>
 
                     <div class="childrensData card-picker-drop">
 
-	                    <?php $booking_form->output(); ?>
+                        <?php $booking_form->output(); ?>
 
                     </div>
 
@@ -106,11 +112,15 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
                 <div class="wc-bookings-booking-cost" style="display:none" data-raw-price=""></div>
             </div>
 
-	        <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+            <?php do_action('woocommerce_before_add_to_cart_button'); ?>
 
-            <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( is_callable( array( $product, 'get_id' ) ) ? $product->get_id() : $product->id ); ?>" class="wc-booking-product-id" />
+            <input type="hidden" name="add-to-cart"
+                   value="<?php echo esc_attr(is_callable(array($product, 'get_id')) ? $product->get_id() : $product->id); ?>"
+                   class="wc-booking-product-id"/>
 
-            <button type="submit" class="wc-bookings-booking-form-button single_add_to_cart_button button alt productPriceAddToBasket disabled" style="display:none">
+            <button type="submit"
+                    class="wc-bookings-booking-form-button single_add_to_cart_button button alt productPriceAddToBasket disabled"
+                    style="display:none">
                 <span>
                     <?php _e('Добавить в корзину', 'traveling-store'); ?>
                 </span>
@@ -118,10 +128,10 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
         </div>
 
-	</div>
+    </div>
 
-<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+    <?php do_action('woocommerce_after_add_to_cart_button'); ?>
 
 </form>
 
-<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+<?php do_action('woocommerce_after_add_to_cart_form'); ?>

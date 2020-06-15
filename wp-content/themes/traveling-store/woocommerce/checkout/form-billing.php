@@ -111,7 +111,7 @@ $fields = $checkout->get_checkout_fields( 'billing' );
             <div class="inputWrap">
 	            <?php
 		            $current_field                           = 'billing_phone';
-		            $fields[ $current_field ]['placeholder'] = 'Phone number';
+		            $fields[ $current_field ]['placeholder'] = 'Phone number: (+___) __-__-__-___';
 		            woocommerce_form_field( $current_field, $fields[ $current_field ], $checkout->get_value( $current_field ) );
 	            ?>
             </div>
