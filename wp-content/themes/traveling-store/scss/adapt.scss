@@ -439,7 +439,7 @@
           > ul {
             display: flex;
             position: fixed;
-            padding-top: 80px;
+            padding-top: 0;
             left: 0;
             top: 0;
             right: 0;
@@ -857,6 +857,7 @@
 
     .titleWrap.innerPageTitleWrap {
       margin: 40px 0 32px;
+      padding: 0 20px;
     }
 
     section.mainSection {

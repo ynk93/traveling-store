@@ -127,6 +127,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $(this).parents('header.header').toggleClass('showMenu');
+        $('body').toggleClass('fixed');
 
         return false;
     });
@@ -350,6 +351,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.productCardRightSide .sideBarHead', function () {
         $(this).parents('.productCardSection').removeClass('openSettings');
+        $('body').removeClass('fixed');
     });
 
     $(document).on("click", '.sideBarBlock .sideBarHead', function (e) {
@@ -366,6 +368,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $(this).parents('.productCardSection').addClass('openSettings');
+        $('body').addClass('fixed');
 
         return false;
     });
