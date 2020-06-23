@@ -427,4 +427,43 @@ $(document).ready(function () {
         openSuccessOrderPopup();
     }
 
+    $(document).on('click', '.checkout-persons-wrap .cart_item .title-row', function () {
+
+        const $_this = $(this);
+        const $_item = $_this.parents('.cart_item');
+        const $_persons = $_item.find('.persons');
+
+        if (!$_item.hasClass('active')) {
+
+            $_persons.slideDown(600, function () {
+                $_item.addClass('active');
+            });
+
+        } else {
+
+            $_persons.slideUp(600, function () {
+                $_item.removeClass('active');
+            });
+
+        }
+
+    });
+
 });
+
+function test() {
+
+    var data = {
+        'action': 'test'
+    };
+
+    $.ajax({
+        url: '/wp-admin/admin-ajax.php',
+        data: data,
+        type: 'GET',
+        success: function (data) {
+            console.log(data);
+        }
+    });
+
+}

@@ -266,32 +266,130 @@
 	}
 
 	//  Persons checkout fields
-	add_action( 'woocommerce_checkout_update_order_meta', 'traveling_store_checkout_persons_field_update_order_meta' );
-	function traveling_store_checkout_persons_field_update_order_meta( $order_id ) {
+	function traveling_store_checkout_persons_data() {
 
-		$order = wc_get_order( $order_id );
+		$cart          = WC()->cart;
+		$cart_products = $cart->get_cart();
+		$result = array();
 
-		var_dump($order);
+		if ( $cart->get_cart_contents_count() !== 0 ) {
 
-//		if ( ! empty( $_POST['whatsapp'] ) ) {
-//			update_post_meta( $order_id, 'whatsapp', sanitize_text_field( $_POST['whatsapp'] ) );
-//		}
-//
-//		if ( ! empty( $_POST['viber'] ) ) {
-//			update_post_meta( $order_id, 'viber', sanitize_text_field( $_POST['viber'] ) );
-//		}
-//
-//		if ( ! empty( $_POST['telegram'] ) ) {
-//			update_post_meta( $order_id, 'telegram', sanitize_text_field( $_POST['telegram'] ) );
-//		}
+			foreach ( $cart_products as $cart_product_key => $cart_product ) {
+
+				$product_id = $cart_product['product_id'];
+				$product_persons = $cart_product['booking']['_persons'];
+
+				foreach ( $product_persons as $product_person_id => $product_person_number ) {
+
+					$_person_type = new WC_Product_Booking_Person_Type( $product_person_id );
+					$person_type_name = $_person_type->get_name();
+
+					$result[$cart_product_key][$product_person_id]['name'] = $person_type_name;
+					$result[$cart_product_key][$product_person_id]['number'] = $product_person_number;
+
+				}
+
+
+			}
+
+		}
+
+		return $result;
 
 	}
 
-	// test
+	function traveling_store_checkout_persons_field( $checkout ) {
 
-//	add_action('init', 'test');
-//	function test() {
+		$data = traveling_store_checkout_persons_data();
+
+		foreach ( $data as $cart_item_key => $person_type_array ) {
+
+			$cart_product = WC()->cart->get_cart_item( $cart_item_key );
+			$_product = new WC_Product_Booking($cart_product['product_id']);
+			$product_name = $_product->get_name();
+
+			echo '<div class="cart_item">'
+				.'<div class="title-row"><div class="title">' . $product_name . '</div></div> '
+				.'<div class="persons">';
+
+			foreach ( $person_type_array as $person_type_id => $person_type ) {
+
+				for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+
+					echo '<div class="inputRowWrap">'
+					     . '<div class="inputLabel">' . $person_type['name'] . ' #' . $i . '</div>'
+					     . '<div class="inputRow twoInputs">'
+					     . '<div class="inputWrap"><input type="text" placeholder="First name" name="first_name_' . $person_type_id . '_' . $i . '" required></div>'
+					     . '<div class="inputWrap"><input type="text" placeholder="Last name" name="last_name_' . $person_type_id . '_' . $i . '" required></div>'
+					     . '</div>'
+					     . '</div>';
+
+				}
+
+			}
+
+			echo '</div></div>';
+
+		}
+
+	}
+
+	add_action( 'woocommerce_checkout_update_order_meta', 'traveling_store_checkout_persons_field_update_order_meta' );
+	function traveling_store_checkout_persons_field_update_order_meta( $order_id ) {
+
+		$data = traveling_store_checkout_persons_data();
+
+		foreach ( $data as $cart_item_key => $person_type_array ) {
+
+			foreach ( $person_type_array as $person_type_id => $person_type ) {
+
+				for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+
+					$first_name = 'first_name_' . $person_type_id . '_' . $i;
+					$last_name = 'last_name_' . $person_type_id . '_' . $i;
+
+					if ( ! empty( $_POST[$first_name] ) ) {
+						update_post_meta( $order_id, $first_name, sanitize_text_field( $_POST[$first_name] ) );
+					}
+
+					if ( ! empty( $_POST[$last_name] ) ) {
+						update_post_meta( $order_id, $last_name, sanitize_text_field( $_POST[$last_name] ) );
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	add_action( 'woocommerce_admin_order_data_after_billing_address', 'traveling_store_checkout_persons_field_display_admin_order_meta', 10, 1 );
+	function traveling_store_checkout_persons_field_display_admin_order_meta($order) {
+
+		//var_dump($order->get_meta_data());
+
+//		$data = traveling_store_checkout_persons_data();
+
+//		foreach ( $data as $cart_item_key => $person_type_array ) {
 //
-//		WC()->cart->empty_cart();
+//			foreach ( $person_type_array as $person_type_id => $person_type ) {
 //
-//	}
+//				for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+//
+//					//var_dump($person_type);
+//
+////					$first_name = 'first_name_' . $person_type_id . '_' . $i;
+////					$last_name = 'last_name_' . $person_type_id . '_' . $i;
+////
+////					$first_name_value = get_post_meta( $order->id, $first_name, true );
+////					$last_name_value = get_post_meta( $order->id, $last_name, true );
+////
+////					echo '<p><strong>' . $first_name . ':</strong> ' . $first_name_value . '</p>';
+////					echo '<p><strong>' . $first_name . ':</strong> ' . $last_name_value . '</p>';
+//				}
+//
+//			}
+//
+//		}
+
+	}

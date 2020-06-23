@@ -3075,6 +3075,21 @@ input[type=number] {
   display: none;
 }
 
+.checkout-persons-wrap {
+  margin-top: 24px;
+}
+.checkout-persons-wrap .cart_item .title {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "San Francisco Pro Display Bold";
+  color: #333333;
+  padding: 20px 0;
+}
+.checkout-persons-wrap .cart_item .persons {
+  display: none;
+  overflow: hidden;
+}
+
 /**
  * Fade-zoom animation for first dialog
  */

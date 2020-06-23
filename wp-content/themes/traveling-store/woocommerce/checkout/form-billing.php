@@ -20,6 +20,9 @@ defined( 'ABSPATH' ) || exit;
 
 $fields = $checkout->get_checkout_fields( 'billing' );
 
+	$fields['billing_first_name']['placeholder'] = 'First name';
+	$fields['billing_last_name']['placeholder'] = 'Last name';
+
 ?>
 
 <?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
@@ -37,36 +40,20 @@ $fields = $checkout->get_checkout_fields( 'billing' );
 
     <div class="inputRowWrap">
         <div class="inputLabel">
-			<?php _e('Взрослый 1', 'traveling-store'); ?>
+			<?php _e('Billing information', 'traveling-store'); ?>
         </div>
         <div class="inputRow twoInputs">
             <div class="inputWrap">
-                <?php woocommerce_form_field( 'billing_first_name', $fields['billing_first_name'], $checkout->get_value( 'billing_first_name' ) ); ?>
+				<?php woocommerce_form_field( 'billing_first_name', $fields['billing_first_name'], $checkout->get_value( 'billing_first_name' ) ); ?>
             </div>
             <div class="inputWrap">
-	            <?php woocommerce_form_field( 'billing_last_name', $fields['billing_last_name'], $checkout->get_value( 'billing_last_name' ) ); ?>
+				<?php woocommerce_form_field( 'billing_last_name', $fields['billing_last_name'], $checkout->get_value( 'billing_last_name' ) ); ?>
             </div>
         </div>
     </div>
 
-    <div class="inputRowWrap">
-        <div class="inputLabel">
-			<?php _e('Взрослый 2', 'traveling-store'); ?>
-        </div>
-        <div class="inputRow twoInputs">
-            <div class="inputWrap"><input type="text" placeholder="Имя"></div>
-            <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
-        </div>
-    </div>
-
-    <div class="inputRowWrap">
-        <div class="inputLabel">
-			<?php _e('Ребенок 1', 'traveling-store'); ?>
-        </div>
-        <div class="inputRow twoInputs">
-            <div class="inputWrap"><input type="text" placeholder="Имя"></div>
-            <div class="inputWrap"><input type="text" placeholder="Фамилия"></div>
-        </div>
+    <div class="checkout-persons-wrap">
+		<?php traveling_store_checkout_persons_field( $checkout ); ?>
     </div>
 
 </div>
