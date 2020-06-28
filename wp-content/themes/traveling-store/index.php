@@ -216,56 +216,39 @@ wp_head(); ?>
     </section>
 
     <section class="reviewsSection">
+        <?php $reviews = get_field('reviews'); ?>
         <div class="content">
             <div class="leftSide">
-                <div class="reviewsTitle h3"><?php _e('Отзывы клиентов', 'traveling-store'); ?></div>
+                <div class="reviewsTitle h3"><?php echo $reviews['left_block']['title']; ?></div>
                 <div class="reviewsDescription p">
-                    <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают, что
-                    путешествие по турции с Traveling Store
-                    сэкономит их время и деньги!', 'traveling-store'); ?>
+                    <?php echo $reviews['left_block']['text'];  ?>
                 </div>
             </div>
             <div class="rightSide">
+
+                <?php foreach ( $reviews['reviews_slider'] as $review ) : ?>
+
                 <div class="reviewBlock">
                     <div class="reviewHead">
                         <div class="avatarPic">
-                            <img src="./images/uploads/avatars/avatar.png">
+                            <?php echo wp_get_attachment_image($review['image'], array(72, 72), false); ?>
                         </div>
                         <div class="reviewTitle">
                             <div class="reviewAuthorName">
-                                Наташа Смирнова
+                                <?php echo $review['title']; ?>
                             </div>
                             <div class="reviewDate p">
-                                20.12.2019
+                                <?php echo $review['data']; ?>
                             </div>
                         </div>
                     </div>
                     <div class="reviewText p">
-                        <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
-                        что путешествие по турции с Traveling Store
-                        сэкономит их время и деньги!', 'traveling-store'); ?>
+                        <?php echo $review['text']; ?>
                     </div>
                 </div>
-                <div class="reviewBlock">
-                    <div class="reviewHead">
-                        <div class="avatarPic">
-                            <img src="./images/uploads/avatars/avatar%20(1).png">
-                        </div>
-                        <div class="reviewTitle">
-                            <div class="reviewAuthorName">
-                                Алексей Билоус
-                            </div>
-                            <div class="reviewDate p">
-                                20.12.2019
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reviewText p">
-                        <?php _e('Traveling Store помог подобрать и организовать множество туров и экскурсий. Наши клиенты знают,
-                        что путешествие по турции с Traveling Store
-                        сэкономит их время и деньги!', 'traveling-store'); ?>
-                    </div>
-                </div>
+
+                <?php endforeach;  ?>
+
             </div>
         </div>
     </section>
