@@ -266,6 +266,7 @@
 	}
 
 	//  Persons checkout fields
+	add_action('checkout_persons_data', 'traveling_store_checkout_persons_data');
 	function traveling_store_checkout_persons_data() {
 
 		$cart          = WC()->cart;
@@ -339,22 +340,28 @@
 
 		$data = traveling_store_checkout_persons_data();
 
-		foreach ( $data as $cart_item_key => $person_type_array ) {
+		if ( count($data) > 0 ) {
 
-			foreach ( $person_type_array as $person_type_id => $person_type ) {
+			update_post_meta( $order_id, 'persons_data', $data );
 
-				for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+			foreach ( $data as $cart_item_key => $person_type_array ) {
 
-					$first_name = 'first_name_' . $person_type_id . '_' . $i;
-					$last_name = 'last_name_' . $person_type_id . '_' . $i;
+				foreach ( $person_type_array as $person_type_id => $person_type ) {
 
-					if ( ! empty( $_POST[$first_name] ) ) {
-						update_post_meta( $order_id, $first_name, sanitize_text_field( $_POST[$first_name] ) );
+					for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+
+						$first_name = 'first_name_' . $person_type_id . '_' . $i;
+						$last_name  = 'last_name_' . $person_type_id . '_' . $i;
+
+						if ( ! empty( $_POST[ $first_name ] ) ) {
+							update_post_meta( $order_id, $first_name, sanitize_text_field( $_POST[ $first_name ] ) );
+						}
+
+						if ( ! empty( $_POST[ $last_name ] ) ) {
+							update_post_meta( $order_id, $last_name, sanitize_text_field( $_POST[ $last_name ] ) );
+						}
 					}
 
-					if ( ! empty( $_POST[$last_name] ) ) {
-						update_post_meta( $order_id, $last_name, sanitize_text_field( $_POST[$last_name] ) );
-					}
 				}
 
 			}
@@ -363,33 +370,38 @@
 
 	}
 
-	add_action( 'woocommerce_admin_order_data_after_billing_address', 'traveling_store_checkout_persons_field_display_admin_order_meta', 10, 1 );
+	add_action( 'woocommerce_admin_order_data_after_shipping_address', 'traveling_store_checkout_persons_field_display_admin_order_meta', 10, 1 );
 	function traveling_store_checkout_persons_field_display_admin_order_meta($order) {
 
-		//var_dump($order->get_meta_data());
+		$data = $order->get_meta('persons_data');
 
-//		$data = traveling_store_checkout_persons_data();
+		if ( count($data) > 0 ) {
 
-//		foreach ( $data as $cart_item_key => $person_type_array ) {
-//
-//			foreach ( $person_type_array as $person_type_id => $person_type ) {
-//
-//				for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
-//
-//					//var_dump($person_type);
-//
-////					$first_name = 'first_name_' . $person_type_id . '_' . $i;
-////					$last_name = 'last_name_' . $person_type_id . '_' . $i;
-////
-////					$first_name_value = get_post_meta( $order->id, $first_name, true );
-////					$last_name_value = get_post_meta( $order->id, $last_name, true );
-////
-////					echo '<p><strong>' . $first_name . ':</strong> ' . $first_name_value . '</p>';
-////					echo '<p><strong>' . $first_name . ':</strong> ' . $last_name_value . '</p>';
-//				}
-//
-//			}
-//
-//		}
+			echo '<h3>Persons data</h3>';
+
+			foreach ( $data as $cart_item_key => $person_type_array ) {
+
+				foreach ( $person_type_array as $person_type_id => $person_type ) {
+
+					for ( $i = 1; $i <= $person_type['number']; $i ++ ) {
+
+						echo '<strong>' . $person_type_array[$person_type_id]['name'] . ' #' . $i . '</strong>';
+
+						$first_name = 'first_name_' . $person_type_id . '_' . $i;
+						$last_name  = 'last_name_' . $person_type_id . '_' . $i;
+
+						$first_name_value = get_post_meta( $order->id, $first_name, true );
+						$last_name_value  = get_post_meta( $order->id, $last_name, true );
+
+						echo '<div><p><span>First name: </span><span>' . $first_name_value . '</span></p>';
+						echo '<p><span>Last name: </span><span>' . $last_name_value . '</span></p></div>';
+
+					}
+
+				}
+
+			}
+
+		}
 
 	}
