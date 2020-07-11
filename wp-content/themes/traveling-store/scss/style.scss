@@ -824,6 +824,16 @@ body {
 
   section.popularProductsSection {
     margin: 106px 0 112px;
+
+    .swiper-container {
+      width: 100%;
+      max-width: 100%;
+      overflow: visible;
+
+      .swiper-pagination {
+        display: none;
+      }
+    }
   }
 
   section.nthInRowSection {
@@ -835,9 +845,9 @@ body {
       display: flex;
       flex-direction: row;
 
-      .card + .card {
-        margin-left: 20px;
-      }
+      //.card + .card {
+      //  margin-left: 20px;
+      //}
     }
   }
 
@@ -1325,6 +1335,10 @@ body {
                 color: $mainGreyColor;
                 font-family: $sfRegular;
 
+                iframe, video {
+                  width: 100%;
+                }
+
                 .p {
                   &.semibold {
                     font-family: $sfSemiBold;
@@ -1333,6 +1347,17 @@ body {
                   }
 
                   & + .p {
+                    margin-top: 12px;
+                  }
+                }
+
+                p {
+                  font-size: 14px;
+                  line-height: 20px;
+                  color: $mainGreyColor;
+                  font-family: $sfRegular;
+
+                  & + p {
                     margin-top: 12px;
                   }
                 }

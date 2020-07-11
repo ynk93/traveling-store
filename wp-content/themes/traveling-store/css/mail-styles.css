@@ -98,7 +98,7 @@ table.mainDataTable span {
     width: calc(100% / 4);
 }
 
-.mainDataTable tr td:first-child {
+.mainDataTable tr td:first-child, .mainDataTable tr td:nth-child(3) {
     border-left: 0;
     font-weight: bold;
 }

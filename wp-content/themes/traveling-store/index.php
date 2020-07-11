@@ -46,47 +46,50 @@ wp_head(); ?>
         </div>
     </section>
 
-	<?php $args = array(
-		'post_type'      => 'product',
-		'posts_per_page' => 5,
-		'post_status'    => 'publish',
-		'perm'           => 'readable',
-		'tax_query' => array(
-			'relation' => 'AND',
-			array(
-				'taxonomy' => 'product_tag',
-				'field' => 'slug',
-				'terms' => 'popular'
-			)
-		),
-	);
+    <?php $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 5,
+        'post_status' => 'publish',
+        'perm' => 'readable',
+        'tax_query' => array(
+            'relation' => 'AND',
+            array(
+                'taxonomy' => 'product_tag',
+                'field' => 'slug',
+                'terms' => 'popular'
+            )
+        ),
+    );
 
-		$loop = new WP_Query( $args );
-		if ( $loop->have_posts() ) : ?>
+    $loop = new WP_Query($args);
+    if ($loop->have_posts()) : ?>
 
-            <section class="nthInRowSection popularProductsSection">
-                <div class="content">
-                    <div class="titleWrap withButtonTitleWrap">
-                        <div class="h3"><?php _e( 'Популярные туры', 'traveling-store' ); ?></div>
-                        <a href="<?php echo get_site_url() . '/tours/'; ?>"
-                           class="withTitleButton"><?php _e( 'Все туры', 'traveling-store' ); ?></a>
-                    </div>
-                    <div class="cardsRow">
-
-						<?php while ( $loop->have_posts() ) : $loop->the_post();
-							$post_id = get_the_ID();
-
-							get_template_part( 'template-parts/catalog-product' );
-
-						endwhile; ?>
-
-                    </div>
+        <section class="nthInRowSection popularProductsSection">
+            <div class="content">
+                <div class="titleWrap withButtonTitleWrap">
+                    <div class="h3"><?php _e('Популярные туры', 'traveling-store'); ?></div>
+                    <a href="<?php echo get_site_url() . '/tours/'; ?>"
+                       class="withTitleButton"><?php _e('Все туры', 'traveling-store'); ?></a>
                 </div>
-            </section>
+                <div class="popularProductsSwiper swiper-container">
+                    <div class="cardsRow swiper-wrapper">
 
-		<?php endif;
-		wp_reset_postdata();
-	?>
+                        <?php while ($loop->have_posts()) : $loop->the_post();
+                            $post_id = get_the_ID();
+
+                            get_template_part('template-parts/catalog-product');
+
+                        endwhile; ?>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+    <?php endif;
+    wp_reset_postdata();
+    ?>
 
     <section class="nthInRowSection partnersSection">
         <div class="content">
@@ -221,33 +224,33 @@ wp_head(); ?>
             <div class="leftSide">
                 <div class="reviewsTitle h3"><?php echo $reviews['left_block']['title']; ?></div>
                 <div class="reviewsDescription p">
-                    <?php echo $reviews['left_block']['text'];  ?>
+                    <?php echo $reviews['left_block']['text']; ?>
                 </div>
             </div>
             <div class="rightSide">
 
-                <?php foreach ( $reviews['reviews_slider'] as $review ) : ?>
+                <?php foreach ($reviews['reviews_slider'] as $review) : ?>
 
-                <div class="reviewBlock">
-                    <div class="reviewHead">
-                        <div class="avatarPic">
-                            <?php echo wp_get_attachment_image($review['image'], array(72, 72), false); ?>
+                    <div class="reviewBlock">
+                        <div class="reviewHead">
+                            <div class="avatarPic">
+                                <?php echo wp_get_attachment_image($review['image'], array(72, 72), false); ?>
+                            </div>
+                            <div class="reviewTitle">
+                                <div class="reviewAuthorName">
+                                    <?php echo $review['title']; ?>
+                                </div>
+                                <div class="reviewDate p">
+                                    <?php echo $review['data']; ?>
+                                </div>
+                            </div>
                         </div>
-                        <div class="reviewTitle">
-                            <div class="reviewAuthorName">
-                                <?php echo $review['title']; ?>
-                            </div>
-                            <div class="reviewDate p">
-                                <?php echo $review['data']; ?>
-                            </div>
+                        <div class="reviewText p">
+                            <?php echo $review['text']; ?>
                         </div>
                     </div>
-                    <div class="reviewText p">
-                        <?php echo $review['text']; ?>
-                    </div>
-                </div>
 
-                <?php endforeach;  ?>
+                <?php endforeach; ?>
 
             </div>
         </div>

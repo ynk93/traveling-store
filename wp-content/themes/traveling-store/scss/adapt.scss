@@ -596,9 +596,25 @@
     section.popularProductsSection {
       margin: 64px 0;
 
-      .forMobileSwiperWrap {
+      .swiper-container {
         width: 100%;
         overflow: visible;
+
+        .swiper-pagination {
+          display: block;
+          position: static;
+          margin-top: 36px;
+
+          .swiper-pagination-bullet {
+            margin: 0 11px;
+            opacity: 1;
+            background: #D3D3D3;
+
+            &.swiper-pagination-bullet-active {
+              background: $mainColor;
+            }
+          }
+        }
       }
 
       .cardsRow {
@@ -980,6 +996,10 @@
       //    margin: 20px 0 0;
       //  }
       //}
+
+      .card {
+        height: 100%;
+      }
     }
 
     section.partnersSection {
@@ -1041,6 +1061,7 @@
                 flex-direction: column;
 
                 .infoBlockContent {
+
                   .p {
                     font-size: 15px;
                     line-height: 22px;

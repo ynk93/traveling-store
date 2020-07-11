@@ -99,7 +99,7 @@ $(document).ready(function () {
         var $me = $(this),
             $parent = $me.parents('.card-param-picker');
 
-        $('.card-param-picker.open').removeClass('open');
+        $(this).parents('.productCardParamWrap').siblings().find('.card-param-picker.open').removeClass('open');
 
         $parent.toggleClass('open');
         $parent.find('.picker.calendar').slideToggle();
@@ -240,6 +240,7 @@ $(document).ready(function () {
     var partnersSwiper = new Swiper('.swiper-container.partnersSwiper', {
         slidesPerView: 5,
         speed: 500,
+        spaceBetween: 20,
         breakpoints: {
             768: {
                 slideToClickedSlide: true,
@@ -251,6 +252,7 @@ $(document).ready(function () {
     var categoriesSwiper = new Swiper('.swiper-container.categoriesSwiper', {
         slidesPerView: 3,
         speed: 500,
+        spaceBetween: 20,
         breakpoints: {
             768: {
                 slideToClickedSlide: true,
@@ -259,7 +261,25 @@ $(document).ready(function () {
         }
     });
 
-    var mobileProductsSwiper;
+    $('.popularProductsSwiper').find('.card').addClass('swiper-slide');
+
+    var popuplarProductsSwiper = new Swiper('.swiper-container.popularProductsSwiper', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        breakpoints: {
+            1023: {
+                slidesPerView: 2,
+            },
+            767: {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+                slidesPerView: 1
+            }
+        }
+    });
+
 
     function initMobileProductsSwiper() {
         var mobileSwiperWrap = $('.forMobileSwiperWrap');
@@ -267,11 +287,17 @@ $(document).ready(function () {
         mobileSwiperWrap.children().addClass('swiper-wrapper');
         mobileSwiperWrap.find('.card').addClass('swiper-slide');
 
+        mobileSwiperWrap.append('<div class="swiper-pagination"></div>');
+
         mobileProductsSwiper = new Swiper('.swiper-container.forMobileSwiperWrap', {
             slidesPerView: 2,
             spaceBetween: 20,
             breakpoints: {
                 767: {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                    },
                     slidesPerView: 1
                 }
             }
@@ -319,13 +345,13 @@ $(document).ready(function () {
             adult = 1;
         parent = $('.childrensData .counterInputElement');
 
-        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3113]').val();
+        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3283]').val();
 
-        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3114]').val();
+        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3284]').val();
 
-        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3115]').val();
+        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3285]').val();
 
-        adult = parent.find('input[name=wc_bookings_field_persons_3112]').val();
+        adult = parent.find('input[name=wc_bookings_field_persons_3281]').val();
 
         var childNumPickerRow = '<span class="innerResult">' +
             adult + '<span class="resultLabel">(взрослый)</span>, ' +

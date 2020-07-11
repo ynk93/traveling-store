@@ -1175,15 +1175,20 @@ body.fixed {
 .wrapper section.popularProductsSection {
   margin: 106px 0 112px;
 }
+.wrapper section.popularProductsSection .swiper-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+.wrapper section.popularProductsSection .swiper-container .swiper-pagination {
+  display: none;
+}
 .wrapper section.nthInRowSection .content {
   flex-direction: column;
 }
 .wrapper section.nthInRowSection .cardsRow {
   display: flex;
   flex-direction: row;
-}
-.wrapper section.nthInRowSection .cardsRow .card + .card {
-  margin-left: 20px;
 }
 .wrapper section.partnersSection {
   margin-bottom: 112px;
@@ -1612,12 +1617,24 @@ body.fixed {
   color: rgba(51, 51, 51, 0.5);
   font-family: "San Francisco Pro Display Regular";
 }
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent iframe, .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent video {
+  width: 100%;
+}
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p.semibold {
   font-family: "San Francisco Pro Display Medium";
   color: #333333;
   opacity: 1;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent .p + .p {
+  margin-top: 12px;
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent p {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "San Francisco Pro Display Regular";
+}
+.wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .infoBlockContent p + p {
   margin-top: 12px;
 }
 .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide {
@@ -3579,9 +3596,22 @@ body.fixed {
   .wrapper section.popularProductsSection {
     margin: 64px 0;
   }
-  .wrapper section.popularProductsSection .forMobileSwiperWrap {
+  .wrapper section.popularProductsSection .swiper-container {
     width: 100%;
     overflow: visible;
+  }
+  .wrapper section.popularProductsSection .swiper-container .swiper-pagination {
+    display: block;
+    position: static;
+    margin-top: 36px;
+  }
+  .wrapper section.popularProductsSection .swiper-container .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 11px;
+    opacity: 1;
+    background: #D3D3D3;
+  }
+  .wrapper section.popularProductsSection .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F87F27;
   }
   .wrapper section.popularProductsSection .cardsRow .card {
     max-width: 100%;
@@ -3860,6 +3890,9 @@ body.fixed {
   .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar {
     max-width: 100%;
     margin: 24px 0 0;
+  }
+  .wrapper section.nthInRowSection .cardsRow .card {
+    height: 100%;
   }
   .wrapper section.partnersSection .swiper-container {
     max-width: 240px;
