@@ -51,8 +51,8 @@ wp_head(); ?>
                         <div class="h3"><?php _e( 'Популярные туры', 'traveling-store' ); ?></div>
                         <a href="<?php echo get_site_url() . '/tours/'; ?>" class="withTitleButton"><?php _e( 'Все туры', 'traveling-store' ); ?></a>
                     </div>
-                    <div class="forMobileSwiperWrap">
-                        <div class="cardsRow">
+                    <div class="popularProductsSwiper swiper-container">
+                        <div class="cardsRow swiper-wrapper">
 
 	                        <?php while ( $loop->have_posts() ) : $loop->the_post();
 		                        $post_id = get_the_ID();
