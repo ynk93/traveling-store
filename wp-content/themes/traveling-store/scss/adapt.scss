@@ -720,10 +720,57 @@
 
     section.partnersSection {
       margin-bottom: 64px;
+
+      .content {
+        position: relative;
+      }
+
+      .swiper-container {
+        position: static;
+        padding-bottom: 41px;
+
+        .swiper-pagination {
+          bottom: 0;
+          right: 0;
+          margin: 0 auto;
+          left: 0;
+          display: block;
+          position: absolute;
+          margin-top: 36px;
+
+          .swiper-pagination-bullet {
+            margin: 0 11px;
+            opacity: 1;
+            background: #D3D3D3;
+
+            &.swiper-pagination-bullet-active {
+              background: $mainColor;
+            }
+          }
+        }
+      }
     }
 
     section.categoriesSection, section.aboutUsSection {
       margin-bottom: 80px;
+
+      .swiper-container {
+        .swiper-pagination {
+          display: block;
+          position: static;
+          margin-top: 36px;
+
+          .swiper-pagination-bullet {
+            margin: 0 11px;
+            opacity: 1;
+            background: #D3D3D3;
+
+            &.swiper-pagination-bullet-active {
+              background: $mainColor;
+            }
+          }
+        }
+      }
     }
 
     section.ourPreferencesSection {

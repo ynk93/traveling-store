@@ -1197,6 +1197,9 @@ body.fixed {
   width: 100%;
   overflow: visible;
 }
+.wrapper section.partnersSection .swiper-container .swiper-pagination {
+  display: none;
+}
 .wrapper section.partnersSection .cardsRow .card .cardPic {
   display: flex;
   flex-direction: column;
@@ -1233,6 +1236,9 @@ body.fixed {
 .wrapper section.categoriesSection .swiper-container {
   width: 100%;
   overflow: visible;
+}
+.wrapper section.categoriesSection .swiper-container .swiper-pagination {
+  display: none;
 }
 .wrapper section.categoriesSection .card {
   max-width: calc((100% - 40px) / 3);
@@ -3689,8 +3695,45 @@ body.fixed {
   .wrapper section.partnersSection {
     margin-bottom: 64px;
   }
+  .wrapper section.partnersSection .content {
+    position: relative;
+  }
+  .wrapper section.partnersSection .swiper-container {
+    position: static;
+    padding-bottom: 41px;
+  }
+  .wrapper section.partnersSection .swiper-container .swiper-pagination {
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    left: 0;
+    display: block;
+    position: absolute;
+    margin-top: 36px;
+  }
+  .wrapper section.partnersSection .swiper-container .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 11px;
+    opacity: 1;
+    background: #D3D3D3;
+  }
+  .wrapper section.partnersSection .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F87F27;
+  }
   .wrapper section.categoriesSection, .wrapper section.aboutUsSection {
     margin-bottom: 80px;
+  }
+  .wrapper section.categoriesSection .swiper-container .swiper-pagination, .wrapper section.aboutUsSection .swiper-container .swiper-pagination {
+    display: block;
+    position: static;
+    margin-top: 36px;
+  }
+  .wrapper section.categoriesSection .swiper-container .swiper-pagination .swiper-pagination-bullet, .wrapper section.aboutUsSection .swiper-container .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 11px;
+    opacity: 1;
+    background: #D3D3D3;
+  }
+  .wrapper section.categoriesSection .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .wrapper section.aboutUsSection .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #F87F27;
   }
   .wrapper section.ourPreferencesSection {
     margin-bottom: 70px;

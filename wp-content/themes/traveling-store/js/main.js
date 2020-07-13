@@ -243,6 +243,10 @@ $(document).ready(function () {
         spaceBetween: 20,
         breakpoints: {
             768: {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
                 slideToClickedSlide: true,
                 slidesPerView: 1
             }
@@ -255,6 +259,10 @@ $(document).ready(function () {
         spaceBetween: 20,
         breakpoints: {
             768: {
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
                 slideToClickedSlide: true,
                 slidesPerView: 1
             }

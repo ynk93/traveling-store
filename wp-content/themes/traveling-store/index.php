@@ -118,6 +118,8 @@ wp_head(); ?>
                     <?php endforeach; ?>
 
                 </div>
+                <div class="swiper-pagination"></div>
+
             </div>
 
         </div>
@@ -173,6 +175,7 @@ wp_head(); ?>
                     <?php endforeach; ?>
 
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
