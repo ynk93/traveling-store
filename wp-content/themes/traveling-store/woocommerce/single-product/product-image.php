@@ -51,6 +51,19 @@ if ( $main_img_id || $gallery_img_ids ) : ?>
 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+
+        <div class="shareRow">
+            <div class="row">
+
+                <a class="button fb" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode (get_post_permalink()); ?>"
+                   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                   target="_blank">
+                    <span class="icon"></span>
+                </a>
+
+            </div>
+        </div>
+
 	</div>
 
 <?php endif; ?>

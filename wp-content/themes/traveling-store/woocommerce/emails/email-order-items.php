@@ -36,6 +36,21 @@ foreach ( $items as $item_id => $item ) :
 		$image         = $product->get_image( $image_size );
 	}
 
+	$booking_ids = WC_Booking_Data_Store::get_booking_ids_from_order_item_id( $item_id );
+	$booking = new WC_Booking( $booking_ids[0] );
+
+	$get_local_time = wc_should_convert_timezone( $booking );
+
+	if ( strtotime( 'midnight', $booking->get_start() ) === strtotime( 'midnight', $booking->get_end() ) ) {
+		$booking_date = sprintf( '%1$s', $booking->get_start_date( null, null, $get_local_time ) );
+	} else {
+		$booking_date = sprintf( '%1$s - %2$s', $booking->get_start_date( null, null, $get_local_time ), $booking->get_end_date( null, null, $get_local_time ) );
+	}
+
+//	var_dump($item);
+//
+//	die;
+
 	?>
 
     <table cellpadding="0" class="mainDataTable">
@@ -66,14 +81,16 @@ foreach ( $items as $item_id => $item ) :
                         </span>
             </td>
             <td>
-                <span>12.06.2020</span>
+                <span><?php echo wp_kses_post( $booking_date ); ?></span>
             </td>
             <td>
                 <span>Всего / Total</span>
             </td>
             <td>
-                <span>
-                    <?php echo wp_kses_post( $order->get_formatted_line_subtotal( $item ) ); ?>
+                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+                    <span class="woocommerce-Price-amount amount" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;"><span class="woocommerce-Price-currencySymbol" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">$</span>
+	                    <?php echo wp_kses_post( $order->get_subtotal( $item ) ); ?>
+                    </span>
                 </span>
             </td>
         </tr>
@@ -84,13 +101,17 @@ foreach ( $items as $item_id => $item ) :
                         </span>
             </td>
             <td>
-                <span>Джейн Вилсон</span>
+                <span><?php echo wp_kses_post( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() ); ?></span>
             </td>
             <td>
                 <span>Задаток / Deposit</span>
             </td>
             <td>
-                <span>$50</span>
+                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+                    <span class="woocommerce-Price-amount amount" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;"><span class="woocommerce-Price-currencySymbol" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">$</span>
+	                    50
+                    </span>
+                </span>
             </td>
         </tr>
         <tr>
@@ -100,13 +121,17 @@ foreach ( $items as $item_id => $item ) :
                         </span>
             </td>
             <td>
-                <span>Grand Park Kemer</span>
+                <span><?php echo wp_kses_post( $order->get_billing_address_1() ); ?></span>
             </td>
             <td>
                 <span>Остаток / Balance</span>
             </td>
             <td>
-                <span>$50</span>
+                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+                    <span class="woocommerce-Price-amount amount" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;"><span class="woocommerce-Price-currencySymbol" style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">$</span>
+	                    <?php echo wp_kses_post( $order->get_subtotal( $item ) - 50 ); ?>
+                    </span>
+                </span>
             </td>
         </tr>
         <tr>
@@ -116,12 +141,12 @@ foreach ( $items as $item_id => $item ) :
                         </span>
             </td>
             <td>
-                <span>3332</span>
+                <span><?php echo wp_kses_post( $order->get_billing_address_2() ); ?></span>
             </td>
             <td>
                 <span>Замечания / Note</span>
             </td>
-            <td></td>
+            <td><?php echo wp_kses_post( wpautop( do_shortcode( $purchase_note ) ) ); ?></td>
         </tr>
         <tr>
             <td>
