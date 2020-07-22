@@ -19,7 +19,7 @@ wp_head(); ?>
         </div>
 
         <div class="productCardSettingsTriggerWrapper">
-            <div class="cardName">Экскурсия в собор Святой Софии</div>
+            <div class="cardName"><?php echo $product->get_title(); ?></div>
             <a href="#" class="productCardSettingsTrigger">
                 <span><?php _e('расчет стоимости', 'traveling-store'); ?></span>
             </a>
