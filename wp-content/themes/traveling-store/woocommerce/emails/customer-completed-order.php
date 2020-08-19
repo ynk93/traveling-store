@@ -25,9 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+    <p style="padding: 32px 20px 0;"><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ); ?></p>
 <?php /* translators: %s: Site title */ ?>
-<p><?php esc_html_e( 'We have finished processing your order.', 'woocommerce' ); ?></p>
+    <p style="padding: 0 20px 32px;"><?php esc_html_e( 'We have finished processing your order.', 'woocommerce' ); ?></p>
 <?php
 
 /*

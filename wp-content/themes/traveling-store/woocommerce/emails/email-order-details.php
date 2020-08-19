@@ -66,9 +66,7 @@
                 <td>
                     <span><?php echo wp_kses_post( $item_totals['order_total']['value'] ); ?></span>
                 </td>
-
             </tr>
-
             </tbody>
         </table>
     </td>

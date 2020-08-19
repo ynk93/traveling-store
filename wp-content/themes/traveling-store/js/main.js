@@ -47,6 +47,18 @@ $(document).ready(function () {
         }
     });
 
+    var reviewsSwiper = new Swiper('.swiper-container.reviewsSwiper', {
+        speed: 500,
+        watchOverflow: true,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        breakpoints: {
+            1180: {
+                slidesPerView: 1
+            }
+        }
+    });
+
     var tourDayIndexesEnabled = [0, 0, 1, 1, 0, 1, 0];
 
     $(".calendar").datepicker({
@@ -353,13 +365,13 @@ $(document).ready(function () {
             adult = 1;
         parent = $('.childrensData .counterInputElement');
 
-        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3283]').val();
+        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3113]').val();
 
-        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3284]').val();
+        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3114]').val();
 
-        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3285]').val();
+        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3115]').val();
 
-        adult = parent.find('input[name=wc_bookings_field_persons_3281]').val();
+        adult = parent.find('input[name=wc_bookings_field_persons_3112]').val();
 
         var childNumPickerRow = '<span class="innerResult">' +
             adult + '<span class="resultLabel">(взрослый)</span>, ' +

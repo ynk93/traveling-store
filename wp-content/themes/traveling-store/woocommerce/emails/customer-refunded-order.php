@@ -23,9 +23,9 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+    <p style="padding: 32px 20px 0;"><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ); ?></p>
 
-<p>
+    <p style="padding: 0 20px 32px;">
 <?php
 if ( $partial_refund ) {
 	/* translators: %s: Site title */

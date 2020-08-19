@@ -210,6 +210,16 @@
         }
       }
     }
+
+    section.reviewsSection {
+      .rightSide {
+        .swiper-container {
+          .swiper-slide-next {
+            opacity: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -463,9 +473,10 @@
 
               a {
                 display: block;
-                font-size: 24px !important;
+                font-size: 18px !important;
                 line-height: 28px;
                 color: #000 !important;
+                text-transform: uppercase;
               }
             }
           }
@@ -1076,11 +1087,13 @@
         }
 
         .rightSide {
+          padding: 0;
+          overflow: visible;
           flex-direction: column;
 
           .reviewBlock {
-            max-width: 100%;
-            margin: 0 0 20px 0;
+            max-width: 400px;
+            margin: 0 auto 20px auto;
           }
         }
       }

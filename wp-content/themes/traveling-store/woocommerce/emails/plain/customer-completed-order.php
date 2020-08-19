@@ -22,7 +22,7 @@ echo esc_html( wp_strip_all_tags( $email_heading ) );
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
 /* translators: %s: Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ) . "\n\n";
 /* translators: %s: Site title */
 echo esc_html__( 'We have finished processing your order.', 'woocommerce' ) . "\n\n";
 

@@ -22,7 +22,7 @@ echo esc_html( wp_strip_all_tags( $email_heading ) );
 echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
 
 /* translators: %s: Customer first name */
-echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ) . "\n\n";
+echo sprintf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ) . "\n\n";
 echo esc_html__( 'The following note has been added to your order:', 'woocommerce' ) . "\n\n";
 
 echo "----------\n\n";

@@ -28,12 +28,12 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
     <tr>
         <td>
-            <table>
+            <table style="padding: 20px;">
                 <tbody>
                 <tr>
                     <td>
                         <span class="mailHead">
-                            <?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName">' . esc_html( $order->get_billing_first_name() ) . '</span>' ); ?>
+                            <?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name() ) . '</span>' ); ?>
                             <br>
                             <?php _e('Thank you for using the Traveling Store service!', 'traveling-store'); ?>
                             <br>

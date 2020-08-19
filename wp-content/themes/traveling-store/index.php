@@ -231,30 +231,33 @@ wp_head(); ?>
                 </div>
             </div>
             <div class="rightSide">
+                <div class="swiper-container reviewsSwiper">
+                    <div class="swiper-wrapper">
 
-                <?php foreach ($reviews['reviews_slider'] as $review) : ?>
+                        <?php foreach ($reviews['reviews_slider'] as $review) : ?>
 
-                    <div class="reviewBlock">
-                        <div class="reviewHead">
-                            <div class="avatarPic">
-                                <?php echo wp_get_attachment_image($review['image'], array(72, 72), false); ?>
-                            </div>
-                            <div class="reviewTitle">
-                                <div class="reviewAuthorName">
-                                    <?php echo $review['title']; ?>
+                            <div class="reviewBlock swiper-slide">
+                                <div class="reviewHead">
+                                    <div class="avatarPic">
+                                        <?php echo wp_get_attachment_image($review['image'], array(72, 72), false); ?>
+                                    </div>
+                                    <div class="reviewTitle">
+                                        <div class="reviewAuthorName">
+                                            <?php echo $review['title']; ?>
+                                        </div>
+                                        <div class="reviewDate p">
+                                            <?php echo $review['data']; ?>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="reviewDate p">
-                                    <?php echo $review['data']; ?>
+                                <div class="reviewText p">
+                                    <?php echo $review['text']; ?>
                                 </div>
                             </div>
-                        </div>
-                        <div class="reviewText p">
-                            <?php echo $review['text']; ?>
-                        </div>
+
+                        <?php endforeach; ?>
                     </div>
-
-                <?php endforeach; ?>
-
+                </div>
             </div>
         </div>
     </section>

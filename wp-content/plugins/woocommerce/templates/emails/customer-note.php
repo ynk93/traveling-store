@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
-<p><?php esc_html_e( 'The following note has been added to your order:', 'woocommerce' ); ?></p>
+    <p style="padding: 20px 20px 0;"><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ); ?></p>
+    <p style="padding: 0 20px 20px;"><?php esc_html_e( 'The following note has been added to your order:', 'woocommerce' ); ?></p>
 
 <blockquote><?php echo wpautop( wptexturize( make_clickable( $customer_note ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></blockquote>
 

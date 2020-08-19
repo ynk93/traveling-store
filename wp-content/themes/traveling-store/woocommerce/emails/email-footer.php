@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
                 <tbody>
                 <tr>
                     <td>
-                        <img src="images/mailTemplates/tursab.svg" class="tursabIcon">
+                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/images/mailTemplates/tursab.png" title="TurSab License" alt="TurSab License" class="tursabIcon">
                     </td>
                     <td>
                             <span class="contactWrap">
                                 <span class="contactBlock">
                                     <span class="contactIcon">
-                                        <img src="images/mailTemplates/phone.svg" >
+                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/images/mailTemplates/phone.png" width="22px" height="22px">
                                     </span>
                                     <span class="contactText">
                                         <a href="tel: 8 067 01 02 013">8 067 01 02 013</a>
@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
                                 </span>
                                 <span class="contactBlock">
                                     <span class="contactIcon">
-                                        <img src="images/mailTemplates/mail.svg" >
+                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/images/mailTemplates/mail.png" height="22px" width="22px">
                                     </span>
                                     <span class="contactText">
                                         <a href="mailto: ex@gmail.com">ex@gmail.com</a>

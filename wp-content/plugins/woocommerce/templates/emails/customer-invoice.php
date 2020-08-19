@@ -27,10 +27,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <?php /* translators: %s: Customer first name */ ?>
-<p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
+    <p style="padding: 20px 20px 0;"><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name()) . '</span>' ); ?></>
 
 <?php if ( $order->has_status( 'pending' ) ) { ?>
-	<p>
+    <p style="padding: 0 20px 20px;">
 	<?php
 	printf(
 		wp_kses(

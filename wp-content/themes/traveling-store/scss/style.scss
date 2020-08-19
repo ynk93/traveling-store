@@ -40,6 +40,7 @@ body {
     overflow: hidden;
   }
 }
+
 .h1 {
   font-size: 36px;
   line-height: 43px;
@@ -352,7 +353,7 @@ body {
           > ul {
             li {
               a {
-                font-size: 14px;
+                font-size: 12px;
               }
             }
           }
@@ -467,7 +468,8 @@ body {
         }
 
         .cellPhoneBlock {
-          margin-left: 56px;
+          flex-shrink: 0;
+          margin-left: 3.8vw;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -512,7 +514,7 @@ body {
           li {
             & + li {
               a {
-                margin-left: 24px;
+                margin-left: 20px;
               }
             }
 
@@ -520,6 +522,7 @@ body {
               font-size: 12px;
               line-height: 10px;
               color: $mainLightColor;
+              text-transform: lowercase;
             }
           }
         }
@@ -572,7 +575,7 @@ body {
 
         .basketIconWrapper {
           position: relative;
-          margin-left: 41px;
+          margin-left: 2.2vw;
           height: 30px;
           height: 30px;
           width: 42px;
@@ -1078,7 +1081,7 @@ body {
   }
 
   section.reviewsSection {
-    padding-bottom: 112px;
+    padding-bottom: 92px;
 
     .content {
       width: 100%;
@@ -1089,8 +1092,8 @@ body {
     }
 
     .leftSide {
-      padding: 0 80px;
-      max-width: 480px;
+      padding: 0 60px 0 80px;
+      max-width: 460px;
 
       .reviewsTitle {
         margin-bottom: 12px;
@@ -1102,13 +1105,37 @@ body {
       width: 100%;
       display: flex;
       flex-direction: row;
+      padding: 20px;
+      overflow: hidden;
 
-      .reviewBlock {
-        & + .reviewBlock {
-          margin-left: 20px;
+      .swiper-container {
+        overflow: visible;
+        width: 100%;
+
+        .swiper-slide {
+          opacity: 0;
+          @include transition(all ease .5s);
         }
 
-        max-width: calc((100% - 20px) / 2);
+        .swiper-slide-active, .swiper-slide-next {
+          opacity: 1;
+        }
+      }
+
+      .reviewBlock {
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 16px;
+          top: 25px;
+          width: 22px;
+          height: 17px;
+          background: url('./images/icons/quote.svg') no-repeat center/contain;
+        }
+
+        position: relative;
+        max-width: 100%;
         width: 100%;
         padding: 24px 16px 16px;
         @include box-shadow(0px 0px 30px rgba(0, 0, 0, 0.08));
@@ -2158,6 +2185,7 @@ body {
 
         .confirmOrderButton {
           @include mainYellowButton(48px);
+          cursor: pointer;
           display: block;
           margin-bottom: 12px;
         }
@@ -2480,6 +2508,7 @@ body {
           .confirmOrderButton {
             @include mainYellowButton(48px);
             max-width: 100%;
+            cursor: pointer;
             margin: 20px 0 16px;
             border: 0;
           }
@@ -3113,7 +3142,7 @@ body {
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: rgba(255,255,255,0.2);
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     .icon {
