@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-/**
- * Template Name: About page
- */
+	/**
+	 * Template Name: Single product page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
+	 */
+
 
 wp_head(); ?>
 <body>
