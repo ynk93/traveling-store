@@ -354,11 +354,11 @@ input[type=number] {
   padding: 0;
 }
 .card-param-picker .input .button.calendarIcon {
-  background: #F87F27 url("./images/icons/calendar_icon.svg") no-repeat center;
+  background: #F87F27 url("./assets/images/icons/calendar_icon.svg") no-repeat center;
 }
 .card-param-picker .input .button.arrowIcon {
   pointer-events: none;
-  background: #fff url("./images/icons/arrow_down-black.svg") no-repeat center/7px;
+  background: #fff url("./assets/images/icons/arrow_down-black.svg") no-repeat center/7px;
   border-left: 1px solid #E7E7E7;
 }
 
@@ -404,7 +404,7 @@ input[type=number] {
   cursor: pointer;
   width: 8px;
   height: 10px;
-  background: url("./images/icons/arrow_down-right.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/arrow_down-right.svg") no-repeat center/contain;
 }
 .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev.ui-datepicker-next-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next.ui-datepicker-prev-hover, .card-param-picker.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover {
   border: 0;
@@ -603,11 +603,11 @@ body.fixed {
 }
 .counterInputElement .counterInputDecreaseButton {
   left: 0;
-  background-image: url("./images/icons/minus_icon.svg");
+  background-image: url("./assets/images/icons/minus_icon.svg");
 }
 .counterInputElement .counterInputIncreaseButton {
   right: 0;
-  background-image: url("./images/icons/plus_icon.svg");
+  background-image: url("./assets/images/icons/plus_icon.svg");
 }
 
 .woocommerce-checkout #payment {
@@ -749,10 +749,10 @@ body.fixed {
   color: #333333;
 }
 .wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
-  background-image: url("./images/icons/arrow_down-black.svg");
+  background-image: url("./assets/images/icons/arrow_down-black.svg");
 }
 .wrapper.innerPageHeader header.header .headerInnerWrap .rightSide .basketIconWrapper, .wrapper.whiteHeader header.header .headerInnerWrap .rightSide .basketIconWrapper {
-  background-image: url("./images/icons/basket-black.svg");
+  background-image: url("./assets/images/icons/basket-black.svg");
 }
 .wrapper.innerPageHeader {
   padding-top: 81px;
@@ -872,7 +872,7 @@ body.fixed {
   align-items: center;
 }
 .wrapper header.header .headerInnerWrap .leftSide .cellPhoneBlock .cellPhoneIcon, .wrapper header.header .headerInnerWrap .rightSide .cellPhoneBlock .cellPhoneIcon {
-  background: #F87F27 url("./images/icons/phone_icon.svg") no-repeat center/19px;
+  background: #F87F27 url("./assets/images/icons/phone_icon.svg") no-repeat center/19px;
   width: 42px;
   height: 42px;
   margin-right: 12px;
@@ -959,7 +959,7 @@ body.fixed {
   -ms-transform-origin: center 50%;
   -webkit-transform-origin: center 50%;
   transform-origin: center 50%;
-  background: url("./images/icons/arrow_down.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/arrow_down.svg") no-repeat center/contain;
 }
 .wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper {
   position: relative;
@@ -967,7 +967,7 @@ body.fixed {
   height: 30px;
   height: 30px;
   width: 42px;
-  background: url("./images/icons/basket.svg") no-repeat left center/29px;
+  background: url("./assets/images/icons/basket.svg") no-repeat left center/29px;
 }
 .wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper .basketIcon {
   display: block;
@@ -1024,7 +1024,7 @@ body.fixed {
   cursor: pointer;
   width: 100%;
   height: 100%;
-  background: url("./images/icons/arrow_right_1.svg") no-repeat center/8px;
+  background: url("./assets/images/icons/arrow_right_1.svg") no-repeat center/8px;
 }
 .wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-left.swiper-button-disabled, .wrapper section.mainSection .swiper-container .swiper-buttons-wrap .swiper-button-right.swiper-button-disabled {
   opacity: 0.5;
@@ -1270,7 +1270,7 @@ body.fixed {
   left: 50%;
   height: 100vh;
   transform: translate(-50%, 0);
-  background: url("./images/uploads/categoriesPics/image 13.png") no-repeat center/cover;
+  background: url("./assets/images/uploads/categoriesPics/image 13.png") no-repeat center/cover;
 }
 .wrapper section.aboutUsSection .aboutUsSectionContent {
   position: relative;
@@ -1367,17 +1367,17 @@ body.fixed {
 .wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.supportIcon {
   width: 59px;
   height: 59px;
-  background-image: url("./images/icons/customer-service 1.svg");
+  background-image: url("./assets/images/icons/customer-service 1.svg");
 }
 .wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.mooneyIcon {
   width: 48px;
   height: 48px;
-  background-image: url("./images/icons/wallet-2 1.svg");
+  background-image: url("./assets/images/icons/wallet-2 1.svg");
 }
 .wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconPic.cardIcon {
   width: 52px;
   height: 40px;
-  background-image: url("./images/icons/003-credit-card-1 1.svg");
+  background-image: url("./assets/images/icons/003-credit-card-1 1.svg");
 }
 .wrapper section.ourPreferencesSection .iconsRow .iconBlock .iconText {
   position: absolute;
@@ -1448,7 +1448,7 @@ body.fixed {
   top: 25px;
   width: 22px;
   height: 17px;
-  background: url("./images/icons/quote.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/quote.svg") no-repeat center/contain;
 }
 .wrapper section.reviewsSection .rightSide .reviewBlock .reviewHead {
   display: flex;
@@ -1562,7 +1562,7 @@ body.fixed {
   display: none;
 }
 .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper .swiper-button-prev, .wrapper section.productCardSection .content .swiper-container.productCardPicsSwiper .swiper-button-next {
-  background: url("./images/icons/arrow_right_1.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/arrow_right_1.svg") no-repeat center/contain;
   width: 20px;
   height: 20px;
 }
@@ -1919,10 +1919,10 @@ body.fixed {
   height: 280px;
 }
 .wrapper section.innerPageSection .textPageContentRow .picSide.tour1 {
-  background: url("./images/uploads/vip/vip1.png") no-repeat center/cover;
+  background: url("./assets/images/uploads/vip/vip1.png") no-repeat center/cover;
 }
 .wrapper section.innerPageSection .textPageContentRow .picSide.tour2 {
-  background: url("./images/uploads/vip/vip2.png") no-repeat center/cover;
+  background: url("./assets/images/uploads/vip/vip2.png") no-repeat center/cover;
 }
 .wrapper section.innerPageSection .textPageContentRow .picSide img {
   width: 100%;
@@ -1994,17 +1994,17 @@ body.fixed {
 .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.mailIcon {
   width: 36px;
   height: 36px;
-  background-image: url("./images/icons/mailIcon.svg");
+  background-image: url("./assets/images/icons/mailIcon.svg");
 }
 .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.phonesIcon {
   width: 36px;
   height: 36px;
-  background-image: url("./images/icons/phoneIcon.svg");
+  background-image: url("./assets/images/icons/phoneIcon.svg");
 }
 .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconPic.messengersIcon {
   width: 36px;
   height: 36px;
-  background-image: url("./images/icons/messengersIcon.svg");
+  background-image: url("./assets/images/icons/messengersIcon.svg");
 }
 .wrapper section.innerPageSection .contactUsContent .iconsRow .iconBlock .iconText {
   display: block;
@@ -2040,7 +2040,7 @@ body.fixed {
   width: 100%;
 }
 .wrapper section.innerPageSection .aboutUsPageRow .leftSide .picSide.aboutUsPic1, .wrapper section.innerPageSection .aboutUsPageRow .rightSide .picSide.aboutUsPic1 {
-  background: url("./images/uploads/aboutUs.png") no-repeat center/cover;
+  background: url("./assets/images/uploads/aboutUs.png") no-repeat center/cover;
 }
 .wrapper section.innerPageSection .aboutUsPageRow .leftSide .picSide img, .wrapper section.innerPageSection .aboutUsPageRow .rightSide .picSide img {
   width: 100%;
@@ -2058,7 +2058,7 @@ body.fixed {
   overflow: hidden;
   padding: 120px 0;
   width: 50vw;
-  background: url("./images/bgPattern.png") no-repeat center/cover;
+  background: url("./assets/images/bgPattern.png") no-repeat center/cover;
 }
 .wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-container {
   padding-left: 40px;
@@ -2100,7 +2100,7 @@ body.fixed {
   margin: 0;
   padding: 0;
   position: static;
-  background: url("./images/icons/arrow_right_black.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/arrow_right_black.svg") no-repeat center/contain;
 }
 .wrapper section.innerPageSection .aboutUsPageRow .rightSide.swiperSide .swiper-bottom-panel .swiper-buttons-wrap .swiper-button-prev {
   -moz-transform: scaleX(-1);
@@ -2226,7 +2226,7 @@ body.fixed {
   justify-content: center;
   width: 100%;
   height: 40px;
-  background: url("./images/icons/close_icon.svg") no-repeat center/12px;
+  background: url("./assets/images/icons/close_icon.svg") no-repeat center/12px;
 }
 .wrapper section.basketPageSection .basketPageContent .basketLeftSide, .wrapper section.basketPageSection .checkoutPageContent .basketLeftSide, .wrapper section.checkoutPageSection .basketPageContent .basketLeftSide, .wrapper section.checkoutPageSection .checkoutPageContent .basketLeftSide {
   max-width: 100%;
@@ -2384,7 +2384,7 @@ body.fixed {
   width: 16px;
   height: 16px;
   margin-right: 10px;
-  background: url("./images/icons/checked.svg") no-repeat center/contain;
+  background: url("./assets/images/icons/checked.svg") no-repeat center/contain;
 }
 .wrapper section.basketPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.basketPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .basketPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText, .wrapper section.checkoutPageSection .checkoutPageContent .rightSideSideBar .sideBarInfoBlock .sideBarInfoText {
   font-size: 13px;
@@ -2619,6 +2619,7 @@ body.fixed {
   text-align: center;
   color: #fff;
   max-width: 100%;
+  cursor: pointer;
   margin: 20px 0 16px;
   border: 0;
 }
@@ -2660,7 +2661,7 @@ body.fixed {
 .wrapper footer.footer .footerInnerRow .leftSideWrap .turSabBlock .turSabPic {
   width: 65px;
   height: 24px;
-  background: url("./images/icons/tursab 1.svg") no-repeat center;
+  background: url("./assets/images/icons/tursab 1.svg") no-repeat center;
   background-size: contain;
   margin-right: 16px;
 }
@@ -2708,7 +2709,7 @@ body.fixed {
 .wrapper footer.footer .footerInnerRow .contactLinks ul li.mailLink a:before {
   width: 22px;
   height: 22px;
-  background-image: url("./images/icons/mail.svg");
+  background-image: url("./assets/images/icons/mail.svg");
 }
 .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink {
   margin-left: 24px;
@@ -2716,7 +2717,7 @@ body.fixed {
 .wrapper footer.footer .footerInnerRow .contactLinks ul li.phoneLink a:before {
   width: 22px;
   height: 22px;
-  background-image: url("./images/icons/phone.svg");
+  background-image: url("./assets/images/icons/phone.svg");
 }
 .wrapper footer.footer .footerInnerRow .contactLinks a {
   display: inline-block;
@@ -2748,31 +2749,31 @@ body.fixed {
   margin-left: 12px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.fb a {
-  background-image: url("./images/icons/social/facebook.svg");
+  background-image: url("./assets/images/icons/social/facebook.svg");
   background-size: 11px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.vk a {
-  background-image: url("./images/icons/social/vk.svg");
+  background-image: url("./assets/images/icons/social/vk.svg");
   background-size: 25px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.insta a {
-  background-image: url("./images/icons/social/instagram.svg");
+  background-image: url("./assets/images/icons/social/instagram.svg");
   background-size: 20px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.whatsup a {
-  background-image: url("./images/icons/social/whatsapp.svg");
+  background-image: url("./assets/images/icons/social/whatsapp.svg");
   background-size: 22px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.telegram a {
-  background-image: url("./images/icons/social/telegram.svg");
+  background-image: url("./assets/images/icons/social/telegram.svg");
   background-size: 21px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.viber a {
-  background-image: url("./images/icons/social/viber.svg");
+  background-image: url("./assets/images/icons/social/viber.svg");
   background-size: 22px;
 }
 .wrapper footer.footer .socialLinksWrap ul li.skype a {
-  background-image: url("./images/icons/social/skype.svg");
+  background-image: url("./assets/images/icons/social/skype.svg");
   background-size: 20px;
 }
 .wrapper footer.footer .socialLinksWrap ul li a {
@@ -3045,7 +3046,7 @@ body.fixed {
   margin: auto;
   width: 12px;
   height: 10px;
-  background: url("./images/icons/check_icon.svg") no-repeat center;
+  background: url("./assets/images/icons/check_icon.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -3107,7 +3108,7 @@ body.fixed {
   margin: 0 auto;
   width: 42px;
   height: 50px;
-  background: url("./images/icons/tickets.svg");
+  background: url("./assets/images/icons/tickets.svg");
 }
 .white-popup .popupContent .h5 {
   margin: 20px 0 8px;
@@ -3167,7 +3168,8 @@ body.fixed {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("./images/icons/social/facebook-white.svg") no-repeat center center;
+  background: url("./assets/images/icons/social/share.svg") no-repeat center center;
+  background-size: 25px;
 }
 
 /**
@@ -3535,11 +3537,11 @@ body.fixed {
     color: #333333;
   }
   .wrapper header.header .headerInnerWrap .rightSide .selectWrapper .nice-select:after {
-    background-image: url("./images/icons/arrow_down-black.svg");
+    background-image: url("./assets/images/icons/arrow_down-black.svg");
   }
   .wrapper header.header .headerInnerWrap .rightSide .basketIconWrapper {
     z-index: 3;
-    background-image: url("./images/icons/basket-black.svg");
+    background-image: url("./assets/images/icons/basket-black.svg");
   }
   .wrapper header.header .headerInnerWrap .hamburgerWrap {
     z-index: 3;
@@ -3878,7 +3880,7 @@ body.fixed {
     margin: auto 0;
     width: 14px;
     height: 14px;
-    background: url("./images/icons/close_icon.svg") no-repeat center/contain;
+    background: url("./assets/images/icons/close_icon.svg") no-repeat center/contain;
   }
   .wrapper section.productCardSection .content .productCardRow .productCardRightSide .sideBarHead .h5 {
     font-size: 20px;
@@ -4068,7 +4070,7 @@ body.fixed {
     top: 0;
     bottom: 0;
     margin: auto 0;
-    background: url("./images/icons/arrow_down-black.svg") no-repeat center/contain;
+    background: url("./assets/images/icons/arrow_down-black.svg") no-repeat center/contain;
   }
   .wrapper section.productCardSection .content .productCardRow .productCardLeftSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows, .wrapper section.productCardSection .content .productCardRow .productCardRightSide .productCardInfoBlocks .infoBlock .leftSide .infoBlockRows {
     border-top: 1px solid #E7E7E7;
@@ -4194,7 +4196,7 @@ body.fixed {
     margin: auto 0;
     width: 9px;
     height: 6px;
-    background: url("./images/icons/arrow_down-black.svg") no-repeat center/contain;
+    background: url("./assets/images/icons/arrow_down-black.svg") no-repeat center/contain;
   }
   .wrapper section.catalogSection .content .catalogSectionRow .catalogSideBarWrap .sideBarBlock .sideBarBody {
     display: none;

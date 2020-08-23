@@ -436,6 +436,19 @@ $(document).ready(function () {
         return false;
     });
 
+    $(document).on('click', '.shareRow a.button', function (e) {
+        if (navigator.share) {
+            e.preventDefault();
+            navigator.share({
+                title: document.title,
+                url: window.location.href
+            });
+        } else {
+            window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+            return false;
+        }
+    });
+
     function calculateBottomLinePosition(object) {
         var bottomLineMargin = object.offset().left - object.parents('.productCardRow').offset().left;
 

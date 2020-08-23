@@ -413,14 +413,14 @@
               color: $mainBlackColor;
 
               &:after {
-                background-image: url('./images/icons/arrow_down-black.svg');
+                background-image: url('./assets/images/icons/arrow_down-black.svg');
               }
             }
           }
 
           .basketIconWrapper {
             z-index: 3;
-            background-image: url('./images/icons/basket-black.svg');
+            background-image: url('./assets/images/icons/basket-black.svg');
           }
         }
 
@@ -887,7 +887,7 @@
                 margin: auto 0;
                 width: 14px;
                 height: 14px;
-                background: url('./images/icons/close_icon.svg') no-repeat center/contain;
+                background: url('./assets/images/icons/close_icon.svg') no-repeat center/contain;
               }
 
               .h5 {
@@ -1161,7 +1161,7 @@
                       top: 0;
                       bottom: 0;
                       margin: auto 0;
-                      background: url('./images/icons/arrow_down-black.svg') no-repeat center/contain;
+                      background: url('./assets/images/icons/arrow_down-black.svg') no-repeat center/contain;
                     }
                   }
 
@@ -1343,7 +1343,7 @@
                   margin: auto 0;
                   width: 9px;
                   height: 6px;
-                  background: url('./images/icons/arrow_down-black.svg') no-repeat center/contain;
+                  background: url('./assets/images/icons/arrow_down-black.svg') no-repeat center/contain;
                 }
               }
 

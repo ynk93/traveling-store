@@ -140,7 +140,6 @@ body {
     top: 0;
     bottom: 0;
     margin: auto 0;
-
     width: 34px;
     height: 100%;
 
@@ -149,12 +148,12 @@ body {
 
   .counterInputDecreaseButton {
     left: 0;
-    background-image: url('./images/icons/minus_icon.svg');
+    background-image: url('./assets/images/icons/minus_icon.svg');
   }
 
   .counterInputIncreaseButton {
     right: 0;
-    background-image: url('./images/icons/plus_icon.svg');
+    background-image: url('./assets/images/icons/plus_icon.svg');
   }
 }
 
@@ -331,13 +330,13 @@ body {
               color: $mainBlackColor;
 
               &:after {
-                background-image: url('./images/icons/arrow_down-black.svg');
+                background-image: url('./assets/images/icons/arrow_down-black.svg');
               }
             }
           }
 
           .basketIconWrapper {
-            background-image: url('./images/icons/basket-black.svg');
+            background-image: url('./assets/images/icons/basket-black.svg');
           }
         }
       }
@@ -475,7 +474,7 @@ body {
           align-items: center;
 
           .cellPhoneIcon {
-            background: $mainColor url('./images/icons/phone_icon.svg') no-repeat center/19px;
+            background: $mainColor url('./assets/images/icons/phone_icon.svg') no-repeat center/19px;
             width: 42px;
             height: 42px;
             margin-right: 12px;
@@ -568,7 +567,7 @@ body {
               bottom: -1px;
               @include transform(none);
               @include transform-origin(center);
-              background: url('./images/icons/arrow_down.svg') no-repeat center/contain;
+              background: url('./assets/images/icons/arrow_down.svg') no-repeat center/contain;
             }
           }
         }
@@ -579,7 +578,7 @@ body {
           height: 30px;
           height: 30px;
           width: 42px;
-          background: url('./images/icons/basket.svg') no-repeat left center/29px;
+          background: url('./assets/images/icons/basket.svg') no-repeat left center/29px;
 
           .basketIcon {
             display: block;
@@ -640,7 +639,7 @@ body {
           cursor: pointer;
           width: 100%;
           height: 100%;
-          background: url('./images/icons/arrow_right_1.svg') no-repeat center/8px;
+          background: url('./assets/images/icons/arrow_right_1.svg') no-repeat center/8px;
 
           &.swiper-button-disabled {
             opacity: 0.5;
@@ -951,7 +950,7 @@ body {
       left: 50%;
       height: 100vh;
       transform: translate(-50%, 0);
-      background: url('./images/uploads/categoriesPics/image 13.png') no-repeat center/cover;
+      background: url('./assets/images/uploads/categoriesPics/image 13.png') no-repeat center/cover;
     }
 
     .aboutUsSectionContent {
@@ -1047,19 +1046,19 @@ body {
           &.supportIcon {
             width: 59px;
             height: 59px;
-            background-image: url('./images/icons/customer-service 1.svg');
+            background-image: url('./assets/images/icons/customer-service 1.svg');
           }
 
           &.mooneyIcon {
             width: 48px;
             height: 48px;
-            background-image: url('./images/icons/wallet-2 1.svg');
+            background-image: url('./assets/images/icons/wallet-2 1.svg');
           }
 
           &.cardIcon {
             width: 52px;
             height: 40px;
-            background-image: url('./images/icons/003-credit-card-1 1.svg');
+            background-image: url('./assets/images/icons/003-credit-card-1 1.svg');
           }
         }
 
@@ -1131,7 +1130,7 @@ body {
           top: 25px;
           width: 22px;
           height: 17px;
-          background: url('./images/icons/quote.svg') no-repeat center/contain;
+          background: url('./assets/images/icons/quote.svg') no-repeat center/contain;
         }
 
         position: relative;
@@ -1279,7 +1278,7 @@ body {
           }
 
           .swiper-button-prev, .swiper-button-next {
-            background: url('./images/icons/arrow_right_1.svg') no-repeat center/contain;
+            background: url('./assets/images/icons/arrow_right_1.svg') no-repeat center/contain;
             width: 20px;
             height: 20px;
           }
@@ -1700,11 +1699,11 @@ body {
         height: 280px;
 
         &.tour1 {
-          background: url('./images/uploads/vip/vip1.png') no-repeat center/cover;
+          background: url('./assets/images/uploads/vip/vip1.png') no-repeat center/cover;
         }
 
         &.tour2 {
-          background: url('./images/uploads/vip/vip2.png') no-repeat center/cover;
+          background: url('./assets/images/uploads/vip/vip2.png') no-repeat center/cover;
         }
 
         img {
@@ -1783,19 +1782,19 @@ body {
             &.mailIcon {
               width: 36px;
               height: 36px;
-              background-image: url('./images/icons/mailIcon.svg');
+              background-image: url('./assets/images/icons/mailIcon.svg');
             }
 
             &.phonesIcon {
               width: 36px;
               height: 36px;
-              background-image: url('./images/icons/phoneIcon.svg');
+              background-image: url('./assets/images/icons/phoneIcon.svg');
             }
 
             &.messengersIcon {
               width: 36px;
               height: 36px;
-              background-image: url('./images/icons/messengersIcon.svg');
+              background-image: url('./assets/images/icons/messengersIcon.svg');
             }
           }
 
@@ -1843,7 +1842,7 @@ body {
           width: 100%;
 
           &.aboutUsPic1 {
-            background: url('./images/uploads/aboutUs.png') no-repeat center/cover;
+            background: url('./assets/images/uploads/aboutUs.png') no-repeat center/cover;
           }
 
           img {
@@ -1865,7 +1864,7 @@ body {
           overflow: hidden;
           padding: 120px 0;
           width: 50vw;
-          background: url('./images/bgPattern.png') no-repeat center/cover;
+          background: url('./assets/images/bgPattern.png') no-repeat center/cover;
 
           .swiper-container {
             padding-left: 40px;
@@ -1907,7 +1906,7 @@ body {
                 margin: 0;
                 padding: 0;
                 position: static;
-                background: url('./images/icons/arrow_right_black.svg') no-repeat center/contain;
+                background: url('./assets/images/icons/arrow_right_black.svg') no-repeat center/contain;
               }
 
               .swiper-button-prev {
@@ -2059,7 +2058,7 @@ body {
             justify-content: center;
             width: 100%;
             height: 40px;
-            background: url('./images/icons/close_icon.svg') no-repeat center/12px;
+            background: url('./assets/images/icons/close_icon.svg') no-repeat center/12px;
           }
         }
       }
@@ -2217,7 +2216,7 @@ body {
               width: 16px;
               height: 16px;
               margin-right: 10px;
-              background: url('./images/icons/checked.svg') no-repeat center/contain;
+              background: url('./assets/images/icons/checked.svg') no-repeat center/contain;
             }
           }
 
@@ -2561,7 +2560,7 @@ body {
           .turSabPic {
             width: 65px;
             height: 24px;
-            background: url('./images/icons/tursab 1.svg') no-repeat center;
+            background: url('./assets/images/icons/tursab 1.svg') no-repeat center;
             background-size: contain;
             margin-right: 16px;
           }
@@ -2622,7 +2621,7 @@ body {
                 &:before {
                   width: 22px;
                   height: 22px;
-                  background-image: url('./images/icons/mail.svg');
+                  background-image: url('./assets/images/icons/mail.svg');
                 }
               }
             }
@@ -2634,7 +2633,7 @@ body {
                 &:before {
                   width: 22px;
                   height: 22px;
-                  background-image: url('./images/icons/phone.svg');
+                  background-image: url('./assets/images/icons/phone.svg');
                 }
               }
             }
@@ -2673,49 +2672,49 @@ body {
 
           &.fb {
             a {
-              background-image: url('./images/icons/social/facebook.svg');
+              background-image: url('./assets/images/icons/social/facebook.svg');
               background-size: 11px;
             }
           }
 
           &.vk {
             a {
-              background-image: url('./images/icons/social/vk.svg');
+              background-image: url('./assets/images/icons/social/vk.svg');
               background-size: 25px;
             }
           }
 
           &.insta {
             a {
-              background-image: url('./images/icons/social/instagram.svg');
+              background-image: url('./assets/images/icons/social/instagram.svg');
               background-size: 20px;
             }
           }
 
           &.whatsup {
             a {
-              background-image: url('./images/icons/social/whatsapp.svg');
+              background-image: url('./assets/images/icons/social/whatsapp.svg');
               background-size: 22px;
             }
           }
 
           &.telegram {
             a {
-              background-image: url('./images/icons/social/telegram.svg');
+              background-image: url('./assets/images/icons/social/telegram.svg');
               background-size: 21px;
             }
           }
 
           &.viber {
             a {
-              background-image: url('./images/icons/social/viber.svg');
+              background-image: url('./assets/images/icons/social/viber.svg');
               background-size: 22px;
             }
           }
 
           &.skype {
             a {
-              background-image: url('./images/icons/social/skype.svg');
+              background-image: url('./assets/images/icons/social/skype.svg');
               background-size: 20px;
             }
           }
@@ -3012,7 +3011,7 @@ body {
       margin: auto;
       width: 12px;
       height: 10px;
-      background: url('./images/icons/check_icon.svg') no-repeat center;
+      background: url('./assets/images/icons/check_icon.svg') no-repeat center;
       background-size: contain;
     }
   }
@@ -3083,7 +3082,7 @@ body {
       margin: 0 auto;
       width: 42px;
       height: 50px;
-      background: url('./images/icons/tickets.svg');
+      background: url('./assets/images/icons/tickets.svg');
     }
 
     .h5 {
@@ -3149,7 +3148,8 @@ body {
       display: block;
       width: 100%;
       height: 100%;
-      background: url('./images/icons/social/facebook-white.svg') no-repeat center center;
+      background: url('./assets/images/icons/social/share.svg') no-repeat center center;
+      background-size: 25px;
     }
 
   }

@@ -60,7 +60,7 @@ foreach ($items as $item_id => $item) :
                 <a href="https://traveling-store.com/" title="Traveling Store" style="display: block;
     width: 155px;
     height: 55px;
-    background: url('https://traveling-store.com/wp-content/themes/traveling-store/images/mailTemplates/logo.png') no-repeat center/contain;"></a>
+    background: url('https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/logo.png') no-repeat center/contain;"></a>
             </td>
             <td>
                         <span style="padding-right: 20px;display: block; text-align: right; margin-left: auto;">
