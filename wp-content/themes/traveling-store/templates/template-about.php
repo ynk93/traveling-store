@@ -2,7 +2,12 @@
 <html lang="en">
 <?php
 	/**
-	 * Template Name: About page
+	 * Template Name: About page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
 	 */
 
 	$about = get_field( 'About' );

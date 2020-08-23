@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-/**
- * Template Name: FAQ page
- */
+	/**
+	 * Template Name: FAQ page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
+	 */
 $qa = get_field('qa');
 wp_head(); ?>
 <body>

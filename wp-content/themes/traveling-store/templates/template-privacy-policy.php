@@ -2,7 +2,12 @@
 <html lang="en">
 <?php
 	/**
-	 * Template Name: Privacy policy page
+	 * Template Name: Privacy policy page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
 	 */
 	wp_head(); ?>
 <body>

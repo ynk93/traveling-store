@@ -2,7 +2,12 @@
 <html lang="en">
 <?php
 	/**
-	 * Template Name: VIP tours page
+	 * Template Name: Vip tours page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
 	 */
 
 	$vip = get_field( "vip_content" );

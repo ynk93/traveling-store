@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-/**
- * Template Name: Checkout page
- */
+	/**
+	 * Template Name: Checkout page template
+	 * Template Post Type: page
+	 *
+	 * @package WordPress
+	 * @subpackage Traveling Store
+	 * @since Traveling Store 1.0
+	 */
 
 $checkout = WC()->checkout();
 
