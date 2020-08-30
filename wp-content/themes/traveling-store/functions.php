@@ -36,6 +36,11 @@
 	endif;
 	add_action( 'after_setup_theme', 'traveling_store_setup' );
 
+	/**
+	 * Include theme classes.
+	 */
+	//require get_template_directory() . '/classes/class-traveling-store-booking.php';
+
 	//  Add viewport meta
 	if ( ! function_exists( 'add_viewport_meta_tag' ) ) :
 
@@ -50,12 +55,15 @@
 	endif;
 	add_action( 'wp_head', 'add_viewport_meta_tag', '1' );
 
-	//  Replace jquery core
+	/**
+	 * Replace theme jquery core.
+	 */
 	if ( ! function_exists( 'replace_core_jquery_version' ) ) :
 
 		function replace_core_jquery_version() {
+			wp_deregister_script( 'jquery' );
 			wp_deregister_script( 'jquery-core' );
-			wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
+			wp_register_script( 'jquery-core',  get_theme_file_uri( '/assets/js/libs/jquery-3.4.1.min.js' ), array(), '3.4.1' );
 			wp_deregister_script( 'jquery-migrate' );
 			wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
 		}
@@ -91,20 +99,20 @@
 
 			$release_version = '1.002';
 
-			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/assets/js/libs/css3-animate-it.js' ), array( 'jquery' ), '1.0', true );
-			wp_enqueue_script( 'traveling-store-swiper', get_theme_file_uri( '/assets/js/libs/swiper.min.js' ), array( 'jquery' ), '1.0', true );
-			wp_enqueue_script( 'traveling-store-magnific-popup', get_theme_file_uri( '/assets/js/libs/mfp.min.js' ), array( 'jquery' ), '1.0', true );
-			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/assets/js/libs/jquery.nice-select.min.js' ), array( 'jquery' ), '1.0', true );
-            wp_enqueue_script( 'traveling-store-jquery-ui', get_theme_file_uri( '/assets/js/libs/jquery-ui.min.js' ), array( 'jquery' ), '1.0', true );
+			wp_enqueue_script( 'traveling-store-animate', get_theme_file_uri( '/assets/js/libs/css3-animate-it.js' ), array( 'jquery-core' ), '1.0', true );
+			wp_enqueue_script( 'traveling-store-swiper', get_theme_file_uri( '/assets/js/libs/swiper.min.js' ), array( 'jquery-core' ), '1.0', true );
+			wp_enqueue_script( 'traveling-store-magnific-popup', get_theme_file_uri( '/assets/js/libs/mfp.min.js' ), array( 'jquery-core' ), '1.0', true );
+			wp_enqueue_script( 'traveling-store-nice-select', get_theme_file_uri( '/assets/js/libs/jquery.nice-select.min.js' ), array( 'jquery-core' ), '1.0', true );
+            wp_enqueue_script( 'traveling-store-jquery-ui', get_theme_file_uri( '/assets/js/libs/jquery-ui.min.js' ), array( 'jquery-core' ), '1.0', true );
 
-            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/assets/js/main.js' ), array( 'jquery' ), $release_version, true );
+            wp_enqueue_script( 'traveling-store-main', get_theme_file_uri( '/assets/js/main.js' ), array( 'jquery-core' ), $release_version, true );
 
-            if ( is_shop() || is_product_tag() || is_product_category() || taxonomy_is_product_attribute($term->taxonomy) ) {
-	            wp_enqueue_script( 'traveling-store-shop', get_theme_file_uri( '/assets/js/ajax/shop.min.js' ), array( 'jquery' ), $release_version, true );
+            if ( is_shop() || is_product_tag() || is_product_category() || taxonomy_is_product_attribute( $term->taxonomy ) ) {
+	            wp_enqueue_script( 'traveling-store-shop', get_theme_file_uri( '/assets/js/ajax/shop.min.js' ), array( 'jquery-core' ), $release_version, true );
             }
 
             if ( is_cart() ) {
-	            wp_enqueue_script( 'traveling-store-cart', get_theme_file_uri( '/assets/js/ajax/cart.js' ), array( 'jquery' ), $release_version, true );
+	            wp_enqueue_script( 'traveling-store-cart', get_theme_file_uri( '/assets/js/ajax/cart.js' ), array( 'jquery-core' ), $release_version, true );
             }
 
 		}
