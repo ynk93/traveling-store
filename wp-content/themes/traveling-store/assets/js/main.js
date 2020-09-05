@@ -184,7 +184,9 @@ $(document).ready(function () {
         }
 
 
-        mainPageAboutUsImgParallax();
+        if($(".img-parallax").length) {
+            mainPageAboutUsImgParallax();
+        }
     });
 
     var img = $('.img-parallax');
@@ -365,13 +367,13 @@ $(document).ready(function () {
             adult = 1;
         parent = $('.childrensData .counterInputElement');
 
-        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3113]').val();
+        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3283]').val();
 
-        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3114]').val();
+        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3284]').val();
 
-        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3115]').val();
+        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3285]').val();
 
-        adult = parent.find('input[name=wc_bookings_field_persons_3112]').val();
+        adult = parent.find('input[name=wc_bookings_field_persons_3281]').val();
 
         var childNumPickerRow = '<span class="innerResult">' +
             adult + '<span class="resultLabel">(взрослый)</span>, ' +
@@ -434,19 +436,6 @@ $(document).ready(function () {
         calculateBottomLinePosition(self);
 
         return false;
-    });
-
-    $(document).on('click', '.shareRow a.button', function (e) {
-        if (navigator.share) {
-            e.preventDefault();
-            navigator.share({
-                title: document.title,
-                url: window.location.href
-            });
-        } else {
-            window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-            return false;
-        }
     });
 
     function calculateBottomLinePosition(object) {

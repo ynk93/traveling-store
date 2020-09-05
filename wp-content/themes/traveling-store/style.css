@@ -3377,6 +3377,9 @@ body.fixed {
   .wrapper.product-page {
     padding-bottom: 72px;
   }
+  .wrapper.product-page .titleWrap.innerPageTitleWrap {
+    margin: 20px 0 32px;
+  }
   .wrapper .titleWrap.innerPageTitleWrap {
     margin: 40px 0 32px;
   }

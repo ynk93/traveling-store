@@ -242,6 +242,10 @@
   .wrapper {
     &.product-page {
       padding-bottom: 72px;
+
+      .titleWrap.innerPageTitleWrap {
+        margin: 20px 0 32px;
+      }
     }
 
     .titleWrap.innerPageTitleWrap {
