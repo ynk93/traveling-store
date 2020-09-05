@@ -47,20 +47,18 @@ foreach ($items as $item_id => $item) :
         $booking_date = sprintf('%1$s - %2$s', $booking->get_start_date(null, null, $get_local_time), $booking->get_end_date(null, null, $get_local_time));
     }
 
-//	var_dump($item);
-//
-//	die;
-
     ?>
 
-    <table cellpadding="0" style="padding: 10px 0;width: 100%;border-top: 1px solid #EBEBEB;">
+    <table cellpadding="0" class="itemsTable" style="padding: 10px 0;width: 100%;border-top: 1px solid #EBEBEB;">
         <tbody>
         <tr>
             <td>
-                <a href="https://traveling-store.com/" title="Traveling Store" style="display: block;
+                <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/logo.png"
+                     style="display: block;
     width: 155px;
     height: 55px;
-    background: url('https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/logo.png') no-repeat center/contain;"></a>
+object-fit: contain;
+margin-left: 10px;">
             </td>
             <td>
                         <span style="padding-right: 20px;display: block; text-align: right; margin-left: auto;">
@@ -75,6 +73,7 @@ foreach ($items as $item_id => $item) :
         </tr>
         </tbody>
     </table>
+
     <table cellpadding="0" class="mainDataTable">
         <tbody>
         <tr>
@@ -133,7 +132,7 @@ foreach ($items as $item_id => $item) :
                 <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
                     <span class="woocommerce-Price-amount amount" style="padding: 0; display: inline;">
                         <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
-	                    50
+	                    0
                     </span>
                 </span>
             </td>
@@ -154,7 +153,7 @@ foreach ($items as $item_id => $item) :
                 <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
                     <span class="woocommerce-Price-amount amount" style="padding: 0; display: inline;">
                         <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
-	                    <?php echo wp_kses_post($order->get_subtotal($item) - 50); ?>
+	                    <?php echo wp_kses_post($order->get_subtotal($item)); ?>
                     </span>
                 </span>
             </td>
@@ -173,53 +172,9 @@ foreach ($items as $item_id => $item) :
             </td>
             <td><?php echo wp_kses_post(wpautop(do_shortcode($purchase_note))); ?></td>
         </tr>
-        <tr>
-            <td>
-                        <span>
-                            Взрослые / Adults
-                        </span>
-            </td>
-            <td>
-                <span>2</span>
-            </td>
-            <td>
-                <span style="font-weight: bold">Дети / Children</span>
-            </td>
-            <td>
-                <table>
-                    <tbody>
-                    <tr>
-                        <td><span class="innerSpan">
-                                <span class="orderedValue"
-                                      style="font-weight: normal; padding: 0; display: inline;">1</span>
-                                <span class="innerSpanDescription"
-                                      style="color: #7E7E7E; font-weight: 300;padding: 0; display: inline;">(0-3 лет / 0-3 years)</span>
-                            </span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="innerSpan">
-                                <span class="orderedValue bold"
-                                      style="font-weight: normal;padding: 0; display: inline;">1</span>
-                                <span class="innerSpanDescription"
-                                      style="color: #7E7E7E; font-weight: 300;padding: 0; display: inline;">(4-6 лет / 4-6 years)</span>
-                            </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <span class="innerSpan">
-                                <span class="orderedValue bold"
-                                      style="font-weight: normal;padding: 0; display: inline;">1</span>
-                                <span class="innerSpanDescription"
-                                      style="color: #7E7E7E; font-weight: 300;padding: 0; display: inline;">(7-12 лет / 7-12 years)</span>
-                            </span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+
+        <?php wc_bookings_get_summary_list( $booking ); ?>
+
         </tbody>
     </table>
 

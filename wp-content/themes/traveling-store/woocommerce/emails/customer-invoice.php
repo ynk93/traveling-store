@@ -33,36 +33,9 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
                 <tr>
                     <td>
                         <span class="mailHead">
-                            <?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name() ) . '</span>' ); ?>
+                            <?php printf( esc_html__( 'Hi %s,', 'traveling-store' ), '<span class="bold userName" style="font-weight: bold; color: #000;">' . esc_html( $order->get_billing_first_name() ) . '</span>' ); ?>
                             <br>
                             <?php _e('Thank you for using the Traveling Store service!', 'traveling-store'); ?>
-                            <br>
-	                        <?php _e('You can download and print your ticket by clicking on', 'traveling-store'); ?>
-                            <a class="textLink" href="#" target="_blank"><?php _e('this link.', 'traveling-store'); ?></a>
-                        </span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
-
-    <tr>
-        <td>
-            <table cellpadding="0" class="logoRowTable">
-                <tbody>
-                <tr>
-                    <td>
-                        <a class="logo" href="http://traveling-store.com/"></a>
-                    </td>
-                    <td>
-                        <span class="ticketNumWrap">
-                            <span>
-                                <?php _e('Invoice', 'traveling-store'); ?>
-                            </span>
-                            <span class="ticketNumber">
-                                <?php echo '#' . $order->get_id(); ?>
-                            </span>
                         </span>
                     </td>
                 </tr>

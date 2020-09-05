@@ -115,7 +115,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
             <?php do_action('woocommerce_before_add_to_cart_button'); ?>
 
             <input type="hidden" name="add-to-cart"
-                   value="<?php echo esc_attr(is_callable(array($product, 'get_id')) ? $product->get_id() : $product->id); ?>"
+                   value="<?php echo esc_attr(is_callable(array($product, 'get_id')) ? $product->get_id() : $product->get_id()); ?>"
                    class="wc-booking-product-id"/>
 
             <button type="submit"

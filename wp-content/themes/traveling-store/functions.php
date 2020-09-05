@@ -63,6 +63,7 @@
 		function replace_core_jquery_version() {
 			wp_deregister_script( 'jquery' );
 			wp_deregister_script( 'jquery-core' );
+			wp_register_script( 'jquery',  get_theme_file_uri( '/assets/js/libs/jquery-3.4.1.min.js' ), array(), '3.4.1' );
 			wp_register_script( 'jquery-core',  get_theme_file_uri( '/assets/js/libs/jquery-3.4.1.min.js' ), array(), '3.4.1' );
 			wp_deregister_script( 'jquery-migrate' );
 			wp_register_script( 'jquery-migrate', "https://code.jquery.com/jquery-migrate-3.0.0.min.js", array(), '3.0.0' );
