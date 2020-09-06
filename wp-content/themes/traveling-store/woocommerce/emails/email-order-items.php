@@ -56,19 +56,19 @@ foreach ($items as $item_id => $item) :
                 <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/logo.png"
                      style="display: block;
     width: 155px;
-    height: 55px;
+    height: auto;
 object-fit: contain;
 margin-left: 10px;">
             </td>
             <td>
-                        <span style="padding-right: 20px;display: block; text-align: right; margin-left: auto;">
-                            <span style="display: block;padding: 0;">
+                        <span style="color:#7e7e7e;vertical-align:middle;padding-right:20px;display:block;text-align:right;margin-left:auto">
+                            <span style="color:#7e7e7e;vertical-align:middle;display:block;padding:0;text-align: right">
                                 <?php _e('Билет №', 'traveling-store'); ?>
                             </span>
-                            <span style="color: #F87F27;margin-top: 4px;font-weight: bold;">
+                <span style="vertical-align:middle;color:#f87f27;margin-top:4px;font-weight:bold;text-align: right">
                                 <?php echo '#' . $order->get_id(); ?>
                             </span>
-                        </span>
+                </span>
             </td>
         </tr>
         </tbody>
@@ -77,38 +77,38 @@ margin-left: 10px;">
     <table cellpadding="0" class="mainDataTable">
         <tbody>
         <tr>
-            <td>
-                        <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                        <span style="font-weight: bold; padding: 0">
                             Экскурсия /
                             Excursion
                         </span>
             </td>
-            <td>
-                <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="padding: 0">
                     <?php echo wp_kses_post(apply_filters('woocommerce_order_item_name', $item->get_name(), $item, false)); ?>
                 </span>
             </td>
-            <td>
-                <span style="font-weight: bold">Начало / Start</span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="font-weight: bold; padding: 0">Начало / Start</span>
             </td>
-            <td>
-                <span>16:00</span>
+            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb">
+                <span style="padding: 0">16:00</span>
             </td>
         </tr>
         <tr>
-            <td>
-                        <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                        <span style="font-weight: bold; padding: 0">
                             Дата / Date
                         </span>
             </td>
-            <td>
-                <span><?php echo wp_kses_post($booking_date); ?></span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="padding: 0"><?php echo wp_kses_post($booking_date); ?></span>
             </td>
-            <td>
-                <span style="font-weight: bold">Всего / Total</span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="font-weight: bold; padding: 0">Всего / Total</span>
             </td>
-            <td>
-                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb;">
+                <span style="vertical-align: middle; display: block; padding: 0; color: #000;">
                     <span class="woocommerce-Price-amount amount" style="padding: 0; display: inline;">
                         <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
 	                    <?php echo wp_kses_post($order->get_subtotal($item)); ?>
@@ -117,19 +117,19 @@ margin-left: 10px;">
             </td>
         </tr>
         <tr>
-            <td>
-                        <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                        <span style="font-weight: bold; padding: 0">
                             Имя / Name
                         </span>
             </td>
-            <td>
-                <span><?php echo wp_kses_post($order->get_billing_first_name() . ' ' . $order->get_billing_last_name()); ?></span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="padding: 0"><?php echo wp_kses_post($order->get_billing_first_name() . ' ' . $order->get_billing_last_name()); ?></span>
             </td>
-            <td>
-                <span style="font-weight: bold">Задаток / Deposit</span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="font-weight: bold; padding: 0">Задаток / Deposit</span>
             </td>
-            <td>
-                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb;">
+                <span style="vertical-align: middle; display: block; padding: 0; color: #000;">
                     <span class="woocommerce-Price-amount amount" style="padding: 0; display: inline;">
                         <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
 	                    0
@@ -138,19 +138,19 @@ margin-left: 10px;">
             </td>
         </tr>
         <tr>
-            <td>
-                        <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                        <span style="font-weight: bold; padding: 0">
                             Отель / Hotel
                         </span>
             </td>
-            <td>
-                <span><?php echo wp_kses_post($order->get_billing_address_1()); ?></span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="padding: 0"><?php echo wp_kses_post($order->get_billing_address_1()); ?></span>
             </td>
-            <td>
-                <span style="font-weight: bold">Остаток / Balance</span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="font-weight: bold; padding: 0">Остаток / Balance</span>
             </td>
-            <td>
-                <span style="vertical-align: middle; display: block; padding: 0 20px; color: #000;">
+            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb;">
+                <span style="vertical-align: middle; display: block; color: #000; padding: 0">
                     <span class="woocommerce-Price-amount amount" style="padding: 0; display: inline;">
                         <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
 	                    <?php echo wp_kses_post($order->get_subtotal($item)); ?>
@@ -159,22 +159,32 @@ margin-left: 10px;">
             </td>
         </tr>
         <tr>
-            <td>
-                        <span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                        <span style="font-weight: bold; padding: 0">
                             Номер / Room
                         </span>
             </td>
-            <td>
-                <span><?php echo wp_kses_post($order->get_billing_address_2()); ?></span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="padding: 0"><?php echo wp_kses_post($order->get_billing_address_2()); ?></span>
             </td>
-            <td>
-                <span style="font-weight: bold">Замечания / Note</span>
+            <td style="width: calc(100% / 4); padding: 0 20px">
+                <span style="font-weight: bold; padding: 0">Замечания / Note</span>
             </td>
-            <td><?php echo wp_kses_post(wpautop(do_shortcode($purchase_note))); ?></td>
+            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb"><?php echo wp_kses_post(wpautop(do_shortcode($purchase_note))); ?></td>
         </tr>
-
-        <?php wc_bookings_get_summary_list( $booking ); ?>
-
+        </tbody>
+    </table>
+    <table class="bottomTable" style="
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    height: 56px;
+    font-weight: bold;
+    border-spacing: 0;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    padding: 20px;">
+        <tbody>
+        <?php wc_bookings_get_summary_list($booking); ?>
         </tbody>
     </table>
 

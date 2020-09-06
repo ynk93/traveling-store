@@ -85,18 +85,23 @@ table.logoRowTable {
     font-weight: bold;
 }
 
+.itemsTable {
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
 .mainDataTable {
     border-spacing: 0;
 }
 
 table.mainDataTable span {
     display: block;
-    padding: 0 20px;
+    padding: 0;
     color: #000;
 }
 
 .mainDataTable tr td span {
-    margin-left: 5px;
+    padding: 0 12px;
 }
 
 .mainDataTable tbody tr td {
@@ -124,6 +129,7 @@ table.mainDataTable span {
     border-bottom: 1px solid #ebebeb;
     font-weight: normal;
     color: #7E7E7E;
+    width: calc(100% / 4);
 
 }
 
@@ -135,16 +141,16 @@ table.mainDataTable span {
     border-spacing: 0;
 }
 
-.mainDataTable tr.mainRow td td span span{
+.mainDataTable tr.mainRow td span span{
     display: inline-block;
     vertical-align: middle;
     padding: 0;
 }
-.mainDataTable tr.mainRow td td span {
+.mainDataTable tr.mainRow td span {
     padding: 0 14px 0 20px;
 }
 
-.mainDataTable tr.mainRow td td .innerSpanDescription {
+.mainDataTable tr.mainRow td .innerSpanDescription {
     color: #7e7e7e;
 }
 
@@ -172,4 +178,10 @@ table.mainDataTable span {
 
 .bottomTableRow .contactBlock {
     padding-left: 30px;
+}
+
+.bottomTableRow .contactText {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 12px;
 }

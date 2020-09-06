@@ -15,40 +15,45 @@
  * @version 3.7.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
-    <tr>
-        <td>
-            <table cellpadding="0" class="bottomTableRow">
-                <tbody>
-                <tr>
-                    <td>
-                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/tursab.png" title="TurSab License" alt="TurSab License" class="tursabIcon">
-                    </td>
-                    <td>
-                            <span class="contactWrap">
-                                <span class="contactBlock">
-                                    <span class="contactIcon">
-                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/phone.png" width="22px" height="22px">
+<tr>
+    <td>
+        <table cellpadding="0" class="bottomTableRow">
+            <tbody>
+            <tr>
+                <td>
+                    <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/tursab.png"
+                         title="TurSab License" alt="TurSab License" class="tursabIcon">
+                </td>
+                <td>
+                            <span class="contactWrap" style="display: block">
+                                <span class="contactBlock" style="display: inline-block">
+                                    <span class="contactIcon" style="display: inline-block;height: 22px">
+                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/phone.png"
+                                             width="22px" height="22px">
                                     </span>
                                     <span class="contactText">
-                                        <a href="tel: 8 067 01 02 013">8 067 01 02 013</a>
+                                        <a href="tel: 8 067 01 02 013"
+                                           style="margin-left: 10px;">8 067 01 02 013</a>
                                     </span>
                                 </span>
-                                <span class="contactBlock">
-                                    <span class="contactIcon">
-                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/mail.png" height="22px" width="22px">
+                                <span class="contactBlock" style="display: inline-block">
+                                    <span class="contactIcon" style="display: inline-block;height: 22px;">
+                                        <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/mail.png"
+                                             height="22px" width="22px">
                                     </span>
                                     <span class="contactText">
-                                        <a href="mailto: ex@gmail.com">ex@gmail.com</a>
+                                        <a href="mailto: ex@gmail.com"
+                                           style="margin-left: 10px;">ex@gmail.com</a>
                                     </span>
                                 </span>
                             </span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
 </tbody>
 </table>
