@@ -16,26 +16,22 @@ $is_theme_text_black = $this->template_options['bewpi_theme_text_black'];
                     </td>
                     <td>
                                 <span class="contactWrap" style="display:block;width: 100%">
-                                    <span class="contactBlock" style="display: inline-block; vertical-align: middle">
-                                        <span class="contactIcon"
-                                              style="display: inline-block; vertical-align: middle;height: 22px">
+                                    <span class="contactBlock">
+                                        <span class="contactIcon">
                                             <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/phone.png"
-                                                 width="22px" height="22px">
+                                                 width="16px" height="16px">
                                         </span>
-                                        <span class="contactText"
-                                              style="display: inline-block;vertical-align: middle;margin-left: 12px;">
-                                            <span>8 067 01 02 013</span>
+                                        <span class="contactText">
+                                            <span style="font-size: 16px">8 067 01 02 013</span>
                                         </span>
                                     </span>
-                                    <span class="contactBlock" style="display: inline-block; vertical-align: middle">
-                                        <span class="contactIcon"
-                                              style="display: inline-block; vertical-align: middle; height: 22px">
+                                    <span class="contactBlock" style="padding-left: 16px">
+                                        <span class="contactIcon">
                                             <img src="https://traveling-store.com/wp-content/themes/traveling-store/assets/images/mailTemplates/mail.png"
-                                                 height="22px" width="22px">
+                                                 height="16px" width="16px">
                                         </span>
-                                        <span class="contactText"
-                                              style="display: inline-block;vertical-align: middle;margin-left: 12px;">
-                                            <span>ex@gmail.com</span>
+                                        <span class="contactText">
+                                            <span style="font-size: 16px;">ex@gmail.com</span>
                                         </span>
                                     </span>
                                 </span>

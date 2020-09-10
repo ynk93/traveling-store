@@ -184,7 +184,7 @@ $(document).ready(function () {
         }
 
 
-        if($(".img-parallax").length) {
+        if ($(".img-parallax").length) {
             mainPageAboutUsImgParallax();
         }
     });
@@ -360,32 +360,33 @@ $(document).ready(function () {
 
     });
 
-    function updateChbResult() {
-        var childUnder3 = 0,
-            childBtwn4and6 = 0,
-            childBtwn7and12 = 0,
-            adult = 1;
-        parent = $('.childrensData .counterInputElement');
+    function updateChbResult(object) {
+        var pickerRowData = '<span class="innerResult">';
 
-        childUnder3 = parent.find('input[name=wc_bookings_field_persons_3283]').val();
+        parent = object.parents('.counterInputElement');
 
-        childBtwn4and6 = parent.find('input[name=wc_bookings_field_persons_3284]').val();
+        var inputRows = object.parents('.childrensData').find('.row');
 
-        childBtwn7and12 = parent.find('input[name=wc_bookings_field_persons_3285]').val();
+        inputRows.each(function (index) {
+            var inputLabel = '<span class="resultLabel">' + $(this).find('.chbRowLabel').text() + '</span>';
+            var inputValue = $(this).find('input').val()
 
-        adult = parent.find('input[name=wc_bookings_field_persons_3281]').val();
+            var inputStr = inputValue + ' ' + inputLabel;
 
-        var childNumPickerRow = '<span class="innerResult">' +
-            adult + '<span class="resultLabel">(взрослый)</span>, ' +
-            childUnder3 + '<span class="resultLabel">(до 3 лет)</span>, ' +
-            childBtwn4and6 + '<span class="resultLabel">(4-6 лет)</span>, ' +
-            childBtwn7and12 + '<span class="resultLabel">(7-12 лет)</span></span>';
+            if(index !== (inputRows.length - 1)) {
+                inputStr += ', '
+            }
 
-        $('.child-num-picker').find('.result').html(childNumPickerRow);
+            pickerRowData += inputStr
+        });
+
+        pickerRowData += '</span>'
+
+        $('.child-num-picker').find('.result').html(pickerRowData);
     }
 
     $(document).on('change', '.childrensData .counterInputElement input', function () {
-        updateChbResult();
+        updateChbResult($(this));
     });
 
     $(document).on('click', '.infoBlock .sideBarHead', function (e) {

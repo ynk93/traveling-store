@@ -2993,7 +2993,7 @@ body.fixed {
   position: relative;
   padding-left: 31px;
   line-height: 20px;
-  height: 20px;
+  height: auto;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;

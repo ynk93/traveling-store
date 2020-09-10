@@ -36,22 +36,22 @@ $text_align = is_rtl() ? 'right' : 'left';
         );
         ?>
 
-        <table class="mainDataTable" style="width: 100%">
+        <table class="mainDataTable" style="width: 100%;table-layout: fixed;" cellpadding="0" cellspacing="0">
             <tbody>
 
             <tr class="mainRow">
                 <?php $item_totals = $order->get_order_item_totals(); ?>
 
-                <td style="width: calc(100% / 4); padding: 0 20px">
+                <td style="width: 25%; padding: 0 20px">
                     <span style="padding: 0;font-weight: bold"><?php echo wp_kses_post($item_totals['cart_subtotal']['label']); ?></span>
                 </td>
-                <td style="width: calc(100% / 4); padding: 0 20px">
+                <td style="width: 25%; padding: 0 20px">
                     <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['cart_subtotal']['value']); ?></span>
                 </td>
-                <td style="width: calc(100% / 4); padding: 0 20px; min-width: calc(100% / 4)">
+                <td style="width: 25%; padding: 0 20px;">
                     <span style="padding: 0; font-weight: bold;"><?php echo wp_kses_post($item_totals['payment_method']['label']); ?></span>
                 </td>
-                <td style="width: calc(100% / 4); padding: 0 20px; min-width: calc(100% / 4); border-right: 1px solid #ebebeb;">
+                <td style="width: 25%; padding: 0 0 0 15px !important; min-width: calc(100% / 4); border-right: 1px solid #ebebeb;">
                     <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['payment_method']['value']); ?></span>
                 </td>
 
@@ -62,13 +62,13 @@ $text_align = is_rtl() ? 'right' : 'left';
 </tr>
 <tr>
     <td>
-        <table class="mainDataTable" style="width: 100%;">
+        <table class="mainDataTable" style="width: 100%;table-layout: fixed;" cellspacing="0" cellpadding="0">
             <tbody>
             <tr>
-                <td style="width: calc(100% / 4); padding: 0 20px">
+                <td style="width: 50%; padding: 0 20px">
                     <span style="padding: 0; font-weight: bold"><?php echo wp_kses_post($item_totals['order_total']['label']); ?></span>
                 </td>
-                <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb;">
+                <td style="width: 50%; padding: 0 20px; border-right: 1px solid #ebebeb;">
                     <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['order_total']['value']); ?></span>
                 </td>
             </tr>

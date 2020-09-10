@@ -74,7 +74,7 @@ margin-left: 10px;">
         </tbody>
     </table>
 
-    <table cellpadding="0" class="mainDataTable">
+    <table cellpadding="0" style="width: 100%;table-layout: fixed;" class="mainDataTable">
         <tbody>
         <tr>
             <td style="width: calc(100% / 4); padding: 0 20px">
@@ -159,18 +159,18 @@ margin-left: 10px;">
             </td>
         </tr>
         <tr>
-            <td style="width: calc(100% / 4); padding: 0 20px">
+            <td style="width: 25%; padding: 0 20px">
                         <span style="font-weight: bold; padding: 0">
                             Номер / Room
                         </span>
             </td>
-            <td style="width: calc(100% / 4); padding: 0 20px">
+            <td style="width: 25%; padding: 0 20px">
                 <span style="padding: 0"><?php echo wp_kses_post($order->get_billing_address_2()); ?></span>
             </td>
-            <td style="width: calc(100% / 4); padding: 0 20px">
+            <td style="width: 25%; padding: 0 20px">
                 <span style="font-weight: bold; padding: 0">Замечания / Note</span>
             </td>
-            <td style="width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb"><?php echo wp_kses_post(wpautop(do_shortcode($purchase_note))); ?></td>
+            <td style="width: 25%; min-width: calc(100% / 4); padding: 0 20px; border-right: 1px solid #ebebeb"><?php echo wp_kses_post(wpautop(do_shortcode($purchase_note))); ?></td>
         </tr>
         </tbody>
     </table>
