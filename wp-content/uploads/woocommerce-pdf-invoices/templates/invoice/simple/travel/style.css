@@ -163,6 +163,15 @@ table.mainDataTable span {
     padding: 24px 0;
 }
 
+.bottomTable {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.bottomTable td, .bottomTable th {
+    border: 1px solid #ebebeb;
+}
+
 .bottomTableRow td {
     padding: 0 20px;
 }

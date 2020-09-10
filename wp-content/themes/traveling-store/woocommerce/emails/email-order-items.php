@@ -175,14 +175,12 @@ margin-left: 10px;">
         </tbody>
     </table>
     <table class="bottomTable" style="
+    table-layout: fixed;
     width: 100%;
     border-top: 1px solid #ebebeb;
-    height: 56px;
     font-weight: bold;
     border-spacing: 0;
-    border-left: 1px solid #ebebeb;
-    border-right: 1px solid #ebebeb;
-    padding: 20px;">
+    border-right: 1px solid #ebebeb;" cellspacing="0" cellpadding="20">
         <tbody>
         <?php wc_bookings_get_summary_list($booking); ?>
         </tbody>

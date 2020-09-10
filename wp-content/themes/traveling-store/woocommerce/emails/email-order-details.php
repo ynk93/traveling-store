@@ -51,7 +51,7 @@ $text_align = is_rtl() ? 'right' : 'left';
                 <td style="width: 25%; padding: 0 20px;">
                     <span style="padding: 0; font-weight: bold;"><?php echo wp_kses_post($item_totals['payment_method']['label']); ?></span>
                 </td>
-                <td style="width: 25%; padding: 0 0 0 15px !important; min-width: calc(100% / 4); border-right: 1px solid #ebebeb;">
+                <td style="width: 25%; padding: 0 15px; border-right: 1px solid #ebebeb;">
                     <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['payment_method']['value']); ?></span>
                 </td>
 

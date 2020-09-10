@@ -24,115 +24,115 @@
  * @since   1.10.8
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
 }
 
 ?>
 <tr>
 
-	<?php
-		if ( $product && $product->has_persons() ) {
-			if ( $product->has_person_types() ) {
-				$person_types         = $product->get_person_types();
-				$person_counts        = $booking->get_person_counts();
-				$child_count          = 0;
-				$grouped_person_types = array(
-					'adult'    => array(),
-					'children' => array()
-				);
+    <?php
+    if ($product && $product->has_persons()) {
+        if ($product->has_person_types()) {
+            $person_types = $product->get_person_types();
+            $person_counts = $booking->get_person_counts();
+            $child_count = 0;
+            $grouped_person_types = array(
+                'adult' => array(),
+                'children' => array()
+            );
 
-				if ( ! empty( $person_types ) && is_array( $person_types ) ) {
+            if (!empty($person_types) && is_array($person_types)) {
 
-					foreach ( $person_types as $person_type ) {
+                foreach ($person_types as $person_type) {
 
-						if ( $person_type->get_name() === 'Adult' || $person_type->get_name() === 'Взрослые' ) {
-							$grouped_person_types['adult'] = $person_type;
-						} else {
-							$grouped_person_types['children'][$child_count] = $person_type;
-							$child_count++;
-						}
+                    if ($person_type->get_name() === 'Adult' || $person_type->get_name() === 'Взрослые') {
+                        $grouped_person_types['adult'] = $person_type;
+                    } else {
+                        $grouped_person_types['children'][$child_count] = $person_type;
+                        $child_count++;
+                    }
 
-					}
+                }
 
-					if ( count( $grouped_person_types['adult'] ) !== 0 ) : ?>
+                if (count($grouped_person_types['adult']) !== 0) : ?>
 
-                        <td>
-                            <span>
+                    <td style="width: 25%">
+                            <span style="color: #000;">
                                 Взрослые / Adults
                             </span>
-                        </td>
+                    </td>
 
-                        <td>
+                    <td style=" border-left: 1px solid #ebebeb; width: 25%">
                             <span>
-                                <?php echo !empty( $person_counts[ $person_type->get_id() ] ) ? $person_counts[ $person_type->get_id() ] : 0; ?>
+                                <?php echo !empty($person_counts[$person_type->get_id()]) ? $person_counts[$person_type->get_id()] : 0; ?>
                             </span>
-                            <span class="innerSpanPrice">
+                        <span class="innerSpanPrice">
                                 x <?php echo $person_type->get_cost() !== 0 ? $person_type->get_cost() . ' $' : 'Бесплатно'; ?>
                             </span>
-                        </td>
+                    </td>
 
-					<?php endif;
+                <?php endif;
 
-					if ( count( $grouped_person_types['children'] ) !== 0 ) : ?>
+                if (count($grouped_person_types['children']) !== 0) : ?>
 
-                        <td>
-                            <span style="font-weight: bold">Дети / Children</span>
-                        </td>
+                    <td style=" border-left: 1px solid #ebebeb; width: 25%">
+                        <span style="font-weight: bold; color: #000;">Дети / Children</span>
+                    </td>
 
-                        <td>
-                            <table>
-                                <tbody>
+                    <td style=" border-left: 1px solid #ebebeb;width: 25%">
+                        <table style="border: 0;">
+                            <tbody>
 
-								<?php
-									foreach ( $grouped_person_types['children'] as $person_type ) {
+                            <?php
+                            foreach ($grouped_person_types['children'] as $person_type) {
 
-										if ( empty( $person_counts[ $person_type->get_id() ] ) ) {
-											continue;
-										} ?>
+                                if (empty($person_counts[$person_type->get_id()])) {
+                                    continue;
+                                } ?>
 
-                                        <tr>
-                                            <td>
+                                <tr>
+                                    <td style="border: 0;">
                                                 <span class="innerSpan">
                                                     <span class="orderedValue"
-                                                          style="font-weight: normal; padding: 0; display: inline;">
+                                                          style="font-weight: normal; padding: 0; display: inline; color: #000;">
                                                         <?php echo $person_type->get_name(); ?>
                                                     </span>
                                                     <span class="innerSpanDescription"
                                                           style="color: #7E7E7E; font-weight: 300;padding: 0; display: inline;">
-                                                        <?php echo $person_counts[ $person_type->get_id() ]; ?>
+                                                        <?php echo $person_counts[$person_type->get_id()]; ?>
                                                     </span>
                                                     <span class="innerSpanPrice">
                                                         x <?php echo $person_type->get_cost() !== 0 ? $person_type->get_cost() . ' $' : 'Бесплатно'; ?>
                                                     </span>
                                                 </span>
-                                            </td>
-                                        </tr>
+                                    </td>
+                                </tr>
 
 
-                                        <?php
-									}
-								?>
+                                <?php
+                            }
+                            ?>
 
-                                </tbody>
-                            </table>
-                        </td>
+                            </tbody>
+                        </table>
+                    </td>
 
-					<?php endif;
-				}
-			} else {
-				?>
-                <td>
+                <?php endif;
+            }
+        } else {
+            ?>
+            <td>
                     <span>
                         <?php
-	                        /* translators: 1: person count */
-	                        echo esc_html( sprintf( __( '%d Persons', 'woocommerce-bookings' ), array_sum( $booking->get_person_counts() ) ) );
+                        /* translators: 1: person count */
+                        echo esc_html(sprintf(__('%d Persons', 'woocommerce-bookings'), array_sum($booking->get_person_counts())));
                         ?>
                     </span>
-                </td>
-				<?php
-			}
-		}
-	?>
+            </td>
+            <?php
+        }
+    }
+    ?>
 
 </tr>
