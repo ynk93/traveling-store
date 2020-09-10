@@ -56,7 +56,6 @@ if ( $main_img_id || $gallery_img_ids ) : ?>
             <div class="row">
 
                 <a class="button" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode (get_post_permalink()); ?>"
-                   onclick="javascript:"
                    target="_blank">
                     <span class="icon"></span>
                 </a>
