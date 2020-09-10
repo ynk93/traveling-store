@@ -58,15 +58,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 					if ( count( $grouped_person_types['adult'] ) !== 0 ) : ?>
 
                         <td>
-                                <span>
-                                    Взрослые / Adults
-                                </span>
+                            <span>
+                                Взрослые / Adults
+                            </span>
                         </td>
 
                         <td>
-                                <span>
-                                    <?php echo $person_counts[ $person_type->get_id() ] ? $person_counts[ $person_type->get_id() ] : 0; ?>
-                                </span>
+                            <span>
+                                <?php echo !empty( $person_counts[ $person_type->get_id() ] ) ? $person_counts[ $person_type->get_id() ] : 0; ?>
+                            </span>
+                            <span class="innerSpanPrice">
+                                x <?php echo $person_type->get_cost() !== 0 ? $person_type->get_cost() . ' $' : 'Бесплатно'; ?>
+                            </span>
                         </td>
 
 					<?php endif;
@@ -98,6 +101,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                     <span class="innerSpanDescription"
                                                           style="color: #7E7E7E; font-weight: 300;padding: 0; display: inline;">
                                                         <?php echo $person_counts[ $person_type->get_id() ]; ?>
+                                                    </span>
+                                                    <span class="innerSpanPrice">
+                                                        x <?php echo $person_type->get_cost() !== 0 ? $person_type->get_cost() . ' $' : 'Бесплатно'; ?>
                                                     </span>
                                                 </span>
                                             </td>
