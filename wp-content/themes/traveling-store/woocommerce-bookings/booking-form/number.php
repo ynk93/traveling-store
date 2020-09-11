@@ -27,9 +27,12 @@ $max   = isset( $field['max'] ) ? $field['max'] : null;
 $min   = isset( $field['min'] ) ? $field['min'] : null;
 $name  = $field['name'];
 $step  = isset( $field['step'] ) ? $field['step'] : null;
+$id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+$person_type = new WC_Product_Booking_Person_Type( $id );
+$cost = $person_type->get_cost();
 ?>
 <div class="form-field form-field-wide row <?php echo esc_attr( implode( ' ', $class ) ); ?>">
-	<label for="<?php echo esc_attr( $name ); ?>" class="chbRowLabel"><?php echo esc_html( $label ); ?>:</label>
+	<label for="<?php echo esc_attr( $name ); ?>" class="chbRowLabel" data-cost="<?php echo $cost; ?>"><?php echo esc_html( $label ) . ' $ ' . $cost; ?>:</label>
     <div class="counterInputElement">
         <a href="#" class="counterInputButton counterInputDecreaseButton"></a>
         <input
