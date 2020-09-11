@@ -360,20 +360,21 @@ $(document).ready(function () {
 
     });
 
-    function updateChbResult(object) {
+
+    function updateChbResult(parent) {
         var pickerRowData = '<span class="innerResult">';
 
-        parent = object.parents('.counterInputElement');
-
-        var inputRows = object.parents('.childrensData').find('.row');
+        var inputRows = parent.find('.row');
 
         inputRows.each(function (index) {
-            var inputLabel = '<span class="resultLabel">' + $(this).find('.chbRowLabel').text() + '</span>';
+            var label = $(this).find('.chbRowLabel').text();
+            label = label.replace(/:/g, '');
+            var inputLabel = '<span class="resultLabel">' + label + '</span>';
             var inputValue = $(this).find('input').val()
 
             var inputStr = inputValue + ' ' + inputLabel;
 
-            if(index !== (inputRows.length - 1)) {
+            if (index !== (inputRows.length - 1)) {
                 inputStr += ', '
             }
 
@@ -385,8 +386,12 @@ $(document).ready(function () {
         $('.child-num-picker').find('.result').html(pickerRowData);
     }
 
+    if ($('.childrensData').length) {
+        updateChbResult($('.childrensData'));
+    }
+
     $(document).on('change', '.childrensData .counterInputElement input', function () {
-        updateChbResult($(this));
+        updateChbResult($(this).parents('.childrensData'));
     });
 
     $(document).on('click', '.infoBlock .sideBarHead', function (e) {
