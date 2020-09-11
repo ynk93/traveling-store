@@ -71,10 +71,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
                     <div class="input">
                         <div class="result">
                             <span class="innerResult">
-                               1 <span class="resultLabel">Взрослый(12+) - 120$:</span>,
-                                0 <span class="resultLabel">Ребёнок(до 3 лет) - Бесплатно:</span>,
-                                0 <span class="resultLabel">Ребёнок(3-7) - 40$:</span>,
-                                0 <span class="resultLabel">Ребёнок(7-12) - 80$:</span>
+
                             </span>
                         </div>
                         <div class="button arrowIcon"></div>

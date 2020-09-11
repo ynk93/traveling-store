@@ -65,11 +65,13 @@ if (!defined('ABSPATH')) {
 
                     <td style=" border-left: 1px solid #ebebeb; width: 25%">
                             <span>
-                                <?php echo !empty($person_counts[$person_type->get_id()]) ? $person_counts[$person_type->get_id()] : 0; ?>
+                                <?php echo !empty( $person_counts[$person_type->get_id()] ) ? $person_counts[$person_type->get_id()] : 0; ?>
                             </span>
+                        <?php if ( !empty( $person_counts[$person_type->get_id()] ) ) : ?>
                         <span class="innerSpanPrice">
                                 x <?php echo $person_type->get_cost() !== 0 ? $person_type->get_cost() . ' $' : 'Бесплатно'; ?>
                             </span>
+                        <?php endif; ?>
                     </td>
 
                 <?php endif;
@@ -87,7 +89,7 @@ if (!defined('ABSPATH')) {
                             <?php
                             foreach ($grouped_person_types['children'] as $person_type) {
 
-                                if (empty($person_counts[$person_type->get_id()])) {
+                                if ( empty($person_counts[$person_type->get_id()]) ) {
                                     continue;
                                 } ?>
 

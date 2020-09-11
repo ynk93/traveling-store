@@ -46,13 +46,14 @@ $text_align = is_rtl() ? 'right' : 'left';
                     <span style="padding: 0;font-weight: bold"><?php echo wp_kses_post($item_totals['cart_subtotal']['label']); ?></span>
                 </td>
                 <td style="width: 25%; padding: 0 20px">
-                    <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['cart_subtotal']['value']); ?></span>
+                    <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
+	                <?php echo wp_kses_post($order->get_subtotal()); ?>
                 </td>
                 <td style="width: 25%; padding: 0 20px;">
                     <span style="padding: 0; font-weight: bold;"><?php echo wp_kses_post($item_totals['payment_method']['label']); ?></span>
                 </td>
                 <td style="width: 25%; padding: 0 15px; border-right: 1px solid #ebebeb;">
-                    <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['payment_method']['value']); ?></span>
+                    <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post( $item_totals['payment_method']['value'] ); ?></span>
                 </td>
 
             </tr>
@@ -69,7 +70,8 @@ $text_align = is_rtl() ? 'right' : 'left';
                     <span style="padding: 0; font-weight: bold"><?php echo wp_kses_post($item_totals['order_total']['label']); ?></span>
                 </td>
                 <td style="width: 50%; padding: 0 20px; border-right: 1px solid #ebebeb;">
-                    <span style="padding: 0; white-space: nowrap"><?php echo wp_kses_post($item_totals['order_total']['value']); ?></span>
+                    <span class="woocommerce-Price-currencySymbol" style="padding: 0; display: inline;">$</span>
+	                <?php echo wp_kses_post($order->get_total()); ?>
                 </td>
             </tr>
             </tbody>
